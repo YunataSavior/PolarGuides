@@ -11936,17 +11936,1567 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Blade's Edge
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Howling Fjord",[[
-	author PolarCookie
+	author YunataSavior
 	startlevel 68
 	next Ding80's Alliance Leveling Guides\\Borean Tundra
 
 	step
-		TODO
+		'Take the appropriate capitol portal and train your skills
+	step
+		'Fly to Menethil Harbor|goto Wetlands,9.5,59.7,0.5|noway|c
+	step
+		..'Walk to the end of the dock on the RIGHT, facing away from the fort and towards the two docks.
+		.'Ride the boat to Howling Fjord|goto Howling Fjord|noway|c
+	step
+		goto 61.1,62.6
+		.talk Macalroy##23547
+		..accept Hell Has Frozen Over...##11228
+	step
+		goto 60.5,61.1
+		.talk Vice Admiral Keller##23546
+		..turnin Hell Has Frozen Over...##11228
+		..accept If Valgarde Falls...##11243
+	step
+		goto 59.8,63.2
+		.talk Pricilla Winterwind##23736
+		..fpath Valgarde
+	step
+		goto 58.6,59.6
+		.'If you are here fresh from Outland, these guys will HURT! Be careful!
+		.'Kill 12 Dragonflayer Invaders|goal 12 Dragonflayer Invaders killed|q 11243/1
+	step
+		goto 60.5,61.1
+		.talk Vice Admiral Keller##23546
+		..turnin If Valgarde Falls...##11243
+		..accept Rescuing the Rescuers##11244
+	step
+		goto 59.0,57.0
+		..'Pickup Ceremonial Dragonflayer Harpoons off the scouts.
+		.'Rescue 8 Scouts|goal 8 Valgarde Scout Rescued|q 11244/1
+	step
+		goto 60.5,61.1
+		.talk Vice Admiral Keller##23546
+		..turnin Rescuing the Rescuers##11244
+		..accept Prisoners of Wyrmskull##11255
+	step
+		goto 60.2,61.0
+		.talk Beltrand McSorf##23548
+		..accept The Human League##11273
+	step
+		goto 59.8,61.5
+		.talk Thoralius the Wise##23975
+		..accept Into the World of Spirits##11333
+	step
+		goto 60.1,62.4
+		.talk Guard Captain Zorek##23728
+		..accept The Path to Payback##11420
+	step
+		goto 62.9,59.1
+		.talk Harold Lagras##23730
+		..accept Daggercap Divin'##11443
+	step
+		goto 62.1,51.7
+		..get Reagent Pouch|q 11333/1
+	step
+		goto 61.3,56.4
+		..get 10 Valgarde Supply Crates|q 11443/1
+	step
+		goto 62.9,59.1
+		.talk Harold Lagras##23730
+		..turnin Daggercap Divin'##11443
+	step
+		goto 59.8,61.5
+		.talk Thoralius the Wise##23975
+		..turnin Into the World of Spirits##11333
+		..accept The Echo of Ymiron##11343
+	step
+		goto 56.0,55.8
+		.talk Scout Valory##24106
+		..accept Fresh Legs##11251
+	step
+		goto 57.6,52.7
+		.kill Dragonflayer mobs|n
+		..get Dragonflayer Cage Keys|n
+		.'Click the Dragonflayer Cages|tip The Dragonflayer Cages are yellow cages around this area.
+		..'Rescue 3 Captured Valgarde Prisoners|goal 3 Captured Valgarde Prisoners Rescued|q 11255/1
+	step
+		goto 59.2,54.6
+		.talk Pulroy the Archaeologist##24122
+		..turnin The Human League##11273
+		..accept Zedd's Probably Dead##11274
+	step
+		goto 60.5,61.1
+		.talk Vice Admiral Keller##23546
+		..turnin Prisoners of Wyrmskull##11255
+		..accept Dragonflayer Battle Plans##11290
+	step
+		goto 56.6,52.4
+		.talk Zedd##24145
+		..turnin Zedd's Probably Dead##11274
+		..accept And Then There Were Two...##11276
+	step
+		goto 55.7,52.6
+		..get Dragonflayer Battle Plans|q 11290/1
+	step
+		goto 56.63,49.50|n
+		.'The path down to And Then There Were Two... starts here|goto 56.63,49.50,0.5|noway|c
+	step
+		goto 56.9,53.8
+		.talk Glorenfeld##24150
+		..turnin And Then There Were Two...##11276
+		..accept The Depths of Depravity##11277
+	step
+		goto 59.3,55.4
+		.'Look for, and pickup, 10 Wyrmskull Tablets along the corridors.
+		.get Harpoon Operation Manual|q 11420/1
+	step
+		goto 59.3,55.4
+		.talk Ares the Oathbound##24189
+		..accept The Shining Light##11288
+	step
+		goto 56.6,53.4
+		.'Go downstairs and into the room full of ghouls. You were given a buff that will instantly kill ghouls that hit you, but you can still die.
+		.'Continue looking for 10 Wyrmskull Tablets.
+		..get Sacred Artifact|q 11288/1
+	step
+		goto 59.3,55.4
+		.talk Ares the Oathbound##24189
+		..turnin The Shining Light##11288
+		..accept Guided by Honor##11289
+	step
+		goto 56.1,56.4
+		.'Finish collecting the tablets.
+		..get 10 Wyrmskull Tablets|q 11277/1
+	step
+		goto 56.9,53.8
+		.talk Glorenfeld##24150
+		..turnin The Depths of Depravity##11277
+		..accept The Ring of Judgement##11299
+	step
+		goto 55.7,57.4
+		.talk Daegarn##24151
+		..turnin The Ring of Judgement##11299
+		..accept Stunning Defeat at the Ring##11300
+	step
+		goto 55.0,57.5
+		.'Fight the gladiator in the center of the room, then fight the next two gladiators.
+		..get Ancient Cipher|q 11300/1
+	step
+		goto 56.9,53.8
+		.talk Glorenfeld##24150
+		..turnin Stunning Defeat at the Ring##11300
+		..accept Return to Valgarde##11278
+	step
+		goto 60.5,61.1
+		.'Leave the catacombs the same way you came in
+		.talk Vice Admiral Keller##23546
+		..turnin Dragonflayer Battle Plans##11290
+		..accept To Westguard Keep!##11291
+	step
+		goto 60.2,61.0
+		.talk Beltrand McSorf##23548
+		..turnin Return to Valgarde##11278
+		..accept The Explorers' League Outpost##11448
+	step
+		goto 59.7,62.4
+		.talk Lord Irulon Trueblade##24191
+		..turnin Guided by Honor##11289
+	step
+		goto 60.1,62.4
+		.talk Guard Captain Zorek##23728
+		..turnin The Path to Payback##11420
+		..accept Locating the Mechanism##11426
+	step
+		goto 60.8,51.1
+		.from Dragonflayer Harpooner##24635
+		..get Harpoon Control Mechanism|q 11426/1
+	step
+		goto 60.25,51.46
+		.'Use the Incense Burner outside.|use Incense Burner##33637
+		.'Then, head into the house to listen to the conversation between the two Vrykul.
+		.'Uncover the Secrets of the Wyrmskull|goal Secrets of Wyrmskull Uncovered|q 11343/1
+	step
+		.'Right click the spirit world buff to return to the physical world. Skip this step when done.
+	step
+		goto 59.4,49.1
+		.talk Defender Mordun##24111
+		..turnin Fresh Legs##11251
+		..accept Disarmament##13205
+		..accept Into Utgarde!##11252
+	step
+		.'The two quests you just received are dungeon quests for Utgarde Keep. Group/queue for the dungeon to complete them. They award some nice experience!
+		.'Skip this step.
+	step
+		goto 59.8,61.5
+		.talk Thoralius the Wise##23975
+		..turnin The Echo of Ymiron##11343
+		..accept Anguish of Nifflevar##11344
+	step
+		goto 60.1,62.4
+		.talk Guard Captain Zorek##23728
+		..turnin Locating the Mechanism##11426
+		..accept Meet Lieutenant Icehammer...##11427
+	step
+		goto 60.1,62.4
+		.talk Guard Captain Zorek##23728
+		..'Ask him to take you to the Lieutenant Icehammer|goto Howling Fjord,64.4,47.0,1|noway|c
+	step
+		goto 64.4,47.0
+		.talk Lieutenant Icehammer##24634
+		..turnin Meet Lieutenant Icehammer...##11427
+		..accept Drop It then Rock It!##11429
+	step
+		goto 65.0,39.9
+		.'Use your Alliance Banner in your bags|use Alliance Banner##34051
+		.'Fight the defenders that come
+		.'Place the Alliance Banner|goal Alliance Banner Placed|q 11429/2
+		.'Defend the Alliance Banner|goal Alliance Banner Defended|q 11429/1
+	step
+		goto 64.4,47.0
+		.talk Lieutenant Icehammer##24634
+		..turnin Drop It then Rock It!##11429
+		..accept Harpoon Master Yavus##11430
+	step
+		goto 65.1,56.6
+		.kill Harpoon Master Yavus##24644|q 11430/1
+	step
+		goto 69.0,54.7
+		.'Use your Incense Burner in your bags|use Incense Burner##33774
+		.'Listen to King Ymiron's speech. If it doesn't start, try walking around the crowd.
+		.'Uncover the Secrets of Nifflevar|goal Secrets of Nifflevar Uncovered|q 11344/1
+	step
+		goto 75.0,65.4
+		.'Keep the Spirit World buff active to avoid the mobs.
+		.talk Stanwad##24717
+		..turnin The Explorers' League Outpost##11448
+		..accept Problems on the High Bluff##11474
+	step
+		goto 75.1,65.5
+		.talk Walt##24807
+		..turnin Problems on the High Bluff##11474
+		..accept Tools to Get the Job Done##11475
+	step
+		goto 75.3,65.0
+		.talk Hidalgo the Master Falconer##24750
+		..accept Trust is Earned##11460
+	step
+		goto 75.5,66.8
+		.'Click the Loose Rocks|tip They are grey stones on the ground around this area.
+		.collect 1 Fjord Grub##34102|q 11460
+	step
+		goto 75.3,65.0
+		.talk a Rock Falcon##24752
+		.'Feed the grub to the rock falcon|goal Fjord Rock Falcon Fed|q 11460/1
+	step
+		goto 75.3,65.0
+		.talk Hidalgo the Master Falconer##24750
+		..turnin Trust is Earned##11460
+		..accept The Ransacked Caravan##11465
+	step
+		goto 78.8,48.9
+		.talk Donny##24811
+		..accept Out of My Element?##11477
+	step
+		goto 79,47.6
+		.'Click the Building Tools|tip They look like a small metal bucket of tools, sitting next to a wooden wheelbarrow.
+		.get Building Tools|q 11475/1
+	step
+		goto 79.0,47.6
+		.'The Iron Rune mobs are in and around this digsite.
+		.kill 5 Iron Rune Laborer|q 11477/2
+		.kill 2 Iron Rune Sage|q 11477/3
+		.kill 10 Iron Rune Destroyer|q 11477/1
+	step
+		goto 78.8,48.9
+		.talk Donny##24811
+		..turnin Out of My Element?##11477
+	step
+		goto 75.1,65.5
+		.talk Walt##24807
+		..turnin Tools to Get the Job Done##11475
+		..accept We Can Rebuild It##11483
+		..accept We Have the Technology##11484
+	step
+		ding 69
+	step
+		goto 75.4,63.3
+		.kill Shoveltusks|n
+		.get Pristine Shoveltusk Hide|q 11484/1
+	step
+		goto 75.5,66.8
+		.'Click the Loose Rocks|tip They are grey stones on the ground around this area.
+		.collect 5 Fjord Grub##34102|q 11465
+	step
+		goto 69.6,64.8
+		.'Use your Trained Rock Falcon in your bags on Fjord Turkeys|use Trained Rock Falcon##34111
+		.get 5 Fjord Turkey##34112|q 11465/1
+	step
+		goto 64.4,47.0
+		.talk Lieutenant Icehammer##24634
+		..turnin Harpoon Master Yavus##11430
+		..accept It Goes to 11...##11421
+	step
+		goto 64.8,40.9
+		.'Click the Industrial Strength Rope|tip It's a rope wound around a small wooden post.
+		.get Industrial Strength Rope|q 11483/2
+	step
+		goto 67.6,52.2
+		.'Click the Large Barrel|tip It looks like a barrel sitting next to this building.
+		.get Large Barrel|q 11483/1
+	step
+		goto 64.8,52.7
+		.'Use your Harpoon Control Mechanism next to the big metal harpoon guns|use Harpoon Control Mechanism##34032
+		.'Use the abilities on your hotbar to shoot the buildings across the water, on the water's edge, and shoot Dragonflayer Defenders
+		.'Destroy the Dragonflayer Longhouse|goal Dragonflayer Longhouse Destroyed|q 11421/2
+		.'Destroy the Dragonflayer Dockhouse|goal Dragonflayer Dockhouse Destroyed|q 11421/3
+		.'Destroy the Dragonflayer Storage Facility|goal Dragonflayer Storage Facility Destroyed|q 11421/4
+		.kill 8 Dragonflayer Defender|q 11421/1
+		.'If you need to kill more defenders after destroying all the buildings, aim at the buildings again to spawn more defenders.
+		.'Click the red arrow on your action bar to get off the harpoon gun|outvehicle
+	step
+		goto 64.4,47.0
+		.talk Lieutenant Icehammer##24634
+		..turnin It Goes to 11...##11421
+		..accept Let's Go Surfing Now##11436
+	step
+		goto 67.9,52.7
+		.kill Dragonflayer mobs|n
+		.get Steel Ribbing|q 11484/2
+	step
+		goto 65.3,57.2
+		.'Click the Large Harpoon Lever|tip It looks like a metal lever on this wooden balcony.
+		.'Go Harpoon Surfing|goal Go Harpoon Surfing|q 11436/1
+	step
+		goto 60.1,62.4
+		.talk Guard Captain Zorek##23728
+		..turnin Let's Go Surfing Now##11436
+	step
+		goto 59.8,61.5
+		.talk Thoralius the Wise##23975
+		..turnin Anguish of Nifflevar##11344
+	step
+		goto 60.8,61.5
+		.talk McGoyver##24040
+		.'Ask him for some dark iron ingots
+		.get Dark Iron Ingots|q 11483/3
+	step
+		goto 60.8,61.5|n
+		.talk McGoyver##24040
+		..'Tell him to take you to the Explorers' League Outpost|goto Howling Fjord,74.7,65.3,1|noway|c
+	step
+		goto 75.3,65
+		.talk Hidalgo the Master Falconer##24750
+		..turnin The Ransacked Caravan##11465
+		..accept Falcon Versus Hawk##11468
+	step
+		goto 75.1,65.5
+		.talk Walt##24807
+		..turnin We Can Rebuild It##11483
+		..turnin We Have the Technology##11484
+		..accept Iron Rune Constructs and You: Rocket Jumping##11485
+	step
+		goto 75.1,65.5
+		'Click the Work Bench tablet next to the iron golem next to you
+		.'Get on the work bench and let Walt put you in the golem suit
+		.'Use the Rocket Jump ability on your hotbar|petaction Rocket Jump
+		.'Master Rocket Jump|goal Rocket Jump Mastered|q 11485/1
+	step
+		'Click the red arrow on your hotbar to leave the golem suit|outvehicle
+	step
+		goto 75.1,65.5
+		.talk Walt##24807
+		..turnin Iron Rune Constructs and You: Rocket Jumping##11485
+		..accept Iron Rune Constructs and You: Collecting Data##11489
+	step
+		'Click the Work Bench tablet next to the iron golem next to you
+		.'Get on the work bench and let Walt put you in the golem suit|invehicle
+	step
+		goto 74.8,65.7
+		.'Use your Collect Data ability on your hotbar next to the blue crystal|petaction Collect Data|tip It's a floating blue crystal next to the wagon.
+		.'Collect Test Data|q 11489/1
+	step
+		'Click the red arrow on your hotbar to leave the golem suit|outvehicle
+	step
+		goto 75.1,65.5
+		.talk Walt##24807
+		..turnin Iron Rune Constructs and You: Collecting Data##11489
+		..accept Iron Rune Constructs and You: The Bluff##11491
+	step
+		'Click the Work Bench tablet next to the iron golem next to you
+		.' Get on the work bench and let Walt put you in the golem suit|invehicle
+	step
+		goto 74.8,65.3
+		.'Walk on Lebronski's Rug|tip It's a long rug on the ground.
+		.'Use your Bluff ability on your hotbar on Lebronski when he gets mad that you walked on his rug|petaction Bluff
+		.'Bluff Lebronski|goal Lebronski Bluffed|q 11491/1
+	step
+		'Click the red arrow on your hotbar to leave the golem suit|outvehicle
+	step
+		goto 75.1,65.5
+		.talk Walt##24807
+		..turnin Iron Rune Constructs and You: The Bluff##11491
+		..accept Lightning Infused Relics##11494
+		..accept The Delicate Sound of Thunder##11495
+	step
+		'Click the Work Bench tablet next to the iron golem next to you
+		.'Get on the work bench and let Walt put you in the golem suit|invehicle
+	step
+		goto 72.7,67.3|n
+		.'The path down to Lightning Infused Relics starts here|goto 72.7,67.3,0.5|noway|c
+	step
+		goto 72.12,70.40|n
+		.'Go here and activate Rocket Jump on the middle rune|goto 74.32,70.98|noway|c
+	step
+		goto 71.55,69.45
+		.'Use your Bluff ability to get rid of suspicious dwarves|petaction Bluff
+		.'Head to the cave, walk towards the end, and listen to Loken's speech until you get credit for quest completion.
+		.'En route, use your Collect Data ability next to the blue crystals|petaction Collect Data|tip They look like blue crystals on the ground around this area.
+		.'Investigate the Thundering Cave |goal Thundering Cave investigated|q 11495/1
+	step
+		goto 71.8,69.2
+		.'Use your Collect Data ability next to the blue crystals|petaction Collect Data|tip They look like blue crystals on the ground around this area.
+		.'Use your Bluff ability to get rid of suspicious dwarves|petaction Bluff
+		.'Collect 15 Iron Rune Data|goal 15 Iron Rune Data Collected|q 11494/1
+	step
+		'Get to a safe place, then click the red arrow on your hotbar to leave the golem suit|outvehicle
+	step
+		goto 75.5,66.8
+		.'To find Fjord Hawks, visit the rocks - they are perched on them in pairs, and they are also flying in the sky. Whenever you use the trained rock falcon on one of them, the other one aggros and chases you.
+		.'There are a lot in the sky which may be pulled solo so they are the fastest ones to get - throughout the next step, keep an eye on the sky.
+		.'Click the Loose Rocks|tip They are grey stones on the ground around this area.
+		.collect 10 Fjord Grub##34102|q 11468
+	step
+		goto 72.2,64.1
+		.'Use your Trained Rock Falcon in your bags on Fjord Hawks|use Trained Rock Falcon##34121
+		.get 10 Fjord Hawk|q 11468/1
+		.'You can find more at 74.3,66.1|n
+		.'You can find more at 74.2,59.3|n
+		.'You can find more at 73.9,56.5|n
+		.'You can find more at 68.17,63.83|n
+	step
+		goto 75.1,65.5
+		.talk Walt##24807
+		..turnin Lightning Infused Relics##11494
+		..turnin The Delicate Sound of Thunder##11495
+		..accept News From the East##11501
+	step
+		goto 75.3,65
+		.talk Hidalgo the Master Falconer##24750
+		..turnin Falcon Versus Hawk##11468
+		..accept There Exists No Honor Among Birds##11470
+	step
+		goto 76.7,67.7
+		.'Use your Trained Rock Falcon in your bags next to the Vrykul Hawk Roost|use Trained Rock Falcon##34124|tip It looks like a stone monument thing, with a chain connected to it.
+		.'Tip: hug the cliffside, because the enemy hawks generally patrol the sky. Look straight down and look for Fjord Hawk Eggs.
+		.'Use the Scavenge ability (Ability 1) to steal the eggs in the nests on the side of the cliff in front of you|petaction Scavenge
+		.'Head down, using Soar (Ability 2) on cooldown to speed up and get right next to an egg.
+		.'Use Escape (Ability 3) to confuse a Hawk Matriarch if you aggro one, then fly away.
+		.get 8 Fjord Hawk Egg|q 11470/1
+	step
+		goto 75.3,65
+		.talk Hidalgo the Master Falconer##24750
+		..turnin There Exists No Honor Among Birds##11470
+	step
+		goto 75.1,65.5|n
+		.talk Walt##24807
+		.'Talk to Walt and let him fly you to Westguard Keep|goto 30.8,42.8|noway|c
+	step
+		goto 31.3,44
+		.talk Greer Orehammer##23859
+		..fpath Westguard Keep
+	step
+		goto 30.86,41.45
+		home Westguard Keep
+	step
+		goto 31.2,40.8
+		.talk Chef Kettleblack##23773
+		..accept Shoveltusk Soup Again?##11155
+	step
+		'Go inside the fort to 28.8,44.1|goto 28.8,44.1
+		.talk Captain Adams##23749
+		..turnin To Westguard Keep!##11291
+		..turnin News From the East##11501
+		..accept The Clutches of Evil##11157
+	step
+		goto 29,41.9
+		.talk Bombardier Petrov##23895
+		..accept Break the Blockade##11153
+	step
+		goto 28.1,42.1
+		.'Wait for the zeppelin to come back, if it is there already, then get on it
+		.'Use Petrov's Cluster Bombs in your bags to throw them off the zeppelin at the pirates as you ride|use Petrov's Cluster Bombs##33098
+		.'CANNONS TAKE MORE THAN ONE BOMB TO DESTROY.
+		.kill 25 Blockade Pirate|q 11153/1
+		.'Destroy 10 Blockade Cannons|goal 10 Blockade Cannons destroyed|q 11153/2
+	step
+		goto 29,41.9
+		.talk Bombardier Petrov##23895
+		..turnin Break the Blockade##11153
+	step
+		goto 34,43.8
+		.talk Cannoneer Ely##23770
+		..accept One Size Does Not Fit All##11190
+	step
+		goto 35.6,40.6
+		.'Click the Westguard Cannonballs|tip They look like grey round rocks on the ground around this area.
+		.get 10 Westguard Cannonball|q 11190/1
+		.kill Shoveltusks|n
+		.get 6 Shoveltusk Meat|q 11155/1
+		.'You can find cannonballs at 35.0,46.4|n
+		.'More at 35.6,40.6|n
+		.'More at 40.0,40.5|n
+	step
+		goto 37.4,51.9
+		.talk Ember Clutch Ancient##23870
+		..accept Root Causes##11182
+	step
+		goto 38.3,47.3
+		.'Destroy 15 Proto-Drake Eggs|goal 15 Proto-Drake Egg destroyed|q 11157/1|tip The Proto-Drake Eggs look like huge eggs on the ground around this area.
+		.kill 15 Proto-Whelp##23688|q 11157/2
+	step
+		'Go inside the small house to 41.5,52.3|goto 41.5,52.3
+		.kill Skeld Drakeson##23940|q 11182/2
+	step
+		goto 40.6,51.5
+		.kill 5 Dragonflayer Handler|q 11182/1
+	step
+		goto 37.4,51.9
+		.talk Ember Clutch Ancient##23870
+		..turnin Root Causes##11182
+	step
+		goto 34,43.8
+		.talk Cannoneer Ely##23770
+		..turnin One Size Does Not Fit All##11190
+	step
+		goto 31.2,40.8
+		.talk Chef Kettleblack##23773
+		..turnin Shoveltusk Soup Again?##11155
+	step
+		'Go inside the fort to 28.8,44.1|goto 28.8,44.1
+		.talk Captain Adams##23749
+		..turnin The Clutches of Evil##11157
+		..accept Mage-Lieutenant Malister##11187
+	step
+		goto 28.9,44.2
+		.talk Mage-Lieutenant Malister##23888
+		..turnin Mage-Lieutenant Malister##11187
+		..accept Two Wrongs...##11188
+	step
+		goto 36.1,47.6
+		.' Use Malister's Frost Wand on Proto-Drakes|use Malister's Frost Wand##33119
+		.kill 3 Proto-Drake##23689|q 11188/1
+	step
+		'Go inside the fort to 28.9,44.2|goto 28.9,44.2
+		.talk Mage-Lieutenant Malister##23888
+		..turnin Two Wrongs...##11188
+	step
+		goto 28.8,44.1
+		.talk Captain Adams##23749
+		..accept Report to Scout Knowles##11199
+	step
+		goto 29.1,41.8
+		.talk Sapper Steelring##23976
+		..accept Danger! Explosives!##11218
+	step
+		goto 31.6,41.5
+		.talk Explorer Abigail##23978
+		..accept Send Them Packing##11224
+	step
+		goto 32.3,46.8
+		.talk Lunk-tusk##25233
+		..accept Orfus of Kamagua##11573
+	step
+		goto 44.5,57.6
+		.talk Scout Knowles##23906
+		..turnin Report to Scout Knowles##11199
+		..accept Mission: Eternal Flame##11202
+	step
+		goto 48.4,55.8
+		.'Use your Ever-burning Torches next to the big shaking cart|use Ever-burning Torches##33164|tip It looks like a big shaking cart up on a hill, overlooking the town.
+		.'Destroy the Southwest Plague Tank|goal Southwest Plague Tank Destroyed|q 11202/1
+	step
+		goto 48.2,52.9
+		.'Don't head into the valley - head around the top
+		.'Use your Ever-burning Torches next to the big shaking cart|use Ever-burning Torches##33164|tip It looks like a big shaking cart up on a hill, overlooking the town.
+		.'Destroy the Northwest Plague Tank|goal Northwest Plague Tank Destroyed|q 11202/2
+	step
+		goto 51.2,50.2
+		.'Again, around the top of the valley
+		.'Use your Ever-burning Torches next to the big shaking cart|use Ever-burning Torches##33164|tip It looks like a big shaking cart up on a hill, overlooking the town.
+		.'Destroy the Northeast Plague Tank|goal Northeast Plague Tank Destroyed|q 11202/3
+	step
+		goto 51.5,57.7
+		.'Use your Ever-burning Torches next to the big shaking cart|use Ever-burning Torches##33164|tip It looks like a big shaking cart up on a hill, overlooking the town.
+		.'Destroy the Southeast Plague Tank|goal Southeast Plague Tank Destroyed|q 11202/4
+	step
+		goto 44.5,57.6
+		.talk Scout Knowles##23906
+		..turnin Mission: Eternal Flame##11202
+		..accept Mission: Package Retrieval##11327
+	step
+		goto 47.8,58.2|n
+		.' The path down to Mission: Package Retrieval starts here|goto 47.8,58.2,0.5|noway|c
+	step
+		goto 50.8,53.9
+		.' Click the Apothecary's Package|tip It's a small tan package on the ground.
+		.get Apothecary's Package|q 11327/1
+	step
+		goto 44.5,57.6
+		.talk Scout Knowles##23906
+		..turnin Mission: Package Retrieval##11327
+		..accept Mission: Forsaken Intel##11328
+	step
+		ding 70
+	step
+		goto 40.3,60.3
+		.talk Orfus of Kamagua##23804
+		..turnin Orfus of Kamagua##11573
+		..accept The Dead Rise!##11504
+	step
+		goto 57.7,77.5
+		.'Click the Mound of Debris|tip It looks like a pile of dirt in the bottom of this small pit, next to a skeleton.
+		.get Fengir's Clue|q 11504/1
+	step
+		goto 59.2,77
+		.'Click the Unlocked Chest|tip It looks like a small chest in the bottom of this small pit, next to a skeleton.
+		.get Rodin's Clue|q 11504/2
+	step
+		goto 59.8,79.4
+		.'Click the Long Tail Feather|tip It's a small blue feather sitting on a circular shield in this pit, on top of a skeleton.
+		.get Isuldof's Clue|q 11504/3
+	step
+		goto 62,80
+		.'Click the Cannonball|tip It looks like a big round grey ball sitting in the dirt in this pit, between a skeleton's legs.
+		.get Windan's Clue|q 11504/4
+	step
+		goto 40.3,60.3
+		.talk Orfus of Kamagua##23804
+		..turnin The Dead Rise!##11504
+		..accept Elder Atuik and Kamagua##11507
+	step
+		'Go across The Ancient Lift to 25.0,57.0|goto 25.0,57.0
+		.talk Elder Atuik##24755
+		..turnin Elder Atuik and Kamagua##11507
+		..accept Grezzix Spindlesnap##11508
+		..accept Feeding the Survivors##11456
+	step
+		goto 24.7,57.8
+		.talk Kip Trawlskip##28197
+		..fpath Kamagua
+	step
+		goto 29.1,58.8
+		.kill Island Shoveltusks|n
+		.get 6 Island Shoveltusk Meat|q 11456/1
+	step
+		goto 25.0,57.0
+		.talk Elder Atuik##24755
+		..turnin Feeding the Survivors##11456
+		..accept Arming Kamagua##11457
+	step
+		goto 27.17,64.47
+		.from Frostwing Chimaera##24673
+		.get 3 Chimaera Horn|q 11457/1
+	step
+		goto 25.0,57.0
+		.talk Elder Atuik##24755
+		..turnin Arming Kamagua##11457
+		..accept Avenge Iskaal##11458
+	step
+		goto 23.1,62.7
+		.talk Grezzix Spindlesnap##24643
+		..turnin Grezzix Spindlesnap##11508
+		..accept Street "Cred"##11509
+	step
+		goto 23.09,62.59|n
+		.talk Lou the Cabin Boy##24896
+		.|Ask to be taken to Scalawag Point|goto 35.57,82.32|noway|c
+	step
+		goto 35.1,80.9
+		.talk "Silvermoon" Harry##24539
+		..turnin Street "Cred"##11509
+		..accept "Scoodles"##11510
+	step
+		goto 35.6,80.2
+		.talk Handsome Terry##24537
+		..accept Forgotten Treasure##11434
+	step
+		goto 37.8,79.6
+		.talk Scuttle Frostprow##24784
+		..accept Swabbin' Soap##11469
+	step
+		goto 38.3,83.4
+		.from "Scoodles"##24899
+		.get Sin'dorei Scrying Crystal|q 11510/1
+	step
+		goto 37.8,84.6
+		.' Click the Eagle Figurine|tip It's a blue eagle statue inside this ship on the middle floor.
+		.get Eagle Figurine|q 11434/2
+	step
+		goto 37.1,85.5
+		.' Click the Amani Vase|tip It looks like a grey vase at the bottom of this wrecked ship.
+		.get Amani Vase|q 11434/1
+	step
+		goto 35.1,80.9
+		.talk "Silvermoon" Harry##24539
+		..turnin "Scoodles"##11510
+		..accept The Ancient Armor of the Kvaldir##11567
+		..accept The Frozen Heart of Isuldof##11512
+		..accept The Lost Shield of the Aesirites##11519
+		..accept The Staff of Storm's Fury##11511
+	step
+		goto 35.6,80.2
+		.talk Handsome Terry##24537
+		..turnin Forgotten Treasure##11434
+		..accept The Fragrance of Money##11455
+	step
+		goto 36.3,80.5
+		.talk Taruk##24541
+		..accept Gambling Debt##11464
+	step
+		goto 35.1,80.9
+		.talk "Silvermoon" Harry##24539
+		..'Tell him you want to collect a debt he owes
+		..'Fight him until he surrenders
+		.talk "Silvermoon" Harry##24539
+		..'Tell him to pay up
+		.get "Silvermoon" Harry's Debt|q 11464/1|goal "Silvermoon" Harry's Debt|q 11464/1
+	step
+		goto 36.3,80.5
+		.talk Taruk##24541
+		..turnin Gambling Debt##11464
+		..accept Jack Likes His Drink##11466
+	step
+		'Go inside the long building to 35.3,79.6|goto 35.3,79.6
+		.talk Olga, the Scalawag Wench##24639
+		..' Pay 1 gold to bribe her into giving Jack Adams a drink
+		.' He passes out on the table
+		.talk Jack Adams##24788
+		..'Search his pockets
+		..get Jack Adams' Debt|q 11466/1|goal Jack Adams' Debt|q 11466/1
+	step
+		goto 36.3,80.5
+		.talk Taruk##24541
+		..turnin Jack Likes His Drink##11466
+		..accept Dead Man's Debt##11467
+	step
+		goto 34.1,76.9
+		.kill Rabid Brown Bears|n
+		.get 4 Bear Musk|q 11455/1
+	step
+		goto 31.4,77.9
+		.from Big Roy##24785
+		.get Big Roy's Blubber|q 11469/1
+	step
+		goto 35.6,80.2
+		.talk Handsome Terry##24537
+		..turnin The Fragrance of Money##11455
+		..accept A Traitor Among Us##11473
+	step
+		goto 35.6,80.6
+		.talk Zeh'gehn##24525
+		..turnin A Traitor Among Us##11473
+		..accept Zeh'gehn Sez##11459
+	step
+		goto 35.6,80.2
+		.talk Handsome Terry##24537
+		..turnin Zeh'gehn Sez##11459
+		..accept A Carver and a Croaker##11476
+	step
+		goto 35.1,80.9
+		.talk "Silvermoon" Harry##24539
+		..buy 1 Shiny Knife|q 11476/2
+	step
+		goto 35.6,81.7
+		.' Click a Scalawag Frog|tip They are blue and green frogs that hop around on the ground here.
+		.get Scalawag Frog|q 11476/1
+	step
+		goto 35.6,80.6
+		.talk Zeh'gehn##24525
+		..turnin A Carver and a Croaker##11476
+		..accept "Crowleg" Dan##11479
+	step
+		goto 35.9,83.6
+		.talk "Crowleg" Dan##24713
+		.kill "Crowleg" Dan|q 11479/1
+	step
+		goto 35.6,80.2
+		.talk Handsome Terry##24537
+		..turnin "Crowleg" Dan##11479
+		..accept Meet Number Two##11480
+	step
+		'Go inside the long building to 35.4,79.4|goto 35.4,79.4
+		.talk Annie Bonn##24741
+		..turnin Meet Number Two##11480
+		..accept The Jig is Up##11471
+	step
+		goto 37.8,79.6
+		.talk Scuttle Frostprow##24784
+		..turnin Swabbin' Soap##11469
+	step
+		goto 37.2,74.8
+		.talk Captain Ellis##24910
+		..turnin The Lost Shield of the Aesirites##11519
+		..accept Mutiny on the Mercy##11527
+	step
+		'Go downstairs in the ship
+		.kill Mutinous Sea Dog ghouls|n
+		.get 5 Barrel of Blasting Powder|q 11527/1
+	step
+		'Go upstairs to the ship deck
+		.talk Captain Ellis##24910
+		..turnin Mutiny on the Mercy##11527
+		..accept Sorlof's Booty##11529
+	step
+		'Run to the other end of the ship deck to the big cannon
+		.'Keep clicking The Big Gun until Sorlof is dead
+		.'Sorlof will drop a big pile of gold on the shore
+		.'Jump off the ship and click Sorlof's Booty
+		.get Sorlof's Booty|q 11529/1
+	step
+		'Go onto the ship to 35.3,64.8|goto 35.3,64.8
+		.'Wait for Abdul the Insane to walk up to the top deck, then run downstairs
+		.'Click The Staff of Storm's Fury|tip On the very bottom floor of this ship.  It looks like a staff standing upright with lightning shooting out of it.
+		.get The Staff of Storm's Fury|q 11511/1
+	step
+		goto 33.2,63.9
+		.kill 8 Crazed Northsea Slaver|q 11458/1
+		.'Use your Horn of Kamagua to summon a Tuskarr to help.
+	step
+		goto 29.0,60.5|n
+		.'The path up to Dead Man's Debt starts here|goto 29.0,60.5,0.3|noway|c
+	step
+		goto 32.7,60.2
+		.'Click the mound of dirt|tip It looks like a huge pile of dirt.
+		.'Kill Black Conrad's Ghost and his friends that spawn
+		.get Black Conrad's Treasure|q 11467/1
+	step
+		goto 25,57
+		.talk Elder Atuik##24755
+		..turnin Avenge Iskaal##11458
+	step
+		goto 24.6,58.9
+		.talk Anuniaq##24810
+		..accept The Way to His Heart...##11472
+		..accept Travel to Moa'ki Harbor##12118
+	step
+		goto 28.9,74.8
+		.'Use Anuniaq's Net on the Schools of Tasty Reef Fish|use Anuniaq's Net##40946|tip They look like swarms of fish in the water.
+		.kill Great Reef Sharks|n
+		.collect 10 Tasty Reef Fish##34127|q 11472
+	step
+		goto 31,74.4
+		.'Use your Tasty Reef Fish on a Reef Bull as far away as you can|use Tasty Reef Fish##34127
+		.'He will come to the spot where you're standing
+		.'Keep doing this
+		.'Lead the Reef Bull to a Reef Cow on the other side of the water|goal Reef Bull led to a Reef Cow|q 11472/1
+	step
+		'Go down the hill to 33.5,75.3|goto 33.5,75.3
+		'Go into the cave to 32.3,78.7|goto 32.3,78.7
+		.'Fight "Mad" Jonah Sterling. Do not waste cooldowns.
+		.'Fight and kill Hozzer.
+		.'Loot Jonah Sterling's Spyglass off its corpse|q 11471/1
+		.'Click The Frozen Heart of Isuldof|tip Inside the cave, it looks like a big blue jewel on the ground.
+		.get The Frozen Heart of Isuldof|q 11512/1
+	step
+		'Leave the cave and go to 35.4,79.4|n
+		'Go inside the long building to 35.4,79.4|goto 35.4,79.4
+		.talk Annie Bonn##24741
+		..turnin The Jig is Up##11471
+	step
+		goto 36.3,80.5
+		.talk Taruk##24541
+		..turnin Dead Man's Debt##11467
+	step
+		goto 36.1,81.6|n
+		.talk Alanya##27933
+		..'Tell her to want to fly to Bael'gun's
+		..' You will land near a ship|goto 80.9,75.3,1|noway|c
+	step
+		'Go onto the ship and downstairs to 81.8,73.9|goto 81.8,73.9
+		.'Click The Ancient Armor of the Kvaldir|tip Inside this ship, on the very bottom floor in the very back of the room.  It looks like a floating chestplate.
+		.get The Ancient Armor of the Kvaldir|q 11567/1
+	step
+		goto 80.9,75.1|n
+		.'Click Harry's Bomber|tip It's a plane on the water's edge.
+		.'Go back to Scalawag Point|goto 36.1,81.7,1|noway|c
+	step
+		goto 37.2,74.8
+		.talk Captain Ellis##24910
+		..turnin Sorlof's Booty##11529
+		..accept The Shield of the Aesirites##11530
+	step
+		'Ride the big lift to the top of the cliff and go to 40.3,60.3|goto 40.3,60.3
+		.talk Orfus of Kamagua##23804
+		..turnin The Ancient Armor of the Kvaldir##11567
+		..turnin The Frozen Heart of Isuldof##11512
+		..turnin The Shield of the Aesirites##11530
+		..turnin The Staff of Storm's Fury##11511
+		..accept A Return to Resting##11568
+	step
+		goto 57.6,77.4
+		.'Use your Bundle of Vrykul Artifacts while standing near the skeleton|use Bundle of Vrykul Artifacts##34624
+		.'Return the Shield of Aesirites|goal Shield of the Aesirites Returned|q 11568/1
+	step
+		goto 59.2,77
+		.'Use your Bundle of Vrykul Artifacts while standing near the skeleton|use Bundle of Vrykul Artifacts##34624
+		.'Return the Staff of Storm's Fury|goal Staff of Storm's Fury Returned|q 11568/2
+	step
+		goto 59.8,79.4
+		.'Use your Bundle of Vrykul Artifacts while standing near the skeleton.|use Bundle of Vrykul Artifacts##34624
+		.'Return the Frozen Heart of Isuldof|goal Frozen Heart of Isuldof Returned|q 11568/3
+	step
+		goto 62,80
+		.'Use your Bundle of Vrykul Artifacts while standing near the skeleton.|use Bundle of Vrykul Artifacts##34624
+		.'Return the Ancient Armor of the Kvaldir|goal Ancient Armor of the Kvaldir Returned|q 11568/4
+	step
+		goto 40.3,60.3
+		.talk Orfus of Kamagua##23804
+		..turnin A Return to Resting##11568
+		..accept Return to Atuik##11572
+	step
+		'Go across the Ancient Lift to 25.0,57.0|goto 25.0,57.0
+		.talk Elder Atuik##24755
+		..turnin Return to Atuik##11572
+	step
+		goto 24.6,58.9
+		.talk Anuniaq##24810
+		..turnin The Way to His Heart...##11472
+	step
+		'Fly to Westguard Keep|goto Howling Fjord,31.3,44.0,0.5|noway|c
+	step
+		goto 30.8,41.6
+		.talk Peppy Wrongnozzle##24283
+		..turnin Mission: Forsaken Intel##11328
+		..accept Absholutely... Thish Will Work!##11330
+	step
+		goto 29.3,44.1|n
+		.'The path down to Absholutely... Thish Will Work! starts here|goto 29.3,44.1,0.5|noway|c
+	step
+		goto 29.5,43.4
+		.'Use Peppy's Special Mix on the Dragonflayer Vrykul Prisoner|use Peppy's Special Mix##33627|tip In the jail under the fort, sitting in a jail cell.
+		.'Administer Peppy's Mix To The Vrykul Prisoner|goal Peppy's Mix Administered To The Vrykul Prisoner|q 11330/1
+	step
+		goto 30.8,41.6
+		.talk Peppy Wrongnozzle##24283
+		..turnin Absholutely... Thish Will Work!##11330
+		..accept You Tell Him ...Hic!##11331
+	step
+		'Go into the fort to 28.8,44.1|goto 28.8,44.1
+		.talk Captain Adams##23749
+		..turnin You Tell Him ...Hic!##11331
+		..accept Mission: Plague This!##11332
+	step
+		goto 31.3,44
+		.talk Greer Orehammer##23859
+		..'Tell him you need a gryphon to ride
+		.'Use Orehammer's Precision Bombs in your bags on the big green carts as you fly over New Agamand|use Orehammer's Precision Bombs##33634
+		.'Hit 5 Plague Tanks|goal 5 Plague Tank Hits|q 11332/1
+	step
+		'Go into the fort to 28.8,44.1|goto 28.8,44.1
+		.talk Captain Adams##23749
+		..turnin Mission: Plague This!##11332
+		..accept Operation: Skornful Wrath##11248
+	step
+		goto 33.8,34.0|n
+		.'We're going to have to start doing things a little out of order, because pserver quest prereqs are screwed up...
+		'The path down into the canyon starts here|goto 33.8,34.0,0.5|noway|c
+	step
+		goto 33.5,36.1
+		.'Use Steelring's Foolproof Dynamite on the mining nodes|use Steelring's Foolproof Dynamite##33190|tip They look like mining nodes around this area.
+		.'Click the Whisper Gulch Ore Fragments that spawn
+		.get 6 Whisper Gulch Ore Fragment|q 11218/1
+		.'Click the Whisper Gulch Ore Gems that spawn
+		.get 18 Whisper Gulch Gem|q 11218/2
+		.'Use the emote /raise on the Abandoned Pack Mules|tip They look like mules with a bunch of supplies tied to them around this area.
+		.'Send 10 Abandoned Pack Mules Packing|goal 10 Abandoned Pack Mule Sent Packing|q 11224/1
+	step
+		.'Go out of the canyon to 31.6,41.5|goto 44.4,26.4
+		.'Use your Westguard Command Insignia in your bags|use Westguard Command Insignia##33311
+		.talk Westguard Sergeant##24060
+		..turnin Operation: Skornful Wrath##11248
+		..accept Towers of Certain Doom##11245
+		..accept Gruesome, But Necessary##11246
+		..accept Burn Skorn, Burn!##11247
+	step
+		goto 43.7,28.5
+		.kill Winterskorn mobs|n
+		.'Use The Sergeant's Machete on their corpses|use The Sergeant's Machete##33310
+		.'Use the Sergeant's Torch inside this house|use Sergeant's Torch##33321
+		.'Set the Northwest Longhouse Ablaze|goal Northwest Longhouse Set Ablaze|q 11247/1
+	step
+		goto 43.6,30.3
+		.kill Winterskorn mobs|n
+		.'Use The Sergeant's Machete on their corpses|use The Sergeant's Machete##33310
+		.'Use the Sergeant's Flare next to this tower|use Sergeant's Flare##33323
+		.'Target the Northwest Tower|goal Northwest Tower Targeted|q 11245/1
+	step
+		goto 46.4,28.2
+		.kill Winterskorn mobs|n
+		.'Use The Sergeant's Machete on their corpses|use The Sergeant's Machete##33310
+		.'Use the Sergeant's Torch inside this house|use Sergeant's Torch##33321
+		.'Set the Northeast Longhouse Ablaze|goal Northeast Longhouse Set Ablaze|q 11247/2
+	step
+		goto 46,30.7
+		.kill Winterskorn mobs|n
+		.'Use The Sergeant's Machete on their corpses|use The Sergeant's Machete##33310
+		.'Use the Sergeant's Torch inside this building|use Sergeant's Torch##33321
+		.'Set the Barracks Ablaze|goal Barracks Set Ablaze|q 11247/3
+	step
+		goto 46.5,33.2
+		.'Continue using the Machete on Winterskorn mobs...
+		.'Use the Sergeant's Flare next to this tower|use Sergeant's Flare##33323
+		.'Target the East Tower|goal East Tower Targeted|q 11245/2
+	step
+		goto 46.9,37.1
+		.'Use the Sergeant's Flare next to this tower|use Sergeant's Flare##33323
+		.'Target the Southeast Tower|goal Southeast Tower Targeted|q 11245/4
+	step
+		goto 45.3,27
+		.kill Winterskorn mobs|n
+		.'Use The Sergeant's Machete on their corpses|use The Sergeant's Machete##33310
+		.'Dismember 20 Winterskorn Vrykul|goal 20 Winterskorn Vrykul Dismembered|q 11246/1
+		.get Vrykul Scroll of Ascension|n
+		.'This item SHOULD have a drop rate of 20%. If you don't get it in 30-40 kills, complain to the server admins.
+		.'Blizzlike is 20%. Look at comments on Wowhead to support the claim.
+		.'Click the Vrykul Scroll of Ascension in your bags|use Vrykul Scroll of Ascension##33314
+		..accept Stop the Ascension!##11249
+	step
+		goto 44.9,35
+		.'Use your Vrykul Scroll of Ascension next to the bonfire|use Vrykul Scroll of Ascension##33339
+		.kill Halfdan the Ice-Hearted|q 11249/1
+	step
+		goto 43.2,35.8
+		.'Use the Sergeant's Flare next to this tower|use Sergeant's Flare##33323
+		.'Target the Southwest Tower|goal Southwest Tower Targeted|q 11245/3
+	step
+		'Use your Westguard Command Insignia in your bags|use Westguard Command Insignia##33311
+		.talk Westguard Sergeant##24060
+		..turnin Towers of Certain Doom##11245
+		..turnin Gruesome, But Necessary##11246
+		..turnin Burn Skorn, Burn!##11247
+		..accept All Hail the Conqueror of Skorn!##11250
+	step
+		'Go inside the fort to 28.8,44.1|goto 28.8,44.1
+		.talk Captain Adams##23749
+		..turnin All Hail the Conqueror of Skorn!##11250
+		..accept Dealing With Gjalerbron##11235
+	step
+		goto 28.9,44
+		.talk Father Levariol##24038
+		..turnin Stop the Ascension!##11249
+		..accept Of Keys and Cages##11231
+	step
+		goto 30.6,42.8
+		.talk Quartermaster Brevin##24494
+		..accept Everything Must Be Ready##11406
+	step
+		goto 29.1,41.8
+		.talk Sapper Steelring##23976
+		..turnin Danger! Explosives!##11218
+		..accept Leader of the Deranged##11240
+	step
+		.goto 31.6,41.5
+		.talk Explorer Abigail##23978
+		..turnin Send Them Packing##11224
+	step
+		goto 33.8,34.0|n
+		'The path down into the canyon starts here|goto 33.8,34.0,0.5|noway|c
+	step
+		goto 31.6,34.8
+		.kill Squeeg Idolhunter##24048|q 11240/1
+	step
+		'Go out of the canyon to 29,41.9|goto 29,41.9
+		.talk Sapper Steelring##23976
+		..turnin Leader of the Deranged##11240
+	step
+		goto 31.7,42
+		.talk Old Man Stonemantle##23831
+		..accept My Daughter##11175
+	step
+		goto 30.2,28.7
+		.talk Overseer Irena Stonemantle##23891
+		..turnin My Daughter##11175
+		..accept See to the Operations##11176
+		..accept Where is Explorer Jaren?##11393
+	step
+		goto 30.2,28.7
+		.talk Engineer Feknut##24227
+		..accept Scare the Guano Out of Them!##11154
+	step
+		goto 30.2,28.7
+		.talk Watcher Moonleaf##24273
+		..accept The Cleansing##11322
+	step
+		goto 30.8,28.6
+		.talk Steel Gate Chief Archaeologist##24399
+		..turnin See to the Operations##11176
+		..accept I've Got a Flying Machine!##11390
+	step
+		'Click the plane near you on the wooden platform to ride in it|invehicle
+	step
+		'Fly down into the valley below
+		.'They look like huge sacks with yellow stuff in them on the ground
+		.'Use your Grappling Hook ability on your hotbar near a big sack on the ground|petaction Grappling Hook
+		.'Fly back to the top of the valley and fly toward the red arrows on the big scale things to Deliver a Sack of Relics
+		.'Repeat this 2 more time
+		.'Deliver 3 Sacks of Relics|goal 3 Sack of Relics Delivered|q 11390/1
+	step
+		'Fly back to the wooden platform and click the red arrow button on your hotbar to get out of the plane|outvehicle
+	step
+		goto 30.8,28.6
+		.talk Steel Gate Chief Archaeologist##24399
+		..turnin I've Got a Flying Machine!##11390
+		..accept Steel Gate Patrol##11391
+	step
+		'Click the plane near you on the wooden platform to ride in it|invehicle
+	step
+		'Use the abilities on your hotbar as you fly around to fight the flying gargoyles
+		.kill 8 Gjalerbron Gargoyle|q 11391/1
+	step
+		'Fly back to the wooden platform and click the red arrow button on your hotbar to get out of the plane|outvehicle
+	step
+		goto 30.8,28.6
+		.talk Steel Gate Chief Archaeologist##24399
+		..turnin Steel Gate Patrol##11391
+	step
+		goto 27.4,32.2|n
+		.'The path down to Explorer Jaren starts here|goto 27.4,32.2,0.5|noway|c
+	step
+		goto 24.2,32.5
+		.talk Explorer Jaren##23833
+		..turnin Where is Explorer Jaren?##11393
+		..accept And You Thought Murlocs Smelled Bad!##11394
+	step
+		goto 22.6,28.6
+		.kill Scourge mobs|n
+		.get Scourge Device|n
+		.'Click the Scourge Device in your bags|use Scourge Device##33961
+		..accept It's a Scourge Device##11395
+	step
+		goto 24.2,32.5
+		.talk Explorer Jaren##23833
+		..turnin It's a Scourge Device##11395
+		..accept Bring Down Those Shields##11396
+	step
+		goto 22.7,31.2
+		.'Use your Scourging Crystal Controller on the Scourge Crystal|use Scourging Crystal Controller##33960|tip It looks like a big floating purple crystal.
+		.'Attack the Scourge Crystal when the purple bubble shield disappears
+		.'Destroy 1 Scourge Crystal|goal 1 Scourging Crystals Destroyed|q 11396/1
+	step
+		goto 21.9,28.8
+		.'Use your Scourging Crystal Controller on the Scourge Crystal|use Scourging Crystal Controller##33960|tip It looks like a big floating purple crystal.
+		.'Attack the Scourge Crystal when the purple bubble shield disappears
+		.'Destroy 1 Scourge Crystal|goal 2 Scourging Crystals Destroyed|q 11396/1
+	step
+		goto 21.5,24.6
+		.'Use your Scourging Crystal Controller on the Scourge Crystal|use Scourging Crystal Controller##33960|tip It looks like a big floating purple crystal.
+		.'Attack the Scourge Crystal when the purple bubble shield disappears
+		.'Destroy 1 Scourge Crystal|goal 3 Scourging Crystals Destroyed|q 11396/1
+	step
+		goto 19.8,22.2
+		.talk Old Icefin##24544
+		..accept Trident of the Son##11422
+	step
+		goto 23.7,35.2
+		.from Rotgill##24546
+		.get Rotgill's Trident|q 11422/1
+		.'Finish killing 15 Scourge murlocs, humanoids, or ghosts|goal 15 Chillmere Coast Scourge Killed|q 11394/1
+	step
+		goto 24.2,32.5
+		.talk Explorer Jaren##23833
+		..turnin And You Thought Murlocs Smelled Bad!##11394
+		..turnin Bring Down Those Shields##11396
+	step
+		goto 19.8,22.2
+		.talk Old Icefin##24544
+		..turnin Trident of the Son##11422
+	step
+		'Hearth to Westguard Keep|goto Howling Fjord,30.9,41.5,1|use Hearthstone##6948|noway|c
+	step
+		goto 60.3,18.7
+		.talk Christopher Sloan##24056
+		..accept I'll Try Anything!##11329
+	step
+		goto 64.4,20.5
+		.'Click the Water Plants|tip They look like tall bushy plants underwater around this area.
+		.from Northern Barbfish##24285
+		.get 5 Northern Barbfish|q 11329/1
+	step
+		goto 60.3,18.7
+		.talk Christopher Sloan##24056
+		..turnin I'll Try Anything!##11329
+		..accept The One That Got Away##11410
+	step
+		goto 62.6,16.8
+		.talk Gil Grisert##24139
+		..turnin Everything Must Be Ready##11406
+		..accept Down to the Wire##11269
+	step
+		goto 62.6,16.8
+		.talk Trapper Jethan##24131
+		..accept Preying Upon the Weak##11292
+	step
+		goto 60.1,16.1
+		.talk James Ormsby##24061
+		..fpath Fort Wildervar
+	step
+		goto 60.2,15.6
+		.talk Foreman Colbey##24176
+		..accept The Yeti Next Door##11284
+	step
+		goto 57.3,18.6
+		.'For some reason, piss server developers thought that "The Book of Runes", "The Enigmatic Frost Nymphs", and "March of the Giants" requires "The Yeti Next Door"...
+		.'Which is FUCKING WRONG... the actual prereq is: "I'll Try Anything"...
+		.'Stupid developers. LOOK AT THE WOWHEAD COMMENTS FOR THESE QUESTS... Rant over; Skip this step.
+	step
+		goto 57.3,18.6
+		.kill Frosthorn Rams|n
+		.collect 4 Tough Ram Meat##33352|n
+		.'God awful drop rate. Follow the road north into Grizzly Hills for more Ram spawns.
+		.'Click the Tough Ram Meat in your bags|use Tough Ram Meat##33352
+		.collect 1 Giant Yeti Meal##33477|q 11284
+		.'We're not completing the following objectives, but just work on them if you see them:
+		.'Click the Spotted Hippogryph Down feathers|tip They look like brown feathers on the ground around this area.
+		.'Click the Sprung Traps|tip They look like small animals stuck in traps on the ground around this area.
+	step
+		goto 54.1,8.2|n
+		.'The path up to The Cleansing starts here|goto 54.1,8.2,0.5|noway|c
+	step
+		'Follow the path up to 61.1,2|goto 61.1,2
+		.'Click the Frostblade Shrine|tip It's a big blue glowing altar table thing.
+		.kill Inner Turmoil that spawns|n
+		.get Cleansed of Your Inner Turmoil|q 11322/1
+	step
+		goto 59.7,13.8|n
+		.'DO NOT MOUNT UP. Use your levitation buff to glide back to town.
+		.'The path into the mine for The Yeti Next Door starts here|goto 59.7,13.8,0.5|noway|c
+	step
+		goto 60.5,11.9
+		.'Use your Giant Yeti Meal in your bags on Shatterhorn|use Giant Yeti Meal##33477|tip In the back of the mine, he's a big sleeping yeti.
+		.kill Shatterhorn|q 11284/1
+	step
+		'Go outside to 60.2,15.6|goto 60.2,15.6
+		.talk Foreman Colbey##24176
+		..turnin The Yeti Next Door##11284
+	step
+		goto 61.8,17.2
+		.talk Lieutenant Maeve##24282
+		..accept The Enigmatic Frost Nymphs##11302
+	step
+		goto 62.3,17.2
+		.talk Prospector Belvar##24328
+		..accept The Book of Runes##11346
+	step
+		goto 62.6,16.5
+		.'This is a group quest. Find some people to complete this objective and the next in the chain.
+		.talk Researcher Aderan##24376
+		..accept March of the Giants##11355
+	step
+		goto 64,19.6
+		.'Use your Fresh Barbfish Bait next to the Sunken Boat underwater|use Fresh Barbfish Bait##34013
+		.kill Frostfin|q 11410/1
+	step
+		goto 61.5,22.8
+		.talk Lurielle##24117
+		..turnin The Enigmatic Frost Nymphs##11302
+		..accept Spirits of the Ice##11313
+	step
+		goto 60.6,22.4
+		.kill Ice Elementals|n
+		.get 15 Icy Core|q 11313/1
+		.'We're not completing the following objectives, but just work on them if you see them:
+		.'Click the Spotted Hippogryph Down feathers|tip They look like brown feathers on the ground around this area.
+		.'Click the Sprung Traps|tip They look like small animals stuck in traps on the ground around this area.
+	step
+		goto 61.5,22.8
+		.talk Lurielle##24117
+		..turnin Spirits of the Ice##11313
+		..accept The Fallen Sisters##11314
+		..accept Wild Vines##11315
+	step
+		goto 53.3,27.8
+		.'Lower the health of Chill Nymphs, then wse Lurielle's Pendant on them.|use Lurielle's Pendant##33606
+		.'Free 7 Chill Nymphs|goal 7 Chill Nymphs Freed|q 11314/1
+		.kill 8 Scarlet Ivy|q 11315/1
+	step
+		goto 61.5,22.8
+		.talk Lurielle##24117
+		..turnin The Fallen Sisters##11314
+		..turnin Wild Vines##11315
+		..accept Spawn of the Twisted Glade##11316
+		..accept Seeds of the Blacksouled Keepers##11319
+	step
+		goto 65.0,28.5
+		.kill Iron Rune Stonecallers and Iron Rune Binders|n
+		.collect 1 Book of Runes - Chapter 1##33778|n
+		.collect 1 Book of Runes - Chapter 2##33779|n
+		.collect 1 Book of Runes - Chapter 3##33780|n
+		.'Click a Book of Runes - Chapter in your bags|use Book of Runes - Chapter 1##33778
+		.get The Book of Runes|q 11346/1
+	step
+		goto 69.07,21.79
+		.'Kill Runed Stone Giants. You should get a group for this.
+		.Use the Runeseeking Pick on their corpses.
+		.'Analyze 4 Runed Stone Giant Corpses|q 11355/1
+		..'More here|goto 71.73,17.28|n
+	step
+		goto 62.6,16.5
+		.'Skip this step if you're not doing the group quest chain.
+		.talk Researcher Aderan##24376
+		..turnin March of the Giants##11355
+		..accept The Lodestone##11358
+	step
+		goto 62.3,17.2
+		.talk Prospector Belvar##24328
+		..turnin The Book of Runes##11346
+		..accept Mastering the Runes##11349
+	step
+		goto 60.3,18.7
+		.talk Christopher Sloan##24056
+		..turnin The One That Got Away##11410
+	step
+		goto 54.7,20.5
+		.kill 10 Thornvine Creeper|q 11316/1
+		.from Spores##23876
+		.'Use your Enchanted Ice Core on Spore corpses|use Enchanted Ice Core##33607
+		.'Freeze 8 Spores|q 11319/1
+	step
+		goto 57.3,18.6
+		.'Finish collecting Trapped Prey.
+		.get 8 Trapped Prey|q 11292/1
+	step
+		goto 61.5,22.8
+		.talk Lurielle##24117
+		..turnin Spawn of the Twisted Glade##11316
+		..turnin Seeds of the Blacksouled Keepers##11319
+		..accept Keeper Witherleaf##11428
+	step
+		goto 71.2,28.7
+		.'Click the Iron Rune Carving Tools|tip It looks like a small metal chest.
+		.get Iron Rune Carving Tools|q 11349/1
+		.'If they are not there, they can also spawn at the following 5 locations as well:
+		..'At 67.5,23.5
+		..'At 69.1,22.8
+		..'At 72.4,17.8
+		..'At 73.4,24.9
+		..'At 67.5,29.2
+	step
+		goto 71.62,17.55
+		.'Skip if you are not doing the group quest.
+		.'Use your Rune Sample at the tablet|use Rune Sample##33819
+		.'Watch the cutscene.
+		.'Compare Runes with the Broken Tablet|q 11358/1
+	step
+		goto 62.6,16.5
+		.'Skip this step if you're not doing the group quest chain. You'll need buddies for the next quest.
+		.talk Researcher Aderan##24376
+		..turnin The Lodestone##11358
+		..accept Demolishing Megalith##11359
+	step
+		goto 62.3,17.2
+		.talk Prospector Belvar##24328
+		..turnin Mastering the Runes##11349
+		..accept The Rune of Command##11348
+	step
+		goto 71.9,24.6
+		.'Use your Rune of Command on a Stone Giant around this area to control it|use Rune of Command##33796
+		.'Once you are controlling the Stone Giant, come here
+		.kill Binder Murdis|q 11348/2
+		.'Finish collecting Spotted Hippogryph Down feathers.
+		.get 10 Spotted Hippogryph Down|q 11269/1
+	step
+		goto 69.0,11.3
+		.Skip if you're not doing the group quest chain. You'll need buddies for this.
+		.kill Megalith|q 11359/1
+	step
+		goto 62.6,16.5
+		.'If you've done the whole chain, turn in, otherwise skip.
+		.talk Researcher Aderan##24376
+		..turnin Demolishing Megalith##11359
+	step
+		goto 62.6,16.8
+		.talk Gil Grisert##24139
+		..turnin Down to the Wire##11269
+		..accept We Call Him Steelfeather##11418
+		goto 62.6,16.8
+		.talk Trapper Jethan##24131
+		..turnin Preying Upon the Weak##11292
+	step
+		goto 62.3,17.2
+		.talk Prospector Belvar##24328
+		..turnin The Rune of Command##11348
+	step
+		'She flies in the sky above town. Type "/tar Steelfeather" to lock on.
+		.'Use your Feathered Charm in your bags on Steelfeather|use Feathered Charm##34026
+		.'Learn Steelfeather's Secret|goal Learn Steelfeather's Secret|q 11418/1
+	step
+		goto 62.6,16.8
+		.talk Gil Grisert##24139
+		..turnin We Call Him Steelfeather##11418
+	step
+		goto 53.7,18.6
+		.kill Keeper Witherleaf##24638|q 11428/1
+	step
+		goto 61.5,22.8
+		.talk Lurielle##24117
+		..turnin Keeper Witherleaf##11428
+	step
+		'Hearth to Westguard Keep|goto Howling Fjord,30.9,41.5,1|use Hearthstone##6948|noway|c
+		.'Or fly there if on cooldown..
+	step
+		goto 30.2,28.7
+		.talk Watcher Moonleaf##24273
+		..turnin The Cleansing##11322
+		..accept In Worg's Clothing##11325
+	step
+		'goto 30.8,20.9
+		.'Use Feknut's Firecrackers on the ground under Darkclaw Bats|use Feknut's Firecrackers##33129|tip They are bats that fly around in the air around this area.
+		.'Click the Darkclaw Guano that spawns
+		.get 10 Darkclaw Guano|q 11154/1
+	step
+		goto 35.1,16
+		.kill 15 Gjalerbron Warrior|q 11235/1
+		.kill 8 Gjalerbron Rune-Caster|q 11235/2
+		.kill 8 Gjalerbron Sleep-Watcher|q 11235/3
+		.kill Gjalerbron mobs|n
+		.collect 10 Gjalerbron Cage Key##33284|n
+		.collect 1 Large Gjalerbron Cage Key##33290|n
+		.'Click Gjalerbron Cages
+		.'Free 10 Gjalerbron Prisoners|goal 10 Gjalerbron Prisoner Freed|q 11231/1
+		.get Gjalerbron Attack Plans|n
+		.'Click the Gjalerbron Attack Plans in your bags|use Gjalerbron Attack Plans##33289
+		..accept Gjalerbron Attack Plans##11237
+	step
+		goto 29.7,5.7
+		'Use your Worg Disguise to turn into a Worg|use Worg Disguise##33618
+		.talk Ulfang##24261
+		..turnin In Worg's Clothing##11325
+		..accept Brother Betrayers##11414
+	step
+		goto 28.3,23.9
+		.kill Bjomolf##24516|q 11414/1
+		..'Also check|goto Grizzly Hills,36.4,93.5|n
+	step
+		goto Howling Fjord,33.8,29.3
+		.kill Varg##24517|q 11414/2
+		..'Also check|goto 35.7,30.5|n
+	step
+		goto 28.9,44.2
+		.talk Mage-Lieutenant Malister##23888
+		..turnin Gjalerbron Attack Plans##11237
+		..accept The Frost Wyrm and its Master##11238
+	step
+		goto 28.8,44.1
+		.talk Captain Adams##23749
+		..turnin Dealing With Gjalerbron##11235
+		..accept Necro Overlord Mezhen##11236
+	step
+		goto 28.9,44
+		.talk Father Levariol##24038
+		..turnin Of Keys and Cages##11231
+		..accept In Service to the Light##11239
+	step
+		.'The dumb thing is that "Sleeping Giants" should be available after turning in "Of Keys and Cages"...
+		.'But pservers are dumb... They require "In Service to the Light"...
+		.'Skip this step.
+	step
+		goto 29.7,5.7
+		.'Use your Worg Disguise to turn into a Worg|use Worg Disguise##33618
+		.talk Ulfang##24261
+		..turnin Brother Betrayers##11414
+		..accept Eyes of the Eagle##11416
+	step
+		.'You may want a group for this.
+		'Go up onto the platform to Grizzly Hills,47.5,77.0|goto Grizzly Hills,47.5,77.0
+		.kill Wyrmcaller Vile##24029|q 11238/1
+		.get Wyrmcaller's Horn|q 11238/3
+		.'Use Wyrmcaller's Horn|use Wyrmcaller's Horn##33282
+		.kill Glacion##24019|q 11238/2
+		.'Also kill the Deathless Watchers around the platform.
+	step
+		'Go up onto the platform to Howling Fjord,35.7,15.8|goto Howling Fjord,35.7,15.8
+		.kill 10 Deathless Watcher|q 11239/1
+		.kill 2 Putrid Wight|q 11239/3
+		.'You can find another Putrid Wight and more Deathless Watchers at 38.2,11.8|goto 38.2,11.8
+	step
+		goto 38.8,13
+		.'Careful, these guys HURT HARD.
+		.kill Necro Overlord Mezhen##24018|q 11236/1
+		.get Mezhen's Writings|n
+		.'Click Mezhen's Writings|use Mezhen's Writings##34090
+		..accept The Slumbering King##11452
+	step
+		goto 39.8,7.6|n
+		.'This is the entrance to The Slumbering King|goto 39.8,7.6,0.3|noway|c|tip Go up the big ramp to this spot.
+	step
+		'Go inside and downstairs to 40.9,6.5|goto 40.9,6.5
+		.kill Queen Angerboda##24023|q 11452/1|tip She's standing up on the platform.
+	step
+		'Go outside to 34.5,13.2|goto 34.5,13.2|n
+		.'The entrance down into the Walking Halls starts here|goto 34.5,13.2,0.3|noway|c
+	step
+		'Go down the stairs to 35,11.9|goto 35,11.9
+		.kill 4 Fearsome Horror|q 11239/2|tip Underground in the Walking Halls.
+		.'Now this is where you would be working on "Sleeping Giants", if pservers weren't dumb...
+	step
+		goto 41.4,37.7
+		.'Click Talonshrike's Egg|tip It's an egg sitting in a nest with 2 other eggs at the base of this waterfall, in the water on a rock.
+		.from Talonshrike##24518
+		.get Eyes of the Eagle|q 11416/1
+	step
+		.'The path back up starts here|goto 40.62,36.14
+	step
+		goto 28.8,44.1
+		.talk Captain Adams##23749
+		..turnin Necro Overlord Mezhen##11236
+		..turnin The Slumbering King##11452
+	step
+		goto 28.9,44
+		.talk Father Levariol##24038
+		..turnin In Service to the Light##11239
+	step
+		goto 28.9,44.2
+		.talk Mage-Lieutenant Malister##23888
+		..accept Sleeping Giants##11432
+	step
+		'Go down the stairs to 35,11.9|goto 35,11.9
+		.kill Necrolords|n
+		.collect 5 Awakening Rod##34083|n
+		.'Use your Awakening Rods on Dormant Vrykul|use Awakening Rod##34083|tip They are sleeping upright inside the walls, like mummies.
+		.kill 5 Dormant Vrykul|q 11432/1
+	step
+		goto 29.7,5.7
+		.'Use your Worg Disguise to turn into a Worg|use Worg Disguise##33618
+		.talk Ulfang##24261
+		..turnin Eyes of the Eagle##11416
+		..accept Alpha Worg##11326
+	step
+		goto 26.3,12.8
+		.kill Garwal##24277|q 11326/1
+	step
+		goto 30.1,28.6
+		.talk Watcher Moonleaf##24273
+		..turnin Alpha Worg##11326
+		.talk Engineer Feknut##24227
+		..turnin Scare the Guano Out of Them!##11154
+	step
+		'Go inside the fort to 28.9,44.2|goto 28.9,44.2
+		.talk Mage-Lieutenant Malister##23888
+		..turnin Sleeping Giants##11432
+	step
+		ding 71
+	step
+		'Fly to Valgarde|goto 59.79,63.26|noway|c
+	step
+		goto 61.3,62.6|n
+		.'Ride the boat to Menethil Harbor|goto Wetlands|noway|c
+	step
+		'Fly to Stormwind and train your skills|goto Stormwind City|noway|c
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundra",[[
 	author PolarCookie
-	startlevel 70
+	startlevel 71
 	next Ding80's Alliance Leveling Guides\\Dragonblight
 
 	step
@@ -13211,7 +14761,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Dragonblight",[[
 	author PolarCookie
-	startlevel 71
+	startlevel 73
 	next Ding80's Alliance Leveling Guides\\Grizzly Hills
 
 	step
@@ -13220,7 +14770,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Dragonblight
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Grizzly Hills",[[
 	author PolarCookie
-	startlevel 73
+	startlevel 75
 	next Ding80's Alliance Leveling Guides\\Zul'Drak
 
 	step
@@ -13229,7 +14779,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Grizzly Hill
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Zul'Drak",[[
 	author PolarCookie
-	startlevel 74
+	startlevel 76
 	next Ding80's Alliance Leveling Guides\\Sholazar Basin
 
 	step
@@ -13238,7 +14788,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Zul'Drak",[[
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Sholazar Basin",[[
 	author PolarCookie
-	startlevel 76
+	startlevel 78
 	next Ding80's Alliance Leveling Guides\\Storm Peaks
 
 	step
@@ -13247,7 +14797,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Sholazar Bas
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Storm Peaks",[[
 	author PolarCookie
-	startlevel 77
+	startlevel 79
 	next Ding80's Alliance Leveling Guides\\Icecrown
 
 	step
