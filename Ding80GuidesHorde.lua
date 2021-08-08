@@ -999,11 +999,349 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		.kill 10 Vampiric Mistbats | q 9159/1
 		.kill 8 Spindleweb Lurkers | q 9159/2
 	step
+		ding 16
+	step
 		goto 31.4,48.3
 		.talk Apprentice Shatharia##16293
 		..accept Underlight Ore Samples##9207
 	step
-		TODO
+		goto 28,48
+		.kill 8 Blackpaw Gnolls | q 9192/1
+		.kill 6 Blackpaw Scavengers | q 9192/2
+		.kill 4 Blackpaw Shamans | q 9192/3
+		.get 6 Underlight Ores | q 9207/1
+	step
+		goto 34.3,47.7
+		.'Enter the Ziggurat via the south. Be careful NOT to overaggro the mobs inside.
+		.'USE THE WALLS AND PILLARS TO "Line-of-sight" THE CASTERS!!
+		.get Stone of Light | q 9176/2
+	step
+		goto 40.4,49.8
+		.'Same thing as above, except from the north.
+		.get Stone of Flame | q 9176/1
+	step
+		.'You need to be 7750/15000 xp on your way to 17.
+		.'Grind til you are, then skip this step.
+	step
+		goto 47.6,34.8
+		.talk Apothecary Renzithen##9149
+		..turnin The Plagued Coast##9149
+	step
+		goto 44.9,32.5
+		.'Go inside the dome-shaped building.
+		.talk Dame Auriferous##16231
+		..turnin Into Occupied Territory##9163
+		..accept Deliver the Plans to An'telas##9166
+		.talk High Executor Mavren##16252
+		..turnin Retaking Windrunner Spire##9173
+		..turnin The Lady's Necklace##9175
+		..accept Journey to Undercity##9180
+		.talk Deathstalker Maltendis##16251
+		..turnin Trouble at the Underlight Mines##9192
+	step
+		goto 46.5,28.4
+		.talk Arcanist Vandril##16197
+		..turnin Windrunner Village##9140
+	step
+		goto 48.4,30.9
+		.talk Master Chef Mouldier##16253
+		..turnin Culinary Crunch##9171
+	step
+		ding 17
+		.'This is very important, because we need to pick up a quest that requires lvl 17.
+	step
+		goto 46.0,32.0
+		.talk Magister Darenis##16199
+		..accept The Sanctum of the Sun##9151
+	step
+		.'If you're neither a Warrior nor Shaman, go to Silvermoon City and train, then hearth back.
+		.'Skip this step when done.
+	step
+		goto 58.1,27.15|n
+		.'The Troll cave entrance is here. Go North, then East.|goto 58.1,27.15,1|noway|c
+	step
+		goto 62.9,32.8
+		.'As you work your way towards the objective, be sure to burn ALL the mummies along the hallways and kill trolls for juju.
+		.'Make sure you get "Explored Catacombs" credit | q 9193/1
+		.talk Ranger Lilatha##16295
+		..accept Escape from the Catacombs##9212
+		.'WARNING. ESCORT.
+	step
+		goto 72.2,30.1
+		.'Escort Lilatha out of the cave | q 9212/1
+		.'Continue burning mummies and collecting juju.
+	step
+		goto 62.9,32.8
+		.'Finish burning mummies and collecting juju if you haven't already.
+		.get 8 Troll Jujus | q 9199/1
+		.'Mummified Troll Remains Burned | q 9193/2
+	step
+		goto 72.4,29.6
+		.talk Captain Helios##16220
+		..turnin Escape from the Catacombs##9212
+	step
+		goto 72.6,31.6
+		.'Up the EASTERN ramp from the captain.
+		.talk Apothecary Venustus##16464
+		..accept A Little Dash of Seasoning##9275
+	step
+		goto 72.5,32.1
+		.talk Farstrider Sedina##16202
+		..turnin Curbing the Plague##9159
+	step
+		goto 76.0,38.2
+		.'Be careful about your pulls, and LOS the mobs when possible.
+		.from Shadowpine Headhunters##16344+
+		..get 3 Headhunter Axes | q 9214/1
+		.from Shadowpine Shadowcasters##16469+
+		..get 3 Shadowcaster Maces | q 9214/2
+		.kill 8 Shadowpine Shadowcasters | q 9276/1
+		.kill 8 Shadowpine Headhunters | q 9276/2
+	step
+		goto 72.3,31.2
+		.talk Farstrider Solanna##16463
+		..turnin Attack on Zeb'Tela##9276
+		..accept Assault on Zeb'Nowa##9277
+	step
+		goto 60.3,35.6
+		.talk Magister Sylastor##16237
+		..turnin Deliver the Plans to An'telas##9166
+		..accept Deactivate An'owyn##9169
+	step
+		goto 68.2,57.8
+		.'As you complete the next set of objectives, kill Catlords and Hexxers for the kill and collect quests.
+		.'Poison the Fresh Fish Rack inside the hut | q 9275/3
+	step
+		goto 65.1,66.7
+		.'Poison the Raw Meat Rack outside | q 9275/1
+	step
+		goto 63.0,75.0
+		.'Poison the Smoked Meat Rack outside | q 9275/2
+	step
+		goto 65.3,79.5
+		.from Kel'gash the Wicked##16358
+		..get Head of Kel'gash the Wicked | q 9215/1
+		.'This is a difficult enemy to solo. I suggest finding another player to help.
+		.'Tip: play peek-a-boo with the dude when he casts.
+	step
+		goto 68.2,57.8
+		.'Finish killing the Catlords and Hexxers, along with getting their drops.
+		.from Shadowpine Catlords##16345+
+		..get 3 Catlord Claws | q 9214/3
+		.from Shadowpine Hexxers##16346+
+		..get 3 Hexxer Staves | q 9214/4
+		.kill 10 Shadowpine Catlords | q 9277/1
+		.kill 10 Shadowpine Hexxers | q 9277/2
+	step
+		goto 58.2,65.1
+		.from Sentinel Infiltrator##16333
+		..collect Crystal Controlling Orb##23191|n
+		.'Use the Orb on the Night Elf Moon Crystal | q 9169/1
+	step
+		ding 18
+	step
+		goto 72.3,31.2
+		.talk Farstrider Solanna##16463
+		..turnin Assault on Zeb'Nowa##9277
+	step
+		goto 72.4,29.6
+		.talk Captain Helios##16220
+		..turnin Shadowpine Weaponry##9214
+		..turnin Bring Me Kel'gash's Head!##9215
+	step
+		goto 72.6,31.6
+		.'Up the EASTERN ramp from the captain.
+		.talk Apothecary Venustus##16464
+		..turnin A Little Dash of Seasoning##9275
+	step
+		goto 60.3,35.6
+		.talk Magister Sylastor##16237
+		..turnin Deactivate An'owyn##9169
+	step
+		goto 55.1,48.8
+		.talk Magister Kaendris##16239
+		..turnin The Twin Ziggurats##9176
+		..accept The Traitor's Destruction##9167
+		.talk Magister Quallestis##16291
+		..turnin Underlight Ore Samples##9207
+	step
+		goto 54.9,48.6
+		.talk Magister Idonis##16204
+		..turnin The Sanctum of the Sun##9151
+		..accept War on Deatholme##9220
+	step
+		goto 46.4,56.4
+		.talk Apprentice Vor'el##16480
+		..accept Clearing the Way##9281
+	step
+		goto 41,62.4
+		.'Search West, SW, and South of the quest giver for the mobs.
+		.kill 10 Greater Spindlewebs | q 9281/1
+		.kill 10 Ghostclaw Ravagers | q 9281/2
+	step
+		goto 35.8,71.3
+		.'Proceed into the undead city and kill the quest mobs.
+		.kill 5 Eye of Dar'Khans | q 9220/1
+		.kill 6 Nerubis Centurions | q 9220/2
+		.kill 6 Wailers | q 9220/3
+	step
+		goto 46.4,56.4
+		.talk Apprentice Vor'el##16480
+		..turnin Clearing the Way##9281
+	step
+		ding 19
+	step
+		goto 54.9,48.6
+		.talk Magister Idonis##16204
+		..turnin War on Deatholme##9220
+		..accept Dar'Khan's Lieutenants##9170
+		.talk Arcanist Janeda##16240
+		..accept A Restorative Draught##9877
+	step
+		goto 47.6,34.8
+		.talk Apothecary Renzithen##9149
+		..turnin A Restorative Draught##9877
+		..accept Captives at Deatholme##9164
+	step
+		goto 44.8,32.8
+		.'Go inside the dome-shaped building.
+		.talk Advisor Valwyn##16289
+		..turnin Investigate the Amani Catacombs##9193
+		.talk Deathstalker Maltendis##16251
+		..turnin Troll Juju##9199
+	step
+		goto 31.8,72.9
+		.'Rescue Apothecary Enith | q 9164/1
+		.kill Jurion | q 9170/3
+	step
+		goto 29.3,88.9|n
+		.'Check here for Masophet the Black. Kill them if you see them.
+	step
+		goto 32.8,89.9
+		.'Rescue Ranger Vedoran | q 9164/3
+		.'Borgoth might be here; kill him if you see him.
+	step
+		goto 35.8,89.1
+		.'If you didn't see Masophet earlier, they may be here. Kill them.
+		.kill Masophet the Black | q 9170/4
+	step
+		goto 41.0,83.2
+		.'Rescue Apprentice Varnis. | q 9164/2
+		.'If you didn't see Borgoth earlier, they may be here. Kill them.
+		.kill Borgoth | q 9170/2
+	step
+		goto 37.4,79.3
+		.kill Mirdoran the Fallen | q 9170/1
+	step
+		goto 33.0,81.3
+		.'Clear your way into the depths of this building.
+		.'This boss is rough, but at least they're a caster. LOS them to death.
+		..'AKA: Play "peek-a-boo" whenever they're about to finish their cast.
+		.from Dar'Khan Drathir##16329
+		..get Dar'Khan's Head | q 9167/1
+	step
+		goto 37.1,69.4
+		.'Kill your way up and down the Dead Scar to retrieve the following items:
+		..get 10 Rotting Hearts | q 9216/1
+		..get 10 Spinal Dust | q 9218/1
+		.'If you're feeling apt, you can solo Luzran. Else, get someone to help.
+		.from Luzran##16245
+		..get Luzran's Head | q 9156/2
+	step
+		goto 40.4,49.8
+		.'If you're feeling apt, you can solo Knucklerot. Else, get someone to help.
+		.from Knucklerot##16246
+		..get Luzran's Head | q 9156/1
+	step
+		goto 55.1,48.8
+		.talk Magister Kaendris##16239
+		..turnin The Traitor's Destruction##9167
+		..accept Hero of the Sin'deorei##9328 | only BloodElf
+		..accept Friend of the Sin'dorei##9811 | only !BloodElf
+		.'If you managed to kill Dra'khan, else abandon.
+	step
+		goto 54.9,48.6
+		.talk Magister Idonis##16204
+		..turnin Dar'Khan's Lieutenants##9170
+		.talk Arcanist Janeda##16240
+		..turnin Captives at Deatholme##9164
+	step
+		goto 46,33.6
+		.talk Deathstalker Rathiel##16200
+		..turnin Wanted: Knucklerot and Luzran##9156
+		.'If you managed to kill both Abominations, else abandon.
+	step
+		goto 48.9,31.3
+		.'Up the ramp on the 2nd floor.
+		.talk Magistrix Aminel##16205
+		..turnin Rotting Hearts##9216
+		..turnin Spinal Dust##9218
+	step
+		ding 20
+		.'This is IMPORTANT. Do not proceed any further until you're 20.
+	step
+		goto 47.75,31.23
+		.'Open the mailbox, and open the letter titled "Learn to Ride in ..."
+		..collect Riding Training Pamphlet##46882 | only BloodElf
+		..accept Learn to Ride in the Eversong Woods##14081
+	step
+		goto 45.4,30.5|n
+		.talk Skymaster Sunwing##16189
+		..'Fly to Silvermoon City|goto Eversong Woods,54.3,50.7,1|noway|c
+	step
+		goto Eversong Woods,61.4,54
+		.talk Perascamin##16280
+		..turnin Learn to Ride in the Eversong Woods##14081
+		.'Train your riding skill here, and buy your mount!
+		only BloodElf
+	step
+		'Go to Silvermoon City|goto Silvermoon City|noway|c
+	step
+		goto 53.8,20.2
+		.talk Lor'themar Theron##16802
+		..turnin Hero of the Sin'dorei##9328 | only BloodElf
+		..accept Envoy to the Horde##9621 | only BloodElf
+		..turnin Friend of the Sin'dorei##9811 | only !BloodElf
+		..accept Envoy to the Horde##9812 | only !BloodElf
+	step
+		goto Silvermoon City,49.5,14.8
+		.' Click the Orb of Translocation
+		..'It will teleport you to Undercity|goto Undercity|noway|c
+		info It's a glowing red crystal ball all the way in the back room of this big building, up a ramp
+	step
+		goto Undercity,63.2,48.6
+		.talk Michael Garrett##4551
+		..fpath Undercity
+		.'Take the elevator down into the Undercity.
+		only !Scourge
+	step
+		goto 58.1,91.8
+		.talk Lady Sylvanas Windrunner##10181
+		..turnin Journey to Undercity##9180
+		..turnin Envoy to the Horde##9621 | only BloodElf
+		..turnin Envoy to the Horde##9812 | only !BloodElf
+		..accept Meeting the Warchief##9626 | only BloodElf
+		..accept Meeting the Warchief##9813 | only !BloodElf
+		.talk Ambassador Sunsorrow##16287
+		..accept Report to Tarren Mill##9425
+		..accept Delivery to the Sepulcher##9189
+	step
+		'Go outside of Undercity|goto Tirisfal Glades
+	step
+		goto Tirisfal Glades,60.8,58.8|n
+		.' Ride the zeppelin to Orgrimmar|goto Durotar,50.8,13.2,1|noway|c
+		info You can ride zeppelins here to either Orgrimmar or Grom'Gol Base Camp
+	step
+		'Go northwest to Orgrimmar|goto Orgrimmar
+	step
+		goto Orgrimmar,45.1,63.9
+		.talk Doras##3310
+		..fpath Orgrimmar
+	step
+		goto 31.6,37.8
+		.talk Thrall##4949
+		..turnin Meeting the Warchief##9626 | only BloodElf
+		..turnin Meeting the Warchief##9813 | only !BloodElf
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-24)",[[

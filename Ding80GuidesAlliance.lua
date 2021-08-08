@@ -148,7 +148,15 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Human (1-5)"
 		.talk Falkhaan Isenstrider##6774
 		..accept Rest and Relaxation##2158
 	step
-		'Travel Hard Right as you leave Northshire Valley towards Stormwind City|goto Stormwind City|noway|c
+		goto 42.1,65.9
+		.talk Marshal Dughan##240
+		..turnin Report to Goldshire##54
+	step
+		goto 43.8,65.8
+		.talk Innkeeper Farley##295
+		..turnin Rest and Relaxation##2158
+	step
+		'Travel to Stormwind City|goto Stormwind City|noway|c
 	step
 		goto 67,33.85,5|sticky
 		'Enter the Deeprun Tram|goto Deeprun Tram|noway|c
@@ -214,7 +222,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Dun Morogh (
 		..accept The Boar Hunter##183
 	step
 		goto 22,70
-		.kill 8 Small Crag Boar|q 183/1
+		.kill 12 Small Crag Boar|q 183/1
 	step
 		goto 22.6,71.4
 		.talk Talin Keeneye##714
@@ -422,6 +430,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		.talk Hegnar Rumbleshot##1243
 		..turnin Ammo for Rumbleshot##5541
 	step
+		'I would suggest switching to the Dwarf Starting Zone guide to unlock "Frostmane Hold", before hearthstoning.
 		'Hearth to Kharanos|goto Dun Morogh,47.3,52.5,0.5|use Hearthstone##6948|noway|c
 	step
 		goto 46.8,52.4
@@ -2047,11 +2056,6 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		.talk Innkeeper Farley##295
 		..home Goldshire
 	step
-		goto 43.8,65.8
-		.talk Innkeeper Farley##295
-		..turnin Rest and Relaxation##2158
-		only Human
-	step
 		goto 43.3,65.7
 		.talk William Pestle##253
 		..accept Kobold Candles##60
@@ -2063,7 +2067,6 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 	step
 		goto 42.1,65.9
 		.talk Marshal Dughan##240
-		..turnin Report to Goldshire##54|only Human
 		..turnin A Fishy Peril##40
 		..accept Further Concerns##35
 		..accept The Fargodeep Mine##62
@@ -3308,6 +3311,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (20-2
 		goto 31,47.3
 		.talk Verner Osgood##415
 		..turnin A Baying of Gnolls##124
+		..accept Howling in the Hills##126
 	step
 		goto 27.7,21.4
 		.from Yowler##518
@@ -3535,10 +3539,6 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (20-2
 		.talk Innkeeper Helbrek##1464
 		..buy Flagon of Mead##2594|q 288/1
 	step
-		goto 10.8,60.8
-		.talk Innkeeper Helbrek##1464
-		..home Menethil Harbor
-	step
 		goto 10.8,60.4|tip 2nd Floor. In the middle room as you go up the stairs.
 		.talk Archaeologist Flagongut##2911
 		..turnin The Absent Minded Prospector##942
@@ -3617,6 +3617,15 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (20-2
 		.from Mosshide Trapper##1011+, Mosshide Brute##1012+, Mosshide Fenrunner##1010+, Mosshide Mistweaver##1009+|tip Mosshide Gnolls and Mosshide Mongrels will not drop the Crude Flint.
 		..get 9 Crude Flint|q 277/1
 	step
+		goto 56.3,40.5
+		.talk Rethiel the Greenwarden##1244
+		..turnin Fire Taboo##277
+		..accept Blisters on The Land##275
+	step
+		goto 42.9,41.2
+		.from Dragonmaw Raider##1034+
+		..get 8 Dragonmaw War Banner|q 464/1
+	step
 		goto 29.1,44.8
 		.kill 10 Mottled Raptor|q 294/1
 		.kill 10 Mottled Screecher|q 294/2
@@ -3627,18 +3636,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (20-2
 		..turnin Ormer's Revenge (1)##294
 		..accept Ormer's Revenge (2)##295
 	step
-		goto 42.9,41.2
-		.from Dragonmaw Raider##1034+
-		..get 8 Dragonmaw War Banner|q 464/1
-	step
-		goto 56.3,40.5
-		.talk Rethiel the Greenwarden##1244
-		..turnin Fire Taboo##277
-		..accept Blisters on The Land##275
-	step
 		ding 24
-	step
-		'Hearth to Menethil Harbor|goto Wetlands,10.1,56.7,9|use Hearthstone##6948|noway|c
 	step
 		goto 10.8,60.4|tip 2nd Floor. In the middle room as you go up the stairs.
 		.talk Archaeologist Flagongut##2911
@@ -3667,6 +3665,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (20-2
 		.talk Sida##2111
 		..turnin Digging Through the Ooze##470
 	step
+		'Hearth to Darkshire|goto Duskwood,73.9,44.5,0.5|use Hearthstone##6948|noway|c
+	step
 		'Fly to Lakeshire|goto Redridge Mountains,30.4,59.0,0.5|noway|c
 	step
 		goto 31.5,57.9
@@ -3677,10 +3677,6 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (20-2
 		.talk Marshal Marris##382
 		..accept Tharil'zun##19
 		..accept Shadow Magic##115
-	step
-		goto 31,47.3
-		.talk Verner Osgood##415
-		..accept Howling in the Hills##126
 	step
 		goto 30,44.4
 		.talk Bailiff Conacher##900
@@ -3716,10 +3712,6 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (20-2
 		goto 33.5,49
 		.talk Marshal Marris##382
 		..turnin Missing in Action##219
-	step
-		goto 31,47.3
-		.talk Verner Osgood##415
-		..turnin Howling in the Hills##126
 	step
 		goto 31.5,57.9
 		.talk Guard Howe##903
@@ -4073,6 +4065,19 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 		.kill Giant Wetlands Crocolisks|n
 		..get 6 Giant Crocolisk Skin|q 471/1
 		.kill 8 Fen Creeper|q 275/1|tip Fen Creepers are stealthed in the marsh, look up their positions on a database.
+		.'More at 18.5,27.7|n
+		.'More at 20.8,28.4|n
+		.'More at 22.5,30.0|n
+		.'More at 23.6,32.0|n
+		.'More at 25.8,31.9|n
+		.'More at 25.3,35.5|n
+		.'More at 27.4,37.1|n
+		.'More at 27.2,39.2|n
+		.'More at 28.9,20.5|n
+		.'More at 33.0,25.7|n
+		.'More at 35.6,33.4|n
+		.'More at 37.4,33.4|n
+		.'More at 40.6,32.9|n
 	step
 		goto 38.8,52.3
 		.talk Prospector Whelgar##1077
@@ -4336,9 +4341,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 		.talk Sven Yorgen##311
 		..turnin Morbent Fel##55
 	step
-		goto 72.7,69.7
+		goto 58.23,80.56
 		.kill 8 Nightbane Vile Fang|q 222/1
 		.kill 8 Nightbane Tainted One|q 222/2
+		.'More at 72.7,69.7|n
 	step
 		goto 75.7,47.6
 		.talk Calor##663
@@ -13585,6 +13591,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		.talk Harbinger Vurenn##25285
 		..accept Enemies of the Light##11792
 	step
+		goto 58.29,68.06
 		home Valiance Keep
 	step
 		goto 58.4,67.8
@@ -13851,6 +13858,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		.talk Crafty Wobblesprout##25477
 		..turnin Dirty, Stinkin' Snobolds!##11645
 	step
+		goto 58.54,19.14
 		kill any of the Robots|n
 		..get The Ultrasonic Screwdriver|n
 		.'Click The Ultrasonic Screwdriver|use The Ultrasonic Screwdriver##34984
@@ -14125,6 +14133,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		..turnin A Deserter##11604
 		..accept Cowards and Fools##11932
 	step
+		.'This guide skips the quest chain "A Diplomatic Mission", which starts from a quest giver on the fort's second floor.
+		.'You may choose to accept the quest and do it before the next step, but be warned that it's kinda a time waste...
+		.'I'd only recommend if you have water walking or a flying mount, as there's a LOT of swimming.
+		.'Skip this step if you choose to skip the quest chain, or complete it.
+	step
 		goto 57.3,44.1
 		.talk Hierophant Cenius##25810
 		..turnin The Nefarious Clam Master...##11872
@@ -14189,20 +14202,20 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		..turnin Reclaiming the Quarry##11612
 		..accept Hampering Their Escape##11617
 	step
-		goto 52.8,34.5
+		goto 52.45,35.32
+		.'Kill Beryl Reclaimers for a Gnomish Grenades
+		.'Use your Gnomish Grenade while standing here on the edge of the cliff|use Gnomish Grenade##34772|tip If you can fly, you can stand on the floating platform and use your Gnomish Grenade.
+		..'Destroy the East Platform|goal East Platform Destroyed|q 11617/1|tip Pick up Tuskarr Ritual Objects on the way.
+	step
+		goto 50.41,34.51
 		.'Kill Beryl Reclaimers for a Gnomish Grenades
 		.'Use your Gnomish Grenade while standing under the floating platform|use Gnomish Grenade##34772|tip If you can fly, you can stand on the floating platform and use your Gnomish Grenade.
-		..'Destroy the East Platform|goal East Platform Destroyed|q 11617/1|tip Pick up Tuskarr Ritual Objects on the way.
+		..'Destroy the West Platform|goal West Platform Destroyed|q 11617/3|tip Pick up Tuskarr Ritual Objects on the way.
 	step
 		goto 52.2,32.1
 		.'Kill Beryl Reclaimers for a Gnomish Grenades
 		.'Use your Gnomish Grenade while standing under the floating platform|use Gnomish Grenade##34772|tip If you can fly, you can stand on the floating platform and use your Gnomish Grenade.
 		..'Destroy the North Platform|goal North Platform Destroyed|q 11617/2|tip Pick up Tuskarr Ritual Objects on the way.
-	step
-		goto 51,33.9
-		.'Kill Beryl Reclaimers for a Gnomish Grenades
-		.'Use your Gnomish Grenade while standing under the floating platform|use Gnomish Grenade##34772|tip If you can fly, you can stand on the floating platform and use your Gnomish Grenade.
-		..'Destroy the West Platform|goal West Platform Destroyed|q 11617/3|tip Pick up Tuskarr Ritual Objects on the way.
 	step
 		goto 52.3,35.75
 		.'Click the Tuskarr Ritual Objects|tip They look like small stone fish and blue smoking bowls on the ground around this area.
@@ -14264,6 +14277,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		.'The path down to Monitoring the Rift: Cleftcliff Anomaly starts here|goto 41.2,41.8,0.5|noway|c
 	step
 		goto 34.3,42
+		.'Do not dive. It's at sea level.
 		.'Use your Arcanometer in this spot next to the purple glowing crack in the ground|use Arcanometer##34669
 		..'Take the Cleftcliff Anomaly Reading|goal Cleftcliff Anomaly Reading Taken|q 11576/1
 	step
@@ -14316,7 +14330,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		.'Use your Arcanometer next to the huge purple glowing crack underwater|use Arcanometer##34669
 		..'Take the Sundered Chasm Reading|goal Sundered Chasm Reading Taken|q 11582/1
 	step
+		goto 45.43,31.12|n
+		.'The path back up starts here|goto 45.43,31.12,0.5|noway|c
+	step
 		goto 45.3,33.3
+		.'Circle around the cliff on the RIGHT. Via the cliff edge.
 		.talk Librarian Donathan##25262
 		..turnin A Race Against Time##11671
 		..accept Reforging the Key##11679
@@ -14342,6 +14360,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		.talk Archmage Evanor##25785
 		..turnin Rescuing Evanor##11681
 		..accept Dragonspeak##11682
+	step
+		goto 33.13,34.42
+		.talk Warmage Adami##27046
+		..fpath Transitus Shield
 	step
 		'Go outside the tower to 45.3,34.5|goto 45.3,34.5
 		.talk Surristrasz##24795
@@ -14514,6 +14536,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		.talk Raelorasz##26117
 		..turnin Cracking the Code##11931
 	step
+		.'Queue/group for "The Nexus" dungeon and complete the quests! Skip this step.
+	step
 		'Fly to Amber Ledge|goto 45.1,34.1,0.5|noway|c
 	step
 		goto 43.5,14
@@ -14683,6 +14707,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		..turnin The Tides Turn##11968
 	step
 		goto 67.2,54.9
+		.'If you didn't pick up the quest in Howling Fjord; otherwise skip this.
 		.talk Hotawa##28382
 		..accept Travel to Moa'ki Harbor##12117
 	step
@@ -14757,6 +14782,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		goto 84.8,41.7
 		.talk Thassarian##26170
 		..turnin Last Rites##12019
+	step
+		goto 82.2,46.4
+		.talk Private Casey##26186
+		..accept The Lost Courier##12157
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Dragonblight",[[
@@ -14764,6 +14793,628 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Dragonblight
 	startlevel 73
 	next Ding80's Alliance Leveling Guides\\Grizzly Hills
 
+	step
+		goto Dragonblight,28.8,56.2
+		.talk Courier Lanson##27060
+		..turnin The Lost Courier##12157
+		..accept Of Traitors and Treason##12171
+	step
+		goto 29.2,55.3
+		.talk Palena Silvercloud##26881
+		..fpath Stars' Rest
+	step
+		goto 29.2,55.3
+		.talk Palena Silvercloud##26881
+		..turnin Of Traitors and Treason##12171
+		..accept High Commander Halford Wyrmbane##12174
+	step
+		'You will fly to Wintergarde Keep|goto Dragonblight,77.1,49.8,0.1|noway|c
+	step
+		goto 77,49.8
+		.talk Rodney Wells##26878
+		..fpath Wintergarde Keep
+	step
+		goto 77.1,50.1
+		.talk Gryphon Commander Urik##27317
+		..accept The Hills Have Us##12511
+	step
+		goto Grizzly Hills,31.8,60.2
+		.'You should be automatically flown to Amberpine Lodge. If not, just manually travel there on foot (sorry, bugged :( ).
+		.talk Lieutenant Dumont##26875
+		..turnin The Hills Have Us##12511
+	step
+		goto 31.3,59.1
+		.talk Vana Grey##26880
+		..fpath Amberpine Lodge
+	step
+		'Fly to Wintergarde Keep|goto Dragonblight,77.1,49.8,0.1|noway|c
+	step
+		goto 78.61,48.2
+		.talk High Commander Halford Wyrmbane##27136
+		..turnin High Commander Halford Wyrmbane##12174
+		..accept Naxxramas and the Fall of Wintergarde##12235
+	step
+		goto 77.1,50.1
+		.talk Gryphon Commander Urik##27317
+		..turnin Naxxramas and the Fall of Wintergarde##12235
+		..accept Flight of the Wintergarde Defender##12237
+	step
+		'Use the Wintergarde Gryphon Whistle in your bags|use Wintergarde Gryphon Whistle##37287
+		.' Click the Wintergarde Gryphon to ride it|invehicle
+	step
+		'Fly to 83.6,48.8|goto 83.6,48.8
+		.' Use your Rescue Villager ability on your hotbar on Helpless Wintergarde Villagers on the ground around this area|petaction Rescue Villager
+		.' Fly them back to Gryphon Commander Urik at 77.1,50.1|n|petaction Soar
+		.' Use your Drop Off Villager ability on your hotbar|petaction Drop Off Villager
+		.' Rescue 10 Helpless Villagers|goal 10 Helpless Villager Rescued|q 12237/1
+	step
+		'Click the red arrow button on your hotbar to get off the gryphon|script VehicleExit()|outvehicle
+	step
+		goto 77.1,50.1
+		.talk Gryphon Commander Urik##27317
+		..turnin Flight of the Wintergarde Defender##12237
+		..accept Return to the High Commander##12251
+	step
+		goto 78.61,48.2
+		.talk High Commander Halford Wyrmbane##27136
+		..turnin Return to the High Commander##12251
+		..accept Rescue from Town Square##12253
+		..accept The Demo-gnome##12275
+	step
+		goto 78.6,48.2
+		.talk Commander Lynore Windstryke##27155
+		..accept The Fate of the Dead##12258
+	step
+		goto 79.1,47.2
+		.talk Zelig the Visionary##27314
+		..accept Imprints on the Past##12282
+	step
+		goto 76.8,47.5
+		.talk Commander Eligor Dawnbringer##27784
+		..accept My Old Enemy##12464
+	step
+		goto 77.3,51.4
+		.talk Wanted!##190020
+		..accept Wanted: Kreug Oathbreaker##12438
+		..accept Wanted: High Shaman Bloodpaw##12441
+		..accept Wanted: Onslaught Commander Iustus##12442
+	step
+		goto 77.8,50.3
+		.talk Siege Engineer Quarterflash##27159
+		..turnin The Demo-gnome##12275
+		..accept The Search for Slinkin##12276
+		..accept The Bleeding Ore##12272
+	step
+		goto 77.8,50.3
+		.talk Highlord Leoric Von Zeldig##27156
+		..accept Not In Our Mine##12269
+	step
+		goto 87.4,38.1
+		.'Start asking around for people to group up: we're going to do 4 group quests. Skip this step, and the next five, if you cannot find a group.
+		.kill Onslaught Commander Iustus##27334|q 12442/1
+	step
+		goto 90.1,52.8
+		.'Second group quest, of four.
+		.kill Kreug Oathbreaker##27105|q 12438/1
+	step
+		goto 90.7,72.9
+		.'Third group quest...
+		.kill High Shaman Bloodpaw##27762|q 12441/1
+	step
+		goto 71.1,77.9
+		.'Last group quest, for now...
+		.from High General Abbendis##27210
+		..get The Head of the High General##37565|q 12464/1
+	step
+		goto 76.8,47.5
+		.talk Commander Eligor Dawnbringer##27784
+		..turnin My Old Enemy##12464
+	step
+		goto 77.8,50.3
+		.talk Highlord Leoric Von Zeldig##27156
+		..turnin Wanted: Kreug Oathbreaker##12438
+		..turnin Wanted: High Shaman Bloodpaw##12441
+		..turnin Wanted: Onslaught Commander Iustus##12442
+	step
+		goto 81.5,42.2
+		.talk Slinkin the Demo-gnome##27412
+		..turnin The Search for Slinkin##12276
+		..accept Leave Nothing to Chance##12277
+		.' Kill Risen Wintergarde Miners inside this mine
+		.get 10 Wintergarde Miner's Card|q 12269/1
+		.' Click the Strange Ore nodes|tip They look like green mining nodes.
+		.get 10 Strange Ore|q 12272/1
+	step
+		goto 80.7,41.3
+		.' Click the Wintergarde Mine Bomb|tip It looks like a bunch of big dymanite sticks on the ground, next to this wooden stage.
+		.collect Wintergarde Mine Bomb##37465|q 12277
+	step
+		'Follow the path in the mine to 80.4,44.8|goto 80.4,44.8
+		.' Use your Wintergarde Mine Bomb in the doorway|use Wintergarde Mine Bomb##37465|tip It's an entrance to the mine.
+		.' Destroy the Lower Wintergarde Mine Shaft|goal Lower Wintergarde Mine Shaft Destroyed|q 12277/2
+	step
+		'Go outside and around to 80.2,45.3|goto 80.2,45.3
+		.' Use your Wintergarde Mine Bomb in the doorway|use Wintergarde Mine Bomb##37465|tip It's an entrance to the mine.
+		.' Destroy the Upper Wintergarde Mine Shaft|goal Upper Wintergarde Mine Shaft Destroyed|q 12277/1
+	step
+		'Follow the path up into town to 77.8,50.3|goto 77.8,50.3
+		.talk Siege Engineer Quarterflash##27159
+		..turnin Leave Nothing to Chance##12277
+		..turnin The Bleeding Ore##12272
+		..accept Understanding the Scourge War Machine##12281
+	step
+		goto 77.8,50.3
+		.talk Highlord Leoric Von Zeldig##27156
+		..turnin Not In Our Mine##12269
+	step
+		goto 78.61,48.2
+		.talk High Commander Halford Wyrmbane##27136
+		..turnin Understanding the Scourge War Machine##12281
+	step
+		'Go upstairs in this building to 78.9,50.9|goto 78.9,50.9
+		.' Click the Scrying Orb|tip Upstairs in this building, in the back of the room, next to some boxes.  It looks like a glowing ball with wings on it.
+		.get Scrying Orb|q 12282/1
+	step
+		goto 79.9,49.7
+		.' Kill Vengeful Geists next to Trapped Wintergarde Villagers|tip The Trapped Wintergarde Villagers looked like scared villagers getting harrassed by Vengeful Geists around this area and inside buildings.
+		.' Rescue 6 Trapped Wintergarde Villagers|goal 6 Trapped Wintergarde Villager Rescued|q 12253/1
+		.kill 15 Vengeful Geist|q 12258/1
+	step
+		goto 78.6,48.2
+		.talk Commander Lynore Windstryke##27155
+		..turnin The Fate of the Dead##12258
+		.talk High Commander Halford Wyrmbane##27136
+		..turnin Rescue from Town Square##12253
+		..accept Find Durkon!##12309
+	step
+		goto 79.1,47.2
+		.talk Zelig the Visionary##27314
+		..turnin Imprints on the Past##12282
+		..accept Orik Trueheart and the Forgotten Shore##12287
+	step
+		goto 79.1,53.2
+		.talk Cavalier Durkon##27318
+		..turnin Find Durkon!##12309
+		..accept The Noble's Crypt##12311
+	step
+		'Go inside the crypt to 78.6,52.4|goto 78.6,52.4
+		.from Necrolord Amarion##27508
+		.' Click the Flesh-bound Tome|tip The Flesh-bound Tome is a small red book on the floor.
+		..accept Secrets of the Scourge##12312
+	step
+		'Go outside the crypt to 79.1,53.2|goto 79.1,53.2
+		.talk Cavalier Durkon##27318
+		..turnin The Noble's Crypt##12311
+		..turnin Secrets of the Scourge##12312
+		..accept Mystery of the Tome##12319
+	step
+		goto 78.61,48.2
+		.talk High Commander Halford Wyrmbane##27136
+		..turnin Mystery of the Tome##12319
+		..accept Understanding the Language of Death##12320
+	step
+		goto 76.8,47.4
+		.talk Inquisitor Hallard##27316
+		..turnin Understanding the Language of Death##12320
+		..accept A Righteous Sermon##12321
+	step
+		goto 76.8,47.4
+		.' Watch the dialogue|tip Downstairs in the fort, in front of a jail cell.
+		.' Hear the Righteous Sermon|goal Righteous Sermon Heard|q 12321/1
+	step
+		goto 78.61,48.2
+		.talk High Commander Halford Wyrmbane##27136
+		..turnin A Righteous Sermon##12321
+		..accept Into Hostile Territory##12325
+	step
+		goto 77.1,49.6
+		.' Click a Wintergarde Gryphon to ride it|invehicle|tip They are standing here in a row.
+	step
+		goto 89.7,46.4
+		.'You should be taxi-ed to the waypoint. If not, just manually go there (stupid bugs...)
+		.talk Duke August Foehammer##27157
+		..turnin Into Hostile Territory##12325
+		..accept Steamtank Surprise##12326
+	step
+		goto 89.6,45.6
+		.' Click an Alliance Steam Tank to ride it|invehicle|tip They look like big siege carts.
+	step
+		goto 88.8,46.8
+		.' Use your Drop Off Gnome ability on your hotbar to drop off gnomes next to the Plague Wagons in this field|petaction Drop Off Gnome
+		.' Sabotage 6 Plague Wagons|goal 6 Plague Wagon Sabotaged|q 12326/1
+	step
+		goto 85.6,49.8
+		.' Use your Drop Off Soldier ability on your hotbar to drop off your soldiers in front of this crypt entrance|petaction Drop Off Soldier
+		.' Drop Off the 7th Legion Elite|goal 7th Legion Elite Safely Dropped Off|q 12326/2
+	step
+		'Go inside the crypt to 85.9,50.9|goto 85.9,50.9
+		.talk Ambo Cash##1293
+		..turnin Steamtank Surprise##12326
+		..accept Scattered To The Wind##12455
+		.talk Yord "Calamity" Icebeard##27319
+		..accept Breaking Off A Piece##12462
+	step
+		'Go outside of the crypt to 85.1,49.5|goto 85.1,49.5
+		.' Click the Wintergarde Munitions Crates|tip They look like long wooden boxes on the ground around this area.
+		.get 8 Wintergarde Munitions|q 12455/1
+	step
+		'Go into the crypt to 85.9,50.9|goto 85.9,50.9
+		.talk Ambo Cash##1293
+		..turnin Scattered To The Wind##12455
+		..accept The Chain Gun And You##12457
+	step
+		goto 86.2,51
+		.' Click a 7th Legion Chain Gun to use it|tip They look like metal turrets.
+		.' Use the abilities on your hotbar Call Out Injured Soldiers and clear a path for them
+		.' Save 8 Injured 7th Legion Soldiers|goal 8 Injured 7th Legion Soldier Saved|q 12457/1
+	step
+		'Click the red arrow button on your hotbar to get off the gun|script VehicleExit()|outvehicle
+	step
+		goto 85.9,50.9
+		.talk Ambo Cash##1293
+		..turnin The Chain Gun And You##12457
+		..accept Plunderbeard Must Be Found!##12463
+	step
+		'Go downstairs to 84.4,51|goto 84.4,51
+		.kill Necrolord X'avius##27826|q 12462/2
+	step
+		goto 86.7,52.9
+		.kill Necrolord Horus##27805|q 12462/1
+	step
+		goto 85.6,52
+		.kill 15 Naxxramas Scourge|q 12462/3
+	step
+		goto 84.2,54.7
+		.talk Plunderbeard##27828
+		..turnin Plunderbeard Must Be Found!##12463
+		..accept Plunderbeard's Journal##12465
+	step
+		'Follow the tunnel to the other side to 83,55|goto 83,55
+		.kill undead mobs|n
+		.get 1 Page 4 of Plunderbeard's Journal|q 12465/1
+		.get 1 Page 5 of Plunderbeard's Journal|q 12465/2
+		.get 1 Page 6 of Plunderbeard's Journal|q 12465/3
+		.get 1 Page 7 of Plunderbeard's Journal|q 12465/4
+	step
+		'Follow the tunnel back to the other side to 85.9,51|goto 85.9,51
+		.talk Yord "Calamity" Icebeard##27319
+		..turnin Breaking Off A Piece##12462
+		.talk Ambo Cash##1293
+		..turnin Plunderbeard's Journal##12465
+		..accept Chasing Icestorm: The 7th Legion Front##12466
+	step
+		goto 78.9,45.3
+		.talk Vas the Unstable##27158
+		..accept A Disturbance In The West##12439
+	step
+		goto 77.1,49.8
+		.talk Rodney Wells##26878
+		..turnin A Disturbance In The West##12439
+		..accept To Stars' Rest!##12440
+	step
+		goto 29,55.5
+		.'You should be automatically taxi-ed. If not, manually fly to Stars' Rest.
+		.talk Image of Archmage Modera##26673
+		..turnin To Stars' Rest!##12440
+		..accept Rifle the Bodies##12000
+		.talk Warden Jodi Moonsong##26973
+		..accept The Liquid Fire of Elune##12166
+	step
+		goto 26.3,52.3
+		.from Blighted Elks
+		.from Rabid Grizzlies
+		.' Use your Liquid Fire of Elune on their corpses|use Liquid Fire of Elune##36956
+		.' Cleanse 6 Blighted Elk corpses|goal 6 Blighted Elk's corpse cleansed|q 12166/1
+		.' Cleanse 6 Rabid Grizzly corpses|goal 6 Rabid Grizzly's corpse cleansed|q 12166/2
+	step
+		goto 29.2,55.6
+		.talk Warden Jodi Moonsong##26973
+		..turnin The Liquid Fire of Elune##12166
+		..accept Kill the Cultists##12167
+	step
+		goto 26.4,45.7
+		.from Anub'ar Cultist##26319
+		.get 5 Functional Cultist Suit|q 12167/1
+		.get The Favor of Zangus|n
+		.' Click the Favor of Zangus in your bags|use The Favor of Zangus##36958
+		..accept The Favor of Zangus##12168
+	step
+		goto 29.2,55.6
+		.talk Warden Jodi Moonsong##26973
+		..turnin Kill the Cultists##12167
+		..turnin The Favor of Zangus##12168
+		..accept The High Cultist##12169
+	step
+		goto 27.0,50.4|n
+		.' The path down to High Cultist Zangus starts here|goto Dragonblight,27.0,50.4,0.5|noway|c
+	step
+		'Go down into the cave to 28.9,49.7|goto 28.9,49.7
+		.kill High Cultist Zangus##26655|q 12169/1
+	step
+		goto 26.2,50.8
+		.talk Kilix the Unraveler##26653
+		..accept Don't Forget the Eggs!##13182
+		..accept Death to the Traitor King##13167
+		..accept The Faceless Ones##13187
+	step
+		.'Now, queue up/find a group for Azjol-Nerub and The Old Kingdom to complete these instance quests. Skip if you don't want to dungeon.
+	step
+		'Go out of the cave to 29.2,55.6|goto 29.2,55.6
+		.talk Warden Jodi Moonsong##26973
+		..turnin The High Cultist##12169
+	step
+		goto 24.2,60.1
+		.talk Ethenial Moonshadow##26501
+		..accept Avenge this Atrocity!##12006
+	step
+		goto 24.1,53.7
+		.' Click the Dead Mage Hunter bodies on the ground
+		.get Mage Hunter Personal Effects bags|n
+		.' Click the Mage Hunter Personal Effects bags in your bags|use Mage Hunter Personal Effects##35792
+		.get Moonrest Gardens Plans|q 12000/1
+		.'I would suggest making a macro that contains "/tar Dead Mage"; spam that macro to find bodies.
+	step
+		goto 29,55.5
+		.talk Image of Archmage Modera##26673
+		..turnin Rifle the Bodies##12000
+		..accept Prevent the Accord##12004
+	step
+		goto 18.4,58.9
+		.from Wind Trader Mu'fah##26496
+		.get Wind Trader Mu'fah's Remains|q 12004/1
+	step
+		'Go inside the building to 19.4,58.1|goto 19.4,58.1
+		.from Goramosh##26349
+		.get The Scales of Goramosh|q 12004/2
+		.get Goramosh's Strange Device|n
+		.' Click Goramosh's Strange Device|use Goramosh's Strange Device##36742
+		..accept A Strange Device##12055
+	step
+		goto 20.9,60.4
+		.kill 15 Blue Dragonflight forces at Moonrest Gardens|q 12006/1|tip Kill all types of mobs except the Moonrest Highbornes around this area.
+	step
+		goto 24.2,60.1
+		.talk Ethenial Moonshadow##26501
+		..turnin Avenge this Atrocity!##12006
+		..accept End Arcanimus##12013
+	step
+		goto 29,55.5
+		.talk Image of Archmage Modera##26673
+		..turnin Prevent the Accord##12004
+		..turnin A Strange Device##12055
+		..accept Projections and Plans##12060
+	step
+		goto 20,59.7
+		.kill Arcanimus##26370|q 12013/1
+	step
+		goto 24.2,55.6
+		.' Immediately after killing Arcanimus, use your Surge Needle Teleporter|use Surge Needle Teleporter##36747
+		.' Walk around on the platform you get teleported onto
+		.' Observe the Object on the Surge Needle|goal Object on the Surge Needle observed|q 12060/1
+	step
+		'Use your Surge Needle Teleporter to go back down to the ground|goto Dragonblight,22.6,57.0,1.0|use Surge Needle Teleporter##36747|noway|c
+	step
+		goto 24.2,60.1
+		.talk Ethenial Moonshadow##26501
+		..turnin End Arcanimus##12013
+	step
+		goto 29,55.5
+		.talk Image of Archmage Modera##26673
+		..turnin Projections and Plans##12060
+		..accept The Focus on the Beach##12065
+	step
+		goto 26.4,65
+		.from Captain Emmy Malin##26762
+		.get Ley Line Focus Control Ring|n
+		.' Use the Ley Line Focus Control Ring next to the half-circle|use Ley Line Focus Control Ring##36751|tip It's a big half-circle purple glowing thing.
+		.' Retrieve ley line focus information|goal Ley line focus information retrieved|q 12065/1
+		.get Captain Malin's Letter|n
+		.' Click Captain Malin's Letter in your bags|use Captain Malin's Letter##36756
+		..accept A Letter for Home##12067
+	step
+		goto 29,55.5
+		.talk Image of Archmage Modera##26673
+		..turnin The Focus on the Beach##12065
+		..accept Atop the Woodlands##12083
+		.talk Commander Saia Azuresteel##26459
+		..turnin A Letter for Home##12067
+	step
+		goto 28.7,57.1
+		.talk Sarendryana##26837
+		..accept Strengthen the Ancients##12092
+	step
+		goto 31.2,59.7
+		.talk Woodlands Walker##26421
+		.collect 3 Bark of the Walkers##36786|q 12092
+	step
+		goto 30.6,63.4
+		.' Use your Bark of the Walkers on Lothalor Ancients|use Bark of the Walkers##36786|tip They just stand around this area and they are friendly toward you.
+		.' Strengthen 3 Lothalor Ancients|goal 3 Lothalor Ancient strengthened|q 12092/1
+	step
+		goto 32.2,70.6
+		.from Lieutenant Ta'zinni##26815|tip He walks in a circle around the half-circle purple glowing thing.
+		.collect Ley Line Focus Control Amulet##36779|q 12083
+	step
+		goto 32.2,71.2
+		.' Use your Ley Line Focus Control Amulet on the Ley Line Focus|use Ley Line Focus Control Amulet##36779|tip It's a big half-circle purple glowing thing.
+		.' Retrieve ley line focus information|goal Ley line focus information retrieved|q 12083/1
+	step
+		goto 28.7,57.1
+		.talk Sarendryana##26837
+		..turnin Strengthen the Ancients##12092
+	step
+		goto 29,55.5
+		.talk Image of Archmage Modera##26673
+		..turnin Atop the Woodlands##12083
+		..accept Search Indu'le Village##12098
+	step
+		goto 48.5,74.4
+		.talk Cid Flounderfix##28196
+		..fpath Moa'ki
+	step
+		home Moa'ki Harbor
+	step
+		goto 48,74.9
+		.talk Elder Ko'nani##26194
+		.'Turn in whichever quest you picked up, then skip once you get the quest.
+		..turnin Travel to Moa'ki Harbor##12117
+		..turnin Travel to Moa'ki Harbor##12118
+		..accept Let Nothing Go To Waste##11958
+	step
+		goto 48.3,74.3
+		.talk Trapper Mau'i##26228
+		..accept Planning for the Future##11960
+	step
+		goto 45.3,63.7
+		.kill Snowfall Glade mobs|n
+		.get 6 Stolen Moa'ki Goods|q 11958/1
+		.' Click Snowfall Glade Pups|tip The Snowfall Glade Pups are small creatures in front of the houses.
+		.'BE CAREFUL NOT TO AoE DAMAGE THE PUPS!!!
+		.get 12 Snowfall Glade Pup|q 11960/1
+	step
+		goto 48.3,74.3
+		.talk Trapper Mau'i##26228
+		..turnin Planning for the Future##11960
+	step
+		goto 48,74.9
+		.talk Elder Ko'nani##26194
+		..turnin Let Nothing Go To Waste##11958
+		..accept Slay Loguhn##11959
+	step
+		goto 46.3,59.2
+		.from Loguhn##26196
+		.get Blood of Loguhn|n
+		.' Click the Blood of Loguhn in your bags|use Blood of Loguhn##35688
+		.' Smear the Blood of Loguhn on yourself|goal Loguhn's Blood Smeared|q 11959/1
+	step
+		goto 48,74.9
+		.talk Elder Ko'nani##26194
+		..turnin Slay Loguhn##11959
+	step
+		goto 49.2,75.6
+		.talk Toalu'u the Mystic##26595
+		..accept Spiritual Insight##12028
+	step
+		goto 48.9,75.8
+		.' Use Toalu'u's Spiritual Incense next to Toalu'u's Brazier|use Toalu'u's Spiritual Incense##35907|tip Sitting next to the entrance to the small house.
+		.' Watch yourself fly as a wisp
+		.' Attain Spiritual Insight cocnerning Indu'le Village|goal Spiritual insight concerning Indu'le Village attained.|q 12028/1
+	step
+		goto 49.2,75.6
+		.talk Toalu'u the Mystic##26595
+		..turnin Spiritual Insight##12028
+		..accept Elder Mana'loa##12030
+	step
+		goto 36.4,65
+		.talk Elder Mana'loa##188419
+		..turnin Elder Mana'loa##12030
+		..accept Freedom for the Lingering##12031
+	step
+		goto 40.3,66.9
+		.' Click Mage-Commander Evenstar's body|tip His body is floating underwater here.
+		..turnin Search Indu'le Village##12098
+		..accept The End of the Line##12107
+	step
+		goto 39.8,66.9
+		.' Use your Ley Line Focus Control Talisman on the Ley Line Focus|use Ley Line Focus Control Talisman##36815|tip It's a big half-circle purple glowing thing underwater.
+		.' Retrieve ley line focus information|goal Ley Line Focus information retrieved|q 12107/1
+	step
+		goto 37.2,65.5
+		.kill Indu'le mobs|n
+		.' Put 15 Indu'le spirits to rest|goal 15 Indu'le spirits put to rest|q 12031/1
+	step
+		goto 36.4,65
+		.talk Elder Mana'loa##188419
+		..turnin Freedom for the Lingering##12031
+		..accept Conversing With the Depths##12032
+	step
+		goto 53,66.4
+		.' Go to this spot on the cliff to Observe Azure Dragonshrine|goal Azure Dragonshrine observed|q 12107/2
+	step
+		goto 47.7,76.6
+		.talk Tua'kea##26245
+		..accept Tua'kea's Crab Traps##12009
+	step
+		goto 47.7,80
+		.' Click the Wrecked Crab Trap|tip It looks like a broken version of Tue'kea's Crab Traps, on the ground underwater.
+		..accept Signs of Big Watery Trouble##12011
+		.' Click Tua'kea's Crab Traps|tip They look like small cages on the ground underwater around this area.
+		.get 8 Tua'kea Crab Trap|q 12009/1
+	step
+		goto 47.7,76.6
+		.talk Tua'kea##26245
+		..turnin Tua'kea's Crab Traps##12009
+		..turnin Signs of Big Watery Trouble##12011
+		..accept The Bait##12016
+	step
+		goto 43.7,82.3
+		.from Kili'ua##26521
+		.get The Flesh of "Two Huge Pincers"|q 12016/1
+	step
+		goto 34.3,79.8|n
+		.' The path up to Conversing With the Depths starts here|goto Dragonblight,34.3,79.8,0.5|noway|c
+	step
+		'Follow the path up to 34,83.4|goto 34,83.4
+		.' Click The Pearl of the Depths|tip It's a big white pearl sitting on a altar thing.
+		.' Oacha'noa appears and tells you to jump in the water
+		.' Jump in the water when he tells you to
+		.' Obey Oacha'noa's compulsion|goal Oacha'noa's compulsion obeyed.|q 12032/1
+	step
+		goto 47.7,76.6
+		.talk Tua'kea##26245
+		..turnin The Bait##12016
+		..accept Meat on the Hook##12017
+	step
+		goto 46.7,78.2
+		.' Use Tu'u'gwar's Bait next to Tua'kea's Fishing Hook|use Tu'u'gwar's Bait##35838|tip It looks like a rope leading into the water, with a big hook on the end.
+		.' Kill Tu'u'gwar when he comes|kill 1 Tu'u'gwar|q 12017/1
+	step
+		goto 47.7,76.6
+		.talk Tua'kea##26245
+		..turnin Meat on the Hook##12017
+	step
+		goto 49.2,75.6
+		.talk Toalu'u the Mystic##26595
+		..turnin Conversing With the Depths##12032
+	step
+		'Fly to Stars' Rest|goto Dragonblight,29.2,55.4,0.5|noway|c
+	step
+		goto 29,55.5
+		.'You should be level 74 by now. If you are not, grind/run instances until you are.
+		.talk Image of Archmage Modera##26673
+		..turnin The End of the Line##12107
+		..accept Gaining an Audience##12119
+		..accept The Magical Kingdom of Dalaran##12794
+	step
+		ding 74
+	step
+		goto 29,55.5|n
+		.talk Image of Archmage Modera##26673
+		..'Teleport to Dalaran|goto Dalaran,55.9,46.8,0.5|noway|c
+	step
+		'Go downstairs to 56.3,46.8|goto Dalaran,56.3,46.8
+		.talk Archmage Celindra##29156
+		..turnin The Magical Kingdom of Dalaran##12794
+		..accept Learning to Leave and Return: the Magical Way##12790
+	step
+		goto 56.3,46.8
+		.' Click the Teleport to Violet Stand Crystal|tip Downstrairs in a small room.  It's a blue floating trianglular jewel.
+		.' Use the Teleport to Violet Stand Crystal|goal Teleport to Violet Stand Crystal used|q 12790/1
+	step
+		goto Crystalsong Forest,15.7,42.5
+		.' Click the Teleport to Dalaran Crystal
+		.' Use the Teleport to Dalaran Crystal|goal Teleport to Dalaran Crystal used|q 12790/2
+	step
+		'Go downstairs to 56.3,46.8|goto Dalaran,56.3,46.8
+		.talk Archmage Celindra##29156
+		..turnin Learning to Leave and Return: the Magical Way##12790
+	step
+		goto 72.2,45.8
+		.talk Aludane Whitecloud##28674
+		..fpath Dalaran
+	step
+		.'Take the portal to your corresponding capital city, then train your skills. Then:
+		'Hearth to Moa'ki Harbor|goto Dragonblight,48.2,74.8,0.5|use Hearthstone##6948|noway|c
 	step
 		TODO
 ]])
