@@ -29,6 +29,11 @@ TALK_RADIUS = 3.0
 # Quests the Wrath Classic DB knows by a later name; the 3.3.5 client shows these.
 OLD_NAMES = {
     9898: ("Nothin' Says Lovin' Like a Big Stinger",),
+    12435: ("Report to Lord Afrasastrasz",),
+}
+# NPCs the Wrath Classic data renamed, with their 3.3.5 names.
+OLD_NPC_NAMES = {
+    27575: ("Lord Afrasastrasz",),
 }
 # Prerequisites the Questie data gets wrong (the quest is offered without them).
 BAD_PREREQS = {
@@ -140,7 +145,8 @@ class Checker:
         rec = get(eid)
         if not rec:
             return None
-        if not loose(rec.get("name"), name):
+        old = OLD_NPC_NAMES.get(eid, ()) if kind == "npc" else ()
+        if not loose(rec.get("name"), name) and not any(loose(alt, name) for alt in old):
             self.report("ERROR", ln, f"{kind} ##{eid} is '{rec.get('name')}', guide says '{name}'")
         if near and kind != "item" and self.pos and self.zone:
             hit = gdb.nearest(rec.get("spawns") or {}, self.zone, self.pos)
