@@ -4060,12 +4060,14 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 		..turnin Lifting the Curse##290
 		..accept The Eye of Paleth##292
 	step
-		'TODO: make this 2 steps
 		goto 18.5,27.3
 		.kill Giant Wetlands Crocolisks|n
 		..get 6 Giant Crocolisk Skin|q 471/1
+		info You can find them up and down the coastline.
+		info They take a while to respawn if others are killing them, but fortunately have a 100% drop rate.
+	step
+		goto 18.5,27.7
 		.kill 8 Fen Creeper|q 275/1|tip Fen Creepers are stealthed in the marsh, look up their positions on a database.
-		.'More at 18.5,27.7|n
 		.'More at 20.8,28.4|n
 		.'More at 22.5,30.0|n
 		.'More at 23.6,32.0|n
@@ -4716,6 +4718,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (30-3
 		goto 87.6,66.7
 		.from Salt Flats Scavenger##4154+
 		..get 10 Hollow Vulture Bone|q 1176/1
+		.'More here 71,75|n
+		info It's so bullshit how few Vultures there are on pservers compared to retail. And the drop rate should be 100%, not 80%....
+		info Skip to the next step, and complete this objective as you travel around.
 	step
 		goto 83.2,55.4
 		.from Sparkleshell Snapper##4143+
@@ -5083,6 +5088,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (30-3
 		goto 33.6,11.5
 		.kill 10 Young Stranglethorn Tiger|q 185/1
 	step
+		goto 35.8,10.7
+		.talk Ajeck Rouack##717
+		..turnin Tiger Mastery (1)##185
+		..accept Tiger Mastery (2)##186
+	step
 		goto 40.6,13.3
 		.from River Crocolisk##1150
 		..get 2 Large River Crocolisk Skin|q 575/1
@@ -5099,19 +5109,17 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (30-3
 		.from Kurzen Medicine Man##940+, Kurzen Jungle Fighter##937+
 		..get 7 Jungle Remedy|q 204/1
 	step
+		goto 46.6,14.4
+		.kill 10 Stranglethorn Tiger|q 186/1
+		info On pservers, I find ST Tiger spawns lacking in the west. Best to grind them here.
+	step
 		goto 35.8,10.7
 		.talk Sir S. J. Erlgadin##718
 		..turnin Panther Mastery (1)##190
 		..accept Panther Mastery (2)##191
 	step
-		goto 35.8,10.7
-		.talk Ajeck Rouack##717
-		..turnin Tiger Mastery (1)##185
-		..accept Tiger Mastery (2)##186
-	step
 		goto 31,10
 		.kill 10 Panther|q 191/1
-		.kill 10 Stranglethorn Tiger|q 186/1
 	step
 		goto 27,16.3
 		.kill 10 Stranglethorn Raptor|q 194/1
@@ -15415,6 +15423,696 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Dragonblight
 	step
 		.'Take the portal to your corresponding capital city, then train your skills. Then:
 		'Hearth to Moa'ki Harbor|goto Dragonblight,48.2,74.8,0.5|use Hearthstone##6948|noway|c
+	step
+		goto 57.9,54.2
+		.talk Tariolstrasz##26443
+		..turnin Gaining an Audience##12119
+		..accept Speak with your Ambassador##12766
+	step
+		goto 57.9,54.2|n
+		.talk Tariolstrasz##26443
+		..'Tell him you need to go to the top of the temple|goto Dragonblight,59.7,53.1,0.1|noway|c
+	step
+		goto 59.6,54.4
+		.talk Lord Itharius##27785
+		..accept Seeds of the Lashers##12458
+	step
+		goto 60,54.5
+		.talk Chromie##27856
+		..accept Mystery of the Infinite##12470
+	step
+		goto 60.1,54.2
+		.talk Nalice##27765
+		..accept The Obsidian Dragonshrine##12447
+	step
+		goto 59.5,53.3|n
+		.talk Torastrasza##26949
+		..'Tell him you want to go to the ground level of the temple|goto Dragonblight,58.0,55.2,0.1|noway|c
+	step
+		goto 63.3,66.9|n
+		.' The path down to Seeds of the Lashers starts here|goto Dragonblight,63.3,66.9,0.5|noway|c
+	step
+		goto 63.7,71.9
+		.talk Nishera the Garden Keeper##27255
+		..accept Cycle of Life##12454
+	step
+		goto 63.3,71
+		.kill Emerald Lashers|n
+		.get 3 Lasher Seed|q 12458/1
+		'They fly around over your head around the lake
+		.kill 5 Emerald Skytalon|q 12454/1
+	step
+		goto 63.7,71.9
+		.talk Nishera the Garden Keeper##27255
+		..turnin Cycle of Life##12454
+		..accept The Plume of Alystros##12456
+	step
+		.'You'll need a group for this.
+		goto 64.6,77.4
+		.'Use your Skytalon Molt on Alystros|use Skytalon Molts##37881
+		.from Alystros the Verdant Keeper##27249
+		..get The Plume of Alystros | q 12456/1
+	step
+		goto 63.7,71.9
+		.talk Nishera the Garden Keeper##27255
+		..turnin The Plume of Alystros##12456
+	step
+		goto 60,55.1
+		.talk Lauriel Trueblade##27803
+		..turnin Speak with your Ambassador##12766
+		..accept Report to the Ruby Dragonshrine##12460
+	step
+		goto 60.3,51.6
+		.talk Nethestrasz##26851
+		..fpath Wyrmrest Temple
+	step
+		goto 71.7,38.9
+		.' Use your Hourglass of Eternity|use Hourglass of Eternity##37923
+		.' Fight the mobs that spawn. Let your clone tank the mobs.
+		.' Protect the Hourglass of Eternity|goal Hourglass of Eternity protected|q 12470/1
+	step
+		.' If you spot a Reanimated Frost Wyrm, use your Seeds of Nature's Wrath on it to weaken it, then kill it|use Seeds of Nature's Wrath##37887
+		info They fly around in the sky.
+		.'Skip this step.
+	step
+		goto 64.7,27.9
+		.talk Legion Commander Tyralion##27844
+		..turnin Chasing Icestorm: The 7th Legion Front##12466
+		..accept Chasing Icestorm: Thel'zan's Phylactery##12467
+	step
+		goto 64.4,26.9
+		.talk Duane##26978
+		..accept Pest Control##12142
+	step
+		goto 64.6,27.5
+		.talk "Wyrmbait"##27843
+		..'Tell him to fetch Icestorm
+		.' He will bring Icestorm
+		.kill Icestorm|n
+		.' Click Thel'zan's Phylactery that spawns
+		.get Thel'zan's Phylactery|q 12467/1
+	step
+		goto 68.1,33.1
+		.kill Magnataurs|n
+		.' Kill 3 Dragonblight Magnataur|goal 3 Dragonblight Magnataur|q 12142/2
+	step
+		goto 70.4,32
+		.kill Snowplain kobolds|n
+		.' Kill 10 Snowplain Snobolds|goal 10 Snowplain Snobolds|q 12142/1
+		.' You can find more Snowplain Snobolds at 64.9,43.0|n
+	step
+		goto 64.4,26.9
+		.talk Duane##26978
+		..turnin Pest Control##12142
+		..accept Canyon Chase##12143
+	step
+		'Follow the fleeing kobolds to 72.5,29.2|goto 72.5,29.2
+		.kill Chilltusk|q 12143/1
+		.get Emblazoned Battle Horn|n
+		.' Click the Emblazoned Battle Horn|use Emblazoned Battle Horn##36855
+		..accept Disturbing Implications##12146
+	step
+		goto 77.5,51.5
+		.talk Illusia Lune##27042
+		home Wintergarde Keep
+	step
+		goto 78.61,48.2
+		.talk High Commander Halford Wyrmbane##27136
+		..turnin Chasing Icestorm: Thel'zan's Phylactery##12467
+		..accept Finality##12472
+	step
+		goto 82.0,50.6|n
+		.' The path down to Legion Commander Yorik starts here|goto Dragonblight,82.0,50.6,0.5|noway|c
+	step
+		goto 81.2,50.7
+		.talk Legion Commander Yorik##27857
+		..turnin Finality##12472
+		..accept An End And A Beginning##12473
+	step
+		'Watch the dialogue
+		.' Help fight the battle
+		.' Defeat Thel'zan the Duskbringer|goal Thel'zan the Duskbringer Defeated|q 12473/1
+	step
+		'Go outside the crypt to 78.61,48.2|goto 78.61,48.2
+		.talk High Commander Halford Wyrmbane##27136
+		..turnin An End And A Beginning##12473
+		..accept To Fordragon Hold!##12474
+	step
+		'Fly to Wyrmrest Temple|goto Dragonblight,60.3,51.4,0.1|noway|c
+	step
+		goto 48.5,24.1
+		.talk Nozzlerust Supply Runner##26896
+		..accept Return to Sender##12469
+	step
+		goto 38.5,26.5|n
+		.' The path up to Highlord Bolvar Fordragon in the End Battle starts here|goto Dragonblight,38.5,26.5,0.5|noway|c
+	step
+		'Follow the path up the mountain to 37.8,23.4|goto 37.8,23.4
+		.talk Highlord Bolvar Fordragon##27872
+		..turnin To Fordragon Hold!##12474
+		..accept Audience With The Dragon Queen##12495
+	step
+		goto 39.5,25.9
+		.talk Derek Rammel##26877
+		..fpath Fordragon Hold
+	step
+		'Fly to Wyrmrest Temple|goto Dragonblight,60.3,51.4,0.1|noway|c
+	step
+		goto 60,55.1
+		.talk Aurastrasza##26983
+		..turnin Disturbing Implications##12146
+		..accept One of a Kind##12148
+	step
+		goto 57.9,54.2|n
+		.talk Tariolstrasz##26443
+		..'Tell him you need to go to the top of the temple|goto Dragonblight,59.7,53.1,0.1|noway|c
+	step
+		goto 60,54.5
+		.talk Chromie##27856
+		..turnin Mystery of the Infinite##12470
+	step
+		goto 59.8,54.7
+		.talk Alexstrasza the Life-Binder##26917
+		..turnin Audience With The Dragon Queen##12495
+		..accept Galakrond and the Scourge##12497
+	step
+		goto 59.6,54.4
+		.talk Lord Itharius##27785
+		..turnin Seeds of the Lashers##12458
+		..accept That Which Creates Can Also Destroy##12459
+	step
+		goto 59.5,53.3
+		.talk Torastrasza##26949
+		..turnin Galakrond and the Scourge##12497
+		..accept On Ruby Wings##12498
+	step
+		.'You will get a Ruby Beacon of the Dragon Queen
+		info This is a very useful item which summons a dragon which you can use in the Dragon Wastes which is the entire center area of the map.
+		info Don't turn this quest in until you're done with the zone.
+		info Whenever you're travelling in the area, use it to travel much faster. You can use it for the rest of the guide as a flying mount!
+		.' Skip this step.
+	step
+		.'You'll need a group for the next set of kill quests.
+		goto 51.3,58.4
+		.from Bonesunder##27006
+		..get Emblazoned Battle Horn | q 12148/1
+	step
+		goto 60,55.1
+		.talk Aurastrasza##26983
+		..turnin One of a Kind##12148
+		..accept Mighty Magnataur##12149
+	step
+		goto 66.3,70.8
+		.kill Bloodfeast | q 12149/2
+	step
+		goto 66.2,51.4
+		.kill Iceshatter | q 12149/1
+	step
+		goto 67.6,37.1
+		.kill Drakegore | q 12149/3
+	step
+		goto 60,55.1
+		.talk Aurastrasza##26983
+		..turnin Mighty Magnataur##12149
+		..accept Reclusive Runemaster##12150
+	step
+		goto 72.8,49.7
+		.Defeat Dregmar Runebrand | q 12150/1
+	step
+		goto 60,55.1
+		.talk Aurastrasza##26983
+		..turnin Reclusive Runemaster##12150
+		..accept Wanton Warlord##12151
+	step
+		goto 57.2,75.4
+		.use the Emblazoned Battle Horn at the waypoint | use Emblazoned Battle Horn##36864
+		.from Grom'thar the Thunderbringer##27002
+		..get Grom'thar's Head | q 12151/1
+	step
+		goto 60,55.1
+		.talk Aurastrasza##26983
+		..turnin Wanton Warlord##12151
+	step
+		goto 52.2,50
+		.talk Ceristrasz##27506
+		..turnin Report to the Ruby Dragonshrine##12460
+		..accept Heated Battle##12416
+	step
+		goto 52.7,46.2
+		.' Help kill the following:
+		..'12 Frigid Ghoul Attackers|kill 12 Frigid Ghoul Attacker|q 12416/1
+		..'8 Frigid Geist Attackers|kill 8 Frigid Geist Attacker|q 12416/2
+		..'1 Frigid Abomination Attacker|kill 1 Frigid Abomination Attacker|q 12416/3
+		.' You can find more of these at 50.9,52.4|n
+	step
+		goto 52.2,50
+		.talk Ceristrasz##27506
+		..turnin Heated Battle##12416
+		..accept Return to the Earth##12417
+	step
+		goto 46.7,52.8
+		.' Click the Ruby Acorns|tip The Ruby Acorns look like red stones on the ground around this area.
+		.collect 6 Ruby Acorn##37727|n
+		.' Use the Ruby Acorns on the Ruby Keeper corpses|use Ruby Acorn##37727|tip The Ruby Keepers look like huge red dragons on fire.
+		.' Return 6 Ruby Keepers to the Earth|goal 6 Ruby Keeper Returned to the Earth|q 12417/1
+	step
+		goto 52.2,50
+		.talk Ceristrasz##27506
+		..turnin Return to the Earth##12417
+		..accept Through Fields of Flame##12418
+	step
+		'Go into the tree trunk to 47.6,49|goto 47.6,49
+		.from Dahlia Suntouch##27680
+		.' Cleanse the Ruby Corruption|goal Ruby Corruption Cleansed|q 12418/2
+		.get Ruby Brooch|n
+		.' Click the Ruby Brooch in your bags|use Ruby Brooch##37833
+		..accept The Fate of the Ruby Dragonshrine##12419
+	step
+		'Go into the valley to 48.2,47.8|goto 48.2,47.8
+		.kill 6 Frigid Necromancer|q 12418/1
+	step
+		goto 52.2,50
+		.talk Ceristrasz##27506
+		..turnin Through Fields of Flame##12418
+		..accept The Steward of Wyrmrest Temple##12768
+	step
+		'Use your Ruby Beacon of the Dragon Queen|use Ruby Beacon of the Dragon Queen##38302
+		.' Click the red dragon to ride it|invehicle
+	step
+		'Fly to 57.2,33.1|goto 57.2,33.1
+		.' Use the abilities on your hotbar
+		.kill 30 Wastes Scavenger|q 12498/1
+	step
+		'Fly to 54.5,31.3|goto 54.5,31.3
+		.' Use the abilities on your hotbar
+		.from Thiassi the Lightning Bringer##28018
+		.' Jump off the dragon|script VehicleExit()
+		.from Grand Necrolord Antiok##28006
+		.' Click the Scythe of Antiok
+		.get Scythe of Antiok|q 12498/2
+	step
+		goto 54.5,23.6
+		.talk Narf##26647
+		..accept Nozzlerust Defense##12043
+	step
+		goto 54.7,23.2
+		.talk Zivlix##26661
+		..accept Shaved Ice##12045
+	step
+		goto 55,23.4
+		.talk Xink##26660
+		..turnin Return to Sender##12469
+		..accept Stocking Up##12044
+	step
+		goto 52.4,30.4
+		.'Reminder to search for a Reanimated Frost Wyrm.
+		.kill 12 Wastes Digger|q 12043/2
+		.kill 1 Wastes Taskmaster|q 12043/1
+		.' Click Composite Ore|tip They look like carts with ore piled in them.
+		.get 8 Composite Ore|q 12044/1
+		.' You can find more of all of these at 56.5,28.1|n
+	step
+		goto 53.7,18.9
+		.kill Crystalline Ice Elementals|n
+		.get 4 Ice Shard Cluster|q 12045/1
+	step
+		.' If you spot a Reanimated Frost Wyrm, use your Seeds of Nature's Wrath on it to weaken it|use Seeds of Nature's Wrath##37887|tip They fly around in the sky.
+		.kill Weakened Reanimated Frost Wyrm|q 12459/1
+	step
+		goto 54.5,23.6
+		.talk Narf##26647
+		..turnin Nozzlerust Defense##12043
+	step
+		goto 55,23.4
+		.talk Xink##26660
+		..turnin Stocking Up##12044
+	step
+		goto 54.7,23.2
+		.talk Zivlix##26661
+		..turnin Shaved Ice##12045
+		..accept Soft Packaging##12046
+	step
+		goto 53.7,25.4
+		.kill Jormungar Tunnelers|n
+		.get 12 Thin Animal Hide|q 12046/1
+	step
+		goto 54.7,23.2
+		.talk Zivlix##26661
+		..turnin Soft Packaging##12046
+		..accept Something That Doesn't Melt##12047
+	step
+		'Also to 55,23.4|goto 55,23.4
+		.talk Xink##26660
+		..accept Hard to Swallow##12049
+	step
+		goto 57.5,23.9
+		.' Click Splintered Bone Chunks|tip They look like small white pointed bones on the ground next to the huge bones on the ground around this area.
+		.get 12 Splintered Bone Chunk|q 12047/1
+		.' Fight a Hulking Jormungar
+		.' Use your Potent Explosive Charges on the Hulking Jormungar when he opens his mouth|use Potent Explosive Charges##36732
+		.' Click the Jormungar Meat
+		.get 6 Seared Jormungar Meat|q 12049/1
+	step
+		goto 64.4,26.9
+		.talk Duane##26978
+		..turnin Canyon Chase##12143
+	step
+		goto 55,23.4
+		.talk Xink##26660
+		..turnin Hard to Swallow##12049
+	step
+		goto 54.7,23.2
+		.talk Zivlix##26661
+		..turnin Something That Doesn't Melt##12047
+	step
+		goto 54.5,23.6
+		.talk Narf##26647
+		..accept Harp on This!##12052
+	step
+		goto 55,23.4
+		.talk Xink##26660
+		..accept Lumber Hack##12050
+	step
+		goto 53.1,19.5
+		.' Use Xink's Shredder Control Device|use Xink's Shredder Control Device##36734
+		.' Click the shredder to ride it
+		.' Use your Gather Lumber ability next to Coldwind Trees|petaction Gather Lumber|tip They look like trees with small pieces of paper with X's on them.
+		.get 50 Coldwind Lumber|q 12050/1
+		.' Kill 15 harpies|goal 15 Coldwind Harpies|q 12052/2
+	step
+		goto 44.9,9.1
+		.' Kill Mistress of the Coldwind using Xink's Shredder|kill Mistress of the Coldwind|q 12052/1|tip She flies around this area.
+	step
+		goto 54.5,23.6
+		.talk Narf##26647
+		..turnin Harp on This!##12052
+	step
+		goto 55,23.4
+		.talk Xink##26660
+		..turnin Lumber Hack##12050
+	step
+		goto 54.5,23.6
+		.talk Narf##26647
+		..accept Stiff Negotiations##12112
+	step
+		goto 59.4,18.2
+		.talk Zort##26659
+		..turnin Stiff Negotiations##12112
+		..accept Slim Pickings##12075
+	step
+		'Go into the cave to 56.2,12|goto 56.2,12
+		.' Click the Ravaged Crystalline Ice Giant|tip It's an ice giant corpse laying inside this cave.
+		.get Sample of Rockflesh|q 12075/1
+	step
+		goto 59.4,18.2
+		.talk Zort##26659
+		..turnin Slim Pickings##12075
+		..accept Messy Business##12076
+	step
+		goto 59,17.8
+		.talk Ko'char the Unbreakable##26473
+		..accept Stomping Grounds##12079
+	step
+		goto 57.5,12.4
+		.' Fight Ice Heart Jormungar Feeders
+		.' They will cast a poison on you
+		.' Use Zort's Scraper when you are affected by the poison|use Zort's Scraper##36775
+		.get 2 Vial of Corrosive Spit|n
+		.kill 8 Ice Heart Jormungar Feeder|q 12079/1
+	step
+		'Go outside the cave to 59.4,18.2|goto 59.4,18.2
+		.talk Zort##26659
+		..turnin Messy Business##12076
+		..accept Apply This Twice A Day##12077
+	step
+		goto 59,17.8
+		.talk Ko'char the Unbreakable##26473
+		..turnin Apply This Twice A Day##12077
+		..turnin Stomping Grounds##12079
+		..accept Really Big Worm##12080
+	step
+		goto 59.4,18.2
+		.talk Zort##26659
+		..accept Worm Wrangler##12078
+	step
+		'Go into the cave to 55.3,11|goto 55.3,11
+		.' Use your Sturdy Crates on Ice Heart Jormungar Spawns|use Sturdy Crates##36771
+		.' Click the Captured Jormungar Spawn crates
+		.get 3 Captured Jormungar Spawn|q 12078/1
+	step
+		.'You should have a group for this.
+		goto 50.6,18.0
+		.'Drink Zort's Protective Elixir | use Zort's Protective Elixir##36770
+		.kill Rattlebore | q 12080/1
+	step
+		'Go outside the cave to 59.4,18.2|goto 59,17.8
+		.talk Ko'char the Unbreakable##26473
+		..turnin Really Big Worm##12080
+	step
+		goto 59.4,18.2
+		.talk Zort##26659
+		..turnin Worm Wrangler##12078
+	step
+		goto 37.2,31.8|n
+		.' The path to Serinar starts here|goto Dragonblight,37.2,31.8,0.5|noway|c
+	step
+		'Go inside the cave to 35.2,30.0|goto 35.2,30.0
+		.talk Serinar##26593
+		..turnin The Obsidian Dragonshrine##12447
+		..accept No One to Save You##12262
+		..accept No Place to Run##12261
+	step
+		'Go outside the cave to 37.9,32|goto 37.9,32
+		.kill 6 Burning Depths Necrolyte|q 12262/1
+		.kill 10 Smoldering Skeleton|q 12262/2
+	step
+		goto 42.1,32
+		.' Use your Destructive Wards in this spot|use Destructive Wards##37445
+		.' Defend the Destructive Ward from the mobs that spawn
+		.' Fully Charge the Destructive Ward|goal Destructive Ward Fully Charged|q 12261/1
+	step
+		'Go into the cave to 35.2,30|goto 35.2,30
+		.talk Serinar##26593
+		..turnin No One to Save You##12262
+		..turnin No Place to Run##12261
+		..accept The Best of Intentions##12263
+	step
+		'Follow the path in the cave while disguised as a cultist to 31.8,30.5|goto 31.8,30.5
+		.' Uncover the Magmawyrm Resurrection Chamber|goal Uncover the Magmawyrm Resurrection Chamber|q 12263/1
+	step
+		'Follow the path back down to 35.2,30|goto 35.2,30
+		.talk Serinar##26593
+		..turnin The Best of Intentions##12263
+		..accept Culling the Damned##12264
+		..accept Defiling the Defilers##12265
+	step
+		'Follow the path in the cave to 34.2,26.8|goto 34.2,26.8
+		.kill 3 Burning Depths Necromancer|q 12264/1
+		.kill 6 Smoldering Construct|q 12264/2
+		.kill 6 Smoldering Geist|q 12264/3
+		.' Click Necromantic Runes|tip They look like round purple symbols on the ground around this area in the cave.
+		.' Destroy 8 Necromantic Runes|goal 8 Necromantic Rune destroyed|q 12265/1
+	step
+		'Go back down in the cave to 35.2,30|goto 35.2,30
+		.talk Serinar##26593
+		..turnin Culling the Damned##12264
+		..turnin Defiling the Defilers##12265
+		..accept Neltharion's Flame##12267
+	step
+		'Follow the path in the cave to 31.6,31.2|goto 31.6,31.2
+		.' Use Neltharion's Flame to Cleanse the Summoning Area|use Neltharion's Flame##37539|tip Stand on the edge of the rock, next to the lava.
+		.kill Rothin the Decaying|q 12267/2
+	step
+		'Go back down in the cave to 35.2,30|goto 35.2,30
+		.talk Serinar##26593
+		..turnin Neltharion's Flame##12267
+		..accept Tales of Destruction##12266
+	step
+		'Hearth to Wintergarde Keep|goto Dragonblight,77.4,51.5,0.5|use Hearthstone##6948|noway|c
+	step
+		goto 87.2,57.4
+		.talk Orik Trueheart##27347
+		..turnin Orik Trueheart and the Forgotten Shore##12287
+		..accept The Murkweed Elixir##12290
+	step
+		goto 87.2,57.4
+		.talk Tilda Darathan##27348
+		..accept The Call Of The Crusade##12542
+	step
+		goto 90.8,64.4
+		.' Click the Murkweed plants|tip They look like little purple plants on the ground around this area.
+		.get 5 Murkweed|q 12290/1
+	step
+		goto 87.2,57.4
+		.talk Orik Trueheart##27347
+		..turnin The Murkweed Elixir##12290
+		..accept The Forgotten Tale##12291
+	step
+		'As a spirit, go to 84.2,66.4|goto 84.2,66.4
+		.' Use the Murkweed Elixir in your bags|use Murkweed Elixir##37570
+		.talk Forgotten Peasant##27226
+		.' Question a Forgotten Peasant|goal Forgotten Peasant Questioned|q 12291/1
+		.talk a Forgotten Rifleman##27225
+		.' Question a Forgotten Rifleman|goal Forgotten Rifleman Questioned|q 12291/2
+		.talk a Forgotten Knight##27224
+		.' Question a Forgotten Knight|goal Forgotten Knight Questioned|q 12291/3
+		.talk a Forgotten Footman##27229
+		.' Question a Forgotten Footman|goal Forgotten Footman Questioned|q 12291/4
+	step
+		goto 87.2,57.4
+		.talk Orik Trueheart##27347
+		..turnin The Forgotten Tale##12291
+		..accept The Truth Shall Set Us Free##12301
+	step
+		goto 86.8,66.2
+		.' Use Orik's Crystalline Orb while standing on the Forgotten Ruins blue circle|use Orik's Crystalline Orb##37577|tip It looks like a blue glowing circle on the ground.
+		.' Watch the cutscene
+		.' Redeem the Forgotten|goal The Forgotten Redeemed|q 12301/1
+	step
+		goto 87.2,57.4
+		.talk Orik Trueheart##27347
+		..turnin The Truth Shall Set Us Free##12301
+		..accept Parting Thoughts##12305
+	step
+		goto 79.1,47.2
+		.talk Zelig the Visionary##27314
+		..turnin Parting Thoughts##12305
+		..accept What Secrets Men Hide##12475
+	step
+		goto 78.6,48.2
+		.talk Commander Lynore Windstryke##27155
+		..accept The Return of the Crusade?##12476
+	step
+		goto 78.61,48.2
+		.talk High Commander Halford Wyrmbane##27136
+		..accept The Path of Redemption##12477
+	step
+		goto 86.2,47
+		.' Use your Seeds of Nature's Wrath on a Turgid the Vile to weaken him|use Seeds of Nature's Wrath##37887|tip He's an abomination standing in a small room inside this abandoned fort.
+		.kill Weakened Turgid the Vile|q 12459/2
+	step
+		goto 87.6,38.1
+		.' Click the Onslaught Map|tip It looks like a map laid out on a table inside this broken tower.
+		.get Onslaught Map|q 12475/1
+		info Be sure to be kill Scarlet mobs in order to get the random quest drop and fulfill the kill quest.
+	step
+		goto 84.9,35.5
+		.kill Onslaught mobs|n
+		.get The Path of Redemption|q 12477/1
+		.kill 20 Scarlet Onslaught|q 12476/1
+	step
+		goto 84,26.1
+		.talk Crusader Valus##28228
+		..turnin The Call Of The Crusade##12542
+		..accept The Cleansing Of Jintha'kalar##12545
+	step
+		goto 89.5,19.1
+		.' Use your Seeds of Nature's Wrath on Overseer Deathgaze to weaken him|use Seeds of Nature's Wrath##37887
+		.kill Weakened Overseer Deathgaze##27122|q 12459/3
+	step
+		goto 86.8,22.4
+		.kill undead mobs|n
+		.' Kill 15 Jintha'kalar Scourge|goal 15 Jintha'kalar Scourge Slain|q 12545/1
+	step
+		goto 84,26.1
+		.talk Crusader Valus##28228
+		..turnin The Cleansing Of Jintha'kalar##12545
+		..accept Into the Breach!##12789
+	step
+		goto 78.6,48.2
+		.talk Commander Lynore Windstryke##27155
+		..turnin The Return of the Crusade?##12476
+	step
+		goto 78.61,48.2
+		.talk High Commander Halford Wyrmbane##27136
+		..turnin The Path of Redemption##12477
+	step
+		goto 79.1,47.2
+		.talk Zelig the Visionary##27314
+		..turnin What Secrets Men Hide##12475
+		..accept Frostmourne Cavern##12478
+	step
+		goto 74.2,23.8|n
+		.' The path to Frostmourne Cavern starts here|goto Dragonblight,74.2,23.8,0.5|noway|c
+	step
+		'Go inside the cave to 75.1,20.2|goto 75.1,20.2
+		.' Use Zelig's Scrying Orb next to the Frostmourne Altar|use Zelig's Scrying Orb##37933|tip It looks like a small stone chair on the ground.
+		.' Reveal the Secrets of the Past|goal Secrets of the Past Revealed|q 12478/1
+	step
+		goto 57.9,54.2
+		.talk Tariolstrasz##26443
+		..turnin The Steward of Wyrmrest Temple##12768
+		..accept Informing the Queen##12123
+	step
+		'Fly to 59.8,54.7|goto 59.8,54.7
+		.'Click the red arrow on your hot bar to jump off the dragon|script VehicleExit()
+		.talk Alexstrasza the Life-Binder##26917
+		..turnin On Ruby Wings##12498
+		..accept Return To Angrathar##12499
+		info Hopefully you enjoyed your temporary flying mount!
+	step
+		goto 60.1,54.2
+		.talk Nalice##27765
+		..turnin Tales of Destruction##12266
+	step
+		goto 59.6,54.4
+		.talk Lord Itharius##27785
+		..turnin That Which Creates Can Also Destroy##12459
+	step
+		goto 59.8,54.7
+		.talk Alexstrasza the Life-Binder##26917
+		..turnin Informing the Queen##12123
+		..accept Report to Lord Afrasastrasz##12435
+	step
+		goto 59.8,54.7
+		.talk Krasus##27990
+		..turnin The Fate of the Ruby Dragonshrine##12419
+	step
+		goto 59.5,53.3|n
+		.talk Torastrasza##26949
+		..'Tell him you want to go to Lord Afrasastrasz|goto Dragonblight,59.2,54.3,0.1|noway|c
+	step
+		goto 59.2,54.3
+		.talk Lord Afrasastrasz##27575
+		..turnin Report to Lord Afrasastrasz##12435
+		..accept Defending Wyrmrest Temple##12372
+	step
+		goto 58.3,55.2
+		.talk Wyrmrest Defender##27629
+		..'Tell him you are ready to get into the fight
+		.' Fly around Wyrmrest Temple fighting the blue dragons in the sky using your abilities on your hotbar
+		.kill 3 Azure Dragon|q 12372/1
+		.kill 5 Azure Drake|q 12372/2
+	step
+		'Fly southwest to 55.1,66.4|goto 55.1,66.4
+		.' Fly into the huge purple swirling column
+		.' Use your Destabilize Azure Dragonshrine ability|petaction Destabilize Azure Dragonshrine
+		.' Destabilize the Azure Dragonshrine|goal Destabilize the Azure Dragonshrine|q 12372/3
+	step
+		goto 58.7,54.5|n
+		'Click the red arrow to get off the dragon on the middle level of the temple|script VehicleExit()|outvehicle|c
+	step
+		goto 59.2,54.3
+		.talk Lord Afrasastrasz##27575
+		..turnin Defending Wyrmrest Temple##12372
+	step
+		goto 59.2,54.3|n
+		.talk Lord Afrasastrasz##27575
+		..'Tell him you want to go to the ground level|goto Dragonblight,58.0,55.2,0.1|noway|c
+	step
+		'Fly to Fordragon Hold|goto Dragonblight,39.6,25.7,0.1|noway|c
+	step
+		'Follow the path up the mountain to 37.8,23.4|goto 37.8,23.4
+		.talk Highlord Bolvar Fordragon##27872
+		..turnin Return To Angrathar##12499
+	step
+		goto 38.5,19.3
+		.talk Alexstrasza the Life-Binder##31333
+		..accept Reborn From The Ashes##13347
+	step
+		goto 38,19.6
+		.' Click Fordragon's Shield|tip It looks like a small metal shield on the ground.
+		.get Fordragon's Shield|q 13347/1
 	step
 		TODO
 ]])

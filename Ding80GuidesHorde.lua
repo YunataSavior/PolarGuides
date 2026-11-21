@@ -594,32 +594,32 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (5-1
 		.talk Apprentice Loralthalis##15924
 		..turnin Deactivating the Spire##8889
 		..accept Word from the Spire##8890
-	step //138
+	step
 		goto 60.3,61.4
 		.talk Magister Duskwither##15951
 		..turnin Word from the Spire##8890
 		..turnin Abandoned Investigations##8891
-	step //147
+	step
 		'Hearth to Fairbreeze Village|goto 43.7,71.2,0.5|use hearthstone##6948|noway|c
-	step //90
+	step
 		goto 44,70.8
 		.talk Magistrix Landra Dawnstrider##16210
 		..turnin Research Notes##9255
 		..accept Missing in the Ghostlands##9144
-	step //148
+	step
 		goto 43.3,70.8
 		.talk Ranger Degolien##15939
 		..turnin Warning Fairbreeze Village##9363
-	step //95
+	step
 		goto 44.1,70.3
 		.talk Halis Dawnstrider##16444
 		..buy 1 Bundle of Fireworks|q 9067/3
-	step //89
+	step
 		goto 46.9,71.8
 		.talk Ranger Sareyn##15942
 		..turnin Defending Fairbreeze Village##9252
 		..accept Runewarden Deryan##9253
-	step //149
+	step
 		goto 38.1,73.6
 		.talk Lord Saltheril##16144
 		..turnin The Party Never Ends##9067
@@ -705,7 +705,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		..accept Return to Arcanist Vandril##9758
 	step
 		goto 47.6,34.8
-		.talk Apothecary Renzithen##9149
+		.talk Apothecary Renzithen##16198
 		..accept The Plagued Coast##9149
 	step
 		goto 48.3,31.6
@@ -1024,7 +1024,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		.'Grind til you are, then skip this step.
 	step
 		goto 47.6,34.8
-		.talk Apothecary Renzithen##9149
+		.talk Apothecary Renzithen##16198
 		..turnin The Plagued Coast##9149
 	step
 		goto 44.9,32.5
@@ -1199,7 +1199,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		..accept A Restorative Draught##9877
 	step
 		goto 47.6,34.8
-		.talk Apothecary Renzithen##9149
+		.talk Apothecary Renzithen##16198
 		..turnin A Restorative Draught##9877
 		..accept Captives at Deatholme##9164
 	step
@@ -1256,7 +1256,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		goto 55.1,48.8
 		.talk Magister Kaendris##16239
 		..turnin The Traitor's Destruction##9167
-		..accept Hero of the Sin'deorei##9328 | only BloodElf
+		..accept Hero of the Sin'dorei##9328 | only BloodElf
 		..accept Friend of the Sin'dorei##9811 | only !BloodElf
 		.'If you managed to kill Dra'khan, else abandon.
 	step
@@ -1281,7 +1281,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		.'This is IMPORTANT. Do not proceed any further until you're 20.
 	step
 		goto 47.75,31.23
-		.'Open the mailbox, and open the letter titled "Learn to Ride in ..."
+		.'Open the mailbox, and open the letter titled "Learn to Ride in ...", then retrieve the pamphlet.
+		.' Click the Riding Training Pamphlet in your bags|use Riding Training Pamphlet##46882 | only BloodElf
 		..collect Riding Training Pamphlet##46882 | only BloodElf
 		..accept Learn to Ride in the Eversong Woods##14081
 	step
@@ -1346,15 +1347,2089 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-24)",[[
 	author YunataSavior
+	next Ding80's Horde Leveling Guides\\Main Guide (25-29)
 	startlevel 20
 
 	step
-		TODO
+		goto Orgrimmar,54.1,68.4
+		.talk Innkeeper Gryshka##6929
+		home Orgrimmar
+	step
+		'Go outside of Orgrimmar|goto Durotar
+	step
+		'Go west to the Barrens|goto The Barrens
+	step
+		goto 63.1,37.2
+		.talk Bragok##16227
+		..fpath Ratchet
+	step
+		goto 63,37.2
+		.talk Sputtervalve##3442
+		..accept Ziz Fizziks##1483
+	step
+		goto 62.4,37.6
+		.talk Mebok Mizzyrix##3446
+		..accept Deepmoss Spider Eggs##1069
+	step
+		goto 51.5,30.3
+		.talk Devrak##3615
+		..fpath Crossroads
+	step
+		goto 52,31.6
+		.talk Mankrik##3432
+		..accept Consumed by Hatred##899
+		..accept Lost in Battle##4921
+	step
+		goto 49.3,50.3
+		.' Click the Beaten Corpse and inspect it further |tip In a small camp of 2 houses to the side of the road.
+		.' Find Mankrik's Wife|goal Find Mankrik's Wife|q 4921/1
+	step
+		goto The Barrens,44.4,59.2
+		.talk Omusa Thunderhorn##10378
+		..fpath Camp Taurajo
+	step
+		goto 44.6,59.2
+		.talk Mangletooth##3430
+		..accept Tribes at War##878
+	step
+		goto 53.5,52
+		.kill 6 Bristleback Water Seeker|q 878/1
+		.kill 12 Bristleback Thornweaver|q 878/2
+		.kill 12 Bristleback Geomancer|q 878/3
+		.' Kill Bristleback mobs
+		.get 60 Bristleback Quilboar Tusk|q 899/1
+		.collect 1 Blood Shard##5075|q 5052|future
+	step
+		goto 44.6,59.2
+		.talk Mangletooth##3430
+		..turnin Tribes at War##878
+		..accept Blood Shards of Agamaggan##5052
+		..turnin Blood Shards of Agamaggan##5052
+	step
+		goto 52,31.6
+		.talk Mankrik##3432
+		..turnin Lost in Battle##4921
+		..turnin Consumed by Hatred##899
+	step
+		goto 35.2,27.8
+		.talk Seereth Stonebreak##4049
+		..accept Goblin Invaders##1062
+		.talk Makaba Flathoof##11857
+		..accept Avenge My Village##6548
+	step
+		goto Stonetalon Mountains,80.6,90.3
+		.kill 8 Grimtotem Ruffian|q 6548/1
+		.kill 6 Grimtotem Mercenary|q 6548/2
+	step
+		goto The Barrens,35.2,27.8
+		.talk Makaba Flathoof##11857
+		..turnin Avenge My Village##6548
+		..accept Kill Grundig Darkcloud##6629
+	step
+		ding 21
+	step
+		goto Stonetalon Mountains,73.7,86.1
+		.kill 6 Grimtotem Brutes|q 6629/2
+		.kill Grundig Darkcloud|q 6629/1
+		info He's standing on the steps of a teepee.
+	step
+		'WARNING: ESCORT!
+		goto 73.5,85.6
+		.talk Kaya Flathoof##11856
+		..accept Protect Kaya##6523|noautoaccept
+	step
+		.'Kaya Escorted to Camp Aparaje | q 6523/1
+	step
+		goto The Barrens,35.2,27.8
+		.talk Makaba Flathoof##11857
+		..turnin Kill Grundig Darkcloud##6629
+		..turnin Protect Kaya##6523
+		..accept Kaya's Alive##6401
+	step
+		goto Stonetalon Mountains,71.2,95
+		.talk Xen'Zilla##12816
+		..accept Blood Feeders##6461
+	step
+		goto 74.5,97.9
+		.talk Witch Doctor Jin'Zil##3995
+		..accept Jin'Zil's Forest Magic##1058
+	step
+		goto 59.1,75.7
+		.' Click the Wanted Poster: Besseleth
+		..accept Arachnophobia##6284
+		info To the side of the road
+	step
+		goto 58.38,76
+		.kill 10 Deepmoss Creeper|q 6461/1
+		info Kill 10 Deepmoss Creepers alongside the path as you walk northwest
+		.kill 7 Deepmoss Venomspitter|q 6461/2
+		.' Click the Deepmoss Eggs
+		.get 15 Deepmoss Egg|q 1069/1
+	step
+		goto 54.6,71.9
+		.' She's a big orange spider
+		.' She spawns in different spots in this valley
+		.' Kill Besseleth
+		.get Besseleth's Fang|q 6284/1
+	step
+		.'Leave the way you came.
+		goto 47.2,61.2
+		.talk Maggran Earthbinder##11860
+		..turnin Arachnophobia##6284
+		..accept Harpies Threaten##6282
+	step
+		goto 45.9,60.4
+		.talk Braelyn Firehand##4198
+		..accept Cenarius' Legacy##1087
+	step
+		goto 47.5,58.4
+		.talk Tammra Windfield##11864
+		..turnin Kaya's Alive##6401
+	step
+		goto 45.1,59.8
+		.talk Tharm##4312
+		..fpath Sun Rock Retreat
+	step
+		goto 47.2,64.2
+		.talk Mor'rogal##11861
+		..accept Boulderslide Ravine##6421
+		.talk Tsunaman##11862
+		..accept Trouble in the Deeps##6562
+		..accept Elemental War##6393
+	step
+		goto 59,62.6
+		.talk Ziz Fizziks##4201
+		..turnin Ziz Fizziks##1483
+		..accept Super Reaper 6000##1093
+	step
+		goto 62.6,53.8
+		.' Kill Venture Co. Operators on and around this big machine
+		.get 1 Super Reaper 6000 Blueprints|q 1093/1
+		.kill 15 Venture Co. Logger|q 1062/1
+	step
+		goto 59,62.6
+		.talk Ziz Fizziks##4201
+		..turnin Super Reaper 6000##1093
+		..accept Further Instructions (1)##1094
+	step
+		goto 67.2,88.2|n
+		.' The path to 'Boulderslide Ravine' starts here|goto 67.2,88.2,0.5|noway|c
+	step
+		goto 61.3,92.4
+		.' Click the Resonite Crystals inside the cave
+		.get 10 Resonite Crystal|q 6421/2
+		.' While collecting, continue moving deep into the cave.
+		info They look like big pink crystals inside the cave.
+	step
+		'Go northwest inside the cave to 59,90|goto 58.9,90.0
+		.' Investigate the Cave in Boulderslide Ravine|goal Investigate Cave in Boulderslide Ravine|q 6421/1
+	step
+		'Leave the cave|goto Stonetalon Mountains,61.8,93.0,0.5
+	step
+		goto 47.2,64.2
+		.talk Mor'rogal##11861
+		..turnin Boulderslide Ravine##6421
+		..accept Earthen Arise##6481
+	step
+		goto 57.57,89.5
+		.use Enchanted Resonite Crystal##16603
+		.'Kill Goggeroc | q 6481/1
+	step
+		goto Stonetalon Mountains,71.2,95
+		.talk Xen'Zilla##12816
+		..turnin Blood Feeders##6461
+	step
+		goto The Barrens,35.2,27.8
+		.talk Seereth Stonebreak##4049
+		..turnin Goblin Invaders##1062
+		..accept Shredding Machines##1068
+	step
+		.'Go to the Crossroads flight master|goto 51.5,30.3|n
+		..'Fly to Ratchet|goto The Barrens,63.1,37.1,0.1|noway|c
+	step
+		goto 63,37.2
+		.talk Sputtervalve##3442
+		..turnin Further Instructions (1)##1094
+		..accept Further Instructions (2)##1095
+	step
+		goto 62.4,37.6
+		.talk Mebok Mizzyrix##3446
+		..turnin Deepmoss Spider Eggs##1069
+	step
+		ding 22
+	step
+		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
+		info !!! Make sure you train your skills !!!
+	step
+		'Go outside of Orgrimmar|goto Durotar
+		'Go east to 50.8,13.3|goto Durotar,50.8,13.3|n
+		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|c
+		info You can ride zeppelins to either Undercity or the Grom'Gol Base Camp here
+	step
+		'Go outside of the Undercity|goto Tirisfal Glades
+	step
+		'Go southwest to Silverpine Forest|goto Silverpine Forest
+	step
+		goto Silverpine Forest,45.6,42.6
+		.talk Karos Razok##2226
+		..fpath The Sepulcher
+	step
+		goto 42.8,40.9
+		.talk Apothecary Renferrel##1937
+		..accept Journey to Hillsbrad Foothills##493
+	step
+		goto 43.4,40.7
+		.talk Advisor Sorrelon##16288
+		..turnin Delivery to the Sepulcher##9189
+	step
+		'Go south to Hillsbrad Foothills|goto Hillsbrad Foothills,13.8,45.8,0.5
+	step
+		goto Hillsbrad Foothills,20.8,47.4
+		.talk Deathstalker Lesh##2214
+		..accept Time To Strike##494
+	step
+		goto 60.1,18.6
+		.talk Zarise##2389
+		..fpath Tarren Mill
+	step
+		goto 61.4,19.1
+		.talk Apothecary Lydon##2216
+		..turnin Journey to Hillsbrad Foothills##493
+		..accept Elixir of Suffering (1)##496
+	step
+		goto 62.4,20.3
+		.talk High Executor Darthalia##2215
+		..turnin Time To Strike##494
+		..accept Battle of Hillsbrad (1)##527
+	step
+		goto 62.6,19.7
+		.talk Dangerous!##2008
+		..accept Dangerous!##567
+		info It's the wanted poster next to the WANTED board.
+	step
+		goto 62.6,20.8
+		.talk WANTED##1763
+		..accept WANTED: Syndicate Personnel##549
+		.talk Advisor Duskingdawn##17092
+		..turnin Report to Tarren Mill##9425
+	step
+		goto 63.2,20.7
+		.talk Krusk##2229
+		..accept The Rescue##498
+	step
+		goto 61.4,19.1
+		.talk Apothecary Lydon##2216
+		..accept Elixir of Pain (1)##501
+	step
+		goto 61.6,30.8
+		.from Gray Bear##2351
+		..get 10 Gray Bear Tongue|q 496/1
+		.from Forest Moss Creeper##2350
+		..get Creeper Ichor|q 496/2
+		info Kill the bears and spiders you pass on the way southeast to Durnholde Keep, and finish them on the way back.
+		info TODO: verify in-game
+	step
+		goto 80.8,44.6
+		.kill 10 Syndicate Rogue|q 549/1
+		.kill 10 Syndicate Watchman|q 549/2
+		info Kill them all around Durnholde Keep.
+		info TODO: verify in-game
+	step
+		goto 79.5,40.6
+		.kill Jailor Marlgen##2428
+		..collect Burnished Gold Key##3499|q 498
+		info He's inside the keep.
+		info TODO: verify in-game
+	step
+		goto 79.8,39.6
+		.' Click the iron ball to free Tog'thar|goal Rescue Tog'thar|q 498/2
+		info TODO: verify in-game
+	step
+		goto 79.6,41.8
+		.kill Jailor Eston##2427
+		..collect Dull Iron Key##3467|q 498
+		info He's in the house on the ground floor.
+		info TODO: verify in-game
+	step
+		goto 75.3,41.5
+		.' Click the iron ball to free Drull|goal Rescue Drull|q 498/1
+		info TODO: verify in-game
+	step
+		goto 61.6,30.8
+		.from Gray Bear##2351
+		..get 10 Gray Bear Tongue|q 496/1
+		.from Forest Moss Creeper##2350
+		..get Creeper Ichor|q 496/2
+		info Head northwest back towards Tarren Mill, killing bears and spiders.
+		info TODO: verify in-game
+	step
+		goto 61.4,19.1
+		.talk Apothecary Lydon##2216
+		..turnin Elixir of Suffering (1)##496
+		..accept Elixir of Suffering (2)##499
+		info TODO: verify in-game
+	step
+		goto 61.5,19.1
+		.talk Umpi##2230
+		..turnin Elixir of Suffering (2)##499
+		info He's the frog next to Apothecary Lydon.
+		info TODO: verify in-game
+	step
+		goto 63.2,20.7
+		.talk Krusk##2229
+		..turnin The Rescue##498
+		info TODO: verify in-game
+	step
+		goto 62.3,20.4
+		.talk High Executor Darthalia##2215
+		..turnin WANTED: Syndicate Personnel##549
+		info TODO: verify in-game
+	step
+		ding 23
+		info TODO: verify in-game
+	step
+		goto 35.2,38.6
+		.kill Farmer Getz|q 527/4
+		.from Starving Mountain Lion##2384
+		..get 10 Mountain Lion Blood|q 501/1
+		info Head west to the Hillsbrad Fields, killing Starving Mountain Lions along the way. Farmer Getz is in the northeast field.
+		info TODO: verify in-game
+	step
+		goto 33.2,34.8
+		.kill Farmer Ray|q 527/3
+		info He's inside the house north of the fields.
+		info TODO: verify in-game
+	step
+		goto 31.9,39.2
+		.kill 6 Hillsbrad Farmer|q 527/1
+		.kill 6 Hillsbrad Farmhand|q 527/2
+		info TODO: verify in-game
+	step
+		goto 45.0,40.0
+		.from Starving Mountain Lion##2384
+		..get 10 Mountain Lion Blood|q 501/1
+		info Finish the lions to the east, on the way back to Tarren Mill.
+		info TODO: verify in-game
+	step
+		goto 62.3,20.4
+		.talk High Executor Darthalia##2215
+		..turnin Battle of Hillsbrad (1)##527
+		..accept Battle of Hillsbrad (2)##528
+		info TODO: verify in-game
+	step
+		goto 62.1,19.7
+		.talk Deathguard Samsa##2418
+		..accept Souvenirs of Death##546
+		info Don't farm the 30 skulls yet, we come back for them later.
+		info TODO: verify in-game
+	step
+		goto 61.4,19.1
+		.talk Apothecary Lydon##2216
+		..turnin Elixir of Pain (1)##501
+		..accept Elixir of Pain (2)##502
+		info TODO: verify in-game
+	step
+		goto 32.7,35.3
+		.talk Stanley##2274
+		..turnin Elixir of Pain (2)##502
+		info He's the dog in the northern house, north of the northern field. He turns hostile after you feed him, so kill him.
+		info TODO: verify in-game
+	step
+		goto 35.5,46.2
+		.kill 15 Hillsbrad Peasant|q 528/1
+		.kill Farmer Kalaba|q 567/4
+		info Kill peasants in the southern fields. Farmer Kalaba is at 35.9,46.6.
+		info TODO: verify in-game
+	step
+		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
+		info !!! Make sure you train your skills !!!
+		info TODO: verify in-game
+	step
+		ding 24
+		info TODO: verify in-game
+	step
+		goto Orgrimmar,37.7,75.2
+		.talk Warcaller Gorlach##10880
+		..accept The Ashenvale Hunt (1)##235
+		info He wanders around the Valley of Honor. Check the Auction House for a Deadly Blunderbuss while you're in town.
+		info TODO: verify in-game
+	step
+		'Go outside of Orgrimmar|goto Durotar
+		info TODO: verify in-game
+	step
+		'Go west to the Crossroads flight master|goto The Barrens,51.5,30.3
+		info Riding there is fine too, it's on the way north.
+		info TODO: verify in-game
+	step
+		'Go north to Ashenvale|goto Ashenvale
+		info TODO: verify in-game
+	step
+		goto Ashenvale,71.1,68.1
+		.talk Kuray'bin##12867
+		..accept Ashenvale Outrunners##6503
+		info TODO: verify in-game
+	step
+		goto 71.4,67.6
+		.talk Locke Okarr##11820
+		..accept Warsong Supplies##6571
+		info TODO: verify in-game
+	step
+		goto 70.0,71.2
+		.talk Gurda Ragescar##12718
+		..accept The Lost Pages##6504
+		info TODO: verify in-game
+	step
+		goto 73.2,61.6
+		.talk Vhulgra##12616
+		..fpath Splintertree Post
+		info TODO: verify in-game
+	step
+		goto 73.1,61.5
+		.talk Pixel##12724
+		..accept Satyr Horns##6441
+		info TODO: verify in-game
+	step
+		goto 73.7,60
+		.talk Mastok Wrilehiss##12737
+		..accept Stonetalon Standstill##25
+		info TODO: verify in-game
+	step
+		goto 73.8,61.5
+		.talk Senani Thunderheart##12696
+		..turnin The Ashenvale Hunt (1)##235
+		..accept The Ashenvale Hunt (2)##6383
+		..turnin The Ashenvale Hunt (2)##6383
+		info The second turn-in gives no xp, but lets the named beasts drop quest items.
+		info TODO: verify in-game
+	step
+		goto 72,70.6
+		.kill 9 Ashenvale Outrunner|q 6503/1
+		info They are stealthed around this area.
+		info TODO: verify in-game
+	step
+		'WARNING: ESCORT!
+		goto 68.3,75.3
+		.talk Torek##12858
+		..accept Torek's Assault##6544|noautoaccept
+		..'Make sure the 3 Splintertree Raiders are there. If they aren't, wait until they spawn.
+		info TODO: verify in-game
+	step
+		.' Escort Torek
+		.' Take Silverwing Outpost|goal Take Silverwing Outpost.|q 6544/1
+		info TODO: verify in-game
+	step
+		goto 53.5,61.2
+		.from Foulweald Warrior##3743, Foulweald Pathfinder##3745
+		..get Logging Rope|q 6571/4
+		info Greenpaw Village.
+		info TODO: verify in-game
+	step
+		goto 48.9,69.6
+		.' Stand in the glowing gazebo
+		.' Scout the gazebo|goal Scout the gazebo on Mystral Lake that overlooks the nearby Alliance outpost.|q 25/1
+		info TODO: verify in-game
+	step
+		goto 47.7,69.7
+		.kill 12 Befouled Water Elemental|q 25/2
+		.' Tideress walks around this area
+		.kill Tideress##12759
+		..get Befouled Water Globe|n
+		.' Click the Befouled Water Globe|use Befouled Water Globe##16408
+		..accept The Befouled Element##1918
+		info TODO: verify in-game
+	step
+		goto 42.3,65.6
+		.' Ursangous wanders around this area
+		.kill Ursangous##12678
+		..get Ursangous's Paw|n
+		.' Click Ursangous's Paw|use Ursangous's Paw##16303
+		..accept Ursangous's Paw##23
+		info TODO: verify in-game
+	step
+		goto 36.6,57.1|n
+		.' The path to bypass Astranaar starts here|goto Ashenvale,36.6,57.2,0.3|noway|c
+		info TODO: verify in-game
+	step
+		goto 12.2,33.8
+		.talk Andruk##11901
+		..fpath Zoram'gar Outpost
+		info TODO: verify in-game
+	step
+		goto 11.6,34.3
+		.talk Je'neu Sancrea##12736
+		..turnin Trouble in the Deeps##6562
+		info TODO: verify in-game
+	step
+		goto 11.7,34.9
+		.talk Marukai##12719
+		..accept Naga at the Zoram Strand##6442
+		.talk Mitsuwa##12721
+		..accept Troll Charm##6462
+		info TODO: verify in-game
+	step
+		goto 11.9,34.5
+		.talk Karang Amakkar##12757
+		..accept Between a Rock and a Thistlefur##216
+		info TODO: verify in-game
+	step
+		'WARNING: ESCORT!
+		goto 12.1,34.6
+		.talk Muglash##12717
+		..accept Vorsha the Lasher##6641|noautoaccept
+		info If he is not there, wait for him to respawn.
+		info TODO: verify in-game
+	step
+		.' Escort and protect Muglash
+		.' Click the purple flame brazier when he tells you to
+		.goal Defeat Vorsha the Lasher|q 6641/1
+		info TODO: verify in-game
+	step
+		goto 12.2,34.2
+		.talk Warsong Runner##12863
+		..turnin Vorsha the Lasher##6641
+		info TODO: verify in-game
+	step
+		goto 12.6,30.8
+		.' Kill nagas
+		.get 20 Wrathtail Head|q 6442/1
+		info TODO: verify in-game
+	step
+		goto 31.3,46.6|n
+		.' The path to 'Between a Rock and a Thistlefur' starts here|goto Ashenvale,31.3,46.6,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 31.3,44.8
+		.kill 8 Thistlefur Avenger|q 216/1
+		.kill 8 Thistlefur Shaman|q 216/2
+		info TODO: verify in-game
+	step
+		goto 37.5,32.4|n
+		.' The path up to 'Troll Charm' starts here|goto Ashenvale,37.5,32.4,0.3|noway|c
+		info TODO: verify in-game
+	step
+		'Go into the cave|goto Ashenvale,38.4,30.6,0.5|c
+		info TODO: verify in-game
+	step
+		goto 40,32.5
+		.' Click the Troll Chests inside the cave
+		.get 8 Troll Charm|q 6462/1
+		info They look like little brown bamboo chests inside the cave.
+		info TODO: verify in-game
+	step
+		'WARNING: ESCORT!
+		goto 41.5,34.5
+		.talk Ruul Snowhoof##12818
+		..accept Freedom to Ruul##6482|noautoaccept
+		info TODO: verify in-game
+	step
+		.goal Escort Ruul from the Thistlefurs.|q 6482/1
+		info TODO: verify in-game
+	step
+		'Leave the cave and go to Zoram'gar Outpost|goto Ashenvale,11.9,34.5
+		info TODO: verify in-game
+	step
+		goto 11.9,34.5
+		.talk Karang Amakkar##12757
+		..turnin Between a Rock and a Thistlefur##216
+		info TODO: verify in-game
+	step
+		goto 11.7,34.9
+		.talk Mitsuwa##12721
+		..turnin Troll Charm##6462
+		.talk Marukai##12719
+		..turnin Naga at the Zoram Strand##6442
+		info TODO: verify in-game
+	step
+		'Fly to Splintertree Post|goto Ashenvale,73.2,61.6,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 74.1,60.9
+		.talk Yama Snowhoof##12837
+		..turnin Freedom to Ruul##6482
+		info TODO: verify in-game
+	step
+		goto 73,62.5
+		.talk Ertog Ragetusk##12877
+		..turnin Torek's Assault##6544
+		info TODO: verify in-game
+	step
+		goto 73.8,61.5
+		.talk Senani Thunderheart##12696
+		..turnin Ursangous's Paw##23
+		info TODO: verify in-game
+	step
+		goto 73.7,60
+		.talk Mastok Wrilehiss##12737
+		..turnin Stonetalon Standstill##25
+		..turnin The Befouled Element##1918
+		..accept Je'neu of the Earthen Ring##824
+		info TODO: verify in-game
+	step
+		goto 71.1,68.1
+		.talk Kuray'bin##12867
+		..turnin Ashenvale Outrunners##6503
+		info He's in the guard tower south of Splintertree Post.
+		info TODO: verify in-game
+	step
+		'Fly to Zoram'gar Outpost|goto Ashenvale,12.2,33.8,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 11.6,34.3
+		.talk Je'neu Sancrea##12736
+		..turnin Je'neu of the Earthen Ring##824
+		info TODO: verify in-game
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (25-29)",[[
 	author YunataSavior
+	next Ding80's Horde Leveling Guides\\Main Guide (30-34)
 	startlevel 25
+
+	step
+		'Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.1,59.8,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Stonetalon Mountains,47.2,64.2
+		.talk Mor'rogal##11861
+		..turnin Earthen Arise##6481
+		info He's up the hill south of town.
+		info TODO: verify in-game
+	step
+		goto 47.5,58.4
+		.talk Tammra Windfield##11864
+		..accept Cycle of Rebirth##6301
+		info TODO: verify in-game
+	step
+		goto 47.2,61.2
+		.talk Maggran Earthbinder##11860
+		..accept Calling in the Reserves##5881
+		info TODO: verify in-game
+	step
+		goto 59,62.6
+		.talk Ziz Fizziks##4201
+		..turnin Further Instructions (2)##1095
+		..accept Gerenzo Wrenchwhistle##1096
+		info TODO: verify in-game
+	step
+		goto 64.1,56.6
+		.kill XT:9|q 1068/2
+		info It wanders along the road heading north.
+		info TODO: verify in-game
+	step
+		goto 67.2,46.7
+		.kill XT:4|q 1068/1
+		info It wanders along the road heading north.
+		info TODO: verify in-game
+	step
+		goto 64.1,38.9
+		.' He spawns in different places on this dock high rise thing
+		.' Kill Gerenzo Wrenchwhistle
+		.get Gerenzo's Mechanical Arm|q 1096/1
+		info TODO: verify in-game
+	step
+		goto 59,62.6
+		.talk Ziz Fizziks##4201
+		..turnin Gerenzo Wrenchwhistle##1096
+		info TODO: verify in-game
+	step
+		goto 51.8,42.6
+		.' Click the Gaea Seeds
+		.get 10 Gaea Seed|q 6301/1
+		info They look like brown pine cones on the ground around the lake.
+		info TODO: verify in-game
+	step
+		goto 46.2,26.5
+		.' Kill coursers
+		.get 30 Courser Eye|q 1058/3
+		info TODO: verify in-game
+	step
+		goto 37.7,18.6
+		.' Kill Sap Beasts
+		.get 5 Stonetalon Sap|q 1058/1
+		.' Kill Fey Dragons
+		.get Fey Dragon Scale|q 1058/4
+		info TODO: verify in-game
+	step
+		goto 36.8,15.9
+		.kill 4 Son of Cenarius|q 1087/1
+		.kill 4 Daughter of Cenarius|q 1087/2
+		.kill 4 Cenarion Botanist|q 1087/3
+		info TODO: verify in-game
+	step
+		goto 33.7,8.2
+		.' Kill Twilight Runners
+		.get 5 Twilight Whisker|q 1058/2
+		info TODO: verify in-game
+	step
+		goto 35.9,65.3
+		.' Kill fire elementals
+		.get 10 Incendrites|q 6393/1
+		info Head far south to the Charred Vale.
+		info TODO: verify in-game
+	step
+		goto 35.7,68.7
+		.kill 7 Bloodfury Slayer|q 6282/3
+		.kill 7 Bloodfury Roguefeather|q 6282/4
+		info TODO: verify in-game
+	step
+		goto 32.6,67.2
+		.kill 7 Bloodfury Ambusher|q 6282/2
+		.kill 7 Bloodfury Harpy|q 6282/1
+		info TODO: verify in-game
+	step
+		'Follow the path east back to Sun Rock Retreat|goto Stonetalon Mountains,47.5,58.4,0.5
+		info TODO: verify in-game
+	step
+		ding 26
+		info TODO: verify in-game
+	step
+		goto 47.5,58.4
+		.talk Tammra Windfield##11864
+		..turnin Cycle of Rebirth##6301
+		..accept New Life##6381
+		info TODO: verify in-game
+	step
+		goto 47.2,61.2
+		.talk Maggran Earthbinder##11860
+		..turnin Harpies Threaten##6282
+		..accept Bloodfury Bloodline##6283
+		info TODO: verify in-game
+	step
+		goto 47.2,64.2
+		.talk Tsunaman##11862
+		..turnin Elemental War##6393
+		info TODO: verify in-game
+	step
+		goto 45.9,60.4
+		.talk Braelyn Firehand##4198
+		..turnin Cenarius' Legacy##1087
+		..accept Ordanus##1088
+		info Ignore the other quests here.
+		info TODO: verify in-game
+	step
+		goto 37.8,66.2
+		.' They look like dirt mounds around this area
+		.' Click the Gaea Dirt Mounds
+		.' Plant 10 Gaea Seeds|goal 10 Gaea seed planted|q 6381/1
+		info Head west back to the Charred Vale.
+		info TODO: verify in-game
+	step
+		goto 30.8,61.9
+		.' Kill the Bloodfury Ripper
+		.get Bloodfury Ripper's Remains|q 6283/1
+		info TODO: verify in-game
+	step
+		goto 47.2,61.2
+		.talk Maggran Earthbinder##11860
+		..turnin Bloodfury Bloodline##6283
+		info TODO: verify in-game
+	step
+		goto 47.5,58.4
+		.talk Tammra Windfield##11864
+		..turnin New Life##6381
+		info TODO: verify in-game
+	step
+		goto 74.5,97.9
+		.talk Witch Doctor Jin'Zil##3995
+		..turnin Jin'Zil's Forest Magic##1058
+		info Head southeast to Malaka'jin. Jin'Zil is in the cave.
+		info TODO: verify in-game
+	step
+		goto The Barrens,35.2,27.8
+		.talk Seereth Stonebreak##4049
+		..turnin Shredding Machines##1068
+		info Head east to the two tauren at the Barrens border.
+		info TODO: verify in-game
+	step
+		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
+		info !!! Make sure you train your skills !!!
+		info TODO: verify in-game
+	step
+		'Go outside of Orgrimmar|goto Durotar
+		'Go east to 50.8,13.3|goto Durotar,50.8,13.3|n
+		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|c
+		info TODO: verify in-game
+	step
+		'Go into the Undercity|goto Undercity,63.2,48.6
+		info TODO: verify in-game
+	step
+		goto Undercity,63.2,48.6
+		.' Fly to Tarren Mill|goto Hillsbrad Foothills,60.1,18.6,0.5|noway|c
+		info TODO: verify in-game
+	step
+		ding 27
+		info TODO: verify in-game
+	step
+		goto Hillsbrad Foothills,62.3,20.4
+		.talk High Executor Darthalia##2215
+		..turnin Battle of Hillsbrad (2)##528
+		..accept Battle of Hillsbrad (3)##529
+		info TODO: verify in-game
+	step
+		goto 61.4,19.1
+		.talk Apothecary Lydon##2216
+		..accept Elixir of Agony (1)##509
+		info TODO: verify in-game
+	step
+		goto 32.1,44.4
+		.kill Blacksmith Verringtan|q 529/1
+		.kill 4 Hillsbrad Apprentice Blacksmith|q 529/2
+		info They're in and around the smithy in the Hillsbrad Fields.
+		info TODO: verify in-game
+	step
+		goto 32.0,45.5
+		.' Click the Shipment of Iron
+		.get Shipment of Iron|q 529/3
+		info It's inside the smithy.
+		info Don't farm the 30 Hillsbrad Human Skulls yet, you'll kill a lot more humans soon.
+		info TODO: verify in-game
+	step
+		goto 62.3,20.4
+		.talk High Executor Darthalia##2215
+		..turnin Battle of Hillsbrad (3)##529
+		..accept Battle of Hillsbrad (4)##532
+		info TODO: verify in-game
+	step
+		goto 29.5,42.4
+		.kill 4 Hillsbrad Councilman|q 532/2
+		.kill Clerk Horrace Whitesteed|q 567/1
+		info Kill the councilmen on your way into the City Hall.
+		info TODO: verify in-game
+	step
+		goto 29.7,41.6
+		.kill Magistrate Burnside|q 532/1
+		.get Hillsbrad Town Registry|q 532/4
+		info He's inside the City Hall.
+		info TODO: verify in-game
+	step
+		goto 29.7,41.8
+		.' Click the Hillsbrad Proclamation to destroy it|goal Destroy the Hillsbrad Proclamation|q 532/3
+		info It's inside the City Hall.
+		info TODO: verify in-game
+	step
+		goto 32.6,39.8
+		.kill Citizen Wilkes|q 567/2
+		info TODO: verify in-game
+	step
+		goto 62.3,20.4
+		.talk High Executor Darthalia##2215
+		..turnin Battle of Hillsbrad (4)##532
+		..accept Battle of Hillsbrad (5)##539
+		info TODO: verify in-game
+	step
+		goto 31.8,52.7
+		.kill Miner Hackett|q 567/3
+		info Head southwest to the mine.
+		info TODO: verify in-game
+	step
+		goto 31.2,56.0
+		.kill Foreman Bonds|q 539/1
+		.kill 10 Hillsbrad Miner|q 539/2
+		info WARNING: Foreman Bonds summons two adds at 20% health. Finish him quickly, then run or kill the adds.
+		info TODO: verify in-game
+	step
+		goto 29.0,55.0
+		.' Kill humans around Hillsbrad
+		.get 30 Hillsbrad Human Skull|q 546/1
+		info TODO: verify in-game
+	step
+		goto 63.8,61.7
+		.' Click the Mudsnout Blossoms
+		.get 6 Mudsnout Blossoms|q 509/1
+		info Head far east to the field with Mudsnout Gnolls. Stay clear of Southshore on the way.
+		info TODO: verify in-game
+	step
+		goto 62.1,19.7
+		.talk Deathguard Samsa##2418
+		..turnin Souvenirs of Death##546
+		info TODO: verify in-game
+	step
+		goto 62.3,20.4
+		.talk High Executor Darthalia##2215
+		..turnin Battle of Hillsbrad (5)##539
+		..turnin Dangerous!##567
+		info Don't take any follow-ups here, we come back later.
+		info TODO: verify in-game
+	step
+		goto 61.4,19.1
+		.talk Apothecary Lydon##2216
+		..turnin Elixir of Agony (1)##509
+		..accept Elixir of Agony (2)##513
+		info TODO: verify in-game
+	step
+		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
+		info !!! Make sure you train your skills !!!
+		info This is your last chance to buy a Deadly Blunderbuss from the Auction House. Without one, skip the Booty Bay and Warsong Saw Blades steps.
+		info TODO: verify in-game
+	step
+		ding 28
+		info TODO: verify in-game
+	step
+		goto Orgrimmar,45.1,63.9
+		.talk Doras##3310
+		..'Fly to Ratchet|goto The Barrens,63.1,37.1,0.5|noway|c
+		info TODO: verify in-game
+	step
+		'ONLY IF YOU HAVE A DEADLY BLUNDERBUSS:
+		goto The Barrens,63.7,38.6|n
+		.' Take the boat to Booty Bay|goto Stranglethorn Vale,26.4,73.6,1|noway|c
+		info TODO: verify in-game
+	step
+		goto Stranglethorn Vale,26.4,73.3
+		.' Click the Warsong Axe Shipment next to Wharfmaster Lozgil
+		.get Warsong Axe Shipment|q 6571/2
+		info Then get right back on the boat to Ratchet. Skip this step if you have no Deadly Blunderbuss.
+		info TODO: verify in-game
+	step
+		'Take the boat back to Ratchet|goto The Barrens,63.7,38.6,1|noway|c
+		info Skip this step if you didn't go to Booty Bay.
+		info TODO: verify in-game
+	step
+		goto The Barrens,63.1,37.2
+		.talk Bragok##16227
+		..'Fly to Camp Taurajo|goto The Barrens,44.4,59.2,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 44.9,59.1
+		.talk Jorn Skyseer##3387
+		..accept Melor Sends Word##1130
+		info TODO: verify in-game
+	step
+		'Head west into Mulgore, then northwest along the road to Thunder Bluff|goto Thunder Bluff
+		info TODO: verify in-game
+	step
+		goto Thunder Bluff,47,49.8
+		.talk Tal##2995
+		..fpath Thunder Bluff
+		info TODO: verify in-game
+	step
+		goto 55.0,51.4
+		.talk Zangen Stonehoof##4721
+		..accept The Sacred Flame (1)##1195
+		info TODO: verify in-game
+	step
+		goto 61.5,80.9
+		.talk Melor Stonehoof##3441
+		..turnin Melor Sends Word##1130
+		..accept Steelsnap##1131
+		info He's on the Hunter Rise.
+		info TODO: verify in-game
+	step
+		goto 47,49.8
+		.talk Tal##2995
+		..'Fly to Splintertree Post|goto Ashenvale,73.2,61.6,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Ashenvale,73.1,61.5
+		.talk Pixel##12724
+		..accept Warsong Saw Blades##6581
+		..turnin Warsong Saw Blades##6581
+		info Only if you have a Deadly Blunderbuss. It gives you the Warsong Saw Blades for Warsong Supplies.
+		info TODO: verify in-game
+	step
+		goto 73.2,60.4
+		.talk Valusha##17355
+		..accept Destroy the Legion##9534
+		info TODO: verify in-game
+	step
+		goto 58.7,56.1
+		.' Kill Laughing Sisters
+		.collect 1 Etched Phial##5867|q 1195
+		info Head west along the road to Raynewood Retreat.
+		info TODO: verify in-game
+	step
+		goto 62.0,51.4
+		.kill Keeper Ordanus##4273
+		.get Ordanus' Head|q 1088/1
+		info He's up in the big tree at Raynewood Retreat.
+		info TODO: verify in-game
+	step
+		goto 57.5,56.0
+		.' Shadumbra walks around this area, on the western side of the tree
+		.kill Shadumbra##12677
+		..get Shadumbra's Head|n
+		.' Click Shadumbra's Head|use Shadumbra's Head##16304
+		..accept Shadumbra's Head##24
+		info TODO: verify in-game
+	step
+		goto 78.5,45.0
+		.' Kill satyrs
+		.get 16 Satyr Horns|q 6441/1
+		info Head northeast around the cliffside, then southeast to the satyr camp in Satyrnaar.
+		info TODO: verify in-game
+	step
+		goto 78.2,44.8
+		.' Click the Warsong Oil
+		.get Warsong Oil|q 6571/3
+		info If it isn't here, check the other satyr camps around Satyrnaar.
+		info TODO: verify in-game
+	step
+		goto 60.2,72.9
+		.' Use your Etched Phial while standing in the moonwell water|use Etched Phial##5867
+		.get Filled Etched Phial|q 1195/1
+		info TODO: verify in-game
+	step
+		goto 70.0,71.2
+		.talk Gurda Ragescar##12718
+		..turnin The Lost Pages##6504
+		info Bind your Shredder Operating Manual pages into chapters first. Skip this if you don't have all 3 chapters.
+		info TODO: verify in-game
+	step
+		goto 71.4,67.6
+		.talk Locke Okarr##11820
+		..turnin Warsong Supplies##6571
+		info Only if you got all 4 supplies. Otherwise abandon the quest.
+		info TODO: verify in-game
+	step
+		goto 75.0,70.1
+		.' Search for Sharptalon around here
+		.kill Sharptalon##12676
+		..get Sharptalon's Claw|n
+		.' Click Sharptalon's Claw|use Sharptalon's Claw##16305
+		..accept Sharptalon's Claw##2
+		info TODO: verify in-game
+	step
+		goto 83.0,70.0
+		.kill 6 Mannoroc Lasher|q 9534/1
+		.kill 6 Roaming Felguard|q 9534/2
+		.kill 6 Searing Infernal|q 9534/3
+		.' They randomly drop Diabolical Plans
+		.' Click the Diabolical Plans|use Diabolical Plans##23797
+		..accept Diabolical Plans##9535
+		info Head east to Felfire Hill.
+		info TODO: verify in-game
+	step
+		goto 73.1,61.5
+		.talk Pixel##12724
+		..turnin Satyr Horns##6441
+		info TODO: verify in-game
+	step
+		goto 73.8,61.5
+		.talk Senani Thunderheart##12696
+		..turnin Shadumbra's Head##24
+		..turnin Sharptalon's Claw##2
+		..accept The Hunt Completed##247
+		..turnin The Hunt Completed##247
+		info TODO: verify in-game
+	step
+		goto 73.2,60.4
+		.talk Valusha##17355
+		..turnin Destroy the Legion##9534
+		..turnin Diabolical Plans##9535
+		info Don't take any follow-ups. Ashenvale is done.
+		info TODO: verify in-game
+	step
+		ding 29
+		info TODO: verify in-game
+	step
+		goto 73.2,61.6
+		.talk Vhulgra##12616
+		..'Fly to Sun Rock Retreat|goto Stonetalon Mountains,45.1,59.8,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Stonetalon Mountains,45.9,60.4
+		.talk Braelyn Firehand##4198
+		..turnin Ordanus##1088
+		info TODO: verify in-game
+	step
+		goto 45.1,59.8
+		.talk Tharm##4312
+		..'Fly to Thunder Bluff|goto Thunder Bluff,47,49.8,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Thunder Bluff,55,51.4
+		.talk Zangen Stonehoof##4721
+		..turnin The Sacred Flame (1)##1195
+		..accept The Sacred Flame (2)##1196
+		info TODO: verify in-game
+	step
+		goto 47,49.8
+		.talk Tal##2995
+		..'Fly to Camp Taurajo|goto The Barrens,44.4,59.2,0.5|noway|c
+		info TODO: verify in-game
+	step
+		'Go southeast down the road to the Great Lift|goto Thousand Needles,31.9,21.7,0.5
+		info TODO: verify in-game
+	step
+		goto Thousand Needles,31.9,21.7
+		.talk Grish Longrunner##12576
+		..turnin Calling in the Reserves##5881
+		info He's at the top of the Great Lift.
+		info TODO: verify in-game
+	step
+		goto 32.2,22.2
+		.talk Brave Moonhorn##10079
+		..accept Message to Freewind Post##4542
+		info TODO: verify in-game
+	step
+		'Take the lift down, follow the road south then east, and take the lift up to Freewind Post|goto Thousand Needles,45.1,49.1,0.5
+		info TODO: verify in-game
+	step
+		goto 45.1,49.1
+		.talk Nyse##4317
+		..fpath Freewind Post
+		info TODO: verify in-game
+	step
+		goto 45.7,50.7
+		.talk Cliffwatcher Longhorn##10537
+		..turnin Message to Freewind Post##4542
+		..accept Pacify the Centaur##4841
+		info TODO: verify in-game
+	step
+		goto 44.6,50.3
+		.talk Hagar Lightninghoof##10539
+		..accept Alien Egg##4821
+		info TODO: verify in-game
+	step
+		goto 46.2,50.4
+		.talk Magistrix Elosai##17093
+		..accept A Different Approach##9431
+		info TODO: verify in-game
+	step
+		goto 46.1,51.7
+		.talk Rau Cliffrunner##4722
+		..turnin The Sacred Flame (2)##1196
+		..accept The Sacred Flame (3)##1197
+		info TODO: verify in-game
+	step
+		goto 46,50.9
+		.talk Wanted Poster - Arnak Grimtotem##176115
+		..accept Wanted - Arnak Grimtotem##5147
+		info TODO: verify in-game
+	step
+		goto 44.9,48.9
+		.talk Elu##10377
+		..accept Wind Rider##4767
+		info TODO: verify in-game
+	step
+		goto 48.6,42.6
+		.kill 12 Galak Scout|q 4841/1
+		.kill 10 Galak Wrangler|q 4841/2
+		.kill 6 Galak Windchaser|q 4841/3
+		info Head north and clear a path through the centaur into the cave.
+		info TODO: verify in-game
+	step
+		goto 42,31.5
+		.' Click the Ancient Brazier
+		.get Cloven Hoof|q 1197/1
+		info It's at the end of the cave. It looks like a bowl with a blue flame in it.
+		info TODO: verify in-game
+	step
+		goto 53.9,41.5
+		.talk Dorn Plainstalker##2986
+		..accept Test of Faith##1149
+		info Head east and up the slope. He's standing in the back of the cave.
+		info TODO: verify in-game
+	step
+		.' Dorn teleports you to the top of a high cliff
+		.' Walk to the two wooden planks and jump off|goal Leap from the planks|q 1149/1
+		info TODO: verify in-game
+	step
+		goto 53.9,41.5
+		.talk Dorn Plainstalker##2986
+		..turnin Test of Faith##1149
+		..accept Test of Endurance##1150
+		info TODO: verify in-game
+	step
+		goto 56.5,50.3
+		.' Click the big white Alien Egg
+		.get Alien Egg|q 4821/1
+		info If the egg is not here, it can also be at 52.3,55.2 or 37.6,56.1.
+		info TODO: verify in-game
+	step
+		goto 65.2,62.0
+		.' Kill Thundering Boulderkin
+		.get 2 Purifying Earth|q 9431/1
+		info TODO: verify in-game
+	step
+		goto 45.7,50.7
+		.talk Cliffwatcher Longhorn##10537
+		..turnin Pacify the Centaur##4841
+		..accept Grimtotem Spying##5064
+		info TODO: verify in-game
+	step
+		goto 44.6,50.3
+		.talk Hagar Lightninghoof##10539
+		..turnin Alien Egg##4821
+		..accept Serpent Wild##4865
+		info TODO: verify in-game
+	step
+		goto 46.1,51.7
+		.talk Rau Cliffrunner##4722
+		..turnin The Sacred Flame (3)##1197
+		info TODO: verify in-game
+	step
+		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
+		info !!! Make sure you train your skills !!!
+		info TODO: verify in-game
+]])
+
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (30-34)",[[
+	author YunataSavior
+	next Ding80's Horde Leveling Guides\\Main Guide (35-39)
+	startlevel 30
+
+	step
+		goto Orgrimmar,45.1,63.9
+		.talk Doras##3310
+		..'Fly to Freewind Post|goto Thousand Needles,45.1,49.1,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Thousand Needles,26,55
+		.' Click the Harpy Foodstuffs at the end of the cave to spawn Grenka Bloodscreech
+		.from Grenka Bloodscreech##4490
+		.get Grenka's Claw|q 1150/1
+		info Head west to the Roguefeather Den.
+		info TODO: verify in-game
+	step
+		goto 10.7,30.8
+		.' Click the Highperch Wyvern Eggs on the ground
+		.get 10 Highperch Wyvern Egg|q 4767/1
+		info They look like white eggs with light blue spots on them around Highperch.
+		info TODO: verify in-game
+	step
+		'WARNING: ESCORT!
+		goto 17.9,40.6
+		.talk Pao'ka Swiftmountain##10427
+		..accept Homeward Bound##4770|noautoaccept
+		info He's up the southeastern path from Highperch.
+		info TODO: verify in-game
+	step
+		.' Escort Pao'ka Swiftmountain to safety|goal Escort Pao'ka from Highperch|q 4770/1
+		info Let him walk in front so he tanks the ambushes.
+		info TODO: verify in-game
+	step
+		goto 21.5,32.4
+		.talk Motega Firemane##10428
+		..turnin Homeward Bound##4770
+		..turnin Serpent Wild##4865
+		..accept Sacred Fire##5062
+		info Watch out for Steelsnap, he runs a wide circle around Whitereach Post.
+		info TODO: verify in-game
+	step
+		goto 21.4,32.5
+		.talk Wizlo Bearingshiner##10941
+		..turnin A Different Approach##9431
+		..accept A Dip in the Moonwell##9433
+		info Skip Hypercapacitor Gizmo, it's out of the way and hard to solo.
+		info TODO: verify in-game
+	step
+		goto 12,18.8|n
+		.' The path to 'A Dip in the Moonwell' starts here
+		..'You can get up on the ledge at this spot|goto Thousand Needles,12,18.8,0.3|noway|c
+		info TODO: verify in-game
+	step
+		goto 9.5,18.7
+		.' Stand next to the Concealed Control Panel
+		.' Dismiss your pet if you have one
+		.' Use your Robotron Control Unit|use Robotron Control Unit##23675
+		.' While in control of the Robotron 3000:
+		..'Walk west to the moonwell
+		..'Use the Gather Water ability on the Robotron 3000 pet toolbar while standing in the moonwell water
+		.get Thalanaar Moonwell Water|q 9433/1
+		.'Cancel the "Summon Robot" buff to dismiss the robot
+		info TODO: verify in-game
+	step
+		goto 22.1,31
+		.' Find the Galak Messenger
+		.' Kill the Galak Messenger
+		.get the Assassination Note|n
+		.' Click the Assassination Note|use Assassination Note##12564
+		..accept Assassination Plot##4881
+		info He runs along the road between Whitereach Post and Camp E'thok.
+		info TODO: verify in-game
+	step
+		goto 21.4,32.5
+		.talk Wizlo Bearingshiner##10941
+		..turnin A Dip in the Moonwell##9433
+		..accept Testing the Tonic##9434
+		info TODO: verify in-game
+	step
+		'WARNING: ESCORT!
+		goto 21.2,32.0
+		.talk Kanati Greycloud##10638
+		..turnin Assassination Plot##4881
+		..accept Protect Kanati Greycloud##4966|noautoaccept
+		info TODO: verify in-game
+	step
+		goto 21.3,32.1
+		.' Protect Kanati Greycloud from the centaur attack
+		.kill Galak Assassin|q 4966/1
+		info TODO: verify in-game
+	step
+		goto 21.2,32.0
+		.talk Kanati Greycloud##10638
+		..turnin Protect Kanati Greycloud##4966
+		info TODO: verify in-game
+	step
+		goto 33.6,34.1
+		.' Click the Incendia Agave in the water
+		.get 10 Incendia Agave|q 5062/1
+		info They look like aloe plants around the boiling lake and inside the water.
+		info TODO: verify in-game
+	step
+		goto 17.6,28.2
+		.' Steelsnap wanders around this area
+		.' Kill Steelsnap
+		.get Steelsnap's Rib|q 1131/1
+		info TODO: verify in-game
+	step
+		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto Orgrimmar,45.1,63.9
+		.talk Doras##3310
+		..'Fly to Thunder Bluff|goto Thunder Bluff,47,49.8,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Thunder Bluff,61.5,80.9
+		.talk Melor Stonehoof##3441
+		..turnin Steelsnap##1131
+		..accept Frostmaw##1136
+		info He's on the Hunter Rise.
+		info TODO: verify in-game
+	step
+		goto 69.8,30.9
+		.talk Magatha Grimtotem##4046
+		..turnin Sacred Fire##5062
+		..accept Arikara##5088
+		info She's on the Elder Rise.
+		info TODO: verify in-game
+	step
+		ding 31
+		info TODO: verify in-game
+	step
+		goto 47,49.8
+		.talk Tal##2995
+		..'Fly to Freewind Post|goto Thousand Needles,45.1,49.1,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Thousand Needles,44.9,48.9
+		.talk Elu##10377
+		..turnin Wind Rider##4767
+		info TODO: verify in-game
+	step
+		goto 46.2,50.4
+		.talk Magistrix Elosai##17093
+		..turnin Testing the Tonic##9434
+		info TODO: verify in-game
+	step
+		goto 53.9,41.5
+		.talk Dorn Plainstalker##2986
+		..turnin Test of Endurance##1150
+		..accept Test of Strength##1151
+		info TODO: verify in-game
+	step
+		goto 31.8,32.6
+		.' Click the Document Chest
+		.get Secret Note #1|q 5064/1
+		info Go up the path to the Grimtotem Camp. The notes are on top of the rope bridges. This one is a grey chest.
+		info TODO: verify in-game
+	step
+		goto 33.8,40
+		.' Click the Document Chest in the big tent
+		.get Secret Note #2|q 5064/2
+		info TODO: verify in-game
+	step
+		goto 39.3,41.5
+		.' Click the Document Chest in the big tent
+		.get Secret Note #3|q 5064/3
+		info TODO: verify in-game
+	step
+		goto 38,35.3
+		.' Click the Sacred Fire of Life
+		.' Light the Sacred Fire of Life to summon Arikara|goal Light the Sacred Fire of Life|q 5088/1
+		.' Kill Arikara
+		.get Arikara Serpent Skin|q 5088/2
+		info TODO: verify in-game
+	step
+		goto 38.9,28.6
+		.' Arnak Grimtotem walks around here
+		.' Kill Arnak Grimtotem
+		.get Arnak's Hoof|q 5147/1
+		info TODO: verify in-game
+	step
+		'WARNING: ESCORT!
+		goto 38.0,26.4
+		.talk Lakota Windsong##10646
+		..accept Free at Last##4904|noautoaccept
+		info TODO: verify in-game
+	step
+		goto 37.7,26.7
+		.' Escort Lakota Windsong from the Darkcloud Pinnacle|goal Escort Lakota Windsong from the Darkcloud Pinnacle.|q 4904/1
+		info TODO: verify in-game
+	step
+		goto 21.5,32.4
+		.talk Motega Firemane##10428
+		..turnin Arikara##5088
+		info TODO: verify in-game
+	step
+		goto 20.6,39.5
+		.from Rok'Alim the Pounder##4499
+		.get Fragments of Rok'Alim|q 1151/1
+		info Head south, then northwest towards Feralas. Rok'Alim can be anywhere along this path.
+		info TODO: verify in-game
+	step
+		'Follow the road northwest into Feralas and straight to Camp Mojache|goto Feralas,75.5,44.4,0.5
+		info TODO: verify in-game
+	step
+		goto Feralas,75.5,44.4
+		.talk Shyn##8020
+		..fpath Camp Mojache
+		info TODO: verify in-game
+	step
+		goto 75.5,44.4
+		.talk Shyn##8020
+		..'Fly to Freewind Post|goto Thousand Needles,45.1,49.1,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Thousand Needles,45.7,50.7
+		.talk Cliffwatcher Longhorn##10537
+		..turnin Grimtotem Spying##5064
+		..turnin Wanted - Arnak Grimtotem##5147
+		info If you're level 32 already, accept Family Tree here and skip the later trip back for it.
+		info TODO: verify in-game
+	step
+		goto 46.0,51.6
+		.talk Thalia Amberhide##10645
+		..turnin Free at Last##4904
+		info TODO: verify in-game
+	step
+		goto 53.9,41.5
+		.talk Dorn Plainstalker##2986
+		..turnin Test of Strength##1151
+		info Don't take the follow-up.
+		info TODO: verify in-game
+	step
+		goto 78.1,77.1
+		.talk Wizzle Brassbolts##4453
+		..accept Hardened Shells##1105
+		.talk Fizzle Brassbolts##4454
+		..accept Salt Flat Venom##1104
+		info Head southeast to the Shimmering Flats.
+		info TODO: verify in-game
+	step
+		goto 77.8,77.3
+		.talk Kravel Koalbeard##4452
+		..accept Hemet Nesingwary Jr.##5762
+		..accept Rocket Car Parts##1110
+		..accept Wharfmaster Dizzywig##1111
+		info TODO: verify in-game
+	step
+		goto 80.2,75.9
+		.talk Pozzik##4630
+		..accept Load Lightening##1176
+		info TODO: verify in-game
+	step
+		goto 81.6,78
+		.talk Trackmaster Zherin##4629
+		..accept A Bump in the Road##1175
+		info TODO: verify in-game
+	step
+		goto 87.8,65.5
+		.' Kill vultures
+		.get 10 Hollow Vulture Bone|q 1176/1
+		.' Click the Rocket Car Parts on the ground as you go
+		.get 30 Rocket Car Parts|q 1110/1
+		info The bones drop slowly, keep coming back to the vultures as you circle the flats.
+		info TODO: verify in-game
+	step
+		goto 83.2,55.5
+		.' Kill turtles
+		.get 9 Hardened Tortoise Shell|q 1105/1
+		info Keep any Turtle Meat, don't vendor it. You need 10 later.
+		info TODO: verify in-game
+	step
+		goto 75.5,54.9
+		.kill 10 Saltstone Basilisk|q 1175/1
+		info TODO: verify in-game
+	step
+		goto 71.7,72.6
+		.' Kill scorpions
+		.get 6 Salty Scorpid Venom|q 1104/1
+		info TODO: verify in-game
+	step
+		goto 78.6,84.7
+		.kill 10 Saltstone Crystalhide|q 1175/2
+		.kill 6 Saltstone Gazer|q 1175/3
+		info TODO: verify in-game
+	step
+		goto 87.8,65.5
+		.' Kill vultures
+		.get 10 Hollow Vulture Bone|q 1176/1
+		.' Finish getting the 30 Rocket Car Parts you need|goal 30 Rocket Car Parts|q 1110/1
+		info TODO: verify in-game
+	step
+		goto 78.1,77.1
+		.talk Wizzle Brassbolts##4453
+		..turnin Hardened Shells##1105
+		.talk Fizzle Brassbolts##4454
+		..turnin Salt Flat Venom##1104
+		..accept Martek the Exiled##1106
+		info TODO: verify in-game
+	step
+		goto 77.8,77.3
+		.talk Kravel Koalbeard##4452
+		..turnin Rocket Car Parts##1110
+		info TODO: verify in-game
+	step
+		goto 80.2,75.9
+		.talk Pozzik##4630
+		..turnin Load Lightening##1176
+		..accept Goblin Sponsorship (1)##1178
+		info TODO: verify in-game
+	step
+		goto 81.6,78
+		.talk Trackmaster Zherin##4629
+		..turnin A Bump in the Road##1175
+		info TODO: verify in-game
+	step
+		'Go south out of the Shimmering Flats to Gadgetzan|goto Tanaris,51.6,25.4,0.5
+		info TODO: verify in-game
+	step
+		goto Tanaris,51.6,25.4
+		.talk Bulkrek Ragefist##7824
+		..fpath Gadgetzan
+		info TODO: verify in-game
+	step
+		ding 32
+		info TODO: verify in-game
+	step
+		goto 51.6,25.4
+		.talk Bulkrek Ragefist##7824
+		..'Fly to Freewind Post|goto Thousand Needles,45.1,49.1,0.5|noway|c
+		info Skip this trip if you already have Family Tree.
+		info TODO: verify in-game
+	step
+		goto Thousand Needles,45.7,50.7
+		.talk Cliffwatcher Longhorn##10537
+		..accept Family Tree##5361
+		info Skip this step if you already have it.
+		info TODO: verify in-game
+	step
+		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
+		info !!! Make sure you train your skills !!!
+		info If you kept up the Elixir of Agony chain, buy a Strong Troll's Blood Elixir from the Auction House. If there are none, buy 2 Briarthorn, 2 Bruiseweed and 1 Leaded Vial and ask an alchemist in trade chat to make one.
+		info TODO: verify in-game
+	step
+		'Go outside of Orgrimmar|goto Durotar
+		'Go east to 50.8,13.3|goto Durotar,50.8,13.3|n
+		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|c
+		info TODO: verify in-game
+	step
+		goto Undercity,48.8,69.3
+		.talk Master Apothecary Faranell##2055
+		..turnin Elixir of Agony (2)##513
+		..accept Elixir of Agony (3)##515
+		info He's in the Apothecarium.
+		info TODO: verify in-game
+	step
+		goto 63.8,49.5
+		.talk Genavie Callow##4486
+		..accept To Steal From Thieves##1164
+		info She's near the flight master.
+		info TODO: verify in-game
+	step
+		goto 63.2,48.6
+		.talk Michael Garrett##4551
+		..'Fly to Tarren Mill|goto Hillsbrad Foothills,60.1,18.6,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Hillsbrad Foothills,62.3,20.4
+		.talk High Executor Darthalia##2215
+		..accept Battle of Hillsbrad (6)##541
+		info TODO: verify in-game
+	step
+		goto 62.8,20.2
+		.talk Deathguard Humbert##2419
+		..accept Humbert's Sword##547
+		info TODO: verify in-game
+	step
+		goto 63.2,20.7
+		.talk Krusk##2229
+		..accept Regthar Deathgate##1361
+		info Don't pick up Infiltration, Prison Break In, Stone Tokens or WANTED: Baron Vardus, you need the quest log space.
+		info TODO: verify in-game
+	step
+		goto 62.3,19.0
+		.talk Christoph Jeffcoat##2393
+		..accept Soothing Turtle Bisque##7321
+		info TODO: verify in-game
+	step
+		goto 61.9,19.6
+		.talk Tallow##2770
+		..accept The Hammer May Fall##676
+		info TODO: verify in-game
+	step
+		goto 63.9,19.7
+		.talk Novice Thaivand##2429
+		..accept Helcular's Revenge (1)##552
+		info TODO: verify in-game
+	step
+		goto 63.9,39.7
+		.from Snapjaw##2408
+		..get 10 Turtle Meat|q 7321/1
+		info Skip this if you kept 10 Turtle Meat from the Shimmering Flats. The turtles in the river straight east drop a lot of it.
+		info TODO: verify in-game
+	step
+		goto 62.3,19.0
+		.' Buy 1 Soothing Spices from the inn
+		.talk Christoph Jeffcoat##2393
+		..turnin Soothing Turtle Bisque##7321
+		info TODO: verify in-game
+	step
+		goto 48.1,31.4
+		.' Kill yetis inside and around the cave
+		.get Helcular's Rod|q 552/1
+		info It's a low drop rate.
+		info TODO: verify in-game
+	step
+		goto 33.1,70.0
+		.' Kill Torn Fin murlocs
+		.get 5 Torn Fin Eye|q 515/3
+		info Head southwest to the murlocs.
+		info TODO: verify in-game
+	step
+		goto 58.9,77.6
+		.' Kill Daggerspine nagas
+		.get 5 Daggerspine Scale|q 515/2
+		info Swim east, staying clear of Southshore.
+		info TODO: verify in-game
+	step
+		goto 61.4,19.1
+		.talk Apothecary Lydon##2216
+		..turnin Elixir of Agony (3)##515
+		..accept Elixir of Agony (4)##517
+		info TODO: verify in-game
+	step
+		goto 63.9,19.7
+		.talk Novice Thaivand##2429
+		..turnin Helcular's Revenge (1)##552
+		..accept Helcular's Revenge (2)##553
+		info TODO: verify in-game
+	step
+		goto 71.6,81.0
+		.' Click the Keg of Shindigger Stout
+		.get Keg of Shindigger Stout|q 517/1
+		info Go southeast into Dun Garok. The keg is in the side room by the entrance.
+		info TODO: verify in-game
+	step
+		goto 71.0,78.1
+		.kill 8 Dun Garok Mountaineer|q 541/1
+		.kill 4 Dun Garok Rifleman|q 541/2
+		.kill 2 Dun Garok Priest|q 541/3
+		.' Kill dwarves
+		.get Humbert's Sword|q 547/1
+		info Humbert's Sword is a rare drop from any dwarf here.
+		info TODO: verify in-game
+	step
+		goto 71.5,79.8
+		.kill Captain Ironhill|q 541/4
+		info He's in the big room at the bottom.
+		info TODO: verify in-game
+	step
+		ding 33
+		info TODO: verify in-game
+	step
+		'Head northeast into the Arathi Highlands|goto Arathi Highlands
+		info TODO: verify in-game
+	step
+		goto Arathi Highlands,30.9,48.4
+		.kill 8 Boulderfist Ogre|q 676/1
+		info Follow the road, then head a bit north to Boulder'gor.
+		info TODO: verify in-game
+	step
+		goto 35.1,44.3
+		.' Inside the cave
+		.kill 10 Boulderfist Enforcer|q 676/2
+		info TODO: verify in-game
+	step
+		'Follow the road all the way east to Hammerfall|goto Arathi Highlands,73.1,32.7,0.5
+		info TODO: verify in-game
+	step
+		goto 73.1,32.7
+		.talk Urda##2851
+		..fpath Hammerfall
+		info TODO: verify in-game
+	step
+		goto 74.2,33.9
+		.talk Drum Fel##2771
+		..turnin The Hammer May Fall##676
+		..accept Call to Arms (1)##677
+		info TODO: verify in-game
+	step
+		goto 72.6,33.9
+		.talk Gor'mul##2792
+		..accept Hammerfall##655
+		info Only pick up Hammerfall and Call to Arms here.
+		info TODO: verify in-game
+	step
+		goto 74.7,36.3
+		.talk Tor'gan##2706
+		..turnin Hammerfall##655
+		..accept Raising Spirits (1)##672
+		info TODO: verify in-game
+	step
+		goto 69.9,36.2
+		.' Kill raptors
+		.get 10 Highland Raptor Eye|q 672/1
+		info TODO: verify in-game
+	step
+		goto 56.7,40.4
+		.' Kill Fardel Dabyrie
+		.get Fardel's Head|q 1164/3
+		info He's standing in front of the barn at Dabyrie's Farmstead.
+		info TODO: verify in-game
+	step
+		goto 54.2,38.3
+		.' Kill Marcel Dabyrie
+		.get Marcel's Head|q 1164/2
+		info He's standing inside the stables.
+		info TODO: verify in-game
+	step
+		goto 56.4,36.1
+		.' Kill Kenata Dabyrie
+		.get Kenata's Head|q 1164/1
+		info She's inside the small northern house on the hill.
+		info TODO: verify in-game
+	step
+		goto 70.2,58.9
+		.kill 10 Witherbark Axe Thrower|q 677/1
+		.kill 10 Witherbark Headhunter|q 677/2
+		.kill 8 Witherbark Witch Doctor|q 677/3
+		info Head southeast to Witherbark Village.
+		info TODO: verify in-game
+	step
+		goto 74.2,33.9
+		.talk Drum Fel##2771
+		..turnin Call to Arms (1)##677
+		info TODO: verify in-game
+	step
+		goto 74.7,36.3
+		.talk Tor'gan##2706
+		..turnin Raising Spirits (1)##672
+		info Don't take any follow-ups.
+		info TODO: verify in-game
+	step
+		goto 73.1,32.7
+		.talk Urda##2851
+		..'Fly to Tarren Mill|goto Hillsbrad Foothills,60.1,18.6,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Hillsbrad Foothills,62.3,20.4
+		.talk High Executor Darthalia##2215
+		..turnin Battle of Hillsbrad (6)##541
+		..accept Battle of Hillsbrad (7)##14351
+		info TODO: verify in-game
+	step
+		goto 61.4,19.1
+		.talk Apothecary Lydon##2216
+		..turnin Elixir of Agony (4)##517
+		..accept Elixir of Agony (5)##524
+		info TODO: verify in-game
+	step
+		goto 62.8,18.7
+		.talk Dusty Rug##1728
+		..turnin Elixir of Agony (5)##524
+		info Go upstairs in the inn and click the rug.
+		info TODO: verify in-game
+	step
+		goto 62.8,20.2
+		.talk Deathguard Humbert##2419
+		..turnin Humbert's Sword##547
+		info TODO: verify in-game
+	step
+		goto 60.1,18.6
+		.talk Zarise##2389
+		..'Fly to the Undercity|goto Undercity,63.2,48.6,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Undercity,63.8,49.5
+		.talk Genavie Callow##4486
+		..turnin To Steal From Thieves##1164
+		info TODO: verify in-game
+	step
+		goto 56.2,92.2
+		.talk Bragor Bloodfist##36273
+		..turnin Battle of Hillsbrad (7)##14351
+		info He's in the Royal Quarter, at the end of the long tunnel in the southwest. If Varimathras is there instead, turn it in to him.
+		info TODO: verify in-game
+	step
+		ding 34
+		info TODO: verify in-game
+	step
+		goto 57.6,93.8
+		.talk Sharlindra##2227
+		..accept The Crown of Will (1)##495
+		info It needs level 34, you should have hit it by now.
+		info TODO: verify in-game
+	step
+		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
+		info !!! Make sure you train your skills !!!
+		info TODO: verify in-game
+	step
+		goto Orgrimmar,51.3,45.9
+		.talk Craven Drok##5639
+		..accept Alliance Relations (1)##1431
+		info He's in the Cleft of Shadow.
+		info TODO: verify in-game
+	step
+		goto 22.6,52.6
+		.talk Keldran##5640
+		..turnin Alliance Relations (1)##1431
+		..accept Alliance Relations (2)##1432
+		info TODO: verify in-game
+	step
+		goto 45.1,63.9
+		.talk Doras##3310
+		..'Fly to Ratchet|goto The Barrens,63.1,37.1,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto The Barrens,62.7,36.2
+		.talk Gazlowe##3391
+		..turnin Goblin Sponsorship (1)##1178
+		..accept Goblin Sponsorship (2)##1180
+		info TODO: verify in-game
+	step
+		goto 63.4,38.5
+		.talk Wharfmaster Dizzywig##3453
+		..turnin Wharfmaster Dizzywig##1111
+		info Don't take the follow-up, Parts for Kravel.
+		info TODO: verify in-game
+	step
+		goto The Barrens,63.7,38.6|n
+		.' Take the boat to Booty Bay|goto Stranglethorn Vale,26.4,73.6,1|noway|c
+		info TODO: verify in-game
+	step
+		goto Stranglethorn Vale,26.9,77.1
+		.talk Gringer##2858
+		..fpath Booty Bay
+		info TODO: verify in-game
+	step
+		goto 28.3,77.6
+		.talk Drizzlik##2495
+		..accept Supply and Demand##575
+		info TODO: verify in-game
+	step
+		goto 26.9,77.2
+		.talk Krazek##773
+		..accept Investigate the Camp##201
+		info TODO: verify in-game
+	step
+		goto 27,77.1
+		.talk Kebok##737
+		..accept Bloodscalp Ears##189
+		..accept Hostile Takeover##213
+		info TODO: verify in-game
+	step
+		goto 27.1,77.2
+		.talk Crank Fizzlebub##2498
+		..accept Singing Blue Shards##605
+		info TODO: verify in-game
+	step
+		goto 27.8,77.1
+		.talk "Sea Wolf" MacKinley##2501
+		..accept Scaring Shaky##606
+		info TODO: verify in-game
+	step
+		'Follow the road north all the way to Grom'gol Base Camp|goto Stranglethorn Vale,32.5,29.4,0.5
+		info TODO: verify in-game
+	step
+		goto 32.5,29.4
+		.talk Thysta##1387
+		..fpath Grom'gol
+		info TODO: verify in-game
+	step
+		goto 32.0,28.6
+		.talk Nemeth Hawkeye##17094
+		..accept Bloodscalp Insight##9436
+		info TODO: verify in-game
+	step
+		goto 32.2,27.7
+		.talk Nimboya##2497
+		..accept Hunt for Yenniku##581
+		..accept Trollbane##638
+		info TODO: verify in-game
+	step
+		goto 32.2,28.9
+		.talk Commander Aggro'gosh##2464
+		..accept The Defense of Grom'gol (1)##568
+		info TODO: verify in-game
+	step
+		goto 32.3,27.7
+		.talk Kin'weelay##2519
+		..accept Bloody Bone Necklaces##596
+		..accept The Vile Reef##629
+		info TODO: verify in-game
+	step
+		goto 32.1,29.2
+		.talk Far Seer Mok'thardin##2465
+		..accept Mok'thardin's Enchantment (1)##570
+		info TODO: verify in-game
+	step
+		goto 35.7,10.8
+		.' See a message saying you Investigated the Camp|goal Locate the hunters' camp|q 201/1
+		.talk Hemet Nesingwary Jr.##715
+		..turnin Hemet Nesingwary Jr.##5762
+		info Head north to Nesingwary's Expedition.
+		info TODO: verify in-game
+	step
+		goto 35.7,10.5
+		.talk Barnil Stonepot##716
+		..accept Welcome to the Jungle##583
+		info TODO: verify in-game
+	step
+		goto 35.7,10.8
+		.talk Hemet Nesingwary Jr.##715
+		..turnin Welcome to the Jungle##583
+		..accept Raptor Mastery (1)##194
+		info Ignore The Green Hills of Stranglethorn for now, it takes too much bag and quest log space.
+		info TODO: verify in-game
+	step
+		goto 35.5,10.6
+		.talk Sir S. J. Erlgadin##718
+		..accept Panther Mastery (1)##190
+		info TODO: verify in-game
+	step
+		goto 35.6,10.6
+		.talk Ajeck Rouack##717
+		..accept Tiger Mastery (1)##185
+		info TODO: verify in-game
+	step
+		goto 40.3,12.4
+		.' Kill River Crocolisks
+		.get 2 Large River Crocolisk Skin|q 575/1
+		info Head north to the river.
+		info TODO: verify in-game
+	step
+		goto 35.4,12.1
+		.kill 10 Young Stranglethorn Tiger|q 185/1
+		info TODO: verify in-game
+	step
+		goto 41.2,12
+		.kill 10 Young Panther|q 190/1
+		info TODO: verify in-game
+	step
+		goto 35.6,10.6
+		.talk Ajeck Rouack##717
+		..turnin Tiger Mastery (1)##185
+		..accept Tiger Mastery (2)##186
+		.talk Sir S. J. Erlgadin##718
+		..turnin Panther Mastery (1)##190
+		..accept Panther Mastery (2)##191
+		info TODO: verify in-game
+	step
+		goto 29.6,10.7
+		.kill 10 Stranglethorn Tiger|q 186/1
+		.kill 10 Panther|q 191/1
+		info Head west and walk up the hill path.
+		info TODO: verify in-game
+	step
+		goto 28,15.5
+		.kill 10 Stranglethorn Raptor|q 194/1
+		info TODO: verify in-game
+	step
+		goto 26.7,18.5
+		.' Kill basilisks
+		.get 10 Singing Crystal Shard|q 605/1
+		info They're on the middle level of the cliff to the southwest.
+		info TODO: verify in-game
+	step
+		goto 24.8,23.1
+		.' It looks like a stone tablet leaning against a wall underwater
+		.' Click the Gri'lek the Wanderer Tablet
+		.get Tablet Shard|q 629/1
+		info Swim southwest and dive down to the murloc ruins.
+		info TODO: verify in-game
+	step
+		goto 28.8,19.7
+		.' Kill trolls
+		.get 9 Bloodscalp Tusk|q 581/1
+		.get 15 Bloodscalp Ear|q 189/1
+		.get 25 Bloody Bone Necklace|q 596/1
+		.' Kill Bloodscalp Shamans
+		.get Bloodscalp Totem|q 9436/1
+		info Swim southeast to the Bal'lal Ruins. There are more trolls in the ruins to the northeast.
+		info TODO: verify in-game
+	step
+		goto 35.6,10.6
+		.talk Ajeck Rouack##717
+		..turnin Tiger Mastery (2)##186
+		..accept Tiger Mastery (3)##187
+		.talk Sir S. J. Erlgadin##718
+		..turnin Panther Mastery (2)##191
+		..accept Panther Mastery (3)##192
+		info TODO: verify in-game
+	step
+		goto 35.7,10.8
+		.talk Hemet Nesingwary Jr.##715
+		..turnin Raptor Mastery (1)##194
+		..accept Raptor Mastery (2)##195
+		info TODO: verify in-game
+	step
+		goto 32.4,21.3
+		.kill 15 Lashtail Raptor|q 568/1
+		.kill 15 Lashtail Raptor|q 195/1
+		info Head south towards Grom'gol.
+		info TODO: verify in-game
+	step
+		goto 32.2,27.7
+		.talk Nimboya##2497
+		..turnin Hunt for Yenniku##581
+		..accept Headhunting##582
+		info Ding80 also takes Grim Message here, but it needs level 35 and your quest log is full. Grab it later.
+		info TODO: verify in-game
+	step
+		goto 32.0,28.6
+		.talk Nemeth Hawkeye##17094
+		..turnin Bloodscalp Insight##9436
+		..accept An Unusual Patron##9457
+		info TODO: verify in-game
+	step
+		goto 32.3,27.7
+		.talk Kin'weelay##2519
+		..turnin The Vile Reef##629
+		..turnin Bloody Bone Necklaces##596
+		..accept Split Bone Necklace##598
+		info TODO: verify in-game
+	step
+		goto 32.2,28.9
+		.talk Commander Aggro'gosh##2464
+		..turnin The Defense of Grom'gol (1)##568
+		..accept The Defense of Grom'gol (2)##569
+		info TODO: verify in-game
+	step
+		goto 32.5,29.4
+		.talk Thysta##1387
+		..'Fly to Booty Bay|goto Stranglethorn Vale,26.9,77.1,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 28.3,77.6
+		.talk Drizzlik##2495
+		..turnin Supply and Demand##575
+		..accept Some Assembly Required##577
+		info TODO: verify in-game
+	step
+		goto 26.9,77.2
+		.talk Krazek##773
+		..turnin Investigate the Camp##201
+		info TODO: verify in-game
+	step
+		goto 27.1,77.2
+		.talk Crank Fizzlebub##2498
+		..turnin Singing Blue Shards##605
+		..accept Venture Company Mining##600
+		info TODO: verify in-game
+	step
+		goto 27,77.1
+		.talk Kebok##737
+		..turnin Bloodscalp Ears##189
+		info TODO: verify in-game
+]])
+
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (35-39)",[[
+	author YunataSavior
+	startlevel 35
 
 	step
 		TODO
