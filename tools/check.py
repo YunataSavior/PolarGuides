@@ -22,6 +22,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gdb  # noqa: E402
 
 TALK_RADIUS = 3.0
+# Quests the Wrath Classic DB knows by a later name; the 3.3.5 client shows these.
+OLD_NAMES = {
+    9898: ("Nothin' Says Lovin' Like a Big Stinger",),
+}
 ZONES = None
 
 
@@ -66,9 +70,12 @@ IDREF = re.compile(r"([^|#\n]+?)##(\d+)")
 
 
 class Checker:
-    def __init__(self, path, start_title=None, show_log=False):
+    def __init__(self, path, start_title=None, show_log=False, side="H", skip=(), stop_title=None):
         self.path = path
         self.start_title = start_title
+        self.side = side
+        self.skip = list(skip)
+        self.stop_title = stop_title
         self.show_log = show_log
         self.issues = 0
         self.warns = 0
@@ -143,7 +150,7 @@ class Checker:
         if not q:
             self.report("ERROR", ln, f"quest ##{qid} ('{name}') not in database")
             return None
-        if not loose(q["name"], name):
+        if not loose(q["name"], name) and not any(loose(alt, name) for alt in OLD_NAMES.get(qid, ())):
             self.report("ERROR", ln, f"quest ##{qid} is '{q['name']}', guide says '{name}'")
         return q
 
@@ -151,8 +158,9 @@ class Checker:
         q = self.quest_ok(name, qid, ln)
         if not q:
             return
-        if not gdb.horde_ok(q):
-            self.report("ERROR", ln, f"{q['name']}##{qid} is Alliance-only")
+        if gdb.side(q) not in ("both", self.side):
+            other = "Alliance" if self.side == "H" else "Horde"
+            self.report("ERROR", ln, f"{q['name']}##{qid} is {other}-only")
         if talk:
             kind, eid = talk
             if eid not in (q["startedBy"].get(kind) or []):
@@ -250,13 +258,21 @@ class Checker:
             elif s.startswith("only "):
                 step_has_only = True
         self.gated = set()
+        skipping = False
         for ln, raw in enumerate(lines, 1):
             line = raw.strip()
             m = re.match(r'ZygorGuidesViewer:RegisterGuide\("([^"]+)"', line)
             if m:
                 self.guide = m.group(1).split("\\")[-1]
+                if self.stop_title and self.stop_title in m.group(1):
+                    break
+                # Skipped guides are not simulated at all (e.g. the other
+                # races' starting zones, which run in parallel to this one).
+                skipping = any(t in m.group(1) for t in self.skip)
                 if not self.active and self.start_title in m.group(1):
                     self.active = True
+                continue
+            if skipping:
                 continue
             code = line.split("//", 1)[0].strip()
             if not code:
@@ -339,7 +355,22 @@ def main():
         i = args.index("--from")
         start = args[i + 1]
         del args[i:i + 2]
-    sys.exit(1 if Checker(args[0], start, show_log).run() else 0)
+    stop = None
+    if "--to" in args:
+        i = args.index("--to")
+        stop = args[i + 1]
+        del args[i:i + 2]
+    side = "H"
+    if "--side" in args:
+        i = args.index("--side")
+        side = {"horde": "H", "alliance": "A"}[args[i + 1].lower()]
+        del args[i:i + 2]
+    skip = []
+    while "--skip" in args:
+        i = args.index("--skip")
+        skip.append(args[i + 1])
+        del args[i:i + 2]
+    sys.exit(1 if Checker(args[0], start, show_log, side, skip, stop).run() else 0)
 
 
 if __name__ == "__main__":
