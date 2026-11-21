@@ -707,6 +707,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		goto 48.3,31.6
 		.talk Wanted Poster##181147
 		..accept Wanted: Knucklerot and Luzran##9156
+		info It's a group quest. Skip this step if you can't find a group and can't solo elites.
+		info TODO: verify in-game
 	step
 		goto 48.8,32.4
 		.talk Innkeeper Kalarin##16542
@@ -1162,9 +1164,14 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		goto 55.1,48.8
 		.talk Magister Kaendris##16239
 		..turnin The Twin Ziggurats##9176
-		..accept The Traitor's Destruction##9167
 		.talk Magister Quallestis##16291
 		..turnin Underlight Ore Samples##9207
+	step
+		goto 55.1,48.8
+		.talk Magister Kaendris##16239
+		..accept The Traitor's Destruction##9167
+		info It's a group quest. Skip this step if you can't find a group.
+		info TODO: verify in-game
 	step
 		goto 54.9,48.6
 		.talk Magister Idonis##16204
@@ -1240,26 +1247,35 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		..'AKA: Play "peek-a-boo" whenever they're about to finish their cast.
 		.from Dar'Khan Drathir##16329
 		..get Dar'Khan's Head | q 9167/1
+		info Skip this step if you didn't take The Traitor's Destruction.
+		info TODO: verify in-game
 	step
 		goto 37.1,69.4
 		.'Kill your way up and down the Dead Scar to retrieve the following items:
 		..get 10 Rotting Hearts | q 9216/1
 		..get 10 Spinal Dust | q 9218/1
+	step
+		goto 37.1,69.4
 		.'If you're feeling apt, you can solo Luzran. Else, get someone to help.
 		.from Luzran##16245
 		..get Luzran's Head | q 9156/2
+		info He patrols the Dead Scar. Skip this step if you didn't take Wanted: Knucklerot and Luzran.
+		info TODO: verify in-game
 	step
 		goto 40.4,49.8
 		.'If you're feeling apt, you can solo Knucklerot. Else, get someone to help.
 		.from Knucklerot##16246
-		..get Luzran's Head | q 9156/1
+		..get Knucklerot's Head | q 9156/1
+		info Skip this step if you didn't take Wanted: Knucklerot and Luzran.
+		info TODO: verify in-game
 	step
 		goto 55.1,48.8
 		.talk Magister Kaendris##16239
 		..turnin The Traitor's Destruction##9167
 		..accept Hero of the Sin'dorei##9328 | only BloodElf
 		..accept Friend of the Sin'dorei##9811 | only !BloodElf
-		.'If you managed to kill Dra'khan, else abandon.
+		info Skip this step if you didn't take The Traitor's Destruction.
+		info TODO: verify in-game
 	step
 		goto 54.9,48.6
 		.talk Magister Idonis##16204
@@ -1270,7 +1286,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		goto 46,33.6
 		.talk Deathstalker Rathiel##16200
 		..turnin Wanted: Knucklerot and Luzran##9156
-		.'If you managed to kill both Abominations, else abandon.
+		info Skip this step if you didn't take Wanted: Knucklerot and Luzran.
+		info TODO: verify in-game
 	step
 		goto 48.9,31.3
 		.'Up the ramp on the 2nd floor.
@@ -1752,7 +1769,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-
 		goto Orgrimmar,37.7,75.2
 		.talk Warcaller Gorlach##10880
 		..accept The Ashenvale Hunt (1)##235
-		info He wanders around the Valley of Honor. Check the Auction House for a Deadly Blunderbuss while you're in town.
+		info He wanders around the Valley of Honor.
+		info TODO: verify in-game
+	step
+		goto Orgrimmar,55.7,62.9
+		'Buy a Deadly Blunderbuss from the Auction House|collect 1 Deadly Blunderbuss##4369
+		info You trade it to Pixel in Ashenvale for the Warsong Saw Blades, which Warsong Supplies needs.
+		info Skip this step if none is listed or it's too expensive; you get one more chance at level 28.
 		info TODO: verify in-game
 	step
 		'Go outside of Orgrimmar|goto Durotar
@@ -2260,7 +2283,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (25-
 	step
 		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
 		info !!! Make sure you train your skills !!!
-		info This is your last chance to buy a Deadly Blunderbuss from the Auction House. Without one, skip the Booty Bay and Warsong Saw Blades steps.
+		info TODO: verify in-game
+	step
+		goto Orgrimmar,55.7,62.9
+		'Buy a Deadly Blunderbuss from the Auction House, last call!|collect 1 Deadly Blunderbuss##4369
+		info Skip this step if you already have one, or none is listed.
+		info Without one, also skip the Booty Bay and Warsong Saw Blades steps, and the Warsong Supplies turn-in.
 		info TODO: verify in-game
 	step
 		ding 28
@@ -2379,7 +2407,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (25-
 		goto 71.4,67.6
 		.talk Locke Okarr##11820
 		..turnin Warsong Supplies##6571
-		info Only if you got all 4 supplies. Otherwise abandon the quest.
+		info Skip this step if you didn't get the Warsong Saw Blades from Pixel (they need a Deadly Blunderbuss).
 		info TODO: verify in-game
 	step
 		goto 75.0,70.1
@@ -5004,7 +5032,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (40-
 		goto 12.6,75.5
 		.' Kill Boss Tho'grun if you see him
 		.get Sign of the Earth|q 782/1
-		info He wanders. Skip this step if you can't find him.
+		info He patrols, and another player may have just killed him. Skip this step if you can't find him.
 		info TODO: verify in-game
 	step
 		goto 2.4,46.1
@@ -5026,7 +5054,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (40-
 		goto 2.9,45.6
 		.talk Gorn##1068
 		..turnin Broken Alliances (1)##782
-		info Don't take the follow-up. If you didn't get the Sign of the Earth, abandon the quest.
+		info Don't take the follow-up.
+		info Skip this step if you couldn't find Boss Tho'grun.
 		info TODO: verify in-game
 	step
 		goto 25.9,44.9
@@ -5447,7 +5476,14 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (45-
 		goto 26.9,77.2
 		.talk Krazek##773
 		..accept Tran'rek##2864
-		info It's for Tanaris. Skip The Captain's Chest, it's a group quest.
+		info It's for Tanaris.
+		info TODO: verify in-game
+	step
+		goto 26.7,73.6
+		.talk Captain Hecklebury Smotts##2500
+		..accept The Captain's Chest##8551
+		info It's a group quest, but Ding80 says you may be able to solo Gorlash.
+		info Skip this step if you can't find a group and don't want to try it solo.
 		info TODO: verify in-game
 	step
 		goto 26,61.7
@@ -5484,6 +5520,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (45-
 		goto 39,59
 		.' Kill Zanzil mobs
 		.get 12 Zanzil's Mixture|q 621/1
+		info TODO: verify in-game
+	step
+		goto 37.0,69.7
+		.from Gorlash##1492
+		.get Smotts' Chest|q 8551/1
+		info Travel south down the coast from the Zanzil ruins. Gorlash is a large elite giant, worth a lot of quick experience.
+		info Skip this step if you didn't take The Captain's Chest.
 		info TODO: verify in-game
 	step
 		goto 28.7,44.9
@@ -5535,13 +5578,31 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (45-
 		goto 35.7,10.8
 		.talk Hemet Nesingwary Jr.##715
 		..turnin Raptor Mastery (4)##197
-		info Ride to Nesingwary's Expedition. Skip Big Game Hunter unless you have a group.
+		info Ride to Nesingwary's Expedition.
 		info TODO: verify in-game
 	step
 		goto 35.5,10.6
 		.talk Sir S. J. Erlgadin##718
 		..turnin Panther Mastery (4)##193
 		info Also turn in any Pages of the Green Hills of Stranglethorn you have.
+		info TODO: verify in-game
+	step
+		goto 35.7,10.8
+		.talk Hemet Nesingwary Jr.##715
+		..accept Big Game Hunter##208
+		info It's a group quest. Skip this step and the next two if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 38.2,35.6
+		.from King Bangalash##731
+		.get Head of Bangalash|q 208/1
+		info Skip this step if you didn't take Big Game Hunter.
+		info TODO: verify in-game
+	step
+		goto 35.7,10.8
+		.talk Hemet Nesingwary Jr.##715
+		..turnin Big Game Hunter##208
+		info Skip this step if you didn't take Big Game Hunter.
 		info TODO: verify in-game
 	step
 		goto 32.1,29.2
@@ -5595,6 +5656,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (45-
 		..turnin Zanzil's Secret##621
 		info TODO: verify in-game
 	step
+		goto 26.7,73.6
+		.talk Captain Hecklebury Smotts##2500
+		..turnin The Captain's Chest##8551
+		info Skip this step if you didn't take The Captain's Chest.
+		info TODO: verify in-game
+	step
 		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
 		info TODO: verify in-game
 	step
@@ -5624,7 +5691,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (45-
 		.talk Tran'rek##7876
 		..turnin Tran'rek##2864
 		..accept Thistleshrub Valley##3362
-		info Don't take Scarab Shells or any Zul'Farrak quests.
+		info TODO: verify in-game
+	step
+		goto 51.6,26.8
+		.talk Tran'rek##7876
+		..accept Scarab Shells##2865
+		info It's a dungeon quest for Zul'Farrak, which you can run later in Tanaris.
+		info Skip this step if you can't find a dungeon group.
 		info TODO: verify in-game
 	step
 		goto 51.8,27
@@ -5654,6 +5727,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (45-
 		goto 51.8,28.7
 		.talk Marin Noggenfogger##7564
 		..accept The Thirsty Goblin##2605
+		info TODO: verify in-game
+	step
+		goto 51.4,28.8
+		.talk Trenton Lighthammer##7804
+		..accept Troll Temper##3042
+		info It's a dungeon quest for Zul'Farrak. Skip this step if you can't find a dungeon group.
 		info TODO: verify in-game
 	step
 		goto 59.5,24.9
@@ -5699,6 +5778,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (45-
 		..turnin Wastewander Justice##1690
 		..accept More Wastewander Justice##1691
 		info Ride back to Gadgetzan.
+		info TODO: verify in-game
+	step
+		goto 52.5,28.5
+		.talk Chief Engineer Bilgewhizzle##7407
+		..accept Divino-matic Rod##2768
+		info It's a dungeon quest for Zul'Farrak. Skip this step if you can't find a dungeon group.
 		info TODO: verify in-game
 	step
 		goto 59.8,32.6
@@ -6094,6 +6179,35 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (45-
 		info Don't pick up Yuka Screwspigot from Yorba. Ding80 takes it but never turns it in.
 		info TODO: verify in-game
 	step
+		goto 67.0,22.4
+		.talk Yeh'kinya##8579
+		..accept The Prophecy of Mosh'aru##3527
+		info It's a dungeon quest for Zul'Farrak. Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		'Run Zul'Farrak|goto 38.7,20.0
+		.' Kill the trolls inside for Troll Temper
+		.get 20 Troll Temper|q 3042/1
+		.' Kill Theka the Martyr for the First Mosh'aru Tablet
+		.get First Mosh'aru Tablet|q 3527/1
+		.' Kill Hydromancer Velratha at the pool for the Second Mosh'aru Tablet
+		.get Second Mosh'aru Tablet|q 3527/2
+		.' Kill the scarabs around the pyramid for Uncracked Scarab Shells
+		.get 5 Uncracked Scarab Shell|q 2865/1
+		.' Kill Sergeant Bly after the pyramid event for the Divino-matic Rod
+		.get Divino-matic Rod|q 2768/1
+		info Queue with the Dungeon Finder here in Steamwheedle Port; it sends you back afterwards.
+		info Or ride to the entrance in northwestern Tanaris.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 67.0,22.4
+		.talk Yeh'kinya##8579
+		..turnin The Prophecy of Mosh'aru##3527
+		info Don't take the follow-up, The Ancient Egg.
+		info Skip this step if you didn't run Zul'Farrak.
+		info TODO: verify in-game
+	step
 		goto 50.9,27.0
 		.talk Alchemist Pestlezugg##5594
 		..turnin Noxious Lair Investigation##82
@@ -6121,6 +6235,24 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (45-
 		goto 51.6,26.8
 		.talk Tran'rek##7876
 		..turnin Thistleshrub Valley##3362
+		info TODO: verify in-game
+	step
+		goto 51.6,26.8
+		.talk Tran'rek##7876
+		..turnin Scarab Shells##2865
+		info Skip this step if you didn't run Zul'Farrak.
+		info TODO: verify in-game
+	step
+		goto 51.4,28.8
+		.talk Trenton Lighthammer##7804
+		..turnin Troll Temper##3042
+		info Skip this step if you didn't run Zul'Farrak.
+		info TODO: verify in-game
+	step
+		goto 52.5,28.5
+		.talk Chief Engineer Bilgewhizzle##7407
+		..turnin Divino-matic Rod##2768
+		info Skip this step if you didn't run Zul'Farrak.
 		info TODO: verify in-game
 	step
 		goto 50.2,27.5
@@ -7013,7 +7145,44 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (50-
 		goto Swamp of Sorrows,47.9,54.8
 		.talk Fel'zerul##1443
 		..turnin Return to Fel'Zerul##1444
-		info Don't take the follow-up, it's a dungeon quest.
+		info TODO: verify in-game
+	step
+		goto 47.9,54.8
+		.talk Fel'zerul##1443
+		..accept The Temple of Atal'Hakkar##1445
+		info It's a dungeon quest for the Sunken Temple.
+		info Skip this step and the next four if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		'Run the Sunken Temple|goto 69.8,53.6
+		.' Kill the trolls inside for Fetishes of Hakkar
+		.get 20 Fetish of Hakkar|q 1445/1
+		.' Kill the Shade of Eranikus at the end; he drops the Essence of Eranikus
+		.' Click it in your bags|use Essence of Eranikus##10454
+		..accept The Essence of Eranikus##3373
+		.' Use it at the Essence Font next to where he died
+		..turnin The Essence of Eranikus##3373
+		info Queue with the Dungeon Finder here in Stonard; it sends you back afterwards.
+		info Or ride to the entrance in the Pool of Tears, east of Stonard.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 47.9,54.8
+		.talk Fel'zerul##1443
+		..turnin The Temple of Atal'Hakkar##1445
+		info Skip this step if you didn't run the Sunken Temple.
+		info TODO: verify in-game
+	step
+		'Click the Oathstone of Ysera's Dragonflight in your bags|use Oathstone of Ysera's Dragonflight##10589
+		..accept The Essence of Eranikus##3374
+		info It's the reward from the Essence Font. Skip this step and the next one if you don't have it.
+		info TODO: verify in-game
+	step
+		goto 13.7,71.7
+		.talk Itharius##5353
+		..turnin The Essence of Eranikus##3374
+		info Ride far west to his cave in Misty Valley.
+		info Skip this step if you didn't take The Essence of Eranikus.
 		info TODO: verify in-game
 	step
 		'Ride south past the Fallen Hero of the Horde at 34.3,66.1 into the Blasted Lands|goto Blasted Lands
@@ -8069,7 +8238,6 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Hellfire Penins
 		.talk Nazgrel##3230
 		..turnin Report to Nazgrel##10291
 		..accept Eradicate the Burning Legion##10121
-		info Don't pick up Weaken the Ramparts from Stone Guard Stok'ton. It's a dungeon quest and Ding80 never turns it in.
 		info TODO: verify in-game
 	step
 		goto 55.1,36.4
@@ -8304,7 +8472,41 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Hellfire Penins
 		..turnin Return to Thrallmar##10388
 		..accept Forge Camp: Mageddon##10390
 		info Ding80 also takes The Assassin here, but it needs level 60. You'll take it when you come back.
-		info Don't pick up Hellfire Fortifications (PvP) from Battlecryer Blackeye outside. Ding80 never turns it in.
+		info Don't pick up Hellfire Fortifications from Battlecryer Blackeye outside. It's a PvP quest.
+		info TODO: verify in-game
+	step
+		goto 55.2,36.0
+		.talk Stone Guard Stok'ton##17493
+		..accept Weaken the Ramparts##9572
+		info It's a dungeon quest for Hellfire Ramparts.
+		info Skip this step and the next three if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		'Run Hellfire Ramparts|goto 47.6,53.6
+		.' Kill Watchkeeper Gargolmar, the first boss
+		.get Gargolmar's Hand|q 9572/1
+		.' Kill Omor the Unscarred, the second boss. He also drops the Ominous Letter
+		.get Omor's Hoof|q 9572/2
+		.' Click the Ominous Letter in your bags|use Ominous Letter##23892
+		..accept Dark Tidings##9588
+		.' Kill Vazruden and his drake Nazan at the end
+		.get Nazan's Head|q 9572/3
+		info Queue with the Dungeon Finder here in Thrallmar; it sends you back afterwards.
+		info Or fly to the entrance on the side of Hellfire Citadel.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 54.9,36.0
+		.talk Caza'rez##17558
+		..turnin Weaken the Ramparts##9572
+		info Skip this step if you didn't run Hellfire Ramparts.
+		info TODO: verify in-game
+	step
+		goto 55.0,36.0
+		.talk Nazgrel##3230
+		..turnin Dark Tidings##9588
+		info Skip this step if you didn't run Hellfire Ramparts.
+		info The Blood Furnace follow-ups come later, when you're level 61.
 		info TODO: verify in-game
 	step
 		goto 52.3,36.5
@@ -8432,7 +8634,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Hellfire Penins
 		.talk Nazgrel##3230
 		..turnin Doorway to the Abyss##10392
 		..accept The Assassin##9400
-		info Don't pick up Cruel's Intentions. It's a group quest, and Ding80 never turns it in.
+		info TODO: verify in-game
+	step
+		goto 55.0,36.0
+		.talk Nazgrel##3230
+		..accept Cruel's Intentions##10136
+		info It's a group quest, but Ding80 says it's worth doing: a lot of experience and a nice reward.
+		info Skip this step if you can't find a group. You'll get two chances to do it near the Pools of Aggonar.
 		info TODO: verify in-game
 	step
 		goto 55.1,36.0
@@ -8743,7 +8951,6 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Hellfire Penins
 		.' Click the Wanted Poster
 		..accept Wanted: Blacktalon the Savage##9466
 		info Skip this step if you don't have a group. Blacktalon is hard to solo.
-		info Don't pick up Cruel's Intentions either; it's a group quest Ding80 never turns in.
 		info TODO: verify in-game
 	step
 		'Fly to Thrallmar|goto Hellfire Peninsula,54.7,38.3,5|noway|c
@@ -8853,10 +9060,53 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Hellfire Penins
 		'Hearth to Thrallmar|goto Hellfire Peninsula,56.7,37.5,5|use hearthstone##6948|noway|c
 		info TODO: verify in-game
 	step
+		goto 54.9,36.0
+		.talk Caza'rez##17558
+		..accept Heart of Rage##9608
+		..accept The Blood is Life##9590
+		info They're dungeon quests for the Blood Furnace, and you only get them if you ran Hellfire Ramparts.
+		info Skip this step and the next three if you didn't, or can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		'Run the Blood Furnace|goto 46.0,51.8
+		.' Kill the Laughing Skull orcs inside for Fel Orc Blood Vials
+		.get 10 Fel Orc Blood Vial|q 9590/1
+		.' Clear your way to Keli'dan the Breaker's room at the end to investigate the Blood Furnace
+		.goal Fully Investigate The Blood Furnace|q 9608/1
+		info Queue with the Dungeon Finder here in Thrallmar; it sends you back afterwards.
+		info Or fly to the entrance on the side of Hellfire Citadel, next to the Ramparts.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 54.9,36.0
+		.talk Caza'rez##17558
+		..turnin The Blood is Life##9590
+		info Skip this step if you didn't run the Blood Furnace.
+		info TODO: verify in-game
+	step
+		goto 55.0,36.0
+		.talk Nazgrel##3230
+		..turnin Heart of Rage##9608
+		info Skip this step if you didn't run the Blood Furnace.
+		info TODO: verify in-game
+	step
 		goto 39.0,40.3
 		.' Stand on the Altar of Aggonar and use the Signaling Gem|use Signaling Gem##23358
 		.kill 1 Draenei Anchorite|q 9370/1
 		info Ride west to the Pools of Aggonar. Three draenei come; kill the Anchorite.
+		info TODO: verify in-game
+	step
+		goto 43.8,31.6
+		.kill 1 Arazzius the Cruel|q 10136/1
+		info Ding80's last chance for Cruel's Intentions. He's an elite demon north of the pools.
+		info Skip this step and the next one if you didn't take Cruel's Intentions, or can't find a group.
+		info TODO: verify in-game
+	step
+		goto 55.0,36.0
+		.talk Nazgrel##3230
+		..turnin Cruel's Intentions##10136
+		info Fly back to Thrallmar, then come back west.
+		info Skip this step if you didn't kill Arazzius.
 		info TODO: verify in-game
 	step
 		goto 32.0,27.8
@@ -9697,6 +9947,18 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Zangarmarsh",[[
 		info Ding80 suggests queueing for it and carrying on questing until a group forms.
 		info TODO: verify in-game
 	step
+		'Run The Underbog|goto 54.2,34.4
+		.' Click the Sanguine Hibiscus plants growing along the way
+		.get 5 Sanguine Hibiscus|q 9715/1
+		.' Click The Underspore, the big glowing mushroom behind Hungarfen, the first boss
+		.get Underspore Frond|q 9717/1
+		.' Kill The Black Stalker, the last boss
+		.get Brain of the Black Stalker|q 9719/1
+		info The entrance is in Coilfang Reservoir, in the middle of the lake; dive under the pipe. The Dungeon Finder can take you there instead.
+		info Don't take Bring Me Another Shrubbery! afterwards; it needs a second run.
+		info Skip this step if you didn't take the Underbog quests.
+		info TODO: verify in-game
+	step
 		goto 19.5,50.0
 		.talk T'shu##17857
 		..turnin Oh, It's On!##9717
@@ -9990,7 +10252,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Terokkar Forest
 		goto 49.8,45.3
 		.' Click the Wanted Poster
 		..accept Wanted: Bonelashers Dead!##10034
-		info Don't pick up Spirits of Auchindoun (PvP) from Exorcist Vaisha. Ding80 never turns it in.
+		info Don't pick up Spirits of Auchindoun from Exorcist Vaisha. It's a PvP quest.
 		info TODO: verify in-game
 	step
 		goto 49.2,43.4
@@ -10349,7 +10611,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Terokkar Forest
 		goto 49.2,45.9
 		.talk Mawg Grimshot##18705
 		..turnin Wanted: Bonelashers Dead!##10034
-		info Don't take the follow-up, Torgos!. It's a group quest that Ding80 drops.
+		info TODO: verify in-game
+	step
+		goto 49.2,45.9
+		.talk Mawg Grimshot##18705
+		..accept Torgos!##10036
+		info It's a group quest; Ding80 does it with a partner in the Bone Wastes.
+		info Skip this step if you can't find a group.
 		info TODO: verify in-game
 	step
 		goto 50.2,46.4
@@ -10538,12 +10806,25 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Terokkar Forest
 		info Have 10 by the time you leave the Bone Wastes.
 		info TODO: verify in-game
 	step
+		goto 43.2,51.6
+		.from Trachela##21515
+		.collect 1 Trachela's Carcass##30618|q 10036
+		info Head east of the Refugee Caravan into the huge mound of Bonelashers.
+		info Skip this step if you didn't take Torgos!.
+		info TODO: verify in-game
+	step
 		goto 30.2,51.1
 		.kill 4 Deathtalon Spirit|q 10848/1
 		.kill 4 Screeching Spirit|q 10848/2
 		.kill 2 Spirit Raven|q 10848/3
 		info Ride southwest past the Refugee Caravan to Veil Rhaze.
-		info Ding80 does Torgos here with a partner, but this guide skips Torgos!, so skip Trachela too.
+		info TODO: verify in-game
+	step
+		goto 27.1,55.7
+		.' Use Trachela's Carcass at the scarecrow, Torgos' Bane|use Trachela's Carcass##30618
+		.from Torgos##18707
+		.get Tail Feather of Torgos|q 10036/1
+		info Skip this step if you didn't take Torgos!.
 		info TODO: verify in-game
 	step
 		goto 29.6,51.7
@@ -10622,7 +10903,25 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Terokkar Forest
 		goto 31.0,76.2
 		.talk Dwarfowitz##22481
 		..turnin Fumping##10929
-		info Don't take the follow-up, The Big Bone Worm. It's a group quest that Ding80 never does.
+		info TODO: verify in-game
+	step
+		goto 31.0,76.2
+		.talk Dwarfowitz##22481
+		..accept The Big Bone Worm##10930
+		info It's a group quest. Skip this step and the next two if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 33.0,76.3
+		.' Use the Fumper in the same spot as before to call up Hai'shulud, the Bone Emperor|use Fumper##31825
+		.from Hai'shulud##22038
+		.get Enormous Bone Worm Organs|q 10930/1
+		info Skip this step if you didn't take The Big Bone Worm.
+		info TODO: verify in-game
+	step
+		goto 31.0,76.2
+		.talk Dwarfowitz##22481
+		..turnin The Big Bone Worm##10930
+		info Skip this step if you didn't take The Big Bone Worm.
 		info TODO: verify in-game
 	step
 		goto 35.0,76.5
@@ -10742,6 +11041,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Terokkar Forest
 		goto 37.0,49.5
 		.talk Soolaveen##18675
 		..turnin Helping the Lost Find Their Way##10031
+		info TODO: verify in-game
+	step
+		goto 49.2,45.9
+		.talk Mawg Grimshot##18705
+		..turnin Torgos!##10036
+		info Fly east to Stonebreaker Hold.
+		info Skip this step if you didn't kill Torgos.
 		info TODO: verify in-game
 	step
 		goto Shattrath City,49.1,35.9
@@ -11158,7 +11464,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Nagrand",[[
 		info TODO: verify in-game
 	step
 		ding 67
-		info Level 67 opens the Ring of Blood group chain by the Laughing Skull Ruins. Look for a group; it's worth over 100,000 XP and a rare weapon. This guide assumes you're solo and skips it.
+		info Level 67 opens the Ring of Blood group chain by the Laughing Skull Ruins. Look for a group; it's worth over 100,000 XP and a rare weapon. It's at the end of this zone's guide.
 		info TODO: verify in-game
 	step
 		goto 55.6,37.6
@@ -11378,6 +11684,62 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Nagrand",[[
 		.talk Farseer Margadesh##18068
 		..turnin Murkblood Leaders...##9867
 		info Before you leave, take one last look for a partner for the Nesingwary finales and the Ring of Blood.
+		info TODO: verify in-game
+	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: Brokentoe##9962
+		.kill 1 Brokentoe|q 9962/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: Brokentoe##9962
+		info Fly north to the Ring of Blood. The chain needs a full group of five around level 67, or a couple of high-level helpers.
+		info Skip this step and the next five if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: The Blue Brothers##9967
+		.kill 1 Murkblood Twin|q 9967/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: The Blue Brothers##9967
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: Rokdar the Sundered Lord##9970
+		.kill 1 Rokdar the Sundered Lord|q 9970/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: Rokdar the Sundered Lord##9970
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: Skra'gath##9972
+		.kill 1 Skra'gath|q 9972/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: Skra'gath##9972
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: The Warmaul Champion##9973
+		.kill 1 Warmaul Champion|q 9973/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: The Warmaul Champion##9973
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: The Final Challenge##9977
+		.kill 1 Mogor|q 9977/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: The Final Challenge##9977
+		info Mogor is the hardest fight; the rare weapon is the reward here.
+		info Skip this step if you can't find a group.
 		info If you're already 68, skip Blade's Edge Mountains and go straight to Northrend.
 		info TODO: verify in-game
 ]])
@@ -12637,7 +12999,27 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Borean Tundra",
 		goto 75.9,37.2
 		.talk Chieftain Wintergale##24703
 		..turnin Words of Power##11640
-		info Don't take the group quest Breaking Through; this guide doesn't come back to Taunka'le to turn it in.
+		info TODO: verify in-game
+	step
+		goto 75.9,37.2
+		.talk Chieftain Wintergale##24703
+		..accept Breaking Through##11898
+		info It's a group quest. Skip this step and the next two if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 86.2,28.8
+		.kill 1 Vanthryn the Merciless|q 11898/3
+		.kill 1 Luthion the Vile|q 11898/2
+		.kill 1 Prince Valanar|q 11898/1
+		info Go back to the Temple City of En'kilah and take the teleporter up to the top of the temple.
+		info Skip this step if you didn't take Breaking Through.
+		info TODO: verify in-game
+	step
+		goto 75.9,37.2
+		.talk Chieftain Wintergale##24703
+		..turnin Breaking Through##11898
+		info Return to Taunka'le.
+		info Skip this step if you didn't take Breaking Through.
 		info TODO: verify in-game
 	step
 		goto 63.8,46.1
@@ -13153,7 +13535,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Borean Tundra",
 		goto 33.5,34.4
 		.talk Librarian Serrah##26110
 		..accept Nuts for Berries##11912
-		info Don't take Have They No Shame?; it's for The Nexus dungeon.
+		info TODO: verify in-game
+	step
+		goto 33.5,34.4
+		.talk Librarian Serrah##26110
+		..accept Have They No Shame?##13095
+		info It's a dungeon quest for The Nexus, which you can run at the end of Coldarra.
+		info Skip this step if you can't find a dungeon group.
 		info TODO: verify in-game
 	step
 		goto 35.0,28.0
@@ -13248,7 +13636,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Borean Tundra",
 		goto 32.9,34.4
 		.talk Archmage Berinand##25314
 		..turnin Secrets of the Ancients##11910
-		info Don't take Quickening; it's for The Nexus dungeon.
+		info TODO: verify in-game
+	step
+		goto 32.9,34.4
+		.talk Archmage Berinand##25314
+		..accept Quickening##11911
+		info It's a dungeon quest for The Nexus. Skip this step if you can't find a dungeon group.
 		info TODO: verify in-game
 	step
 		.' Use the Augmented Arcane Prison in your bags|use Augmented Arcane Prison##35671
@@ -13310,7 +13703,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Borean Tundra",
 		..turnin Springing the Trap##11969
 		..turnin Hatching a Plan##11936
 		..accept Drake Hunt##11919
-		info Finish the axes, essences and eggs on your way back if you still need any. Don't take Prisoner of War; it's for The Nexus dungeon.
+		info Finish the axes, essences and eggs on your way back if you still need any.
+		info TODO: verify in-game
+	step
+		goto 33.3,34.5
+		.talk Raelorasz##26117
+		..accept Prisoner of War##11973
+		info It's a dungeon quest for The Nexus. Skip this step if you can't find a dungeon group.
 		info TODO: verify in-game
 	step
 		goto 33.5,34.4
@@ -13321,7 +13720,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Borean Tundra",
 		goto 32.9,34.4
 		.talk Archmage Berinand##25314
 		..turnin Reading the Meters##11900
-		info Don't take Postponing the Inevitable; it's for The Nexus dungeon.
+		info TODO: verify in-game
+	step
+		goto 32.9,34.4
+		.talk Archmage Berinand##25314
+		..accept Postponing the Inevitable##11905
+		info It's a dungeon quest for The Nexus. Skip this step if you can't find a dungeon group.
 		info TODO: verify in-game
 	step
 		goto 24.6,27.1|n
@@ -13363,7 +13767,40 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Borean Tundra",
 		.talk Raelorasz##26117
 		..turnin Drake Hunt##11940
 		..turnin Cracking the Code##11931
-		info That finishes Coldarra. The Nexus quests are worth a lot of experience if you find a group, but this guide skips them.
+		info That finishes Coldarra.
+		info TODO: verify in-game
+	step
+		'Run The Nexus|goto 27.5,26.0
+		.' Kill Crystalline Protectors in the halls for Arcane Splinters
+		.get 5 Arcane Splinter|q 11911/1
+		.' Use the Interdimensional Refabricator near the rift, by Anomalus, the second boss
+		.goal Interdimensional Refabricator used|q 11905/1
+		.' Find Berinand's Research, a book in the Nexus
+		.get Berinand's Research|q 13095/1
+		.' Kill Keristrasza, the last boss, to release her
+		.kill 1 Keristrasza|q 11973/1
+		info Ding80: run The Nexus at least once; the four quests give an extra 70,400 XP on top of the dungeon's.
+		info Queue with the Dungeon Finder here at the Transitus Shield; it sends you back afterwards.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 33.5,34.4
+		.talk Librarian Serrah##26110
+		..turnin Have They No Shame?##13095
+		info Skip this step if you didn't run The Nexus.
+		info TODO: verify in-game
+	step
+		goto 32.9,34.4
+		.talk Archmage Berinand##25314
+		..turnin Quickening##11911
+		..turnin Postponing the Inevitable##11905
+		info Skip this step if you didn't run The Nexus.
+		info TODO: verify in-game
+	step
+		goto 33.3,34.5
+		.talk Raelorasz##26117
+		..turnin Prisoner of War##11973
+		info Skip this step if you didn't run The Nexus.
 		info TODO: verify in-game
 	step
 		goto 33.1,34.5
@@ -13904,12 +14341,42 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Howling Fjord",
 		.talk High Executor Anselm##23780
 		..turnin Report to Anselm##11234
 		info Ride north to Vengeance Landing.
-		info Don't take the follow-up, A Score to Settle. It's a dungeon quest that Ding80 never turns in.
+		info TODO: verify in-game
+	step
+		goto 78.6,31.2
+		.talk High Executor Anselm##23780
+		..accept A Score to Settle##11272
+		info It's a dungeon quest for Utgarde Keep.
+		info Skip this step if you can't find a dungeon group.
 		info TODO: verify in-game
 	step
 		goto 78.5,29.0
 		.talk Apothecary Lysander##24126
 		..turnin Trail of Fire##11241
+		info TODO: verify in-game
+	step
+		'Run Utgarde Keep|goto Howling Fjord,57.3,46.8
+		.' Talk to Dark Ranger Marrah, just inside the entrance
+		.talk Dark Ranger Marrah##24137
+		..accept Disarmament##13206
+		..accept Ingvar Must Die!##11262
+		.' Kill Prince Keleseth, the first boss, for A Score to Settle
+		.kill 1 Prince Keleseth|q 11272/1
+		.' Click the Vrykul Weapons lying around the keep
+		.get 5 Vrykul Weapon|q 13206/1
+		.' Kill Ingvar the Plunderer, the last boss
+		.get Ingvar's Head|q 11262/1
+		info Queue with the Dungeon Finder while you're in Vengeance Landing; it sends you back here afterwards.
+		info Or walk in: the entrance is under the keep, at the far end of the long bridge west of the Vengeance Lift.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 78.6,31.2
+		.talk High Executor Anselm##23780
+		..turnin A Score to Settle##11272
+		..turnin Disarmament##13206
+		..turnin Ingvar Must Die!##11262
+		info Skip this step if you can't find a dungeon group.
 		info TODO: verify in-game
 	step
 		'Go southwest up the Vengeance Lift to 71.1,39.1|goto 71.1,39.1
@@ -14202,8 +14669,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Howling Fjord",
 		goto 48.1,10.5
 		.talk Sage Edan##24390
 		..turnin The Lodestone##11366
-		info Don't take the follow-up, Demolishing Megalith.
 		info Skip this step if you didn't take The Lodestone.
+		info TODO: verify in-game
+	step
+		goto 48.1,10.5
+		.talk Sage Edan##24390
+		..accept Demolishing Megalith##11367
+		info It's a group quest. Skip this step if you didn't do The Lodestone or can't find a group.
 		info TODO: verify in-game
 	step
 		goto 61.5,22.8
@@ -14217,6 +14689,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Howling Fjord",
 		.goal Stone Giant controlled|q 11352/1
 		.kill Binder Murdis|q 11352/2
 		info Ride east to Giants' Run.
+		info TODO: verify in-game
+	step
+		goto 66.5,9.5
+		.kill 1 Megalith|q 11367/1
+		info He's at the northern end of Giants' Run.
+		info Skip this step if you didn't take Demolishing Megalith.
 		info TODO: verify in-game
 	step
 		goto 44.4,26.2
@@ -14298,6 +14776,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Howling Fjord",
 		.talk Longrunner Pembe##24362
 		..turnin The Rune of Command##11352
 		info Ride northeast back to Camp Winterhoof.
+		info TODO: verify in-game
+	step
+		goto 48.1,10.5
+		.talk Sage Edan##24390
+		..turnin Demolishing Megalith##11367
+		info Skip this step if you didn't take Demolishing Megalith.
 		info TODO: verify in-game
 	step
 		goto 48.2,10.7
