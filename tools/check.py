@@ -16,6 +16,9 @@ Problems print as ERROR (almost surely wrong) or WARN (worth a look).
   --as "Orc Hunter"  simulate one race and class: `only` steps and lines that
                      don't match are skipped (as Zygor does), matching ones are
                      checked in full. Races use Zygor's names (Scourge, BloodElf).
+  --undone <qid>     `only if ZGV.completedQuests[qid]` counts that quest as not
+                     done (to check the branch for players who skipped an
+                     optional quest). Repeatable.
 """
 
 import os
@@ -97,8 +100,10 @@ IDREF = re.compile(r"([^|#\n]+?)##(\d+)")
 
 
 class Checker:
-    def __init__(self, path, start_title=None, show_log=False, side="H", skip=(), stop_title=None, who=None):
+    def __init__(self, path, start_title=None, show_log=False, side="H", skip=(), stop_title=None, who=None,
+                 undone=()):
         self.who = who
+        self.undone = set(undone)
         self.path = path
         self.start_title = start_title
         self.side = side
@@ -114,6 +119,15 @@ class Checker:
         self.pos = None
         self.guide = "?"
         self.active = True
+
+    def condition(self, cond, ln):
+        """Evaluate an `only if` condition; only ZGV.completedQuests[id] with and/or/not is understood."""
+        expr = re.sub(r"ZGV\.completedQuests\[(\d+)\]",
+                      lambda m: str(int(m.group(1)) in self.done and int(m.group(1)) not in self.undone), cond)
+        if re.sub(r"\b(True|False|and|or|not)\b|[()\s]", "", expr):
+            self.report("ERROR", ln, f"can't evaluate condition: {cond}")
+            return True
+        return eval(expr)  # only True/False/and/or/not/parentheses remain
 
     def report(self, sev, ln, msg):
         if not self.active:
@@ -211,6 +225,10 @@ class Checker:
                 soft = only or p in self.log
                 self.report("WARN" if soft else "ERROR", ln,
                             f"{q['name']}##{qid} needs {(gdb.quest(p) or {}).get('name')}##{p} done first")
+        for e in q.get("exclusiveTo") or []:
+            if (e in self.done and e not in self.undone) or e in self.log:
+                self.report("WARN" if only or ln in self.gated_lines else "ERROR", ln,
+                            f"{q['name']}##{qid} is exclusive with {(gdb.quest(e) or {}).get('name')}##{e}, taken earlier")
         req = q.get("requiredLevel") or 0
         if req > self.level + 1:
             self.report("ERROR", ln, f"{q['name']}##{qid} needs level {req}, guide is at ~{self.level}")
@@ -280,6 +298,8 @@ class Checker:
         # With --as, lines in steps whose `only` doesn't match are skipped.
         gated, step_start, step_has_only = set(), 0, False
         excluded, step_fits = set(), None
+        # Step-level `only if <lua>` conditions, by the step line's number.
+        step_conds = {}
         for i, raw in enumerate(lines + ["step"]):
             s = raw.strip().lstrip(".")
             if s.startswith("step") or s.startswith("ZygorGuidesViewer:"):
@@ -288,11 +308,15 @@ class Checker:
                     if self.who and not race_class_match(step_fits, self.who):
                         excluded.update(range(step_start + 1, i + 1))
                 step_start, step_has_only = i, False
+            elif s.startswith("only if "):
+                step_conds[step_start + 1] = s[8:].split("//", 1)[0].strip()
             elif s.startswith("only "):
                 step_has_only = True
                 step_fits = s[5:].split("//", 1)[0].strip()
         self.gated = set()
+        self.gated_lines = gated
         skipping = False
+        cond_false = False
         for ln, raw in enumerate(lines, 1):
             line = raw.strip()
             m = re.match(r'ZygorGuidesViewer:RegisterGuide\("([^"]+)"', line)
@@ -312,8 +336,19 @@ class Checker:
             if not code:
                 continue
             body = code.lstrip(".")
+            if body.startswith("step"):
+                cond_false = ln in step_conds and not self.condition(step_conds[ln], ln)
+            elif cond_false:
+                continue
             if ln in excluded and not body.startswith("step"):
                 continue
+            if body.startswith("only if "):
+                continue
+            m = re.search(r"\|\s*only\s+if\s+([^|]+)", body)
+            if m:
+                if not self.condition(m.group(1).strip(), ln):
+                    continue
+                body = body[:m.start()] + body[m.end():]
             only = bool(re.search(r"(^|\|)\s*only\b", body)) or body.startswith("only ")
             if body.startswith("only "):
                 continue
@@ -416,7 +451,12 @@ def main():
         i = args.index("--as")
         who = tuple(args[i + 1].split())
         del args[i:i + 2]
-    sys.exit(1 if Checker(args[0], start, show_log, side, skip, stop, who).run() else 0)
+    undone = []
+    while "--undone" in args:
+        i = args.index("--undone")
+        undone.append(int(args[i + 1]))
+        del args[i:i + 2]
+    sys.exit(1 if Checker(args[0], start, show_log, side, skip, stop, who, undone).run() else 0)
 
 
 if __name__ == "__main__":

@@ -22622,3 +22622,1426 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Grizzly Hills",
 		info Return to Camp Oneqwah.
 		info TODO: verify in-game
 ]])
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Zul'Drak",[[
+	author YunataSavior
+	next Ding80's Horde Leveling Guides\\Sholazar Basin
+	startlevel 76
+
+	step
+		'Fly to Venomspite|goto Dragonblight,76.5,62.2,0.5|noway|c
+		info If you're already level 77 and have the gold, fly to Dalaran first and train Cold Weather Flying from the riding trainer by Krasus' Landing.
+		info TODO: verify in-game
+	step
+		'Ride northeast into Zul'Drak|goto Zul'Drak|noway|c
+		info Zul'Drak has the Amphitheater of Anguish, a group arena chain like the Ring of Blood, with big XP and a good weapon. Look for a group while you quest; it's near the end of this guide.
+		info TODO: verify in-game
+	step
+		goto Zul'Drak,32.2,74.4
+		.talk Danica Saint##28618
+		..fpath Light's Breach
+		info Ride to Light's Breach.
+		info TODO: verify in-game
+	step
+		goto 32.0,74.4
+		.talk Sergeant Riannah##29137
+		..turnin Into the Breach!##12789
+		info TODO: verify in-game
+	step
+		goto 32.0,75.6
+		.talk Elder Shaman Moky##29733
+		..accept This Just In: Fire Still Hot!##12859
+		info TODO: verify in-game
+	step
+		goto 32.2,75.7
+		.talk Crusader Lord Lantinga##29687
+		..accept In Search Of Answers##12902
+		info TODO: verify in-game
+	step
+		goto 32.2,75.7
+		.talk Chief Rageclaw##29690
+		..accept Trolls Is Gone Crazy!##12861
+		info TODO: verify in-game
+	step
+		goto 32.3,75.7
+		.' Click the Wanted! poster
+		..accept Wanted: Ragemane's Flipper##12857
+		info It's a group quest, but two players can do it. Skip this step and its kill and turn-in steps if you can't find a partner.
+		info TODO: verify in-game
+	step
+		goto 34.9,83.9
+		.' Click the Orders From Drakuru|tip It looks like a floating scroll above a small pillar.
+		..turnin In Search Of Answers##12902
+		..accept Orders From Drakuru##12883
+		info Ride southeast to Rageclaw Den and clear your way to the scroll.
+		info TODO: verify in-game
+	step
+		goto 34.9,81.0
+		.kill Drakuru Blood Drinkers|n
+		.get Drakuru "Lock Openers"|n
+		.' Use your Drakuru "Lock Openers" next to Captured Rageclaws|use Drakuru "Lock Opener"##41161|tip The Captured Rageclaws look like wolverines chained to the ground.
+		.' Free 8 Captured Rageclaws|goal 8 Captured Rageclaw Freed|q 12861/1
+		.' Use your Rageclaw Fire Extinguisher next to burning huts|use Rageclaw Fire Extinguisher##41131
+		.' Douse 15 Hut Fires|goal 15 Hut Fire Doused|q 12859/1
+		info Spam the extinguisher; each hut takes several uses.
+		info TODO: verify in-game
+	step
+		goto 38.6,84.4
+		.kill Ragemane|n
+		.get Ragemane's Flipper|q 12857/1
+		info Ride southeast to Rageclaw Lake.
+		info Skip this step if you didn't take Wanted: Ragemane's Flipper.
+		info TODO: verify in-game
+	step
+		goto 32.2,75.7
+		.talk Crusader Lord Lantinga##29687
+		..turnin Orders From Drakuru##12883
+		..accept The Ebon Watch##12884
+		..accept Crusader Forward Camp##12894
+		info Return to Light's Breach.
+		info TODO: verify in-game
+	step
+		goto 32.2,75.7
+		.talk Chief Rageclaw##29690
+		..turnin Trolls Is Gone Crazy!##12861
+		info TODO: verify in-game
+	step
+		goto 32.2,75.7
+		.talk Chief Rageclaw##29690
+		..turnin Wanted: Ragemane's Flipper##12857
+		info Skip this step if you didn't kill Ragemane. If you find a partner later, Chief Rageclaw is still here.
+		info TODO: verify in-game
+	step
+		goto 32.0,75.6
+		.talk Elder Shaman Moky##29733
+		..turnin This Just In: Fire Still Hot!##12859
+		info TODO: verify in-game
+	step
+		goto 25.3,64.0
+		.talk Crusader MacKellar##29689
+		..turnin Crusader Forward Camp##12894
+		..accept That's What Friends Are For...##12903
+		info Ride northwest to the Crusader Forward Camp.
+		info TODO: verify in-game
+	step
+		goto 25.3,64.0
+		.talk Engineer Reed##29688
+		..accept Making Something Out Of Nothing##12901
+		info TODO: verify in-game
+	step
+		goto 25.1,51.6
+		.' Find Crusader Dargath|goal Crusader Dargath found|q 12903/1|tip He stands on a huge platform with wind spiraling around him.
+		info Ride north.
+		info TODO: verify in-game
+	step
+		goto 19.7,56.4
+		.talk Gymer##29647
+		..accept A Great Storm Approaches##12912
+		info Ride southwest to Thrym's End.
+		info TODO: verify in-game
+	step
+		goto 17.6,57.6
+		.' Find Gerk|goal Gerk found|q 12903/2
+		.talk Gerk##29455
+		..accept Light Won't Grant Me Vengeance##12904
+		info Ride west.
+		info TODO: verify in-game
+	step
+		goto 15.7,59.4
+		.' Find Burr|goal Burr found|q 12903/3|tip He's lying on a metal table.
+		info Ride west.
+		info TODO: verify in-game
+	step
+		goto 16.9,58.7
+		.kill 15 Vargul|q 12904/1
+		.' Click the Scourge Scrap Metal|tip They look like big spiked metal stars and other metal pieces on the ground.
+		.get 10 Scourge Scrap Metal|q 12901/1
+		info More scrap metal lies around 19.4,61.4.
+		info TODO: verify in-game
+	step
+		goto 17.6,57.6
+		.talk Gerk##29455
+		..turnin Light Won't Grant Me Vengeance##12904
+		info TODO: verify in-game
+	step
+		goto 25.3,64.0
+		.talk Engineer Reed##29688
+		..turnin A Great Storm Approaches##12912
+		..accept Gymer's Salvation##12914
+		..turnin Making Something Out Of Nothing##12901
+		info Return to the Crusader Forward Camp.
+		info TODO: verify in-game
+	step
+		goto 25.3,64.0
+		.talk Crusader MacKellar##29689
+		..turnin That's What Friends Are For...##12903
+		info TODO: verify in-game
+	step
+		goto 23.9,62.4
+		.kill Banshee Soulclaimers|n|tip They fly around in the air.
+		.get 6 Banshee Essence|q 12914/1
+		info TODO: verify in-game
+	step
+		goto 14.0,73.6
+		.talk Baneflight##28615
+		..fpath Ebon Watch
+		info Ride southwest to Ebon Watch.
+		info TODO: verify in-game
+	step
+		goto 14.1,73.8
+		.talk Stefan Vadu##28518
+		..turnin The Ebon Watch##12884
+		..accept Kickin' Nass and Takin' Manes##12630
+		info TODO: verify in-game
+	step
+		goto 15.9,71.5
+		.kill Icetouched Earthragers|n
+		.get 6 Diatomaceous Earth|q 12914/2
+		info They're around the south and west sides of the camp.
+		info TODO: verify in-game
+	step
+		goto 15.5,69.8
+		.kill Withered Trolls|n
+		.' Use Stefan's Steel Toed Boot on Nass after each kill|use Stefan's Steel Toed Boot##38659
+		.' Collect 10 Hair Samples|goal 10 Hair Samples Collected|q 12630/1
+		.get Unliving Choker|n|only if not ZGV.completedQuests[12238]
+		.' Click the Unliving Choker in your bags|use Unliving Choker##38660|only if not ZGV.completedQuests[12238]
+		..accept An Invitation, of Sorts...##12631|only if not ZGV.completedQuests[12238]
+		.get Writhing Choker|n|only if ZGV.completedQuests[12238]
+		.' Click the Writhing Choker in your bags|use Writhing Choker##38673|only if ZGV.completedQuests[12238]
+		..accept Darkness Calling##12633|only if ZGV.completedQuests[12238]
+		info They're around the north and east sides of the camp.
+		info If you turned in Cleansing Drak'Tharon, the trolls drop a Writhing Choker instead, and the Ebon Watch chain uses other quests up to Infiltrating Voltarus. The guide shows the right ones.
+		info TODO: verify in-game
+	step
+		goto 14.1,73.8
+		.talk Stefan Vadu##28518
+		..turnin Kickin' Nass and Takin' Manes##12630
+		..turnin An Invitation, of Sorts...##12631|only if not ZGV.completedQuests[12238]
+		..accept Near Miss##12637|only if not ZGV.completedQuests[12238]
+		..turnin Darkness Calling##12633|only if ZGV.completedQuests[12238]
+		..accept Close Call##12638|only if ZGV.completedQuests[12238]
+		info TODO: verify in-game
+	step
+		goto 14.3,74.0
+		.talk Bloodrose Datura##28532
+		..accept Taking a Stand##12795
+		..'Tell her Stefan said she would demonstrate the item's purpose
+		.' Expose the Choker's Purpose|goal Choker's Purpose Exposed|q 12637/1|only if not ZGV.completedQuests[12238]
+		.' Expose the Choker's Purpose|goal Choker's purpose exposed|q 12638/1|only if ZGV.completedQuests[12238]
+		info TODO: verify in-game
+	step
+		goto 14.1,73.8
+		.talk Stefan Vadu##28518
+		..turnin Near Miss##12637|only if not ZGV.completedQuests[12238]
+		..accept You Can Run, But You Can't Hide##12629|only if not ZGV.completedQuests[12238]
+		..turnin Close Call##12638|only if ZGV.completedQuests[12238]
+		..accept Silver Lining##12643|only if ZGV.completedQuests[12238]
+		info TODO: verify in-game
+	step
+		goto 20.6,73.0
+		.kill Putrid Abominations|n
+		.get 5 Putrid Abomination Guts|q 12629/1|only if not ZGV.completedQuests[12238]
+		.get 5 Putrid Abomination Guts|q 12643/1|only if ZGV.completedQuests[12238]
+		.' Click the Gooey Ghoul Drool|tip They look like jelly blobs on the ground.
+		.get 5 Gooey Ghoul Drool|q 12629/2|only if not ZGV.completedQuests[12238]
+		.get 5 Gooey Ghoul Drool|q 12643/2|only if ZGV.completedQuests[12238]
+		info Ride east to the Reliquary of Agony.
+		info TODO: verify in-game
+	step
+		goto 14.1,73.8
+		.talk Stefan Vadu##28518
+		..turnin You Can Run, But You Can't Hide##12629|only if not ZGV.completedQuests[12238]
+		..accept Dressing Down##12648|only if not ZGV.completedQuests[12238]
+		..turnin Silver Lining##12643|only if ZGV.completedQuests[12238]
+		..accept Suit Up!##12649|only if ZGV.completedQuests[12238]
+		info TODO: verify in-game
+	step
+		goto 19.9,75.5
+		.' Use the Ensorcelled Choker to disguise yourself as a ghoul|use Ensorcelled Choker##38699
+		.talk Gristlegut##28589
+		..accept Feedin' Da Goolz##12652
+		..buy Bitter Plasma|goal Bitter Plasma|q 12648/1|only if not ZGV.completedQuests[12238]
+		..buy Bitter Plasma|goal Bitter Plasma|q 12649/1|only if ZGV.completedQuests[12238]
+		info Ride back to the Reliquary of Agony.
+		info TODO: verify in-game
+	step
+		goto 20.5,74.8
+		.' Use your Bowels and Brains Bowl near Decaying Ghouls|use Bowels and Brains Bowl##38701
+		.' Feed 10 Decaying Ghouls|goal 10 Decaying Ghouls Fed|q 12652/1
+		info TODO: verify in-game
+	step
+		goto 19.9,75.5
+		.talk Gristlegut##28589
+		..turnin Feedin' Da Goolz##12652
+		info TODO: verify in-game
+	step
+		goto 14.1,73.8
+		.talk Stefan Vadu##28518
+		..turnin Dressing Down##12648|only if not ZGV.completedQuests[12238]
+		..turnin Suit Up!##12649|only if ZGV.completedQuests[12238]
+		..accept Infiltrating Voltarus##12661
+		info TODO: verify in-game
+	step
+		goto 25.3,64.0
+		.talk Engineer Reed##29688
+		..turnin Gymer's Salvation##12914
+		..accept Our Only Hope##12916
+		info Ride to the Crusader Forward Camp.
+		info TODO: verify in-game
+	step
+		goto 19.7,56.4
+		.' Click the Scourge Enclosure to blow it up|tip It's Gymer's huge cage.
+		.talk Gymer##29647
+		..turnin Our Only Hope##12916
+		..accept The Storm King's Vengeance##12919
+		info Ride northwest to Gymer.
+		info TODO: verify in-game
+	step
+		.' Ride Gymer
+		.' Spam Gymer's Smash (ability 1) on a target for big area damage
+		.' Use Gymer's Grab (ability 3) on bosses, then Gymer's Throw (ability 4)
+		.' Pick up Storm Clouds to heal and grow stronger
+		.kill Algar the Chosen|q 12919/1
+		.kill Prince Navarius|q 12919/3
+		.kill Thrym|q 12919/2
+		info Algar is to the northeast. Prince Navarius is to the southeast at 32.5,63.4, and killing him brings out Thrym.
+		info Grab a Storm Cloud before you turn to face Thrym.
+		info TODO: verify in-game
+	step
+		goto 25.3,64.0
+		.talk Crusader MacKellar##29689
+		..turnin The Storm King's Vengeance##12919
+		info Ride back to the Crusader Forward Camp and dismount.
+		info TODO: verify in-game
+	step
+		goto 27.1,46.2
+		.' Use your Ensorcelled Choker, then stand on the green circle at 28.4,44.9 to teleport up|use Ensorcelled Choker##38699
+		.talk Overlord Drakuru##28503
+		..accept Dark Horizon##12664|only if not ZGV.completedQuests[12238]
+		..accept Reunited##12663|only if ZGV.completedQuests[12238]
+		info Ride north to Voltarus. You'll go up and down this necropolis many times, keep the disguise on.
+		info TODO: verify in-game
+	step
+		goto 29.9,47.8
+		.talk Gorebag##28666
+		.' Take the tour of Zul'Drak
+		.' Complete the tour of Zul'Drak|goal Tour of Zul'Drak complete|q 12664/1|only if not ZGV.completedQuests[12238]
+		.' Complete the tour of Zul'Drak|goal Tour of Zul'Drak complete|q 12663/1|only if ZGV.completedQuests[12238]
+		info He's in the southeast part of the necropolis.
+		info TODO: verify in-game
+	step
+		goto 27.1,46.2
+		.talk Overlord Drakuru##28503
+		..turnin Dark Horizon##12664|only if not ZGV.completedQuests[12238]
+		..turnin Reunited##12663|only if ZGV.completedQuests[12238]
+		.' Complete Overlord Drakuru's task|goal Overlord Drakuru's task complete|q 12661/1
+		info TODO: verify in-game
+	step
+		.' Walk into the green circle to go down
+		.' Use Stefan's Horn to summon Stefan Vadu, then talk to him|use Stefan's Horn##41390
+		..turnin Infiltrating Voltarus##12661
+		..accept So Far, So Bad##12669
+		info TODO: verify in-game
+	step
+		goto 27.1,46.2
+		.' Use your Ensorcelled Choker and teleport up|use Ensorcelled Choker##38699
+		.talk Overlord Drakuru##28503
+		..accept It Rolls Downhill##12673
+		info TODO: verify in-game
+	step
+		goto 27.2,45.1
+		.' Go back down
+		.' Use your Scepter of Suggestion on Blight Geists|use Scepter of Suggestion##39157
+		.' Use the Harvest Blight Crystal ability near Crystallized Blight|petaction Harvest Blight Crystal|tip The Crystallized Blight looks like orange crystals on the ground.
+		.' Wait for the geist to walk onto the teleporter before you control a new one
+		.' Collect 7 Blight Crystals|goal 7 Blight Crystals collected|q 12673/1
+		.' Use your Diluting Additive next to Blight Cauldrons around the edge of the Reliquary of Pain|use Diluting Additive##39154
+		.' Dilute 5 Blight Cauldrons|goal 5 Blight Cauldrons diluted|q 12669/2
+		info Run away right after you use the additive, to avoid the mob it spawns.
+		info TODO: verify in-game
+	step
+		goto 27.1,46.2
+		.' Teleport up
+		.talk Overlord Drakuru##28503
+		..turnin It Rolls Downhill##12673
+		.' Complete Drakuru's task|goal Drakuru's task complete|q 12669/1
+		info TODO: verify in-game
+	step
+		.' Go down and use Stefan's Horn to summon Stefan Vadu|use Stefan's Horn##41390
+		..turnin So Far, So Bad##12669
+		..accept Hazardous Materials##12677
+		info TODO: verify in-game
+	step
+		goto 27.1,46.2
+		.' Teleport up
+		.talk Overlord Drakuru##28503
+		..accept Zero Tolerance##12686
+		info TODO: verify in-game
+	step
+		goto 27.1,43.9
+		.' Click the Harvested Blight Crystal crates|tip They look like big wooden crates in the halls and rooms of the necropolis.
+		.get 5 Harvested Blight Crystal|q 12677/2
+		info Each crate you open may make your disguise fail soon.
+		info TODO: verify in-game
+	step
+		goto 29.7,49.6
+		.' Go down
+		.' Use your Scepter of Empowerment on a Servant of Drakuru|use Scepter of Empowerment##39206
+		.' Send it at Darmuk, use Ferocious Enrage, then Gut Rip and Stunning Force on cooldown
+		.' Kill Darmuk|goal Darmuk Slain|q 12686/1
+		info Darmuk walks the platform further south. Stay in ghoul form and let the servant fight.
+		info TODO: verify in-game
+	step
+		goto 27.1,46.2
+		.' Teleport up
+		.talk Overlord Drakuru##28503
+		..turnin Zero Tolerance##12686
+		info TODO: verify in-game
+	step
+		.' Go down and use Stefan's Horn to summon Stefan Vadu|use Stefan's Horn##41390
+		..turnin Hazardous Materials##12677
+		..accept Sabotage##12676
+		info TODO: verify in-game
+	step
+		goto 27.1,46.2
+		.' Teleport up
+		.talk Overlord Drakuru##28503
+		..accept Fuel for the Fire##12690
+		info TODO: verify in-game
+	step
+		goto 30.6,45.3
+		.' Go down
+		.' Use your Explosive Charges next to Scourgewagons|use Explosive Charges##39165|tip They look like small catapult carts.
+		.' Destroy 5 Scourgewagons|goal 5 Scourgewagons destroyed|q 12676/1
+		info Head northeast.
+		info TODO: verify in-game
+	step
+		goto 32.1,40.6
+		.' Use your Scepter of Command on a Bloated Abomination|use Scepter of Command##39238
+		.' Send it from troll to troll, using Flatulate to stay ahead of them
+		.' Use Burst at the Seams when about 10 trolls follow you|petaction Burst at the Seams
+		.' Kill 60 Drakkari Skullcrushers|goal 60 Drakkari Skullcrushers Slain|q 12690/1
+		.' Lure 3 Drakkari Chieftains|goal 3 Drakkari Chieftain Lured|q 12690/2
+		info You don't get credit if you explode while the trolls are knocked down by Flatulate.
+		info TODO: verify in-game
+	step
+		goto 27.1,46.2
+		.' Teleport up
+		.talk Overlord Drakuru##28503
+		..turnin Fuel for the Fire##12690
+		..accept Disclosure##12710
+		.' Complete Drakuru's task|goal Drakuru's task complete|q 12676/2
+		info TODO: verify in-game
+	step
+		goto 27.2,42.3
+		.' Step into the upper blue circle in the middle of the room to go up
+		.' Click the Musty Coffin and follow Malmortis|tip Click the coffin again after he says "Ahh... there you are." to finish without the tour.
+		.' Explore Drakuru's upper chamber|goal Drakuru's upper chamber explored|q 12710/1
+		info TODO: verify in-game
+	step
+		goto 27.1,46.2
+		.' Take the green circle back down to Drakuru
+		.talk Overlord Drakuru##28503
+		..turnin Disclosure##12710
+		.' Learn Drakuru's secret|goal Learn Drakuru's secret|q 12676/3
+		info TODO: verify in-game
+	step
+		.' Go down and use Stefan's Horn to summon Stefan Vadu|use Stefan's Horn##41390
+		..turnin Sabotage##12676
+		..accept Betrayal##12713
+		info TODO: verify in-game
+	step
+		goto 27.1,46.2
+		.' Teleport up and tell Drakuru you're ready to join him
+		.' As your disguise fades, use the Scepter of Domination on a Brightblood Troll right away|use Scepter of Domination##39664
+		.' Send it at Drakuru and use Concussion Blow and Powerful Strike on cooldown
+		.' Strafe in circles to dodge his crystals, and attack him yourself too
+		.' When your troll dies, take control of another one and use its heal (Brightblood Infusion) at once
+		.' Kill Drakuru and click Drakuru's Skull
+		.get Drakuru's Skull|q 12713/1
+		info This fight is hard solo. Read the whole step and put the scepter on an easy key before you talk to Drakuru.
+		info TODO: verify in-game
+	step
+		.' Use Drakuru's Last Wish to leave the necropolis|use Drakuru's Last Wish##43059
+		.' Use Stefan's Horn to summon Stefan Vadu|use Stefan's Horn##41390
+		..turnin Betrayal##12713
+		info TODO: verify in-game
+	step
+		goto 41.5,64.4
+		.talk Gurric##28623
+		..fpath The Argent Stand
+		info Ride southeast to The Argent Stand.
+		info TODO: verify in-game
+	step
+		goto 39.4,67.0
+		.talk Commander Falstaav##28059
+		..turnin Taking a Stand##12795
+		..accept Defend the Stand##12503
+		..accept Parachutes for the Argent Crusade##12740
+		info TODO: verify in-game
+	step
+		goto 40.5,65.6
+		.talk Hexxer Ubungo##28062
+		..accept The Blessing of Zim'Abwa##12565
+		info TODO: verify in-game
+	step
+		goto 38.4,67.1
+		.' Kill 10 Scourge|goal 10 Scourge at The Argent Stand destroyed|q 12503/1
+		.' Target Argent Shieldmen and Argent Crusaders and use your Crusader Parachute on them|use Crusader Parachute##39615|tip It won't work on all of them.
+		.' Equip 10 Argent forces with a parachute|goal 10 Argent forces equipped with a parachute|q 12740/1
+		.kill Scourge mobs|n
+		..collect 10 Drakkari Offerings##38551|q 12565
+		info Head a short distance west. Tagging a Scourge with a little damage is enough; the soldiers can finish it off.
+		info Keep looting Drakkari Offerings in this zone: three blessings need 10 each, and you hand in the second one as soon as you reach Zim'Torga.
+		info TODO: verify in-game
+	step
+		goto 36.7,72.6
+		.talk Zim'Abwa##190535
+		..turnin The Blessing of Zim'Abwa##12565
+		info Ride south to the statue of Zim'Abwa.
+		info TODO: verify in-game
+	step
+		goto 39.4,67.0
+		.talk Commander Falstaav##28059
+		..turnin Defend the Stand##12503
+		..turnin Parachutes for the Argent Crusade##12740
+		info Return to The Argent Stand.
+		info TODO: verify in-game
+	step
+		goto 40.3,66.6
+		.talk Commander Kunz##28039
+		..accept New Orders for Sergeant Stackhammer##12505
+		..accept Pa'Troll##12596
+		info TODO: verify in-game
+	step
+		goto 40.5,65.6
+		.talk Hexxer Ubungo##28062
+		..accept Trouble at the Altar of Sseratus##12506
+		info TODO: verify in-game
+	step
+		goto 48.8,78.9
+		.talk Captain Brandon##28042
+		..accept Something for the Pain##12597
+		info Ride southeast.
+		info TODO: verify in-game
+	step
+		goto 58.1,72.4
+		.talk Captain Rupert##28044
+		..accept Throwing Down##12598
+		info Ride northeast.
+		info TODO: verify in-game
+	step
+		goto 58.7,72.5
+		.talk Dr. Rogers##28125
+		..accept Leave No One Behind##12512
+		info TODO: verify in-game
+	step
+		goto 53.4,68.7
+		.' Use your High Impact Grenade next to Nerubian Tunnels|use High Impact Grenade##38574|tip They look like squarish dirt mounds with nerubians around them.
+		.' Seal 5 Nerubian Tunnels|goal 5 Nerubian Tunnels Sealed|q 12598/1
+		info Head west.
+		info TODO: verify in-game
+	step
+		goto 50.7,69.9
+		.' Use your Crusader's Bandage on Crusader Jonathan|use Crusader's Bandage##38330|tip He's lying on the ground inside this building.
+		.' Ride straight back to Dr. Rogers at 58.7,72.5; he follows you without pulling anything
+		.' Save Crusader Jonathan|goal Saved Crusader Jonathan|q 12512/1
+		info TODO: verify in-game
+	step
+		goto 49.4,74.7
+		.' Use your Crusader's Bandage on Crusader Josephine|use Crusader's Bandage##38330|tip She's lying on the ground inside this building.
+		.' Ride straight back to Dr. Rogers at 58.7,72.5
+		.' Save Crusader Josephine|goal Saved Crusader Josephine|q 12512/3
+		info TODO: verify in-game
+	step
+		goto 53.6,75.0
+		.' Use your Crusader's Bandage on Crusader Lamoof|use Crusader's Bandage##38330|tip He's lying on the ground inside this building.
+		.' Ride straight back to Dr. Rogers at 58.7,72.5
+		.' Save Crusader Lamoof|goal Saved Crusader Lamoof|q 12512/2
+		info TODO: verify in-game
+	step
+		goto 58.7,72.5
+		.talk Dr. Rogers##28125
+		..turnin Leave No One Behind##12512
+		info TODO: verify in-game
+	step
+		goto 58.1,72.4
+		.talk Captain Rupert##28044
+		..turnin Throwing Down##12598
+		..accept Cocooned!##12606
+		.' Complete Captain Rupert's Task|goal Captain Rupert's Task|q 12596/2
+		info TODO: verify in-game
+	step
+		goto 58.1,72.0
+		.talk Sergeant Moonshard##28283
+		..accept Death to the Necromagi##12552
+		info TODO: verify in-game
+	step
+		goto 58.3,72.0
+		.talk Specialist Cogwheel##28284
+		..accept Skimmer Spinnerets##12553
+		info TODO: verify in-game
+	step
+		goto 56.7,69.7
+		.' Attack the Nerubian Cocoons|tip They look like big squirming white cocoons on the ground.
+		.' Free 3 Captive Footmen|goal 3 Freed Captive Footmen|q 12606/1
+		info Ride west.
+		info TODO: verify in-game
+	step
+		goto 57.6,75.2
+		.kill 8 Hath'ar Necromagus|q 12552/1
+		.kill Hath'ar Skimmers|n
+		.get 5 Intact Skimmer Spinneret|q 12553/1
+		info Ride southeast. More Necromagi are in the Kolramas building to the northeast.
+		info TODO: verify in-game
+	step
+		goto 58.1,72.0
+		.talk Sergeant Moonshard##28283
+		..turnin Death to the Necromagi##12552
+		info TODO: verify in-game
+	step
+		goto 58.1,72.0
+		.talk Sergeant Moonshard##28283
+		..accept Malas the Corrupter##12554
+		info It's a group quest; strong classes can solo it. Skip this step and its kill and turn-in steps if you'd rather not.
+		info TODO: verify in-game
+	step
+		goto 58.3,72.0
+		.talk Specialist Cogwheel##28284
+		..turnin Skimmer Spinnerets##12553
+		..accept Crashed Sprayer##12583
+		info TODO: verify in-game
+	step
+		goto 58.1,72.4
+		.talk Captain Rupert##28044
+		..turnin Cocooned!##12606
+		..accept Pure Evil##12584
+		info TODO: verify in-game
+	step
+		goto 48.8,75.6
+		.' Click the Crashed Plague Sprayer|tip It looks like a stone cube with a pillar at each corner and skulls on it.
+		.get Plague Sprayer Parts|q 12583/1
+		info Ride southwest.
+		info TODO: verify in-game
+	step
+		goto 58.3,72.0
+		.talk Specialist Cogwheel##28284
+		..turnin Crashed Sprayer##12583
+		..accept A Tangled Skein##12555
+		info TODO: verify in-game
+	step
+		goto 58.3,74.3
+		.' Use your Tangled Skein Thrower on Plague Sprayers|use Tangled Skein Thrower##38515|tip They hover in the sky.
+		.' Web and destroy 5 Plague Sprayers|goal 5 Plague Sprayers webbed and destroyed|q 12555/1
+		info Head east.
+		info TODO: verify in-game
+	step
+		goto 61.0,78.6
+		.' Click the Chunks of Saronite|tip They look like tiny green mining nodes inside the necropolis.
+		.get 10 Chunk of Saronite|q 12584/1
+		info Head into Kolramas.
+		info TODO: verify in-game
+	step
+		goto 61.0,78.0
+		.kill Malas the Corrupter|n
+		.get Head of the Corrupter|q 12554/1
+		info He's on top of the necropolis.
+		info Skip this step if you didn't take Malas the Corrupter.
+		info TODO: verify in-game
+	step
+		goto 58.3,72.0
+		.talk Specialist Cogwheel##28284
+		..turnin A Tangled Skein##12555
+		info Return to Captain Rupert's camp.
+		info TODO: verify in-game
+	step
+		goto 58.1,72.0
+		.talk Sergeant Moonshard##28283
+		..turnin Malas the Corrupter##12554
+		info Skip this step if you didn't kill Malas.
+		info TODO: verify in-game
+	step
+		ding 77
+	step
+		goto 48.2,63.9
+		.talk Captain Grondel##28043
+		..accept Creature Comforts##12599
+		info Ride west.
+		info TODO: verify in-game
+	step
+		goto 35.6,52.2
+		.talk Captain Arnath##28045
+		..accept Siphoning the Spirits##12799
+		info Ride northwest.
+		info TODO: verify in-game
+	step
+		goto 35.0,52.1
+		.talk Alchemist Finklestein##28205
+		..accept Lab Work##12557
+		info TODO: verify in-game
+	step
+		.' Click the ingredients on the shelves in the two rooms of the lab
+		.' Get a Muddy Mire Maggot|goal Muddy Mire Maggot found|q 12557/1|tip It looks like an open bag of grain on the ground.
+		.' Get a Withered Batwing|goal Withered Batwing found|q 12557/2|tip It looks like a bony wing.
+		.' Get an Amberseed|goal Amberseed found|q 12557/3|tip It looks like a spiked potato.
+		.' Get a Chilled Serpent Mucus|goal Chilled Serpent Mucus found|q 12557/4|tip It looks like a skinny green vial.
+		info The maggot, batwing and amberseed are in the north part of the lab, the mucus in the south part.
+		info TODO: verify in-game
+	step
+		goto 35.0,52.1
+		.talk Alchemist Finklestein##28205
+		..turnin Lab Work##12557
+		.' Complete Alchemist Finklestein's task|goal Alchemist Finklestein's Task|q 12596/4
+		info TODO: verify in-game
+	step
+		goto 36.6,60.5
+		.kill Lost Drakkari Spirits|n
+		.get 5 Ancient Ectoplasm|q 12799/1
+		info Head south to the pools. Only the neutral spirits drop the ectoplasm.
+		info TODO: verify in-game
+	step
+		goto 35.6,52.2
+		.talk Captain Arnath##28045
+		..turnin Siphoning the Spirits##12799
+		..accept Stocking the Shelves##12609
+		..accept Clipping Their Wings##12610
+		info TODO: verify in-game
+	step
+		goto 36.1,51.1
+		.kill Trapdoor Crawlers|n
+		.get 7 Fresh Spider Ichor|q 12609/1
+		.kill Zul'Drak Bats|n
+		.get 7 Unblemished Bat Wing|q 12610/1
+		info TODO: verify in-game
+	step
+		goto 35.6,52.2
+		.talk Captain Arnath##28045
+		..turnin Stocking the Shelves##12609
+		..turnin Clipping Their Wings##12610
+		info TODO: verify in-game
+	step
+		goto 40.4,48.2
+		.talk Sergeant Stackhammer##28056
+		..turnin New Orders for Sergeant Stackhammer##12505
+		..accept Argent Crusade, We Are Leaving!##12504
+		info Ride northeast.
+		info TODO: verify in-game
+	step
+		goto 40.4,48.2
+		.talk Corporal Maga##28099
+		..accept Mopping Up##12508
+		info TODO: verify in-game
+	step
+		goto 40.4,47.0
+		.kill 10 Followers of Sseratus|q 12508/1
+		.get Strange Mojo|n
+		.' Click the Strange Mojo in your bags|use Strange Mojo##38321
+		..accept Strange Mojo##12507
+		.talk Argent Soldier##28041
+		.' Tell 10 Argent Soldiers to report back to the sergeant|goal 10 Argent Soldier told to report back to the sergeant|q 12504/1
+		info Head north.
+		info TODO: verify in-game
+	step
+		goto 40.3,39.3
+		.' Investigate the main building at the Altar of Sseratus|goal Main building at the Altar of Sseratus investigated.|q 12506/1
+		info Ride to the top of the temple.
+		info TODO: verify in-game
+	step
+		goto 40.4,48.2
+		.talk Sergeant Stackhammer##28056
+		..turnin Argent Crusade, We Are Leaving!##12504
+		info TODO: verify in-game
+	step
+		goto 40.4,48.2
+		.talk Corporal Maga##28099
+		..turnin Mopping Up##12508
+		info TODO: verify in-game
+	step
+		goto 41.0,67.0
+		.talk Eitrigg##28244
+		..turnin Pure Evil##12584
+		info Ride south to The Argent Stand.
+		info TODO: verify in-game
+	step
+		goto 40.5,65.6
+		.talk Hexxer Ubungo##28062
+		..turnin Trouble at the Altar of Sseratus##12506
+		..turnin Strange Mojo##12507
+		..accept Precious Elemental Fluids##12510
+		info TODO: verify in-game
+	step
+		goto 40.2,68.9
+		.talk Sub-Lieutenant Jax##28309
+		..accept The Drakkari Do Not Need Water Elementals!##12562
+		info TODO: verify in-game
+	step
+		goto 44.9,79.5
+		.' Click the Mature Water-Poppy plants|tip They look like tall white-leaved plants with purple bulbs on top.
+		.get 5 Mature Water-Poppy|q 12597/1
+		info Ride south to the Drak'Sotra Fields.
+		info TODO: verify in-game
+	step
+		goto 40.2,73.6
+		.kill 10 Drakkari Water Binder|q 12562/1
+		.kill Crazed Water Spirits|n
+		.collect 3 Water Elemental Links##38323|n
+		.' Use the 3 Water Elemental Links to make a Tether to the Plane of Water|use Water Elemental Link##38323
+		.' Use the Tether to summon a Watery Lord|use Tether to the Plane of Water##38324
+		.kill Watery Lords|n
+		.get 3 Precious Elemental Fluids|q 12510/1
+		info You can't hold more than 3 links, so make a tether each time you have 3.
+		info TODO: verify in-game
+	step
+		goto 48.8,78.9
+		.talk Captain Brandon##28042
+		..turnin Something for the Pain##12597
+		.' Complete Captain Brandon's Task|goal Captain Brandon's Task|q 12596/1
+		info Ride east.
+		info TODO: verify in-game
+	step
+		goto 40.2,68.9
+		.talk Sub-Lieutenant Jax##28309
+		..turnin The Drakkari Do Not Need Water Elementals!##12562
+		info Ride northwest to The Argent Stand.
+		info TODO: verify in-game
+	step
+		goto 40.5,65.6
+		.talk Hexxer Ubungo##28062
+		..turnin Precious Elemental Fluids##12510
+		..accept Mushroom Mixer##12514
+		info TODO: verify in-game
+	step
+		goto 41.3,65.1
+		.talk Apprentice Pestlepot##28204
+		..accept Gluttonous Lurkers##12527
+		info TODO: verify in-game
+	step
+		goto 41.4,57.4
+		.' Click Muddlecap Fungus|tip They look like groups of tall mushrooms.
+		.get 10 Muddlecap Fungus|q 12514/1
+		.' Click Zul'Drak Rats walking on the ground
+		.collect 5 Zul'Drak Rat##38380|n
+		.' Target a Lurking Basilisk and use all 5 rats on it|use Zul'Drak Rat##38380
+		.' Click the Gorged Lurking Basilisk
+		.get 5 Basilisk Crystals|q 12527/1
+		info Ride northeast to the water.
+		info TODO: verify in-game
+	step
+		goto 46.9,61.4
+		.' Click Dead Thornwood|tip It looks like curved thorny roots coming out of the water.
+		.get 20 Dead Thornwood|q 12599/1
+		info TODO: verify in-game
+	step
+		goto 48.2,63.9
+		.talk Captain Grondel##28043
+		..turnin Creature Comforts##12599
+		.' Complete Captain Grondel's Task|goal Captain Grondel's Task|q 12596/3
+		info TODO: verify in-game
+	step
+		goto 40.5,65.6
+		.talk Hexxer Ubungo##28062
+		..turnin Mushroom Mixer##12514
+		..accept Too Much of a Good Thing##12516
+		info Return to The Argent Stand.
+		info TODO: verify in-game
+	step
+		goto 40.3,66.6
+		.talk Commander Kunz##28039
+		..turnin Pa'Troll##12596
+		info TODO: verify in-game
+	step
+		goto 35.0,52.1
+		.talk Alchemist Finklestein##28205
+		..turnin Gluttonous Lurkers##12527
+		info Ride northwest.
+		info TODO: verify in-game
+	step
+		goto 40.2,42.6
+		.' Throw your Modified Mojo at the Prophet of Sseratus|use Modified Mojo##38332|tip He's a huge green snake.
+		.kill 1 Muddled Prophet of Sseratus|q 12516/1
+		info Ride northeast.
+		info TODO: verify in-game
+	step
+		goto 40.5,65.6
+		.talk Hexxer Ubungo##28062
+		..turnin Too Much of a Good Thing##12516
+		..accept To the Witch Doctor##12623
+		info Return to The Argent Stand.
+		info TODO: verify in-game
+	step
+		'Make sure you have 10 Drakkari Offerings|collect 10 Drakkari Offerings##38551|c|q 12615|future
+		.' If not, kill Scourge around here until you do
+		info You hand them in at Zim'Torga as soon as you arrive.
+		info TODO: verify in-game
+	step
+		goto 60.0,56.7
+		.talk Maaka##28624
+		..fpath Zim'Torga
+		info Ride northeast to Zim'Torga.
+		info TODO: verify in-game
+	step
+		goto 59.5,58.1
+		.talk Witch Doctor Khufu##28479
+		..turnin To the Witch Doctor##12623
+		..accept Breaking Through Jin'Alai##12627
+		..accept The Blessing of Zim'Torga##12615
+		info TODO: verify in-game
+	step
+		goto 59.2,56.2
+		.talk Scalper Ahunae##28484
+		..accept The Leaders at Jin'Alai##12622
+		info TODO: verify in-game
+	step
+		goto 60.0,57.9
+		.talk Chronicler To'kini##28527
+		..accept Just Checkin'##13099
+		info TODO: verify in-game
+	step
+		goto 59.4,57.2
+		.talk Zim'Torga##190602
+		..turnin The Blessing of Zim'Torga##12615
+		info It's the statue in the center.
+		info TODO: verify in-game
+	step
+		goto 57.6,61.7
+		.' Click the Purple Cauldron|goal Purple Cauldron disturbed|q 12627/3
+		.' Click the Green Cauldron at 55.7,64.3|goal Green Cauldron disturbed|q 12627/2
+		.' Click the Blue Cauldron at 57.2,65.3|goal Blue Cauldron disturbed|q 12627/1
+		.' Click the Red Cauldron at 58.8,62.7|goal Red Cauldron disturbed|q 12627/4
+		info Ride southwest to Jin'Alai. The cauldrons are at the corners of the big plaza.
+		info TODO: verify in-game
+	step
+		.kill Jin'Alai trolls|n
+		.' Kutube'sa, Gawanil and Chulo the Mad spawn by the big totems once you've killed enough trolls
+		.' Kill them and click the treasure that appears at their corpses
+		.get 1 Treasure of Kutube'sa|q 12622/1
+		.get 1 Treasure of Gawanil|q 12622/2
+		.get 1 Treasure of Chulo the Mad|q 12622/3
+		info TODO: verify in-game
+	step
+		goto 59.5,58.1
+		.talk Witch Doctor Khufu##28479
+		..turnin Breaking Through Jin'Alai##12627
+		..accept To Speak With Har'koa##12628
+		info Return to Zim'Torga.
+		info TODO: verify in-game
+	step
+		goto 59.2,56.2
+		.talk Scalper Ahunae##28484
+		..turnin The Leaders at Jin'Alai##12622
+		..accept Sealing the Rifts##12640
+		info TODO: verify in-game
+	step
+		goto 60.0,57.9
+		.talk Chronicler To'kini##28527
+		..accept Relics of the Snow Leopard Goddess##12635
+		info TODO: verify in-game
+	step
+		goto 59.4,56.4
+		.talk Element-Tamer Dagoda##28480
+		..accept The Frozen Earth##12639
+		info TODO: verify in-game
+	step
+		goto 63.8,70.5
+		.talk Har'koa##28401
+		..turnin To Speak With Har'koa##12628
+		..accept But First My Offspring##12632
+		info Ride southeast.
+		info TODO: verify in-game
+	step
+		goto 62.9,70.6
+		.kill Cursed Offspring of Har'koa|n
+		.' Use your Whisker of Har'koa on their corpses|use Whisker of Har'koa##38676
+		.' Resurrect 7 Cursed Offspring of Har'koa|goal 7 Cursed Offspring of Har'koa resurrected|q 12632/1
+		.' Click the Har'koan Relics|tip They look like upright stone tablets on the ground.
+		.get 10 Har'koan Relic|q 12635/1
+		info Ride west.
+		info TODO: verify in-game
+	step
+		goto 63.8,70.5
+		.talk Har'koa##28401
+		..turnin But First My Offspring##12632
+		..accept Spirit of Rhunok##12642
+		info TODO: verify in-game
+	step
+		goto 60.0,57.9
+		.talk Chronicler To'kini##28527
+		..turnin Relics of the Snow Leopard Goddess##12635
+		..accept Plundering Their Own##12650
+		..accept Tails Up##13549
+		info Ride northwest back to Zim'Torga.
+		info TODO: verify in-game
+	step
+		goto 59.5,58.1
+		.talk Witch Doctor Khufu##28479
+		..accept The Blessing of Zim'Rhuk##12655
+		info TODO: verify in-game
+	step
+		goto 56.4,52.8
+		.' Fight the Elemental Rifts|tip They look like swirling lightning clouds.
+		.' Seal 7 Elemental Rifts|goal 7 Elemental Rifts sealed|q 12640/1
+		.kill Frozen Earths|n
+		.get 7 Essence of the Frozen Earth|q 12639/1
+		.collect 10 Drakkari Offerings##38551|q 12655
+		info Ride northwest.
+		info TODO: verify in-game
+	step
+		goto 59.3,44.5
+		.talk Zim'Rhuk##190657
+		..turnin The Blessing of Zim'Rhuk##12655
+		info Ride northeast.
+		info TODO: verify in-game
+	step
+		goto 53.4,39.2
+		.talk Spirit of Rhunok##28561
+		..turnin Spirit of Rhunok##12642
+		..accept My Prophet, My Enemy##12646
+		info Ride northwest.
+		info TODO: verify in-game
+	step
+		goto 54.0,47.3
+		.from Prophet of Rhunok##28442
+		.get Arctic Bear God Mojo|q 12646/1
+		.kill Priests of Rhunok|n
+		.get 7 Rhunokian Artifact|q 12650/1
+		info Ride south to the lake.
+		info TODO: verify in-game
+	step
+		goto 53.4,39.2
+		.talk Spirit of Rhunok##28561
+		..turnin My Prophet, My Enemy##12646
+		..accept An End to the Suffering##12647
+		info TODO: verify in-game
+	step
+		goto 53.4,35.9
+		.from Rhunok's Tormentor##28575
+		.collect 1 Tormentor's Incense##38696|q 12647
+		info Head into the temple.
+		info TODO: verify in-game
+	step
+		goto 53.5,34.5
+		.' Use your Tormentor's Incense next to Rhunok|use Tormentor's Incense##38696
+		.kill 1 Rhunok|q 12647/1
+		info TODO: verify in-game
+	step
+		goto 53.4,39.2
+		.talk Spirit of Rhunok##28561
+		..turnin An End to the Suffering##12647
+		..accept Back to Har'koa##12653
+		info TODO: verify in-game
+	step
+		goto 60.0,57.9
+		.talk Chronicler To'kini##28527
+		..turnin Plundering Their Own##12650
+		info Ride southeast to Zim'Torga.
+		info TODO: verify in-game
+	step
+		goto 59.2,56.2
+		.talk Scalper Ahunae##28484
+		..turnin Sealing the Rifts##12640
+		..accept Scalps!##12659
+		info TODO: verify in-game
+	step
+		goto 59.4,56.4
+		.talk Element-Tamer Dagoda##28480
+		..turnin The Frozen Earth##12639
+		..accept Bringing Down Heb'Jin##12662
+		info TODO: verify in-game
+	step
+		goto 63.8,70.5
+		.talk Har'koa##28401
+		..turnin Back to Har'koa##12653
+		..accept I Sense a Disturbance##12665
+		info Ride southeast.
+		info TODO: verify in-game
+	step
+		goto 63.8,70.5
+		.talk Har'koa##28401
+		.' Ask her to call one of her children to carry you to the Altar of Quetz'lun
+		.' Reveal Quetz'lun's fate|goal Quetz'lun's fate revealed.|q 12665/1
+		info TODO: verify in-game
+	step
+		goto 63.8,70.5
+		.talk Har'koa##28401
+		..turnin I Sense a Disturbance##12665
+		..accept Preparations for the Underworld##12666
+		info TODO: verify in-game
+	step
+		goto 64.1,69.9
+		.kill Har'koan Subduers|n
+		.kill Claws of Har'koa|n
+		.get 8 Sacred Adornment|q 12666/1
+		info TODO: verify in-game
+	step
+		goto 63.8,70.5
+		.talk Har'koa##28401
+		..turnin Preparations for the Underworld##12666
+		..accept Seek the Wind Serpent Goddess##12667
+		info TODO: verify in-game
+	step
+		goto 74.3,66.7
+		.' Use To'kini's Blowgun on Frost Leopards and Icepaw Bears|use To'kini's Blowgun##44890
+		.' Click them while they sleep to check whether they're female
+		.' Recover 3 Female Frost Leopards|goal 3 Female Frost Leopards recovered|q 13549/1
+		.' Recover 3 Female Icepaw Bears|goal 3 Female Icepaw Bears recovered|q 13549/2
+		info Ride east.
+		info TODO: verify in-game
+	step
+		goto 75.4,58.6
+		.talk Quetz'lun's Spirit##28030
+		..turnin Seek the Wind Serpent Goddess##12667
+		..accept Setting the Stage##12672
+		info Ride northeast to Quetz'lun.
+		info TODO: verify in-game
+	step
+		goto 74.6,59.8
+		.' Click the Underworld Power Fragments|tip They look like brownish floating crystals.
+		.get 10 Underworld Power Fragment|q 12672/1
+		info Head west, downstairs.
+		info TODO: verify in-game
+	step
+		goto 75.4,58.6
+		.talk Quetz'lun's Spirit##28030
+		..turnin Setting the Stage##12672
+		..accept Foundation for Revenge##12668
+		info TODO: verify in-game
+	step
+		goto 74.6,59.8
+		.kill Quetz'lun Worshippers and Serpent-Touched Berserkers next to the Soul Fonts|n|tip The Soul Fonts look like altars.
+		.' Kill 12 trolls near a Soul Font|goal 12 Trolls killed near a Soul Font|q 12668/1
+		info Head west, downstairs again.
+		info TODO: verify in-game
+	step
+		goto 75.4,58.6
+		.talk Quetz'lun's Spirit##28030
+		..turnin Foundation for Revenge##12668
+		..accept Hell Hath a Fury##12674
+		info TODO: verify in-game
+	step
+		goto 76.0,54.9
+		.' Use Quetz'lun's Hexxing Stick on each priest, then kill them|use Quetz'lun's Hexxing Stick##39158
+		.' Hex High Priest Hawinni at death|goal High Priest Hawinni hexed at death|q 12674/3
+		.' Hex High Priest Mu'funu at death at 74.5,57.4|goal High Priest Mu'funu hexed at death|q 12674/1
+		.' Hex High Priestess Tua-Tua at death at 73.5,60.8|goal High Priestess Tua-Tua hexed at death|q 12674/2
+		info TODO: verify in-game
+	step
+		goto 75.4,58.6
+		.talk Quetz'lun's Spirit##28030
+		..turnin Hell Hath a Fury##12674
+		..accept One Last Thing##12675
+		info TODO: verify in-game
+	step
+		goto 63.8,70.5
+		.talk Har'koa##28401
+		..turnin One Last Thing##12675
+		..accept Blood of a Dead God##12684
+		info Ride southwest back to Har'koa.
+		info TODO: verify in-game
+	step
+		goto 64.6,57.0
+		.kill Heb'Drakkar trolls|n
+		.' Use Ahunae's Knife on their corpses to scalp them|use Ahunae's Knife##38731
+		.' Scalp 10 Heb'Drakkar trolls|goal 10 Heb'Drakkar trolls scalped|q 12659/1
+		info Ride north to Heb'Drakkar.
+		info TODO: verify in-game
+	step
+		goto 64.2,52.6
+		.' Click Heb'Jin's Drum to bring Heb'Jin down|tip It's a big drum in the middle of the road.
+		.' Use your Bat Net on Heb'Jin's Bat|use Bat Net##39041
+		.kill 1 Heb'Jin|q 12662/1
+		info TODO: verify in-game
+	step
+		goto 70.5,50.4
+		.kill Bloods of Mam'toth|n
+		.get 7 Blood of Mam'toth|q 12684/1
+		info Ride northeast to the lower part of the Altar of Mam'toth.
+		info TODO: verify in-game
+	step
+		goto 63.8,70.5
+		.talk Har'koa##28401
+		..turnin Blood of a Dead God##12684
+		..accept You Reap What You Sow##12685
+		info Return to Har'koa.
+		info TODO: verify in-game
+	step
+		goto 75.2,58.6
+		.' Use Quetz'lun's Ritual on the Prophet of Quetz'lun|use Quetz'lun's Ritual##39187
+		.kill 1 Drained Prophet of Quetz'lun|q 12685/1
+		info Ride northeast to the Altar of Quetz'lun.
+		info TODO: verify in-game
+	step
+		goto 59.5,58.1
+		.talk Witch Doctor Khufu##28479
+		..turnin You Reap What You Sow##12685
+		info Ride west to Zim'Torga.
+		info TODO: verify in-game
+	step
+		goto 59.4,56.4
+		.talk Element-Tamer Dagoda##28480
+		..turnin Bringing Down Heb'Jin##12662
+		..accept Enchanted Tiki Warriors##12708
+		info TODO: verify in-game
+	step
+		goto 59.2,56.2
+		.talk Scalper Ahunae##28484
+		..turnin Scalps!##12659
+		..accept Wooly Justice##12707
+		info TODO: verify in-game
+	step
+		goto 60.0,57.9
+		.talk Chronicler To'kini##28527
+		..turnin Tails Up##13549
+		..accept Hexed Caches##12709
+		info TODO: verify in-game
+	step
+		goto 60.3,57.8
+		.talk Har'koa##28401
+		..accept The Key of Warlord Zol'Maz##12712
+		info TODO: verify in-game
+	step
+		goto 69.5,41.1
+		.' Use your Medallion of Mam'toth on an Enraged Mammoth and mount it|use Medallion of Mam'toth##39268
+		.' Charge Mam'toth Disciples with Rushing Charge (ability 1), then spam Trample (ability 2)
+		.' Trample 12 Mam'toth Disciples to death|goal 12 Mam'toth Disciples trampled to death|q 12707/1
+		info Ride northeast up the steps to the upper Altar of Mam'toth. If your mammoth dies, get another.
+		info TODO: verify in-game
+	step
+		goto 67.9,32.8
+		.kill Yara|n|tip She's downstairs, in the southwest part.
+		.collect 1 Yara's Sword##39313|q 12712
+		.kill Drek'Maz|n|tip He's downstairs, in the southeast part, at 68.2,35.3.
+		.collect 1 Drek'Maz's Tiki##39315|q 12712
+		.kill Tiri|n|tip She's upstairs, in the northeast part, at 63.8,37.2.
+		.collect 1 Tiri's Magical Incantation##39316|q 12712
+		.' Kill Enchanted Tiki Warriors|goal 12 Enchanted Tiki Warriors destroyed|q 12708/1
+		.' Click the Zol'Maz Stronghold Caches|tip They look like bamboo boxes on the ground.
+		.get 12 Zol'Maz Stronghold Cache|q 12709/1
+		info Ride northwest to Zol'Maz Stronghold.
+		info TODO: verify in-game
+	step
+		goto 66.2,33.4
+		.' Click one of the three items to combine them into the Tiki Dervish Ceremony|use Tiri's Magical Incantation##39316
+		.' Use the Tiki Dervish Ceremony in front of the big metal gate at the top|use Tiki Dervish Ceremony##39314
+		.from Warlord Zol'Maz##28902
+		.get Key of Warlord Zol'Maz|q 12712/1
+		info Let the Tiki Dervish tank, and attack once it has aggro.
+		info TODO: verify in-game
+	step
+		goto 60.3,57.8
+		.talk Har'koa##28401
+		..turnin The Key of Warlord Zol'Maz##12712
+		..accept Rampage##12721
+		info Return to Zim'Torga.
+		info TODO: verify in-game
+	step
+		goto 60.0,57.9
+		.talk Chronicler To'kini##28527
+		..turnin Hexed Caches##12709
+		info TODO: verify in-game
+	step
+		goto 59.4,56.4
+		.talk Element-Tamer Dagoda##28480
+		..turnin Enchanted Tiki Warriors##12708
+		info TODO: verify in-game
+	step
+		goto 59.2,56.2
+		.talk Scalper Ahunae##28484
+		..turnin Wooly Justice##12707
+		info TODO: verify in-game
+	step
+		goto 78.1,24.2
+		.' Click the 4 Akali Chain Anchors|tip They look like stone pillars with fire on top.
+		.' Unfetter Akali from his chains|goal Akali unfettered from his chains.|q 12721/1
+		info Ride northeast to Akali.
+		info TODO: verify in-game
+	step
+		goto 70.5,23.3
+		.talk Rafae##30569
+		..fpath Gundrak
+		info Ride west to Dubra'Jin.
+		info TODO: verify in-game
+	step
+		goto 70.1,20.9
+		.talk Chronicler Bah'Kini##30676
+		..turnin Just Checkin'##13099
+		info TODO: verify in-game
+	step
+		goto 70.1,20.9
+		.talk Chronicler Bah'Kini##30676
+		..accept For Posterity##13098
+		..accept One of a Kind##13111
+		info They're Gundrak dungeon quests. Skip this step if you won't run Gundrak; the dungeon steps are at the end of this guide.
+		info TODO: verify in-game
+	step
+		goto 70.0,21.0
+		.talk Ha'wana##33025
+		..accept Eggs for Dubra'Jin##13556
+		info TODO: verify in-game
+	step
+		goto 79.8,34.7
+		.' Click the Gundrak Raptor Eggs in the bunches of trees|tip Gundrak Raptors drop them too.
+		.get 12 Gundrak Raptor Egg|q 13556/1
+		info They're in the trees northeast and southeast of Dubra'Jin.
+		info TODO: verify in-game
+	step
+		goto 70.0,21.0
+		.talk Ha'wana##33025
+		..turnin Eggs for Dubra'Jin##13556
+		info TODO: verify in-game
+	step
+		goto 70.5,23.3
+		.talk Rafae##30569
+		..'Fly to Zim'Torga|goto 60.0,56.7,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 59.5,58.1
+		.talk Witch Doctor Khufu##28479
+		..turnin Rampage##12721
+		info TODO: verify in-game
+	step
+		goto 48.4,56.4
+		.talk Gurgthock##30007
+		..accept The Amphitheater of Anguish: Yggdras!##12932
+		.kill 1 Yggdras|q 12932/1
+		.talk Wodin the Troll-Servant##30009
+		..turnin The Amphitheater of Anguish: Yggdras!##12932
+		only if not ZGV.completedQuests[9977]
+		info Ride west to the Amphitheater of Anguish. The chain needs a group of five with a tank and a healer.
+		info Have one player start each fight so the whole group gets the quest, and wait for everyone to turn in before the next.
+		info Skip this step and the next five if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 48.4,56.4
+		.talk Gurgthock##30007
+		..accept The Amphitheater of Anguish: Yggdras!##12954
+		.kill 1 Yggdras|q 12954/1
+		.talk Wodin the Troll-Servant##30009
+		..turnin The Amphitheater of Anguish: Yggdras!##12954
+		only if ZGV.completedQuests[9977]
+		info Ride west to the Amphitheater of Anguish. The chain needs a group of five with a tank and a healer.
+		info You finished the Ring of Blood in Nagrand, so you get this version of the first fight.
+		info Have one player start each fight so the whole group gets the quest, and wait for everyone to turn in before the next.
+		info Skip this step and the next five if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 48.4,56.4
+		.talk Gurgthock##30007
+		..accept The Amphitheater of Anguish: Magnataur!##12933
+		.kill 1 Stinkbeard|q 12933/1
+		.talk Wodin the Troll-Servant##30009
+		..turnin The Amphitheater of Anguish: Magnataur!##12933
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 48.4,56.4
+		.talk Gurgthock##30007
+		..accept The Amphitheater of Anguish: From Beyond!##12934
+		.' Kill the elemental that comes into the arena
+		.talk Wodin the Troll-Servant##30009
+		..turnin The Amphitheater of Anguish: From Beyond!##12934
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 48.4,56.4
+		.talk Gurgthock##30007
+		..accept The Amphitheater of Anguish: Tuskarrmageddon!##12935
+		.kill 1 Orinoko Tuskbreaker|q 12935/1
+		.talk Wodin the Troll-Servant##30009
+		..turnin The Amphitheater of Anguish: Tuskarrmageddon!##12935
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 48.4,56.4
+		.talk Gurgthock##30007
+		..accept The Amphitheater of Anguish: Korrak the Bloodrager!##12936
+		.kill 1 Korrak the Bloodrager|q 12936/1
+		.talk Wodin the Troll-Servant##30009
+		..turnin The Amphitheater of Anguish: Korrak the Bloodrager!##12936
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 48.4,56.4
+		.talk Gurgthock##30007
+		..accept The Champion of Anguish##12948
+		.kill 1 Vladof the Butcher|q 12948/1
+		.talk Wodin the Troll-Servant##30009
+		..turnin The Champion of Anguish##12948
+		info Vladof is the hardest fight; the weapon is the reward here.
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 59.5,58.1
+		.talk Witch Doctor Khufu##28479
+		..accept The Gods Have Spoken##12729
+		info Return to Zim'Torga. The rest of this zone is group quests. Skip this step and the next five if you can't find a group, and go on to Sholazar Basin.
+		info TODO: verify in-game
+	step
+		goto 60.6,44.3
+		.kill Guardians of Zim'Rhuk|n
+		.get Unblemished Heart of the Guardian|q 12729/1
+		info Ride northwest to Zim'Rhuk.
+		info Skip this step if you didn't take The Gods Have Spoken.
+		info TODO: verify in-game
+	step
+		goto 75.0,62.4
+		.kill Altar Wardens|n
+		.get Gusty Essence of the Warden|q 12729/2
+		info Ride southeast to the Altar of Quetz'lun.
+		info Skip this step if you didn't take The Gods Have Spoken.
+		info TODO: verify in-game
+	step
+		goto 60.3,57.8
+		.talk Har'koa##28401
+		..turnin The Gods Have Spoken##12729
+		..accept Convocation at Zol'Heb##12730
+		info Return to Zim'Torga.
+		info Skip this step if you didn't take The Gods Have Spoken.
+		info TODO: verify in-game
+	step
+		goto 77.5,36.3
+		.' Use the Prophet of Akali Convocation at the circle of power|use Prophet of Akali Convocation##39566
+		.kill 1 Prophet of Akali|q 12730/1
+		info Ride northeast to Zol'Heb.
+		info Skip this step if you didn't take Convocation at Zol'Heb.
+		info TODO: verify in-game
+	step
+		goto 60.3,57.8
+		.talk Har'koa##28401
+		..turnin Convocation at Zol'Heb##12730
+		..accept Unfinished Business##13097
+		info Skip this step if you didn't take Convocation at Zol'Heb.
+		info TODO: verify in-game
+	step
+		goto 70.0,22.9
+		.talk Tol'mar##30671
+		..turnin Unfinished Business##13097
+		..accept Gal'darah Must Pay##13096
+		info Ride north to Dubra'Jin.
+		info Skip this step if you didn't take Unfinished Business.
+		info TODO: verify in-game
+	step
+		goto 76.0,21.0
+		.' Run Gundrak
+		.' Click the Drakkari History Tablets throughout the dungeon
+		.get 6 Drakkari History Tablet|q 13098/1
+		.' Kill the Drakkari Colossus boss
+		.get Drakkari Colossus Fragment|q 13111/1
+		.kill Gal'darah|q 13096/1
+		info Gal'darah is the last boss.
+		info Queue with the Dungeon Finder, or walk in: the entrance is in the Gundrak ruins near Dubra'Jin.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 70.1,20.9
+		.talk Chronicler Bah'Kini##30676
+		..turnin For Posterity##13098
+		..turnin One of a Kind##13111
+		info Skip this step if you didn't run Gundrak.
+		info TODO: verify in-game
+	step
+		goto 70.0,22.9
+		.talk Tol'mar##30671
+		..turnin Gal'darah Must Pay##13096
+		info Skip this step if you didn't kill Gal'darah.
+		info TODO: verify in-game
+]])
