@@ -19462,6 +19462,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Dragonblight",[
 		goto 36.6,46.6
 		.talk Senior Sergeant Juktok##26415
 		..accept The Taunka and the Tauren##11979
+		info You need this quest to unlock Into the Fold at Westwind.
+		info The other way in is the Taunka'le chain in Borean Tundra (after Breaking Through), which needs level 71 and a group, so the guide skips it.
 		info TODO: verify in-game
 	step
 		goto 14.2,49.8
@@ -21325,5 +21327,1298 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Dragonblight",[
 		info TODO: verify in-game
 	step
 		'Hearth to Venomspite|goto Dragonblight,76.9,63.1,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+]])
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Grizzly Hills",[[
+	author YunataSavior
+	next Ding80's Horde Leveling Guides\\Zul'Drak
+	startlevel 75
+
+	step
+		'Ride east into the Grizzly Hills|goto Grizzly Hills|noway|c
+		info Start from Venomspite.
+		info TODO: verify in-game
+	step
+		goto Grizzly Hills,20.7,64.2
+		.talk Conqueror Krenna##26860
+		..turnin To Conquest Hold, But Be Careful!##12487
+		..accept The Conqueror's Task##12468
+		info Ride east to Conquest Hold.
+		info TODO: verify in-game
+	step
+		home Conquest Hold
+		info TODO: verify in-game
+	step
+		goto 22.0,64.4
+		.talk Kragh##26852
+		..fpath Conquest Hold
+		info TODO: verify in-game
+	step
+		goto 21.0,64.1
+		.talk Sergeant Nazgrim##27388
+		..turnin The Conqueror's Task##12468
+		..accept A Show of Strength##12257
+		..accept The Flamebinders' Secrets##12256
+		info TODO: verify in-game
+	step
+		goto 22.0,65.1
+		.talk Hidetrader Jun'ik##27037
+		..accept Gray Worg Hides##12175
+		info TODO: verify in-game
+	step
+		goto 22.7,66.2
+		.talk Provisioner Lorkran##26868
+		..accept Supplemental Income##12436
+		info TODO: verify in-game
+	step
+		goto 24.7,66.9
+		.kill Graymist Hunters|n
+		.get 3 Gray Worg Hide|q 12175/1
+		info Head east out of Conquest Hold.
+		info TODO: verify in-game
+	step
+		goto 26.4,65.8
+		.talk Raider Captain Kronn##27120
+		..accept Blackriver Brawl##12170
+		info TODO: verify in-game
+	step
+		goto 27.3,64.7
+		.' Kill Amberpine Scouts or Alliance players in the Blackriver Logging Camp
+		.' Kill 10 Alliance in Blackriver|goal 10 Alliance in Blackriver slain|q 12170/1
+		info TODO: verify in-game
+	step
+		goto 24.4,60.7
+		.kill Tallhorn Stags|n
+		.get 5 Succulent Venison|q 12436/1
+		info TODO: verify in-game
+	step
+		goto 33.6,79.0
+		.kill 12 Dragonflayer Huscarl|q 12257/1
+		.kill Dragonflayer Flamebinders|n
+		.get 3 Flame-Imbued Talisman|q 12256/1
+		info Ride southwest and follow the path into Voldrune.
+		info TODO: verify in-game
+	step
+		goto 26.4,65.8
+		.talk Raider Captain Kronn##27120
+		..turnin Blackriver Brawl##12170
+		info TODO: verify in-game
+	step
+		goto 22.7,66.2
+		.talk Provisioner Lorkran##26868
+		..turnin Supplemental Income##12436
+		info Return to Conquest Hold.
+		info TODO: verify in-game
+	step
+		goto 22.0,65.1
+		.talk Hidetrader Jun'ik##27037
+		..turnin Gray Worg Hides##12175
+		..accept A Minor Substitution##12176
+		info TODO: verify in-game
+	step
+		goto 21.0,64.1
+		.talk Sergeant Nazgrim##27388
+		..turnin A Show of Strength##12257
+		..turnin The Flamebinders' Secrets##12256
+		..accept The Thane of Voldrune##12259
+		info TODO: verify in-game
+	step
+		goto 10.1,77.2
+		.talk General Khazgar##27532
+		..accept Crush Captain Brightwater!##12315
+		info Ride southwest to the Horde camp at Venture Bay.
+		info TODO: verify in-game
+	step
+		goto 10.1,77.3
+		.talk Centurion Kaggrum##27563
+		..accept Keep Them at Bay##12317
+		info TODO: verify in-game
+	step
+		goto 11.2,76.6
+		.talk Gurtor##27565
+		..accept Seeking Solvent##12433
+		info TODO: verify in-game
+	step
+		goto 11.4,76.7
+		.talk Stone Guard Ragetotem##27606
+		..accept Smoke 'Em Out##12324
+		info TODO: verify in-game
+	step
+		goto 16.4,76.6
+		.' Use the Smoke Bomb on the buildings to drive out the Venture Co. Stragglers|use Smoke Bomb##37621
+		.' Smoke out 20 Venture Company Stragglers|goal 20 Venture Company Stragglers smoked out|q 12324/1
+		.' Kill Westfall Brigade Marines or Alliance players on the way
+		.' Kill 10 Alliance in Venture Bay|goal 10 Alliance killed in Venture Bay|q 12317/1
+		info There are buildings with Stragglers at 18.0,79.6, 16.4,76.6 and 14.6,76.7.
+		info Tip: aggro all of them, then Smoke Bomb several at once.
+		info TODO: verify in-game
+	step
+		goto 17.0,81.6
+		.kill Captain Brightwater##27509|q 12315/1
+		info He's on the east ship. It's a group quest, but he can be soloed.
+		info TODO: verify in-game
+	step
+		goto 16.4,80.3
+		.' Finish killing 10 Alliance first, then clear your way into the back room of the ship
+		.' Click the Element 115|tip It looks like a red canister with a handle on top.
+		.get Element 115|q 12433/1
+		info You can't mount while carrying it, so run back to the Horde camp.
+		info TODO: verify in-game
+	step
+		goto 10.1,77.2
+		.talk General Khazgar##27532
+		..turnin Crush Captain Brightwater!##12315
+		info TODO: verify in-game
+	step
+		goto 10.1,77.3
+		.talk Centurion Kaggrum##27563
+		..turnin Keep Them at Bay##12317
+		info TODO: verify in-game
+	step
+		goto 11.2,76.6
+		.talk Gurtor##27565
+		..turnin Seeking Solvent##12433
+		info TODO: verify in-game
+	step
+		goto 11.4,76.7
+		.talk Stone Guard Ragetotem##27606
+		..turnin Smoke 'Em Out##12324
+		info TODO: verify in-game
+	step
+		goto 26.6,77.9
+		.talk Flamebringer##27292
+		.' Unchain and ride Flamebringer|invehicle|c
+		info Ride northeast and around into Voldrune. Flamebringer is in the southwestern area.
+		info TODO: verify in-game
+	step
+		goto 27.1,73.0
+		.kill 1 Thane Torvald Eriksson|q 12259/1|tip He stands on a tower balcony.
+		info Fly right next to him: Wing Buffet (ability 2) is melee range.
+		info Spam Flame Breath (ability 1) and keep Molten Fury (ability 3) up.
+		info Use Wing Buffet to stun him out of Volley as soon as you or your mount get the Volley debuff.
+		info Stay mounted and fly back to Conquest Hold.
+		info TODO: verify in-game
+	step
+		goto 21.0,64.1
+		.talk Sergeant Nazgrim##27388
+		..turnin The Thane of Voldrune##12259
+		..accept Onward to Camp Oneqwah##12451
+		info TODO: verify in-game
+	step
+		goto 20.7,64.2
+		.talk Conqueror Krenna##26860
+		..accept My Enemy's Friend##12412
+		info TODO: verify in-game
+	step
+		goto 36.3,67.9
+		.kill 1 Vladek|q 12412/2|tip He stands inside a house in Forest's Edge Post.
+		info Ride east to Forest's Edge Post.
+		info TODO: verify in-game
+	step
+		goto 35.2,69.9
+		.kill 8 Silverbrook Hunter|q 12412/1
+		.' The Silverbrook Hunters drop Mikhail's Journal; click it|use Mikhail's Journal##37830
+		..accept Mikhail's Journal##12423
+		info TODO: verify in-game
+	step
+		goto 28.4,56.5
+		.kill Grizzly Bears|n
+		.get 6 Grizzly Hide|q 12176/1
+		info TODO: verify in-game
+	step
+		goto 22.0,65.1
+		.talk Hidetrader Jun'ik##27037
+		..turnin A Minor Substitution##12176
+		..accept Jun'ik's Coverup##12177
+		info Return to Conquest Hold.
+		info TODO: verify in-game
+	step
+		goto 20.7,64.2
+		.talk Conqueror Krenna##26860
+		..turnin My Enemy's Friend##12412
+		..accept Attack on Silverbrook##12413
+		..turnin Mikhail's Journal##12423
+		..accept Gorgonna##12424
+		info TODO: verify in-game
+	step
+		goto 21.0,64.0
+		.talk Gorgonna##27102
+		..turnin Gorgonna##12424
+		..accept Tactical Clemency##12422
+		info TODO: verify in-game
+	step
+		goto 22.5,62.8
+		.talk Windseer Grayhorn##27262
+		..accept Eyes Above##12453
+		info TODO: verify in-game
+	step
+		goto 22.2,64.7
+		.talk Sergeant Thurkin##27266
+		..accept Good Troll Hunting##12208
+		info TODO: verify in-game
+	step
+		goto 22.7,66.2
+		.talk Provisioner Lorkran##26868
+		..buy 5 Simple Flour|q 12177/2
+		info TODO: verify in-game
+	step
+		goto 23.4,63.1
+		.talk Smith Prigka##27134
+		..buy 1 Coal|q 12177/1
+		info TODO: verify in-game
+	step
+		goto 22.0,65.1
+		.talk Hidetrader Jun'ik##27037
+		..turnin Jun'ik's Coverup##12177
+		..accept Delivery to Krenna##12178
+		info TODO: verify in-game
+	step
+		goto 20.7,64.2
+		.talk Conqueror Krenna##26860
+		..turnin Delivery to Krenna##12178
+		info The Conquest Pit next to Krenna has five group quests (a "Ring of Blood" style arena). Join a group for them if one forms while you're in the zone.
+		info TODO: verify in-game
+	step
+		goto 16.2,47.6
+		.talk Samir##26424
+		..turnin Good Troll Hunting##12208
+		..accept Filling the Cages##11984
+		info Ride northwest to Granite Springs.
+		info TODO: verify in-game
+	step
+		goto 16.4,48.3
+		.talk Budd##26429
+		..'Tell him it's time to play with the ice trolls|havebuff INV_Misc_Head_Troll_01|q 11984
+		info TODO: verify in-game
+	step
+		goto 13.2,60.5
+		.' Use Budd's Tag Troll ability to stun a troll when you're near one, but not in combat|petaction Tag Troll
+		.' Use your Bounty Hunter's Cage on the stunned troll|use Bounty Hunter's Cage##35736
+		.' Capture a Live Ice Troll|goal Captured Live Ice Troll|q 11984/1
+		info Head southwest to the Ruins of Drak'Zin.
+		info TODO: verify in-game
+	step
+		goto 16.2,47.6
+		.talk Samir##26424
+		..turnin Filling the Cages##11984
+		info Return to Granite Springs.
+		info TODO: verify in-game
+	step
+		goto 16.4,47.8
+		.talk Drakuru##26423
+		..accept Truce?##11989
+		info TODO: verify in-game
+	step
+		goto 16.5,47.8
+		.' Click the Dull Carving Knife|tip It's stuck in the side of the tree trunk.
+		.collect 1 Dull Carving Knife##38083|q 11989
+		info TODO: verify in-game
+	step
+		goto 16.4,47.8
+		.' Use your Dull Carving Knife next to the cage|use Dull Carving Knife##38083
+		.talk Drakuru##26423
+		..'Shake his hand
+		..'Make a Blood Pact With Drakuru|goal Blood Pact With Drakuru|q 11989/1
+		info TODO: verify in-game
+	step
+		goto 16.4,47.8
+		.talk Drakuru##26423
+		..turnin Truce?##11989
+		..accept Vial of Visions##11990
+		info TODO: verify in-game
+	step
+		goto 16.0,47.8
+		.talk Ameenah##26474
+		..buy 1 Imbued Vial|q 11990/1
+		info TODO: verify in-game
+	step
+		goto 14.6,45.3
+		.' Click the Hazewood Bushes|tip They look like small flower bushes on the ground.
+		.get 3 Haze Leaf|q 11990/2
+		info Head northwest.
+		info TODO: verify in-game
+	step
+		goto 15.2,40.3
+		.' Click a Waterweed|tip They look like big green bushes underwater in the lake.
+		.get Waterweed Frond|q 11990/3
+		info TODO: verify in-game
+	step
+		goto 16.4,47.8
+		.talk Drakuru##26423
+		..turnin Vial of Visions##11990
+		..accept Subject to Interpretation##11991
+		info Return to Granite Springs.
+		info TODO: verify in-game
+	step
+		goto 15.7,46.7
+		.talk Prigmon##26519
+		..accept Scourgekabob##12484
+		info TODO: verify in-game
+	step
+		goto 15.7,46.9
+		.' Click a Scourged Troll Mummy on the ground nearby
+		.collect 1 Scourged Troll Mummy##38149|q 12484
+		info TODO: verify in-game
+	step
+		goto 16.9,48.3
+		.' Use your Scourged Troll Mummy next to the burning pile of mummies|use Scourged Troll Mummy##38149
+		.' Burn a Mummified Carcass|goal Mummified Carcass Burned|q 12484/1
+		info It's the fire east of the campfire, with lots of mummy corpses next to it.
+		info TODO: verify in-game
+	step
+		goto 16.7,48.3
+		.talk Mack Fearsen##26604
+		..turnin Scourgekabob##12484
+		..accept Seared Scourge##12029
+		info Listen to him sing for a bit.
+		info TODO: verify in-game
+	step
+		goto 15.7,46.7
+		.talk Prigmon##26519
+		..accept Shimmercap Stew##12483
+		info TODO: verify in-game
+	step
+		goto 13.3,58.5
+		.kill trolls|n
+		.collect 5 Frozen Mojo##35799|q 11991
+		info Head southwest back to the Ruins of Drak'Zin.
+		info TODO: verify in-game
+	step
+		goto 13.2,60.9
+		.' Use Drakuru's Elixir next to Drakuru's Brazier|use Drakuru's Elixir##35797|tip It's a square bowl at the top of the stairs.
+		.talk Image of Drakuru##26500
+		..turnin Subject to Interpretation##11991
+		..accept Sacrifices Must be Made##12007
+		info TODO: verify in-game
+	step
+		goto 11.1,61.8
+		.kill Ice Serpents|n
+		.get 5 Ice Serpent Eye|q 12483/1
+		.' Click the Shimmering Snowcaps|tip They look like blue glowing mushrooms at the base of the trees on the snow.
+		.get 5 Shimmering Snowcap|q 12483/2
+		info They're on the snow bank along the river.
+		info TODO: verify in-game
+	step
+		goto 14.5,38.0
+		.kill Warlord Zim'bo|n|tip He stands inside a hut, next to a bonfire.
+		.collect 1 Zim'bo's Mojo##35836|q 12007
+		.' Click the Sweetroot plants|tip They look like aloe vera plants around Zeb'Halak.
+		.get 5 Sweetroot|q 12483/3
+		info Head northeast into Zeb'Halak.
+		info TODO: verify in-game
+	step
+		goto 17.9,36.5
+		.' Click the Seer of Zeb'Halak statue|tip It's a huge blue glowing statue at the top of the ziggurat stairs.
+		.get Eye of the Prophets|q 12007/1
+		info TODO: verify in-game
+	step
+		goto 17.4,36.4
+		.' Use Drakuru's Elixir next to Drakuru's Brazier|use Drakuru's Elixir##35797
+		.talk Image of Drakuru##26543
+		..turnin Sacrifices Must be Made##12007
+		..accept Heart of the Ancients##12042
+		info TODO: verify in-game
+	step
+		goto 16.0,29.9
+		.' Stand on the big rock and throw Mack's Dark Grog at the trolls to the north|use Mack's Dark Grog##35908
+		.' Burn 20 Scourge Trolls|goal 20 Scourge Trolls Burned|q 12029/1
+		info It has a big minimum range, so throw it far, into the most clumped trolls.
+		info Faster for the daring: throw the grog, mount up, aggro everything and pull it into the fire.
+		info TODO: verify in-game
+	step
+		goto 21.9,29.9
+		.talk Captured Trapper##27497
+		..turnin Tactical Clemency##12422
+		info Ride east to Bonesnap's Camp.
+		info TODO: verify in-game
+	step
+		goto 24.0,33.6
+		.kill 8 Silverbrook Defender|q 12413/1
+		info Ride east into Silverbrook.
+		info TODO: verify in-game
+	step
+		goto 33.8,32.7
+		.talk Aumana##27464
+		..accept Overwhelmed!##12288
+		info Ride east to the Horde side of the Blue Sky Logging Grounds.
+		info It's a PvP area and a daily quest hub, so level 80 Alliance may be around. If it's too hot, come back later.
+		info TODO: verify in-game
+	step
+		goto 34.4,32.6
+		.talk Lurz##27422
+		..accept Making Repairs##12280
+		info TODO: verify in-game
+	step
+		goto 34.5,32.5
+		.talk Grekk##27423
+		..accept Shred the Alliance##12270
+		info TODO: verify in-game
+	step
+		goto 34.5,33.0
+		.talk Commander Bargok##27451
+		..accept Keep 'Em on Their Heels##12284
+		info TODO: verify in-game
+	step
+		goto 35.2,39.3
+		.' Use your Renewing Tourniquet on Wounded Skirmishers|use Renewing Tourniquet##37568
+		.' Heal 10 Wounded Skirmishers|goal 10 Wounded Skirmishers Healed|q 12288/1
+		.' Click the Grooved Cogs, Notched Sprockets and High Tension Springs on the ground
+		.get 4 Grooved Cog|q 12280/1
+		.get 3 Notched Sprocket|q 12280/2
+		.get 2 High Tension Spring|q 12280/3
+		.' Kill Wounded Westfall Infantry or Alliance players
+		.' Kill 15 Alliance|goal 15 Alliance units eliminated|q 12284/1
+		info Head west across the lake.
+		info The Wounded Westfall Infantry are sitting, so you get a guaranteed first-hit critical: use a big opening attack.
+		info TODO: verify in-game
+	step
+		goto 32.8,40.5
+		.' Find a Broken-down Shredder, click it to get in, and drive it back to Grekk at 34.5,32.5
+		.' Deliver 3 Shredders|goal 3 Shredder Delivered|q 12270/1
+		info TODO: verify in-game
+	step
+		goto 34.5,32.5
+		.talk Grekk##27423
+		..turnin Shred the Alliance##12270
+		info TODO: verify in-game
+	step
+		goto 34.4,32.6
+		.talk Lurz##27422
+		..turnin Making Repairs##12280
+		info TODO: verify in-game
+	step
+		goto 34.5,33.0
+		.talk Commander Bargok##27451
+		..turnin Keep 'Em on Their Heels##12284
+		info TODO: verify in-game
+	step
+		goto 33.8,32.7
+		.talk Aumana##27464
+		..turnin Overwhelmed!##12288
+		info TODO: verify in-game
+	step
+		goto 36.9,32.4
+		.' Click the Heart of the Ancients|tip It's a small pointed stone on the floor of the room at the top of the rig, next to a dead goblin.
+		..turnin Heart of the Ancients##12042
+		..accept My Heart is in Your Hands##12802
+		info Ride northeast and climb up the rig at the lake.
+		info TODO: verify in-game
+	step
+		goto 44.2,30.4
+		.kill Drakkari trolls|n
+		.collect 5 Desperate Mojo##36743|q 12802
+		info TODO: verify in-game
+	step
+		goto 45.0,28.4
+		.' Use Drakuru's Elixir next to Drakuru's Brazier|use Drakuru's Elixir##35797|tip It's a square bowl in the middle of the stone courtyard.
+		.talk Image of Drakuru##26701
+		..turnin My Heart is in Your Hands##12802
+		..accept Voices From the Dust##12068
+		info TODO: verify in-game
+	step
+		'Hearth to Conquest Hold|goto 20.9,64.5,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 20.7,64.2
+		.talk Conqueror Krenna##26860
+		..turnin Attack on Silverbrook##12413
+		info TODO: verify in-game
+	step
+		goto 21.0,64.0
+		.talk Gorgonna##27102
+		..accept Ruuna the Blind##12425
+		info TODO: verify in-game
+	step
+		goto 22.5,62.8
+		.talk Windseer Grayhorn##27262
+		..accept Vordrassil's Fall##12207
+		..accept The Darkness Beneath##12213
+		info TODO: verify in-game
+	step
+		goto 16.7,48.3
+		.talk Mack Fearsen##26604
+		..turnin Seared Scourge##12029
+		info Ride northwest to Granite Springs.
+		info TODO: verify in-game
+	step
+		goto 16.7,48.3
+		.talk Mack Fearsen##26604
+		..accept Search and Rescue##12037
+		info It's a dungeon quest for Drak'Tharon Keep. Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 15.7,46.7
+		.talk Prigmon##26519
+		..turnin Shimmercap Stew##12483
+		..accept Say Hello to My Little Friend##12190
+		info TODO: verify in-game
+	step
+		goto 26.5,46.6
+		.kill Entropic Oozes|n
+		.get 6 Slime Sample|q 12207/1
+		.' Use your Silver Feather on Imperial Eagles|use Silver Feather##37877|tip They fly around and sit on the broken parts of Vordrassil.
+		.' Bind 6 Imperial Eagles' sight|goal 6 Imperial Eagle's sight bound|q 12453/1
+		info Do these during the next steps. You should have them all by the end of Vordrassil's Heart.
+		info TODO: verify in-game
+	step
+		goto 28.6,45.1|n
+		.' The path down to Vordrassil's Tears starts here|goto 28.6,45.1,0.3|noway|c
+		info Ride northeast to Vordrassil's Tears and clear your way through the slime.
+		info TODO: verify in-game
+	step
+		goto 30.5,43.9
+		.' Use your Geomancer's Orb at the end of the tunnel, under the black mist|use Geomancer's Orb##37173
+		.' Use the Orb beneath Vordrassil's Tears|goal Orb used beneath Vordrassil's Tears.|q 12213/3
+		info TODO: verify in-game
+	step
+		goto 33.3,48.5|n
+		.' The path down to Vordrassil's Limb starts here|goto 33.3,48.5,0.3|noway|c
+		info Ride southeast to Vordrassil's Limb.
+		info TODO: verify in-game
+	step
+		goto 32.2,45.8
+		.' Use your Geomancer's Orb at the end of the tunnel, under the black mist|use Geomancer's Orb##37173
+		.' Use the Orb beneath Vordrassil's Limb|goal Orb used beneath Vordrassil's Limb.|q 12213/2
+		info TODO: verify in-game
+	step
+		goto 40.7,52.0|n
+		.' The path down to Vordrassil's Heart starts here|goto 40.7,52.0,0.3|noway|c
+		info Ride southeast to Vordrassil's Heart.
+		info TODO: verify in-game
+	step
+		goto 41.2,54.7
+		.' Use your Geomancer's Orb at the end of the tunnel, under the black mist|use Geomancer's Orb##37173
+		.' Use the Orb beneath Vordrassil's Heart|goal Orb used beneath Vordrassil's Heart.|q 12213/1
+		info Finish the 6 Slime Samples and the 6 Imperial Eagles before you leave the area.
+		info TODO: verify in-game
+	step
+		goto 44.0,47.9
+		.talk Ruuna the Blind##27581
+		..turnin Ruuna the Blind##12425
+		..accept Ruuna's Request##12328
+		info Ride northeast to Ruuna the Blind.
+		info TODO: verify in-game
+	step
+		goto 46.8,35.7
+		.kill Fern Feeder Moths|n
+		.get 4 Gossamer Dust|q 12328/1
+		info TODO: verify in-game
+	step
+		goto 44.0,47.9
+		.talk Ruuna the Blind##27581
+		..turnin Ruuna's Request##12328
+		..accept Out of Body Experience##12327
+		info TODO: verify in-game
+	step
+		goto 44.0,47.9
+		.' Drink the Gossamer Potion next to Ruuna's Crystal Ball and watch the scene|use Gossamer Potion##37661
+		.' See the Vision from the Past|goal Vision from the Past|q 12327/1
+		info TODO: verify in-game
+	step
+		goto 44.0,47.9
+		.talk Ruuna the Blind##27581
+		..turnin Out of Body Experience##12327
+		..accept Fate and Coincidence##12329
+		info TODO: verify in-game
+	step
+		goto 57.5,41.3
+		.talk Sasha##26935
+		..turnin Fate and Coincidence##12329
+		..accept Sasha's Hunt##12134
+		..accept Anatoly Will Talk##12330
+		info Ride northeast to the White Pine Trading Post.
+		info TODO: verify in-game
+	step
+		goto 60.4,40.2
+		.kill 12 Solstice Hunter|q 12134/1
+		info Head east to Solstice Village.
+		info TODO: verify in-game
+	step
+		goto 62.3,42.0
+		.' Target Tatjana (not the horse) and use your Tranquilizer Dart|use Tranquilizer Dart##37665|tip She's on the east side of the village, sitting on a horse.
+		.' Click the horse to jump on it
+		.' Deliver Tatjana|goal Tatjana Delivered|q 12330/1
+		info TODO: verify in-game
+	step
+		goto 57.5,41.3
+		.talk Sasha##26935
+		..turnin Sasha's Hunt##12134
+		..turnin Anatoly Will Talk##12330
+		..accept A Sister's Pledge##12411
+		info TODO: verify in-game
+	step
+		goto 65.0,46.9
+		.talk Makki Wintergale##26853
+		..fpath Camp Oneqwah
+		info Ride southeast to Camp Oneqwah.
+		info TODO: verify in-game
+	step
+		goto 65.2,47.7
+		.talk Scout Vor'takh##26666
+		..turnin Onward to Camp Oneqwah##12451
+		..accept An Expedient Ally##12074
+		info TODO: verify in-game
+	step
+		goto 65.0,47.9
+		.talk Soulok Stormfury##26944
+		..accept The Horse Hollerer##12415
+		info TODO: verify in-game
+	step
+		goto 65.3,47.5
+		.talk Tormak the Scarred##27221
+		..accept The Unexpected 'Guest'##12195
+		info TODO: verify in-game
+	step
+		goto 64.8,43.4
+		.talk Anya##27646
+		..turnin A Sister's Pledge##12411
+		info Ride north and west into the cave.
+		info TODO: verify in-game
+	step
+		goto 64.8,43.4
+		.talk Sasha##26935
+		..accept Hour of the Worg##12164
+		info It's a group quest. Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 60.4,54.3
+		.kill Silvercoat Stags|n
+		.get 5 Mature Stag Horn|q 12195/1
+		info They're all over the forest and hills. Another spot is 57.3,48.2.
+		info TODO: verify in-game
+	step
+		goto 69.1,40.1
+		.talk Hugh Glass##26484
+		..accept A Bear of an Appetite##12279
+		info Ride to the Redwood Trading Post.
+		info TODO: verify in-game
+	step
+		goto 61.6,32.6
+		.' Use your Flashbang Grenade on Highland Mustangs|use Flashbang Grenade##37716
+		.' Frighten 15 Highland Mustangs|goal 15 Highland Mustangs Frightened|q 12415/1
+		info There's a pack of Highland Mustangs galloping around here, and another one further northeast.
+		info TODO: verify in-game
+	step
+		goto 64.3,19.8
+		.' Click the Battered Journal|tip It's a thick book on the ground.
+		..accept The Damaged Journal##12026
+		info Head east into Thor Modan.
+		info TODO: verify in-game
+	step
+		goto 64.3,19.8
+		.' Click the Missing Journal Pages|tip They look like torn pages on the ground all around this area.
+		.collect 8 Missing Journal Page##35737|q 12026|n
+		.' Click the Incomplete Journal in your bags|use Incomplete Journal##35739
+		.get Brann Bronzebeard's Journal|q 12026/1
+		info TODO: verify in-game
+	step
+		'Hearth to Conquest Hold|goto 20.9,64.5,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 22.5,62.8
+		.talk Windseer Grayhorn##27262
+		..turnin Vordrassil's Fall##12207
+		..turnin The Darkness Beneath##12213
+		..turnin Eyes Above##12453
+		..accept A Possible Link##12229
+		..accept The Bear God's Offspring##12231
+		info TODO: verify in-game
+	step
+		goto 22.0,64.4
+		.talk Kragh##26852
+		..'Fly to Camp Oneqwah|goto 64.9,46.9,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 65.2,47.7
+		.talk Sage Paluna##26584
+		..turnin The Damaged Journal##12026
+		..accept Deciphering the Journal##12054
+		info TODO: verify in-game
+	step
+		goto 65.0,47.9
+		.talk Soulok Stormfury##26944
+		..turnin The Horse Hollerer##12415
+		info TODO: verify in-game
+	step
+		goto 65.3,47.5
+		.talk Tormak the Scarred##27221
+		..turnin The Unexpected 'Guest'##12195
+		..accept An Intriguing Plan##12165
+		info TODO: verify in-game
+	step
+		goto 63.6,57.9
+		.kill Redfang Furbolgs|n
+		.get Crazed Furbolg Blood|q 12229/1
+		info Ride south, killing Redfang Furbolgs on the way. You don't have to finish all 8 here.
+		info TODO: verify in-game
+	step
+		goto 66.6,58.8
+		.from Grumbald One-Eye##26681
+		.get Spiritsbreath|q 12054/1
+		info TODO: verify in-game
+	step
+		goto 66.9,62.4
+		.talk Kodian##27275
+		.' Listen to Kodian's Story|goal Kodian's Story|q 12231/2
+		info He's in the cave behind Grumbald, to the southeast.
+		info TODO: verify in-game
+	step
+		goto 48.1,58.9
+		.kill Frostpaw Furbolgs|n
+		.get 8 Crazed Furbolg Blood|q 12229/1
+		.talk Orsonn##27274
+		..'Listen to Orsonn's Story|goal Orsonn's Story|q 12231/1
+		info Ride west. Orsonn is inside the cave.
+		info TODO: verify in-game
+	step
+		goto 22.5,62.8
+		.talk Windseer Grayhorn##27262
+		..turnin A Possible Link##12229
+		..turnin The Bear God's Offspring##12231
+		..accept Vordrassil's Seeds##12242
+		..accept Destroy the Sapling##12241
+		info Ride back to Conquest Hold.
+		info TODO: verify in-game
+	step
+		goto 22.0,64.4
+		.talk Kragh##26852
+		..'Fly to Camp Oneqwah|goto 64.9,46.9,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 65.2,47.7
+		.talk Sage Paluna##26584
+		..turnin Deciphering the Journal##12054
+		..accept The Runic Prophecies##12058
+		info TODO: verify in-game
+	step
+		goto 65.2,47.7
+		.talk Scout Vor'takh##26666
+		..accept Pounding the Iron##12073
+		info TODO: verify in-game
+	step
+		goto 64.3,15.0|n
+		.' The path up to Kurun starts here|goto 64.3,15.0,0.3|noway|c
+		info TODO: verify in-game
+	step
+		goto 65.8,17.8
+		.talk Kurun##26260
+		..turnin An Expedient Ally##12074
+		..accept Raining Down Destruction##11982
+		info Follow the road up into the mountains.
+		info TODO: verify in-game
+	step
+		goto 66.1,13.8
+		.' Pick up a Boulder|tip They're big rocks on the ground where the giants are throwing boulders into the city below. You can only carry one at a time.
+		.' Target an Iron Dwarf below and throw the Boulder at it|use Boulder##35734
+		.' Disrupt 5 Iron Dwarf Operations|goal 5 Iron Dwarf Operations Disrupted|q 11982/1
+		info TODO: verify in-game
+	step
+		goto 65.8,17.8
+		.talk Kurun##26260
+		..turnin Raining Down Destruction##11982
+		..accept Rallying the Troops##12070
+		info TODO: verify in-game
+	step
+		goto 68.3,10.1
+		.' Use your Shard of the Earth on Grizzly Hills Giants that are fighting in melee|use Shard of the Earth##36764
+		.' Rally 5 Grizzly Hills Giants|goal 5 Grizzly Hills Giants Rallied|q 12070/1
+		.' Kill the Iron Rune Avenger that spawns each time
+		.' Kill 5 Iron Rune Avengers|goal 5 Iron Rune Avengers Slain|q 12070/2
+		info TODO: verify in-game
+	step
+		goto 65.8,17.8
+		.talk Kurun##26260
+		..turnin Rallying the Troops##12070
+		..accept Into the Breach##11985
+		info TODO: verify in-game
+	step
+		goto 68.5,16.2
+		.' Click the Third Rune Plate|tip It looks like a brown strip across a metal door in the wall.
+		.' Decipher the Third Prophecy|goal Third Prophecy Deciphered|q 12058/3
+		.' Kill Iron Dwarf Defenders on the way in and out
+		.' Kill 10 Iron Dwarf Defenders|goal 10 Iron Dwarf Defenders Killed|q 12073/1
+		info Head around and down into Thor Modan.
+		info TODO: verify in-game
+	step
+		goto 69.0,14.4
+		.' Click the First Rune Plate|tip It looks like a brown strip across a metal door in the wall.
+		.' Decipher the First Prophecy|goal First Prophecy Deciphered|q 12058/1
+		info TODO: verify in-game
+	step
+		goto 70.2,14.7
+		.' Click the Second Rune Plate|tip It looks like a brown strip across a metal door in the wall.
+		.' Decipher the Second Prophecy|goal Second Prophecy Deciphered|q 12058/2
+		info TODO: verify in-game
+	step
+		goto 70.2,13.0
+		.kill 1 Iron Thane Argrum|q 11985/1|tip He's at the very end of the tunnel.
+		info Clear your way back out, finishing the 10 Iron Dwarf Defenders.
+		info TODO: verify in-game
+	step
+		goto 65.8,17.8
+		.talk Kurun##26260
+		..turnin Into the Breach##11985
+		..accept Gavrock##12081
+		info TODO: verify in-game
+	step
+		goto 73.8,34.0
+		.talk Harkor##26884
+		..turnin Say Hello to My Little Friend##12190
+		..accept Nice to Meat You##12113
+		..accept Therapy##12114
+		info Ride southeast to Harkor's Camp.
+		info TODO: verify in-game
+	step
+		goto 73.9,34.1
+		.talk Kraz##26886
+		..accept It Takes Guts....##12116
+		info TODO: verify in-game
+	step
+		goto 75.5,26.9
+		.' Stand in a School of Northern Salmon and use your Fishing Net|use Fishing Net##37542|tip They look like schools of fish around the islands.
+		.get 6 Northern Salmon|q 12279/1
+		info Head east.
+		info TODO: verify in-game
+	step
+		goto 79.8,33.6
+		.talk Gavrock##26420
+		..turnin Gavrock##12081
+		..accept Runes of Compulsion##12093
+		info He's a huge rock elemental on a small island.
+		info TODO: verify in-game
+	step
+		ding 76
+		info TODO: verify in-game
+	step
+		goto 67.7,29.6
+		.kill Iron Rune-Weavers|n
+		.kill 1 Overseer Durval|q 12093/1
+		info Ride northwest. Kill the Rune-Weavers to make the Overseer spawn.
+		info Kill any Duskhowl Prowlers and Longhoof Grazers in your way during the next steps.
+		info TODO: verify in-game
+	step
+		goto 72.1,33.9
+		.kill Iron Rune-Weavers|n
+		.kill 1 Overseer Korgan|q 12093/2
+		info Ride southeast. Kill the Rune-Weavers to make the Overseer spawn.
+		info TODO: verify in-game
+	step
+		goto 75.3,36.7
+		.kill Iron Rune-Weavers|n
+		.kill 1 Overseer Lochli|q 12093/3
+		info Ride southeast. Kill the Rune-Weavers to make the Overseer spawn.
+		info TODO: verify in-game
+	step
+		goto 79.1,43.3
+		.kill Iron Rune-Weavers|n
+		.kill 1 Overseer Brunon|q 12093/4
+		info Ride southeast. Kill the Rune-Weavers to make the Overseer spawn.
+		info TODO: verify in-game
+	step
+		goto 79.8,33.6
+		.talk Gavrock##26420
+		..turnin Runes of Compulsion##12093
+		..accept Latent Power##12094
+		info TODO: verify in-game
+	step
+		goto 71.3,39.9
+		.' Use your Shard of Gavrock next to the First Ancient Stone|use Shard of Gavrock##36787|tip It's a big blue glowing stone statue.
+		.' Draw Power from the First Ancient Stone|goal Power Drawn from First Ancient Stone|q 12094/1
+		info Ride southwest.
+		info TODO: verify in-game
+	step
+		goto 74.1,44.3
+		.' Use your Shard of Gavrock next to the Third Ancient Stone|use Shard of Gavrock##36787|tip It's a big blue glowing stone statue.
+		.' Draw Power from the Third Ancient Stone|goal Power Drawn from Third Ancient Stone|q 12094/3
+		info Ride southeast.
+		info TODO: verify in-game
+	step
+		goto 78.8,39.9
+		.' Use your Shard of Gavrock next to the Second Ancient Stone|use Shard of Gavrock##36787|tip It's a big blue glowing stone statue.
+		.' Draw Power from the Second Ancient Stone|goal Power Drawn from Second Ancient Stone|q 12094/2
+		info Ride northeast.
+		info TODO: verify in-game
+	step
+		goto 79.8,33.6
+		.talk Gavrock##26420
+		..turnin Latent Power##12094
+		..accept Free at Last##12099
+		info TODO: verify in-game
+	step
+		goto 76.2,37.7
+		.' Use Gavrock's Runebreaker on Runed Giants|use Gavrock's Runebreaker##36796
+		.' Free 4 Runed Giants|goal 4 Runed Giants Freed|q 12099/1
+		.kill Duskhowl Prowlers|n
+		.get 10 Fibrous Worg Meat|q 12113/1
+		.kill Longhoof Grazers|n
+		.get 10 Shovelhorn Steak|q 12113/2
+		info Ride west. Keep using the Runebreaker on the same giant until it works: it can take several tries.
+		info TODO: verify in-game
+	step
+		goto 70.8,21.8
+		.' Click the Drakkari Canopic Jars|tip They look like small gray urns against the walls inside the underground crypt.
+		.get 5 Drakkari Canopic Jar|q 12116/1
+		info Ride northwest to the Drakil'jin Ruins and head down into them.
+		info TODO: verify in-game
+	step
+		goto 69.4,18.2
+		.' Click the Drakkari Tablets|tip It's a big stone tablet in the corner of a small room inside the crypt.
+		.get Drakkari Tablets|q 12068/1
+		info TODO: verify in-game
+	step
+		goto 69.5,17.5
+		.talk Harrison Jones##26814
+		..accept Dun-da-Dun-tah!##12082
+		info TODO: verify in-game
+	step
+		goto 69.5,17.5
+		.' Escort Harrison Jones out of the Drakil'jin Ruins|goal Harrison has escorted you to safety.|q 12082/1
+		info Let him tank the snake and kill the adds.
+		info TODO: verify in-game
+	step
+		goto 70.5,27.4
+		.kill 10 Drakkari Protector|q 12114/1
+		.kill 10 Drakkari Oracle|q 12114/2
+		.kill Drakkari trolls|n
+		.collect 5 Sacred Mojo##36758|q 12068
+		info TODO: verify in-game
+	step
+		goto 71.7,26.2
+		.' Use Drakuru's Elixir next to Drakuru's Brazier|use Drakuru's Elixir##35797|tip It's a square bowl at the top of the stairs.
+		.talk Image of Drakuru##26787
+		..turnin Voices From the Dust##12068
+		info TODO: verify in-game
+	step
+		goto 71.7,26.2
+		.talk Image of Drakuru##26787
+		..accept Cleansing Drak'Tharon##12238
+		info It's a dungeon quest for Drak'Tharon Keep. Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 73.9,34.1
+		.talk Kraz##26886
+		..turnin It Takes Guts....##12116
+		..accept Drak'aguul's Mallet##12120
+		info Ride back to Harkor's Camp.
+		info TODO: verify in-game
+	step
+		goto 73.8,34.0
+		.talk Harkor##26884
+		..turnin Nice to Meat You##12113
+		..turnin Therapy##12114
+		..turnin Dun-da-Dun-tah!##12082
+		info TODO: verify in-game
+	step
+		goto 71.6,28.1
+		.from Drak'aguul##26919
+		.get Drakil'jin Mallet|q 12120/1
+		info Ride north. He's between the camp and the ruins, and he pulls solo while his adds wait around.
+		info TODO: verify in-game
+	step
+		goto 73.9,34.1
+		.talk Kraz##26886
+		..turnin Drak'aguul's Mallet##12120
+		..accept See You on the Other Side##12121
+		info TODO: verify in-game
+	step
+		goto 71.5,24.7
+		.' Use your Charged Drakil'jin Mallet next to the gongs outside the crypt|use Charged Drakil'jin Mallet##36834
+		.' Get killed by Warlord Jin'arrak|goal Death by Warlord Jin'arrak|q 12121/1
+		.' Stay dead|havebuff On the Other Side
+		info TODO: verify in-game
+	step
+		goto 69.4,19.5
+		.talk Gan'jo##26924
+		..turnin See You on the Other Side##12121
+		..accept Chill Out, Mon##12137
+		info While dead, go into the crypt.
+		info TODO: verify in-game
+	step
+		goto 69.4,19.5
+		.' Click Gan'jo's Chest|tip It's in the wall sink next to Gan'jo.
+		.get Snow of Eternal Slumber|q 12137/1
+		info TODO: verify in-game
+	step
+		goto 69.4,19.5
+		.talk Gan'jo##26924
+		..'Tell him you're ready to return to the realm of the living|nobuff On the Other Side|c
+		info TODO: verify in-game
+	step
+		goto 70.0,20.4
+		.' Use your Snow of Eternal Slumber on Ancient Drakkari|use Snow of Eternal Slumber##36859
+		.' Follow them to the mummies they run to, and click the Drakkari Spirit Particles they spawn
+		.get 5 Drakkari Spirit Particles|q 12137/2
+		info TODO: verify in-game
+	step
+		goto 73.9,34.1
+		.talk Kraz##26886
+		..turnin Chill Out, Mon##12137
+		..accept Jin'arrak's End##12152
+		info Ride back to Harkor's Camp.
+		info TODO: verify in-game
+	step
+		goto 71.3,19.6
+		.' Click the Sacred Drakkari Offering|tip It's a small fruit bowl on the ground in the first room of the crypt, next to a skull statue.
+		.' Use your Drakkari Spirit Dust|use Drakkari Spirit Dust##36873
+		.collect 1 Infused Drakkari Offering##37063|q 12152
+		info Ride north to the Drakil'jin Ruins again and enter the crypt.
+		info TODO: verify in-game
+	step
+		goto 71.4,24.4
+		.' Use your Infused Drakkari Offering next to the gongs outside the crypt|use Infused Drakkari Offering##37063
+		.' Destroy Warlord Jin'arrak|goal Warlord Jin'arrak Destroyed|q 12152/1
+		info TODO: verify in-game
+	step
+		goto 73.9,34.1
+		.talk Kraz##26886
+		..turnin Jin'arrak's End##12152
+		info TODO: verify in-game
+	step
+		goto 65.2,47.7
+		.talk Scout Vor'takh##26666
+		..turnin Pounding the Iron##12073
+		info Ride to Camp Oneqwah.
+		info TODO: verify in-game
+	step
+		goto 65.2,47.7
+		.talk Sage Paluna##26584
+		..turnin The Runic Prophecies##12058
+		info TODO: verify in-game
+	step
+		goto 65.2,47.7
+		.talk Scout Vor'takh##26666
+		..accept In the Name of Loken##12204
+		info TODO: verify in-game
+	step
+		goto 51.5,47.1
+		.' Click Vordrassil's Seeds|tip They look like brown pinecones on the ground outside the southern side of the tree.
+		.get 8 Vordrassil's Seed|q 12242/1
+		info Ride west to Grizzlemaw.
+		info TODO: verify in-game
+	step
+		goto 50.5,45.9|n
+		.' The southern entrance into the tree is here|goto 50.5,45.9,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 50.8,42.6
+		.' Use your Verdant Torch next to the tree at the bottom|use Verdant Torch##37306|tip It's a tall tree at the bottom of the spiral path.
+		.get Vordrassil's Ashes|q 12241/1
+		info TODO: verify in-game
+	step
+		'Hearth to Conquest Hold|goto 20.9,64.5,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 22.5,62.8
+		.talk Windseer Grayhorn##27262
+		..turnin Vordrassil's Seeds##12242
+		..turnin Destroy the Sapling##12241
+		info TODO: verify in-game
+	step
+		goto 22.5,62.8
+		.talk Windseer Grayhorn##27262
+		..accept Ursoc, the Bear God##12236
+		info It's a group quest for about three players. Skip this step and the next two if you can't find a group.
+		info Keep looking for groups for Ursoc and Hour of the Worg during the rest of your time in the zone.
+		info TODO: verify in-game
+	step
+		goto 52.6,24.1
+		.talk Tur Ragepaw##27328
+		.' He joins your group as a bear (tank), a tree (healer) or a cat (DPS); pick what your group needs most
+		.' Follow him into Ursoc's Den and kill Ursoc
+		.kill 1 Ursoc|q 12236/1
+		.' Use the Purified Ashes of Vordrassil on Ursoc's corpse|use Purified Ashes of Vordrassil##37307
+		info Ursoc's Den is northwest of the Westfall Brigade Encampment.
+		info Skip this step if you didn't take Ursoc, the Bear God.
+		info TODO: verify in-game
+	step
+		goto 22.5,62.8
+		.talk Windseer Grayhorn##27262
+		..turnin Ursoc, the Bear God##12236
+		info Return to Conquest Hold.
+		info Skip this step if you didn't take Ursoc, the Bear God.
+		info TODO: verify in-game
+	step
+		goto 17.6,27.0
+		.' Run Drak'Tharon Keep
+		.' Free Kurzel from her cocoon in the webbed rooms after Trollgore, the first boss
+		.talk Kurzel##26664
+		..turnin Search and Rescue##12037
+		..accept Head Games##13129
+		.' Kill Novos the Summoner, the second boss, and use Kurzel's Blouse Scrap on his corpse|use Kurzel's Blouse Scrap##43214
+		.get Ichor-Stained Cloth|q 13129/1
+		.' Collect 5 Enduring Mojo from the Drakkari trolls, then use Drakuru's Elixir at his brazier after The Prophet Tharon'ja, the last boss|use Drakuru's Elixir##35797
+		.talk Drakuru##28016
+		..turnin Cleansing Drak'Tharon##12238
+		info Queue with the Dungeon Finder, or walk in: the entrance is north of Granite Springs.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 16.7,48.3
+		.talk Mack Fearsen##26604
+		..turnin Head Games##13129
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 22.0,64.4
+		.talk Kragh##26852
+		..'Fly to Camp Oneqwah|goto 64.9,46.9,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 85.9,27.9
+		.kill 1 Selas|q 12164/2
+		info Swim northeast to Bloodmoon Isle. Selas is in the first camp, to the right as you head up the path.
+		info Skip this step and the next three if you didn't take Hour of the Worg.
+		info TODO: verify in-game
+	step
+		goto 84.9,23.3
+		.kill 1 Varlam|q 12164/1
+		info Continue up the path; Varlam is to the left.
+		info Skip this step if you didn't take Hour of the Worg.
+		info TODO: verify in-game
+	step
+		goto 87.0,26.5
+		.kill 1 Goremaw|q 12164/3
+		info He's at the "stables" outside the tower.
+		info Skip this step if you didn't take Hour of the Worg.
+		info TODO: verify in-game
+	step
+		goto 87.7,26.5
+		.kill 1 Shade of Arugal|q 12164/4
+		.talk Sasha##26935
+		..turnin Hour of the Worg##12164
+		info Whenever Arugal summons adds, kill the adds first. Sasha is at the top of the tower.
+		info Skip this step if you didn't take Hour of the Worg.
+		info TODO: verify in-game
+	step
+		goto 69.1,40.1
+		.talk Hugh Glass##26484
+		..turnin A Bear of an Appetite##12279
+		..'Talk to him about Loken
+		..'Question Hugh Glass|goal Hugh Glass Questioned|q 12204/1
+		info Ride northeast from Camp Oneqwah.
+		info TODO: verify in-game
+	step
+		goto 79.8,33.6
+		.talk Gavrock##26420
+		..turnin Free at Last##12099
+		..'Talk to him about Loken
+		..'Question Gavrock|goal Gavrock Questioned|q 12204/2
+		info Ride east.
+		info TODO: verify in-game
+	step
+		goto 65.2,47.7
+		.talk Scout Vor'takh##26666
+		..turnin In the Name of Loken##12204
+		..accept The Overseer's Shadow##12201
+		info Return to Camp Oneqwah.
+		info TODO: verify in-game
+	step
+		goto 76.6,55.1
+		.kill Iron Rune-Smiths|n
+		.collect Golem Blueprint Section 1##36849|q 12165|n
+		.collect Golem Blueprint Section 2##36850|q 12165|n
+		.collect Golem Blueprint Section 3##36851|q 12165|n
+		.' Click the Golem Blueprint Section 1 in your bags|use Golem Blueprint Section 1##36849
+		.get War Golem Blueprint|q 12165/1
+		.from Iron Rune Overseer##27177
+		.get Overseer's Uniform|q 12201/1
+		info Ride southeast to Dun Argol and go into the buildings.
+		info TODO: verify in-game
+	step
+		goto 65.1,47.2
+		.talk Prospector Rokar##27227
+		..turnin An Intriguing Plan##12165
+		..accept From the Ground Up##12196
+		info Return to Camp Oneqwah.
+		info TODO: verify in-game
+	step
+		goto 65.2,47.7
+		.talk Scout Vor'takh##26666
+		..turnin The Overseer's Shadow##12201
+		..accept Cultivating an Image##12202
+		info TODO: verify in-game
+	step
+		goto 76.2,53.4
+		.kill Iron dwarves|n
+		.' Target their corpses and use Rokar's Camera|use Rokar's Camera##37125
+		.' Capture 8 Iron Dwarf Images|goal 8 Iron Dwarf Images Captured|q 12202/1
+		info Ride southeast, to the top of Dun Argol this time.
+		info TODO: verify in-game
+	step
+		goto 76.6,54.8
+		.' Click the War Golem Parts|tip They look like metal parts in the rooms and buildings of the fortress at the top.
+		.get 8 War Golem Part|q 12196/1
+		info You can find more around 75.3,57.3.
+		info TODO: verify in-game
+	step
+		goto 65.1,47.2
+		.talk Prospector Rokar##27227
+		..turnin From the Ground Up##12196
+		..accept We Have the Power##12197
+		info Return to Camp Oneqwah.
+		info TODO: verify in-game
+	step
+		goto 65.2,47.7
+		.talk Scout Vor'takh##26666
+		..turnin Cultivating an Image##12202
+		..accept Loken's Orders##12203
+		info TODO: verify in-game
+	step
+		goto 74.9,56.9
+		.from Rune-Smith Durar##26409
+		.get Durar's Power Cell|q 12197/1
+		info Ride southeast to Dun Argol.
+		info TODO: verify in-game
+	step
+		goto 76.8,59.4
+		.from Rune-Smith Kathorn##26410
+		.get Kathorn's Power Cell|q 12197/2
+		info TODO: verify in-game
+	step
+		goto 81.5,60.3
+		.' Mount up and use your Overseer Disguise Kit; it works while mounted|use Overseer Disguise Kit##37071
+		.' Click Loken's Pedestal in the easternmost building|tip It's a big square stone altar.
+		.' Receive the Message from Loken|goal Message from Loken received|q 12203/1
+		info TODO: verify in-game
+	step
+		goto 65.2,47.7
+		.talk Scout Vor'takh##26666
+		..turnin Loken's Orders##12203
+		info Return to Camp Oneqwah.
+		info TODO: verify in-game
+	step
+		goto 65.1,47.2
+		.talk Prospector Rokar##27227
+		..turnin We Have the Power##12197
+		..accept ... Or Maybe We Don't##12198
+		info TODO: verify in-game
+	step
+		goto 73.7,51.4
+		.' Use your Golem Control Unit to get your Depleted War Golem out|use Golem Control Unit##36936
+		.kill Lightning Sentries|n
+		.get 10 Charge Level|q 12198/1
+		info Ride south.
+		info TODO: verify in-game
+	step
+		goto 65.1,47.2
+		.talk Prospector Rokar##27227
+		..turnin ... Or Maybe We Don't##12198
+		..accept Bringing Down the Iron Thane##12199
+		info Return to Camp Oneqwah.
+		info TODO: verify in-game
+	step
+		goto 76.2,63.2
+		.' Use your Golem Control Unit to ride your War Golem|use Golem Control Unit##36865
+		.' Walk up to Iron Thane Furyhammer and use EMP (ability 2) to make him vulnerable
+		.' Spam Charged Smash (ability 1) on him
+		.kill 1 Iron Thane Furyhammer|q 12199/1
+		info Ride up to the top building and take the elevator down.
+		info After the kill, run away so you don't aggro The Anvil.
+		info TODO: verify in-game
+	step
+		goto 65.3,47.5
+		.talk Tormak the Scarred##27221
+		..turnin Bringing Down the Iron Thane##12199
+		info Return to Camp Oneqwah.
 		info TODO: verify in-game
 ]])
