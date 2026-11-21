@@ -24045,3 +24045,1041 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Zul'Drak",[[
 		info Skip this step if you didn't kill Gal'darah.
 		info TODO: verify in-game
 ]])
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Sholazar Basin",[[
+	author YunataSavior
+	next Ding80's Horde Leveling Guides\\Storm Peaks
+	startlevel 78
+
+	step
+		'Fly to Dalaran|goto Dalaran|noway|c
+		info Take the flight path to Dalaran.
+		info TODO: verify in-game
+	step
+		goto Dalaran,65.6,32.2
+		.talk Uda the Beast##31557
+		..home Dalaran
+		info She's the innkeeper of The Filthy Animal, in the Sunreaver's Sanctuary.
+		info TODO: verify in-game
+	step
+		'Take the portal to Orgrimmar and train your class skills, then hearth back to Dalaran
+		info The Orgrimmar portal is in the Sunreaver's Sanctuary. Skip this step if you don't need to train.
+		info TODO: verify in-game
+	step
+		goto Dalaran,69.8,45.4
+		.talk Hira Snowdawn##31238
+		..'Learn Cold Weather Flying
+		info She's by the flight master at Krasus' Landing. Cold Weather Flying costs 1,000g and needs level 77.
+		info Sholazar Basin has several quests that need a flying mount, so learn it now if you can.
+		info TODO: verify in-game
+	step
+		goto Dalaran,68.5,42.0
+		.talk Archmage Pentarus##28160
+		..accept Where in the World is Hemet Nesingwary?##12521
+		info Ding80 says Pentarus can give you a ride to the basin. If he doesn't offer one, fly southwest to Sholazar Basin yourself.
+		info TODO: verify in-game
+	step
+		goto Sholazar Basin,39.7,58.7
+		.talk Monte Muzzleshot##27987
+		..turnin Where in the World is Hemet Nesingwary?##12521
+		..accept Welcome to Sholazar Basin##12489
+		info He's next to a crashed flying machine.
+		info TODO: verify in-game
+	step
+		goto 27.1,58.6
+		.talk Hemet Nesingwary##27986
+		..turnin Welcome to Sholazar Basin##12489
+		info Fly west to the Nesingwary Base Camp.
+		info TODO: verify in-game
+	step
+		goto 26.9,58.9
+		.talk Chad##28497
+		..accept It Could Be Anywhere!##12624
+		info The Golden Engagement Ring drops from the animals all over the zone. Turn it in when you find it.
+		info TODO: verify in-game
+	step
+		goto 25.4,58.5
+		.talk Weslex Quickwrench##28033
+		..accept Need an Engine, Take an Engine##12522
+		info TODO: verify in-game
+	step
+		goto 27.2,59.9
+		.talk Debaar##28032
+		..accept Venture Co. Misadventure##12524
+		info TODO: verify in-game
+	step
+		goto 38.7,56.7
+		.' Click the Flying Machine Engine|tip It's an engine on the ground next to the crashed flying machine.
+		.get Flying Machine Engine|q 12522/1
+		info Fly east back to the crash.
+		info TODO: verify in-game
+	step
+		goto 35.5,47.4
+		.talk Engineer Helice##28787
+		..accept Engineering a Disaster##12688
+		.' Escort Engineer Helice out of Swindlegrin's Dig|goal Escort Engineer Helice out of Swindlegrin's Dig|q 12688/1
+		.' Kill 15 Venture Company members|goal 15 Venture Company members killed|q 12524/1
+		info Fly northwest to Swindlegrin's Dig. Kill the Venture Company members while you escort her out.
+		info TODO: verify in-game
+	step
+		goto 37.4,46.1
+		.' Kill 15 Venture Company members|goal 15 Venture Company members killed|q 12524/1
+		info Skip this step if you finished the kills during the escort.
+		info TODO: verify in-game
+	step
+		goto 27.1,58.6
+		.talk Hemet Nesingwary##27986
+		..turnin Engineering a Disaster##12688
+		info Return to the Nesingwary Base Camp.
+		info TODO: verify in-game
+	step
+		goto 25.4,58.5
+		.talk Weslex Quickwrench##28033
+		..turnin Need an Engine, Take an Engine##12522
+		..accept Have a Part, Give a Part##12523
+		info TODO: verify in-game
+	step
+		goto 27.2,59.9
+		.talk Debaar##28032
+		..turnin Venture Co. Misadventure##12524
+		..accept Wipe That Grin Off His Face##12525
+		info TODO: verify in-game
+	step
+		goto 35.8,50.3
+		.kill 1 Foreman Swindlegrin|q 12525/1|tip He drives a shredder on top of the platform.
+		.kill 1 Meatpie|q 12525/2|tip He's a blue ogre who walks up and down the platform.
+		info Fly northeast back to Swindlegrin's Dig.
+		info TODO: verify in-game
+	step
+		goto 32.7,46.9
+		.' Click the Venture Co. Spare Parts|tip They look like piles of metal parts on the ground.
+		.get 7 Venture Co. Spare Parts|q 12523/1
+		info TODO: verify in-game
+	step
+		goto 25.4,58.5
+		.talk Weslex Quickwrench##28033
+		..turnin Have a Part, Give a Part##12523
+		info Return to the Nesingwary Base Camp.
+		info TODO: verify in-game
+	step
+		goto 27.2,59.9
+		.talk Debaar##28032
+		..turnin Wipe That Grin Off His Face##12525
+		info TODO: verify in-game
+	step
+		goto 25.3,58.5
+		.talk The Spirit of Gnomeregan##28037
+		..fpath Nesingwary Base Camp
+		info The flying machine is fixed, so the flight path is open now.
+		info TODO: verify in-game
+	step
+		goto 26.7,59.0
+		.talk Buck Cantwell##28031
+		..accept Dreadsaber Mastery: Becoming a Predator##12549
+		info TODO: verify in-game
+	step
+		goto 27.1,58.6
+		.talk Hemet Nesingwary##27986
+		..accept Rhino Mastery: The Test##12520
+		info TODO: verify in-game
+	step
+		goto 25.4,58.5
+		.talk Professor Calvert##28266
+		..accept Aerial Surveillance##12696
+		info TODO: verify in-game
+	step
+		goto 27.1,59.9
+		.talk Drostan##28328
+		..accept Kick, What Kick?##12589
+		info TODO: verify in-game
+	step
+		goto 27.1,59.9
+		.' Equip the RJR Rifle and use it on Lucky Wilhelm|use RJR Rifle##38573
+		.' Shoot the apple on Lucky Wilhelm's head|goal Shot apple on Lucky Wilhelm's Head|q 12589/1
+		info There's no trick to it. Keep shooting on cooldown until you hit the apple.
+		info TODO: verify in-game
+	step
+		goto 27.1,59.9
+		.talk Drostan##28328
+		..turnin Kick, What Kick?##12589
+		..accept The Great Hunter's Challenge##12592
+		info Re-equip your own weapon.
+		info TODO: verify in-game
+	step
+		goto 28.0,56.0
+		.kill 15 Dreadsaber|q 12549/1
+		.kill 15 Shardhorn Rhino|q 12520/1
+		info Fly north. Every animal you kill counts toward The Great Hunter's Challenge.
+		info More Dreadsabers and Rhinos are at 38.2,45.3.
+		info TODO: verify in-game
+	step
+		goto 26.7,59.0
+		.talk Buck Cantwell##28031
+		..turnin Dreadsaber Mastery: Becoming a Predator##12549
+		..accept Dreadsaber Mastery: Stalking the Prey##12550
+		info Return to the Nesingwary Base Camp.
+		info TODO: verify in-game
+	step
+		goto 27.1,58.6
+		.talk Hemet Nesingwary##27986
+		..turnin Rhino Mastery: The Test##12520
+		..accept Rhino Mastery: The Chase##12526
+		info TODO: verify in-game
+	step
+		goto 26.7,59.5
+		.talk Korg the Cleaver##28046
+		..accept A Steak Fit for a Hunter##12804
+		info TODO: verify in-game
+	step
+		goto 27.2,59.9
+		.talk Debaar##28032
+		..accept Crocolisk Mastery: The Trial##12551
+		info TODO: verify in-game
+	step
+		goto 26.8,60.1
+		.talk Grimbooze Thunderbrew##29157
+		..accept Some Make Lemonade, Some Make Liquor##12634
+		info TODO: verify in-game
+	step
+		goto 25.6,66.5
+		.talk Oracle Soo-rahm##28191
+		..turnin Rhino Mastery: The Chase##12526
+		..accept An Offering for Soo-rahm##12543
+		info Fly south.
+		info TODO: verify in-game
+	step
+		goto 29.5,66.4
+		.kill Longneck Grazers|n
+		.get 5 Longneck Grazer Steak|q 12804/1
+		info TODO: verify in-game
+	step
+		goto 37.6,61.8
+		.' Click the Sturdy Vines|tip They hang down from the trees. Fruit drops when you pull them, and sometimes a dwarf falls out instead and gives you some.
+		.get Orange|q 12634/1
+		.get 2 Banana Bunch|q 12634/2
+		.get Papaya|q 12634/3
+		info Fly northeast to Wildgrowth Mangal.
+		info TODO: verify in-game
+	step
+		goto 29.0,62.5
+		.kill 15 Mangal Crocolisk|q 12551/1
+		info TODO: verify in-game
+	step
+		goto 36.3,65.8
+		.kill Emperor Cobras|n
+		.get 5 Intact Cobra Fang|q 12543/1
+		info TODO: verify in-game
+	step
+		goto 36.3,65.8
+		.' Kill 60 Game Animals|goal 60 Game Animals Killed|q 12592/1
+		.get Golden Engagement Ring|q 12624/1|tip It drops from most animals in the zone.
+		info Any beast in Sholazar Basin counts.
+		info TODO: verify in-game
+	step
+		goto 39.9,43.7
+		.' Click the Dreadsaber Tracks|tip They look like brown paw prints on the ground.
+		.' Identify 3 Shango Tracks|goal 3 Shango Track identified|q 12550/1
+		info Fly northwest.
+		info TODO: verify in-game
+	step
+		goto 25.6,66.5
+		.talk Oracle Soo-rahm##28191
+		..turnin An Offering for Soo-rahm##12543
+		..accept The Bones of Nozronn##12544
+		info Fly southwest.
+		info TODO: verify in-game
+	step
+		goto 26.1,71.6
+		.' Use Soo-rahm's Incense next to the Offering Bowl|use Soo-rahm's Incense##38519|tip It's a small bowl in front of the skull.
+		.' Reveal the location of Farunn|goal Location of Farunn revealed|q 12544/1
+		info TODO: verify in-game
+	step
+		goto 26.7,59.5
+		.talk Korg the Cleaver##28046
+		..turnin A Steak Fit for a Hunter##12804
+		info Return to the Nesingwary Base Camp.
+		info TODO: verify in-game
+	step
+		goto 26.9,58.9
+		.talk Chad##28497
+		..turnin It Could Be Anywhere!##12624
+		info TODO: verify in-game
+	step
+		goto 27.2,59.9
+		.talk Debaar##28032
+		..turnin Crocolisk Mastery: The Trial##12551
+		..accept Crocolisk Mastery: The Plan##12560
+		info TODO: verify in-game
+	step
+		goto 26.7,59.0
+		.talk Buck Cantwell##28031
+		..turnin Dreadsaber Mastery: Stalking the Prey##12550
+		..accept Dreadsaber Mastery: Ready to Pounce##12558
+		info TODO: verify in-game
+	step
+		goto 26.8,60.1
+		.talk Grimbooze Thunderbrew##29157
+		..turnin Some Make Lemonade, Some Make Liquor##12634
+		..accept Still At It##12644
+		info TODO: verify in-game
+	step
+		goto 27.1,58.6
+		.talk Hemet Nesingwary##27986
+		..turnin The Bones of Nozronn##12544
+		..accept Rhino Mastery: The Kill##12556
+		info TODO: verify in-game
+	step
+		goto 27.1,59.9
+		.talk Drostan##28328
+		..turnin The Great Hunter's Challenge##12592
+		info TODO: verify in-game
+	step
+		goto 26.7,60.0
+		.talk "Tipsy" McManus##28566
+		..'Tell him you're ready to start the distillation
+		.' Click the item he calls out each time, quickly|tip It's random: something on the ground or on the machine.
+		.' Click the barrel when the process is done
+		.get Thunderbrew's Jungle Punch|q 12644/1
+		info TODO: verify in-game
+	step
+		goto 26.8,60.1
+		.talk Grimbooze Thunderbrew##29157
+		..turnin Still At It##12644
+		..accept The Taste Test##12645
+		info TODO: verify in-game
+	step
+		goto 27.1,58.6
+		.' Use your Jungle Punch Sample on Hemet Nesingwary|use Jungle Punch Sample##38697|tip He stands in front of a tent.
+		.' Complete Hemet's taste test|goal Hemet's taste test|q 12645/1
+		info TODO: verify in-game
+	step
+		goto 27.4,59.4
+		.' Use your Jungle Punch Sample on Hadrius Harlowe|use Jungle Punch Sample##38697|tip He stands next to a tiki torch.
+		.' Complete Hadrius' taste test|goal Hadrius' taste test|q 12645/2
+		info TODO: verify in-game
+	step
+		goto 34.7,41.5
+		.' Click the Sandferns|tip They look like ferns on the lakeshore.
+		.get 5 Sandfern|q 12560/1
+		info Fly north to the lake.
+		info TODO: verify in-game
+	step
+		goto 27.2,59.9
+		.talk Debaar##28032
+		..turnin Crocolisk Mastery: The Plan##12560
+		..accept Crocolisk Mastery: The Ambush##12569
+		info Return to the Nesingwary Base Camp.
+		info Ding80 also takes Lakeside Landing from Hemet here, but Hemet only offers it after Ready to Pounce and The Kill are turned in. Skip it: Tamara at Lakeside Landing gives you The Part-time Hunter directly.
+		info TODO: verify in-game
+	step
+		goto 33.4,34.7
+		.kill Shango##28297|n
+		.get Shango's Pelt|q 12558/1
+		info Fly northwest. Shango is near the waterfall.
+		info TODO: verify in-game
+	step
+		goto 47.4,43.9
+		.kill Farunn##28288|n
+		.get Farunn's Horn|q 12556/1
+		info Fly northeast. Farunn wanders between the northeast part of the lake and The Glimmering Pillar.
+		info TODO: verify in-game
+	step
+		goto 50.1,61.4
+		.talk Marvin Wobblesprocket##28574
+		..fpath River's Heart
+		info Fly south to Lakeside Landing.
+		info TODO: verify in-game
+	step
+		goto 50.0,61.5
+		.talk Pilot Vic##28746
+		..turnin Aerial Surveillance##12696
+		..accept An Embarassing Incident##12699
+		..accept Force of Nature##12803
+		info TODO: verify in-game
+	step
+		goto 50.5,62.1
+		.' Use your Jungle Punch Sample on Tamara Wobblesprocket|use Jungle Punch Sample##38697|tip She stands in front of a tent.
+		.' Complete Tamara's taste test|goal Tamara's taste test|q 12645/3
+		info TODO: verify in-game
+	step
+		goto 50.5,62.1
+		.talk Tamara Wobblesprocket##28568
+		..accept The Part-time Hunter##12654
+		info TODO: verify in-game
+	step
+		goto 48.6,64.0
+		.' Click the Raised Mud|tip They look like piles of dirt on the lake floor.
+		.get Vic's Keys|q 12699/1
+		info Dive into the lake. It can take a few piles before you find the keys.
+		info TODO: verify in-game
+	step
+		goto 46.3,63.4
+		.' Stand on the big log half in the water and use your Sandfern Disguise|use Sandfern Disguise##38564
+		.kill Bushwhacker|n
+		.get Bushwhacker's Jaw|q 12569/1
+		info Get out on the west side of the lake.
+		info TODO: verify in-game
+	step
+		goto 50.5,77.3
+		.kill Pitch##28097|n
+		.get Pitch's Remains|q 12654/1
+		info Fly south. Pitch is cornered by three trackers.
+		info TODO: verify in-game
+	step
+		goto 50.5,76.6
+		.talk Tracker Gekgek##28095
+		..accept Playing Along##12528
+		info TODO: verify in-game
+	step
+		goto 50.5,62.1
+		.talk Tamara Wobblesprocket##28568
+		..turnin The Part-time Hunter##12654
+		info Fly northwest back to Lakeside Landing.
+		info TODO: verify in-game
+	step
+		goto 50.0,61.5
+		.talk Pilot Vic##28746
+		..turnin An Embarassing Incident##12699
+		..accept Reconnaissance Flight##12671
+		info TODO: verify in-game
+	step
+		goto 50.0,61.5
+		.' Take the flight and shoot missiles at the gargoyles that attack you
+		.' When the engine blows, fly back to Lakeside Landing
+		.' Land inside the circle of blue markers|petaction Land Flying Machine
+		.' Complete the Reconnaissance Flight|goal Reconnaissance Flight|q 12671/1
+		info TODO: verify in-game
+	step
+		goto 50.0,61.5
+		.talk Pilot Vic##28746
+		..turnin Reconnaissance Flight##12671
+		info TODO: verify in-game
+	step
+		'Fly to Nesingwary Base Camp|goto 25.4,58.2,0.5|noway|c
+		info Take the flight path.
+		info TODO: verify in-game
+	step
+		goto 26.8,60.1
+		.talk Grimbooze Thunderbrew##29157
+		..turnin The Taste Test##12645
+		info TODO: verify in-game
+	step
+		goto 27.2,59.9
+		.talk Debaar##28032
+		..turnin Crocolisk Mastery: The Ambush##12569
+		info TODO: verify in-game
+	step
+		goto 26.7,59.0
+		.talk Buck Cantwell##28031
+		..turnin Dreadsaber Mastery: Ready to Pounce##12558
+		info TODO: verify in-game
+	step
+		goto 27.1,58.6
+		.talk Hemet Nesingwary##27986
+		..turnin Rhino Mastery: The Kill##12556
+		..accept In Search of Bigger Game##12595
+		info TODO: verify in-game
+	step
+		goto 42.3,28.7
+		.talk Dorian Drakestalker##28376
+		..turnin In Search of Bigger Game##12595
+		..accept Sharpening Your Talons##12603
+		..accept Securing the Bait##12605
+		info Fly northeast to Dorian's Camp.
+		info TODO: verify in-game
+	step
+		goto 42.1,28.7
+		.talk Colvin Norrington##28771
+		..accept Burning to Help##12683
+		info TODO: verify in-game
+	step
+		goto 39.7,38.0
+		.kill 5 Bittertide Hydra|q 12683/2|tip They're underwater in Bittertide Lake.
+		.' Use your Sample Container while you have the Hydra Sputum debuff|use Sample Container##39164
+		.' Collect 5 Sputum Samples|goal 5 Sputum Samples Collected|q 12683/1
+		info Fly southwest. The hydras spit Hydra Sputum on you while you fight them; take a sample after each kill.
+		info TODO: verify in-game
+	step
+		goto 44.7,27.4
+		.kill 6 Primordial Drake|q 12603/1|tip They fly around overhead.
+		.' Attack the Primordial Drake Eggs|tip They're white eggs next to the trees.
+		.' Click the Primordial Hatchlings that come out
+		.get 6 Primordial Hatchling|q 12605/1
+		info Fly northeast to The Savage Thicket.
+		info TODO: verify in-game
+	step
+		goto 42.3,28.7
+		.talk Dorian Drakestalker##28376
+		..turnin Sharpening Your Talons##12603
+		..turnin Securing the Bait##12605
+		info Fly west back to Dorian's Camp.
+		info TODO: verify in-game
+	step
+		goto 42.1,28.7
+		.talk Colvin Norrington##28771
+		..turnin Burning to Help##12683
+		..accept Reagent Agent##12681
+		info TODO: verify in-game
+	step
+		goto 42.1,28.9
+		.talk Zootfizzle##28374
+		..accept A Mammoth Undertaking##12607
+		..accept My Pet Roc##12658
+		info TODO: verify in-game
+	step
+		goto 39.3,27.3
+		.' Use your Mammoth Harness on a Shattertusk Mammoth|use Mammoth Harness##38627
+		.' Ride it back to Zootfizzle at 42.1,28.9 and use the Hand Over Mammoth ability|petaction Hand Over Mammoth
+		.' Deliver the Shattertusk Mammoth|goal Shattertusk Mammoth Delivered|q 12607/1
+		info The mammoths are around the camp.
+		info TODO: verify in-game
+	step
+		goto 42.1,28.9
+		.talk Zootfizzle##28374
+		..turnin A Mammoth Undertaking##12607
+		info TODO: verify in-game
+	step
+		goto 42.3,28.7
+		.talk Dorian Drakestalker##28376
+		..accept Post-partum Aggression##12614
+		info TODO: verify in-game
+	step
+		goto 47.1,21.3
+		.kill 1 Broodmother Slivina|q 12614/1
+		info Ride a mammoth northeast to her. Use Signal Hemet to Attack (ability 4) on her so Hemet joins in.
+		info Spam Gore (ability 6), and pull Slivina into the trap whenever Hemet drops one.
+		info TODO: verify in-game
+	step
+		goto 54.5,27.9
+		.kill Goretalon Rocs|n
+		.get 5 Twisted Roc Talon|q 12681/1
+		.' Click the Roc Eggs|tip They're white eggs in nests on the ground.
+		.get 7 Roc Egg|q 12658/1
+		info Head further east into The Bonefields.
+		info TODO: verify in-game
+	step
+		goto 42.3,28.7
+		.talk Dorian Drakestalker##28376
+		..turnin Post-partum Aggression##12614
+		info Fly back to Dorian's Camp.
+		info TODO: verify in-game
+	step
+		goto 42.1,28.7
+		.talk Colvin Norrington##28771
+		..turnin Reagent Agent##12681
+		info TODO: verify in-game
+	step
+		goto 42.1,28.9
+		.talk Zootfizzle##28374
+		..turnin My Pet Roc##12658
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		..turnin Force of Nature##12803
+		..accept An Issue of Trust##12561
+		info Fly southeast to the Avatar of Freya.
+		info TODO: verify in-game
+	step
+		goto 67.3,51.4
+		.kill 6 Blighted Corpse|q 12561/1
+		.kill 10 Bonescythe Ravager|q 12561/2
+		info Head east.
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		..turnin An Issue of Trust##12561
+		..accept Returned Sevenfold##12611
+		info TODO: verify in-game
+	step
+		goto 66.5,44.2
+		.' Use Freya's Ward when Thalgran's hands start glowing black|use Freya's Ward##38657|tip Stand still while it channels; it reflects his Deathbolts back at him.
+		.kill 1 Thalgran Blightbringer|q 12611/1
+		info Fly north. You can stay out of melee and kite him in circles, letting his own bolts kill him.
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		..turnin Returned Sevenfold##12611
+		..accept The Fallen Pillar##12612
+		..accept Salvaging Life's Strength##12805
+		info TODO: verify in-game
+	step
+		goto 65.1,60.3
+		.' Click the Cultist Corpse|tip It's at the very top of The Lifeblood Pillar, next to a huge red crystal.
+		..turnin The Fallen Pillar##12612
+		..accept Cultist Incursion##12608
+		info Fly south and up to the top of The Lifeblood Pillar.
+		info TODO: verify in-game
+	step
+		goto 69.7,57.9
+		.kill Lifeblood Elementals|n
+		.' Use your Lifeblood Gem on their corpses|use Lifeblood Gem##40397
+		.' Recover 8 Lifeblood Energy|goal 8 Lifeblood Energy Recovered|q 12805/1
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		..turnin Cultist Incursion##12608
+		..turnin Salvaging Life's Strength##12805
+		..accept Exterminate the Intruders##12617
+		..accept Weapons of Destruction##12660
+		info TODO: verify in-game
+	step
+		goto 57.5,41.1
+		.kill 8 Cultist Infiltrator|q 12617/1
+		.' Click the Unstable Explosives|tip They look like big spiked metal balls on the ground.
+		.' Destroy 4 Unstable Explosives|goal 4 Unstable Explosives destroyed|q 12660/1
+		info Fly northwest to Death's Hand Encampment.
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		..turnin Exterminate the Intruders##12617
+		..turnin Weapons of Destruction##12660
+		..accept The Lifewarden's Wrath##12620
+		info TODO: verify in-game
+	step
+		goto 50.1,37.3
+		.' Stand under the floating structure at the top of The Glimmering Pillar and use Freya's Horn|use Freya's Horn##38684
+		.' Release The Lifewarden's Wrath|goal The Lifewarden's Wrath|q 12620/1
+		info Fly northwest to the very top of the pillar, where the explosives are.
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		..turnin The Lifewarden's Wrath##12620
+		..accept Freya's Pact##12621
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		.' Ask her how you can help and go through the dialogue
+		.get Freya's Pact|q 12621/1
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		..turnin Freya's Pact##12621
+		..accept Powering the Waygate - The Maker's Perch##12559
+		info TODO: verify in-game
+	step
+		goto 26.2,35.5
+		.' Click Activation Switch Gamma|goal Activation Switch Gamma|q 12559/1|tip It's an upright control panel between three huge windows.
+		info Fly far northwest to The Maker's Perch. The way in is a big balcony at 28.4,39.1.
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		..turnin Powering the Waygate - The Maker's Perch##12559
+		..accept Powering the Waygate - The Maker's Overlook##12613
+		info TODO: verify in-game
+	step
+		goto 80.4,55.8
+		.' Click the Timeworn Coffer|tip It's a big stone box on the balcony outside the building.
+		..accept A Timeworn Coffer##12691
+		info Fly east to The Maker's Overlook.
+		info TODO: verify in-game
+	step
+		goto 89.1,52.9
+		.kill Sholazar Guardians|n
+		.get Huge Stone Key|q 12691/1
+		.' Click Activation Switch Theta|goal Activation Switch Theta|q 12613/1|tip It's an upright control panel at the very end of the hallway.
+		info Head down the corridor east all the way to the end. The Sholazar Guardians on the way drop the key. Avoid the elite Overlook Sentry.
+		info TODO: verify in-game
+	step
+		goto 80.4,55.8
+		.' Click the Timeworn Coffer
+		..turnin A Timeworn Coffer##12691
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		..turnin Powering the Waygate - The Maker's Overlook##12613
+		..accept The Etymidian##12548
+		info TODO: verify in-game
+	step
+		goto 40.3,82.9
+		.' Stand inside the light to go through the Waygate|goto Un'Goro Crater|noway|c
+		info Fly southwest to the Waygate.
+		info TODO: verify in-game
+	step
+		goto Un'Goro Crater,47.4,9.2
+		.talk The Etymidian##28092
+		..turnin The Etymidian##12548
+		..accept The Activation Rune##12547
+		info Head up the stairs.
+		info TODO: verify in-game
+	step
+		goto 48.2,2.5
+		.kill High Cultist Herenn##28601|n
+		.get Omega Rune|q 12547/1
+		info Enter the hall; she's at the end of it.
+		info TODO: verify in-game
+	step
+		goto 47.4,9.2
+		.talk The Etymidian##28092
+		..turnin The Activation Rune##12547
+		..accept Back Through the Waygate##12797
+		info TODO: verify in-game
+	step
+		goto 50.5,7.8
+		.' Stand inside the light to go back through the Waygate|goto Sholazar Basin|noway|c
+		info Don't go back to Freya yet; Ding80 does Frenzyheart Hill first.
+		info TODO: verify in-game
+	step
+		goto Sholazar Basin,55.0,69.1
+		.talk High-Shaman Rakjak##28082
+		..turnin Playing Along##12528
+		..accept The Ape Hunter's Slave##12529
+		info Fly northeast to Frenzyheart Hill.
+		info TODO: verify in-game
+	step
+		goto 55.3,69.8
+		.talk Goregek the Gorilla Hunter##28214
+		..accept Tormenting the Softknuckles##12530
+		info He follows you around. If he's gone, use Goregek's Shackles to call him back.
+		info TODO: verify in-game
+	step
+		goto 57.5,73.3
+		.kill 8 Hardknuckle Forager|q 12529/1
+		info Fly southeast.
+		info TODO: verify in-game
+	step
+		goto 61.1,71.7
+		.kill 6 Hardknuckle Charger|q 12529/2
+		info TODO: verify in-game
+	step
+		goto 66.9,73.2
+		.' Use your Softknuckle Poker on Softknuckles until the Hardknuckle Matriarch comes|use Softknuckle Poker##38467|tip Softknuckles are baby gorillas.
+		.kill 1 Hardknuckle Matriarch|q 12530/1
+		info TODO: verify in-game
+	step
+		goto 55.0,69.1
+		.talk High-Shaman Rakjak##28082
+		..turnin The Ape Hunter's Slave##12529
+		..turnin Tormenting the Softknuckles##12530
+		..accept The Wasp Hunter's Apprentice##12533
+		info Return to Frenzyheart Hill.
+		info TODO: verify in-game
+	step
+		goto 55.5,69.7
+		.talk Elder Harkek##28138
+		..accept The Sapphire Queen##12534
+		info TODO: verify in-game
+	step
+		goto 59.6,75.8
+		.kill 6 Sapphire Hive Wasp|q 12533/1
+		.kill 9 Sapphire Hive Drone|q 12533/2
+		info Fly southeast into the Sapphire Hive.
+		info TODO: verify in-game
+	step
+		goto 57.1,79.3
+		.kill Sapphire Hive Queen##28087|n
+		.get Stinger of the Sapphire Queen|q 12534/1
+		info Fight your way to the end of the tunnel. The path down starts at 59.4,79.1.
+		info TODO: verify in-game
+	step
+		goto 55.0,69.1
+		.talk High-Shaman Rakjak##28082
+		..turnin The Wasp Hunter's Apprentice##12533
+		..turnin The Sapphire Queen##12534
+		info Return to Frenzyheart Hill.
+		info TODO: verify in-game
+	step
+		goto 55.5,69.7
+		.talk Elder Harkek##28138
+		..accept Flown the Coop!##12532
+		info TODO: verify in-game
+	step
+		goto 55.5,69.7
+		.' Click the Chicken Escapees|tip They run around the camp.
+		.get 12 Captured Chicken|q 12532/1
+		info TODO: verify in-game
+	step
+		goto 55.5,69.7
+		.talk Elder Harkek##28138
+		..turnin Flown the Coop!##12532
+		..accept The Underground Menace##12531
+		info TODO: verify in-game
+	step
+		goto 55.0,69.1
+		.talk High-Shaman Rakjak##28082
+		..accept Mischief in the Making##12535
+		info TODO: verify in-game
+	step
+		goto 56.6,84.6
+		.' Click the Skyreach Crystal Formations|tip They're white crystal clusters along the river bank.
+		.get 8 Skyreach Crystal Cluster|q 12535/1
+		info Fly south to the river.
+		info TODO: verify in-game
+	step
+		goto 49.8,85.0
+		.' Walk over Serfex's dirt mound to make him come up
+		.kill Serfex the Reaver##28083|n
+		.get Claw of Serfex|q 12531/1
+		info He's underground in one of two spots on the river.
+		info TODO: verify in-game
+	step
+		goto 55.0,69.1
+		.talk High-Shaman Rakjak##28082
+		..turnin The Underground Menace##12531
+		..turnin Mischief in the Making##12535
+		..accept A Rough Ride##12536
+		info Return to Frenzyheart Hill.
+		info TODO: verify in-game
+	step
+		goto 57.3,68.4
+		.talk Captive Crocolisk##28298
+		..'Tell him let's do this
+		.' Ride to Mistwhisper Refuge|goal Travel to Mistwhisper Refuge.|q 12536/1
+		info You arrive just southeast of the refuge.
+		info TODO: verify in-game
+	step
+		goto 46.2,39.7
+		'Use Zepik's Hunting Horn if Zepik isn't next to you|use Zepik's Hunting Horn##38512
+		.talk Zepik the Gorloc Hunter##28216
+		..turnin A Rough Ride##12536
+		..accept Lightning Definitely Strikes Twice##12537
+		..accept The Mist Isn't Listening##12538
+		info TODO: verify in-game
+	step
+		goto 45.4,37.2
+		.' Use your Skyreach Crystal Clusters at the base of the weather shrine|use Skyreach Crystal Clusters##38510|tip It's a tall stone monument.
+		.' Click the crystals that appear next to the shrine to shatter them
+		.' Sabotage the Mistwhisper Weather Shrine|goal Sabotage the Mistwhisper Weather Shrine|q 12537/1
+		info TODO: verify in-game
+	step
+		goto 45.5,39.8
+		.' Kill 12 Mistwhisper Gorlocs|goal 12 Mistwhisper Gorloc|q 12538/1
+		info TODO: verify in-game
+	step
+		goto 46.2,39.7
+		'Use Zepik's Hunting Horn if Zepik isn't next to you|use Zepik's Hunting Horn##38512
+		.talk Zepik the Gorloc Hunter##28216
+		..turnin Lightning Definitely Strikes Twice##12537
+		..turnin The Mist Isn't Listening##12538
+		..accept Hoofing It##12539
+		info TODO: verify in-game
+	step
+		goto 55.0,69.1
+		.talk High-Shaman Rakjak##28082
+		..turnin Hoofing It##12539
+		..accept Just Following Orders##12540
+		info Return to Frenzyheart Hill.
+		info TODO: verify in-game
+	step
+		goto 55.7,64.9
+		.talk Injured Rainspeaker Oracle##28217
+		..'Pull it to its feet
+		.kill the crocolisk that attacks|n
+		.' Locate the Injured Rainspeaker Oracle|goal Locate Injured Rainspeaker Oracle|q 12540/1
+		info Fly north.
+		info TODO: verify in-game
+	step
+		goto 55.7,64.9
+		.talk Injured Rainspeaker Oracle##28217
+		..turnin Just Following Orders##12540
+		..accept Fortunate Misunderstandings##12570
+		info TODO: verify in-game
+	step
+		goto 55.7,64.9
+		.talk Injured Rainspeaker Oracle##28217
+		..'Tell it you're ready to travel to its village
+		.' Escort the Injured Rainspeaker Oracle to Rainspeaker Canopy|goal Escort the Injured Rainspeaker Oracle to Rainspaker Canopy|q 12570/1
+		info TODO: verify in-game
+	step
+		goto 54.6,56.3
+		.talk High-Oracle Soo-say##28027
+		..turnin Fortunate Misunderstandings##12570
+		..accept Make the Bad Snake Go Away##12571
+		info TODO: verify in-game
+	step
+		'Use Lafoo's Bug Bag if Lafoo isn't next to you|use Lafoo's Bug Bag##38622
+		.talk Lafoo##28120
+		..accept Gods like Shiny Things##12572
+		info TODO: verify in-game
+	step
+		goto 57.5,52.4
+		.kill 1 Venomtip|q 12571/2|tip He walks back and forth on a small path near the waterfall.
+		info Head north.
+		info TODO: verify in-game
+	step
+		goto 52.4,53.2
+		.kill 10 Emperor Cobra|q 12571/1
+		.' Stand on the faint sparkles on the ground so Lafoo digs them up|tip Use Lafoo's Bug Bag if Lafoo isn't with you.
+		.' Click the items he digs up
+		.get 6 Shiny Treasures|q 12572/1
+		info TODO: verify in-game
+	step
+		goto 54.6,56.3
+		.talk High-Oracle Soo-say##28027
+		..turnin Gods like Shiny Things##12572
+		..turnin Make the Bad Snake Go Away##12571
+		..accept Making Peace##12573
+		info Return to Rainspeaker Canopy.
+		info TODO: verify in-game
+	step
+		goto 51.3,64.6
+		.talk Shaman Vekjik##28315
+		..'Tell him you brought an offering
+		.' Extend the Peace Offering to Shaman Vekjik|goal Extend Peace Offering to Shaman Vekjik|q 12573/1
+		info Fly southwest.
+		info TODO: verify in-game
+	step
+		goto 54.6,56.3
+		.talk High-Oracle Soo-say##28027
+		..turnin Making Peace##12573
+		..accept Back So Soon?##12574
+		info Return to Rainspeaker Canopy.
+		info TODO: verify in-game
+	step
+		goto 42.1,38.6
+		.talk Mistcaller Soo-gan##28114
+		..turnin Back So Soon?##12574
+		..accept The Lost Mistwhisper Treasure##12575
+		..accept Forced Hand##12576
+		info Fly northwest to Mistwhisper Refuge.
+		info TODO: verify in-game
+	step
+		goto 41.6,19.5
+		.kill 1 Warlord Tartek|q 12575/1|tip He comes in on a red dragon when you reach the treasure.
+		.' Click the Mistwhisper Treasure|tip It's a glowing yellow orb over a tree stump altar.
+		.get Mistwhisper Treasure|q 12575/2
+		info Fly northwest.
+		info TODO: verify in-game
+	step
+		goto 40.4,26.4
+		.kill 8 Frenzyheart Spearbearer|q 12576/1
+		.kill 6 Frenzyheart Scavenger|q 12576/2
+		info Head down from the treasure.
+		info TODO: verify in-game
+	step
+		goto 42.1,38.6
+		.talk Mistcaller Soo-gan##28114
+		..turnin The Lost Mistwhisper Treasure##12575
+		..turnin Forced Hand##12576
+		..accept Home Time!##12577
+		info Return to Mistwhisper Refuge.
+		info TODO: verify in-game
+	step
+		goto 54.6,56.3
+		.talk High-Oracle Soo-say##28027
+		..turnin Home Time!##12577
+		..accept The Angry Gorloc##12578
+		info Fly to Rainspeaker Canopy.
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		..turnin Back Through the Waygate##12797
+		..accept Reclamation##12546
+		info Fly northeast to the Avatar of Freya.
+		info TODO: verify in-game
+	step
+		goto 75.3,54.1
+		.' Travel to Mosswalker Village|goal Travel to Mosswalker Village.|q 12578/1
+		info Fly east.
+		info TODO: verify in-game
+	step
+		goto 74.7,51.0
+		'Use Moodle's Stress Ball if Moodle isn't next to you|use Moodle's Stress Ball##38624
+		.talk Moodle##28122
+		..turnin The Angry Gorloc##12578
+		..accept The Mosswalker Savior##12580
+		..accept Lifeblood of the Mosswalker Shrine##12579
+		info TODO: verify in-game
+	step
+		goto 75.4,52.4
+		.' Kill the undead standing over the Mosswalker Victims, then talk to the victims
+		.' Rescue 6 Mosswalker Victims|goal 6 Mosswalker Victims Rescued|q 12580/1
+		info TODO: verify in-game
+	step
+		goto 68.9,54.6
+		.' Click the Lifeblood Shards|tip They're small red crystals on the ground near the big red crystals.
+		.get 10 Lifeblood Shard|q 12579/1
+		info Fly southwest.
+		info TODO: verify in-game
+	step
+		goto 74.7,51.0
+		'Use Moodle's Stress Ball if Moodle isn't next to you|use Moodle's Stress Ball##38624
+		.talk Moodle##28122
+		..turnin The Mosswalker Savior##12580
+		..turnin Lifeblood of the Mosswalker Shrine##12579
+		info TODO: verify in-game
+	step
+		goto 74.7,51.0
+		'Use Moodle's Stress Ball if Moodle isn't next to you|use Moodle's Stress Ball##38624
+		.talk Moodle##28122
+		..accept A Hero's Burden##12581
+		info It's a group quest: Artruis the Heartless is an elite inside the bottom of The Lifeblood Pillar. Look for a group while you do Reclamation.
+		info Skip this step and the A Hero's Burden steps after Reclamation if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 70.0,37.0
+		.' Use the Omega Rune to take control of The Etymidian|use Omega Rune##38709
+		.' Kill 200 Lesser Undead on the way up the slope
+		.kill 1 Bythius the Flesh-Shaper|q 12546/1
+		.kill 1 Urgreth of the Thousand Tombs|q 12546/2
+		.kill 1 Hailscorn|q 12546/3
+		info Fly northeast to The Avalanche. Try out the abilities on the lesser undead first:
+		info 1 Colossal Strike: frontal cleave, spam it. 2 Cataclysm: big AoE that kills lesser undead outright. 3 Reconstruction: heals you to full. 4 Titanic Surge: restores all your mana, but you take extra damage while it charges. 5 Maker's Sanctuary: drops combat and makes you immune; use it when you're about to die.
+		info Bythius: spam Colossal Strike and Cataclysm, and Reconstruction when you're low.
+		info Urgreth: when he "begins to emanate a powerful dark energy", run away or you die instantly. Use Reconstruction and Titanic Surge while he walks back to you.
+		info Hailscorn: spam Colossal Strike, and save Cataclysm for when he calls forth an army of frozen corpses.
+		info TODO: verify in-game
+	step
+		goto 64.5,48.7
+		.talk Avatar of Freya##27801
+		..turnin Reclamation##12546
+		info Fly southwest to Freya.
+		info TODO: verify in-game
+	step
+		goto 70.8,58.7
+		.' Enter the cave at the bottom of The Lifeblood Pillar and follow the path to 72.2,57.3
+		.kill Artruis the Heartless|q 12581/1
+		info At 30% he becomes immune and you must kill either Jaloot (a wolvar) or Zepik (a gorloc). You become friendly with whoever you don't kill. Kill Jaloot to side with the Frenzyheart, or Zepik to side with the Oracles; you can switch later with the same daily.
+		info Skip this step if you didn't take A Hero's Burden.
+		info TODO: verify in-game
+	step
+		goto 72.1,57.4
+		.' Click Artruis's Phylactery
+		..turnin A Hero's Burden##12581
+		info Skip this step if you didn't kill Artruis.
+		info TODO: verify in-game
+	step
+		goto 72.0,57.0
+		.talk Zepik the Gorloc Hunter##28668
+		..accept Frenzyheart Champion##12582
+		..turnin Frenzyheart Champion##12582
+		..accept Return of the Lich Hunter##12692
+		info Skip this step if you killed Zepik or didn't do A Hero's Burden.
+		info TODO: verify in-game
+		only if not ZGV.completedQuests[12689]
+	step
+		goto 72.5,57.5
+		.talk Jaloot##28667
+		..accept Hand of the Oracles##12689
+		..turnin Hand of the Oracles##12689
+		..accept Return of the Friendly Dryskin##12695
+		info Skip this step if you killed Jaloot or didn't do A Hero's Burden.
+		info TODO: verify in-game
+		only if not ZGV.completedQuests[12582]
+	step
+		goto 55.5,69.7
+		.talk Elder Harkek##28138
+		..turnin Return of the Lich Hunter##12692
+		info Fly to Frenzyheart Hill.
+		info TODO: verify in-game
+		only if ZGV.completedQuests[12582]
+	step
+		goto 54.6,56.3
+		.talk High-Oracle Soo-say##28027
+		..turnin Return of the Friendly Dryskin##12695
+		info Fly to Rainspeaker Canopy.
+		info TODO: verify in-game
+		only if ZGV.completedQuests[12689]
+	step
+		'Hearth to Dalaran|goto Dalaran|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+]])
