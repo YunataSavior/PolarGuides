@@ -13712,3 +13712,1574 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Borean Tundra",
 		.' Go to the other zeppelin platform and ride the zeppelin to Howling Fjord|goto Howling Fjord|noway|c
 		info TODO: verify in-game
 ]])
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Howling Fjord",[[
+	author YunataSavior
+	next Ding80's Horde Leveling Guides\\Dragonblight
+	startlevel 71
+
+	step
+		'Go down the zeppelin tower to 78.5,29.0|goto Howling Fjord,78.5,29.0
+		.talk Apothecary Lysander##24126
+		..accept The New Plague##11167
+		info Welcome to Vengeance Landing.
+		info TODO: verify in-game
+	step
+		goto 79.0,29.7
+		.talk Bat Handler Adeline##27344
+		..fpath Vengeance Landing
+		info TODO: verify in-game
+	step
+		goto 79.2,31.2
+		.talk Pontius##23938
+		..accept Let Them Eat Crow##11227
+		info TODO: verify in-game
+	step
+		goto 78.6,31.2
+		.talk High Executor Anselm##23780
+		..accept War is Hell##11270
+		info TODO: verify in-game
+	step
+		goto 75.8,31.5
+		.' Use your Plaguehound Cage to summon a Plaguehound|use Plaguehound Cage##33221
+		.' Use the Plaguehound's Sic 'Em! ability on Fjord Crows flying overhead to bring them down
+		.kill Fjord Crows|n
+		.collect 5 Crow Meat##33238|q 11227|n
+		.' Use the Crow Meat to feed your Plaguehound|use Crow Meat##33238
+		.goal 5 Plaguehound Fed|q 11227/1
+		.' Use your Burning Torch next to Alliance and Forsaken corpses|use Burning Torch##33278
+		.goal 10 Fallen Combatant burned|q 11270/1
+		info Ride southwest to the Bleeding Vale.
+		info TODO: verify in-game
+	step
+		goto 81.0,35.5
+		.' Click the Plague Containers on the wrecked ship
+		.get 10 Intact Plague Container|q 11167/1
+		info Ride southeast onto the Wrecked Ship.
+		info TODO: verify in-game
+	step
+		goto 79.2,31.2
+		.talk Pontius##23938
+		..turnin Let Them Eat Crow##11227
+		..accept Sniff Out the Enemy##11253
+		info Return to Vengeance Landing.
+		info TODO: verify in-game
+	step
+		goto 78.5,29.0
+		.talk Apothecary Lysander##24126
+		..turnin The New Plague##11167
+		..accept Spiking the Mix##11168
+		info TODO: verify in-game
+	step
+		goto 78.6,31.2
+		.talk High Executor Anselm##23780
+		..turnin War is Hell##11270
+		..accept Reports from the Field##11221
+		info TODO: verify in-game
+	step
+		goto 76.9,20.0
+		.kill Giant Tidecrawlers|n
+		.get 3 Giant Toxin Gland|q 11168/1
+		info Head northeast along the coast.
+		info TODO: verify in-game
+	step
+		'Go inside the cave to 75.9,19.7|goto 75.9,19.7
+		.' Click the Dragonskin Scroll
+		..turnin Sniff Out the Enemy##11253
+		..accept The Dragonskin Map##11254
+		info TODO: verify in-game
+	step
+		goto 78.5,29.0
+		.talk Apothecary Lysander##24126
+		..turnin Spiking the Mix##11168
+		..accept Test at Sea##11170
+		info Return to Vengeance Landing.
+		info TODO: verify in-game
+	step
+		goto 78.6,31.2
+		.talk High Executor Anselm##23780
+		..turnin The Dragonskin Map##11254
+		..accept The Offensive Begins##11295
+		info TODO: verify in-game
+	step
+		goto 79.0,29.8
+		.talk Bat Handler Camille##23816
+		.' Tell her to send you on the bombing mission
+		.' Use your Plague Vials on the ships as you fly over them|use Plague Vials##33349
+		.goal 16 North Fleet Reservist Infected|q 11170/1
+		info Use the vials every time they're off cooldown, or one flight won't be enough.
+		info TODO: verify in-game
+	step
+		goto 78.5,29.0
+		.talk Apothecary Lysander##24126
+		..turnin Test at Sea##11170
+		..accept New Agamand##11304
+		info TODO: verify in-game
+	step
+		goto 77.6,34.7
+		.talk Deathstalker Razael##23998
+		.' Listen to Razael's Report|goal Listen to Razael's Report|q 11221/1
+		info Ride southwest.
+		info TODO: verify in-game
+	step
+		goto 79.5,36.2
+		.talk Dark Ranger Lyana##23778
+		.' Listen to Lyana's Report|goal Listen to Lyana's Report|q 11221/2
+		info Ride southeast.
+		info TODO: verify in-game
+	step
+		goto 78.6,31.2
+		.talk High Executor Anselm##23780
+		..turnin Reports from the Field##11221
+		..accept The Windrunner Fleet##11229
+		info Return to Vengeance Landing.
+		info TODO: verify in-game
+	step
+		goto 79.0,29.8
+		.talk Bat Handler Camille##23816
+		..'Tell her to send you to deliver the message|goto 84.6,36.3,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 84.7,36.5
+		.talk Captain Harker##24037
+		..turnin The Windrunner Fleet##11229
+		..accept Ambushed!##11230
+		info TODO: verify in-game
+	step
+		'Run around on the ships
+		.kill 15 North Fleet Marine|q 11230/1
+		info TODO: verify in-game
+	step
+		goto 84.7,36.5
+		.talk Captain Harker##24037
+		..turnin Ambushed!##11230
+		..accept Guide Our Sights##11232
+		info TODO: verify in-game
+	step
+		goto 80.3,38.2
+		.' Use your Cannoneer's Smoke Flare next to the cannon|use Cannoneer's Smoke Flare##33335
+		.goal Eastern Cannon Marked|q 11232/1
+		info Swim west and go through the entrance in the barricade.
+		info TODO: verify in-game
+	step
+		goto 79.3,40.1
+		.' Use your Cannoneer's Smoke Flare next to the cannon|use Cannoneer's Smoke Flare##33335
+		.goal Western Cannon Marked|q 11232/2
+		info Clear your way southwest.
+		info TODO: verify in-game
+	step
+		goto 79.5,36.2
+		.talk Dark Ranger Lyana##23778
+		..turnin Guide Our Sights##11232
+		..accept Landing the Killing Blow##11233
+		info Ride northwest.
+		info TODO: verify in-game
+	step
+		goto 82.2,40.8
+		.kill 1 Sergeant Lorric|q 11233/3
+		info Ride southeast into the camp.
+		info TODO: verify in-game
+	step
+		goto 81.5,43.4
+		.kill 1 Captain Olster|q 11233/1
+		info TODO: verify in-game
+	step
+		goto 83.2,43.3
+		.kill 1 Lieutenant Celeyne|q 11233/2
+		info TODO: verify in-game
+	step
+		goto 83.2,43.2
+		.talk Apothecary Hanes##23784
+		..accept Trail of Fire##11241
+		.' Escort Apothecary Hanes to safety|goal Rescue Apothecary Hanes|q 11241/1
+		info The escort ends at Dark Ranger Lyana.
+		info TODO: verify in-game
+	step
+		goto 79.5,36.2
+		.talk Dark Ranger Lyana##23778
+		..turnin Landing the Killing Blow##11233
+		..accept Report to Anselm##11234
+		info TODO: verify in-game
+	step
+		goto 78.6,31.2
+		.talk High Executor Anselm##23780
+		..turnin Report to Anselm##11234
+		info Ride north to Vengeance Landing.
+		info Don't take the follow-up, A Score to Settle. It's a dungeon quest that Ding80 never turns in.
+		info TODO: verify in-game
+	step
+		goto 78.5,29.0
+		.talk Apothecary Lysander##24126
+		..turnin Trail of Fire##11241
+		info TODO: verify in-game
+	step
+		'Go southwest up the Vengeance Lift to 71.1,39.1|goto 71.1,39.1
+		.talk Sergeant Gorth##24027
+		..turnin The Offensive Begins##11295
+		..accept A Lesson in Fear##11282
+		info TODO: verify in-game
+	step
+		goto 71.5,39.2
+		.talk Longrunner Nanik##28314
+		..accept Help for Camp Winterhoof##12566
+		info TODO: verify in-game
+	step
+		goto 69.1,38.5
+		.kill Winterskorn Defenders|n
+		.' Killing the defenders makes Oric the Baleful, Ulf the Bloodletter and Gunnar Thorvardsson appear, with a yell
+		.' Use your Forsaken Banner on each hero's corpse|use Forsaken Banner##33563
+		.goal Oric the Baleful's Corpse Impaled|q 11282/1
+		.goal Ulf the Bloodletter's Corpse Impaled|q 11282/2
+		.goal Gunnar Thorvardsson's Corpse Impaled|q 11282/3
+		info They may already be up. Oric is around 69.1,38.5, Ulf around 69.4,39.5 and Gunnar around 69.6,40.1.
+		info TODO: verify in-game
+	step
+		goto 71.1,39.1
+		.talk Sergeant Gorth##24027
+		..turnin A Lesson in Fear##11282
+		..accept Baleheim Bodycount##11283
+		..accept Baleheim Must Burn!##11285
+		info TODO: verify in-game
+	step
+		goto 66.7,39.8
+		.' Use Gorth's Torch next to the watchtower|use Gorth's Torch##33472
+		.goal Winterskorn Watchtower Burned|q 11285/2
+		info Ride west to Baleheim. Kill every Vrykul in your way between the steps.
+		info The watchtower is the first building with an entrance.
+		info TODO: verify in-game
+	step
+		goto 66.2,39.6
+		.' Use Gorth's Torch next to the bridge|use Gorth's Torch##33472
+		.goal Winterskorn Bridge Burned|q 11285/3
+		info TODO: verify in-game
+	step
+		goto 64.9,40.9
+		.' Use Gorth's Torch next to the dwelling|use Gorth's Torch##33472
+		.goal Winterskorn Dwelling Burned|q 11285/1
+		info TODO: verify in-game
+	step
+		goto 63.8,40.0
+		.' Use Gorth's Torch next to the barracks|use Gorth's Torch##33472
+		.goal Winterskorn Barracks Burned|q 11285/4
+		info You can burn it from the outside.
+		info TODO: verify in-game
+	step
+		'Kill Winterskorn Vrykul all around Baleheim
+		.goal 16 Baleheim Bodycount|q 11283/1
+		info TODO: verify in-game
+	step
+		goto 71.1,39.1
+		.talk Sergeant Gorth##24027
+		..turnin Baleheim Bodycount##11283
+		..turnin Baleheim Must Burn!##11285
+		..accept The Ambush##11303
+		info TODO: verify in-game
+	step
+		goto 65.9,36.8
+		.talk Lydell##24458
+		..turnin The Ambush##11303
+		..accept Adding Injury to Insult##12481
+		info Ride northwest.
+		info TODO: verify in-game
+	step
+		goto 64.2,38.8
+		.' Use your Vrykul Insult on Bjorn Halgurdsson|use Vrykul Insult##33581
+		.goal Bjorn Halgurdsson insulted|q 12481/1
+		info Clear your way southwest to him.
+		info TODO: verify in-game
+	step
+		goto 65.9,36.8
+		.' RUN straight back to Lydell
+		.goal Bjorn Halgurdsson defeated|q 12481/2
+		info Bjorn follows you and dies in the ambush.
+		info TODO: verify in-game
+	step
+		goto 65.9,36.8
+		.talk Lydell##24458
+		..turnin Adding Injury to Insult##12481
+		info TODO: verify in-game
+	step
+		goto 49.6,11.6
+		.talk Celea Frozenmane##24032
+		..fpath Camp Winterhoof
+		info Ride northwest to Camp Winterhoof.
+		info TODO: verify in-game
+	step
+		goto 48.0,10.7
+		.talk Chieftain Ashtotem##24129
+		..turnin Help for Camp Winterhoof##12566
+		info TODO: verify in-game
+	step
+		goto 48.4,11.0
+		.talk Ahota Whitefrost##24127
+		..accept Hasty Preparations##11271
+		info TODO: verify in-game
+	step
+		goto 49.3,12.0
+		.talk Nokoma Snowseer##24123
+		..accept Making the Horn##11275
+		info TODO: verify in-game
+	step
+		goto 48.9,12.0
+		.talk Wind Tamer Kagan##24256
+		..accept Suppressing the Elements##11311
+		info TODO: verify in-game
+	step
+		goto 49.5,10.8
+		.talk Bori Wintertotem##24033
+		..home Camp Winterhoof
+		info Ding80 hearths back here later in the zone.
+		info TODO: verify in-game
+	step
+		goto 50.9,11.0
+		.kill Frosthorn Rams|n
+		.get 6 Undamaged Ram Horn|q 11275/1
+		.' Click the Spotted Hippogryph Down feathers on the ground
+		.get 10 Spotted Hippogryph Down|q 11271/1
+		info Ride northeast. You don't need all 10 feathers now; pick them up whenever you see them around the camp.
+		info TODO: verify in-game
+	step
+		goto 52.5,6.5
+		.' Kill Iceshard Elementals
+		.kill 8 Mountain Elementals|q 11311/1
+		info You can find more Iceshard Elementals at 51.2,2.9.
+		info TODO: verify in-game
+	step
+		goto 48.9,12.0
+		.talk Wind Tamer Kagan##24256
+		..turnin Suppressing the Elements##11311
+		info Return to Camp Winterhoof.
+		info TODO: verify in-game
+	step
+		goto 49.3,12.0
+		.talk Nokoma Snowseer##24123
+		..turnin Making the Horn##11275
+		..accept Mimicking Nature's Call##11281
+		..accept The Frozen Glade##11312
+		info TODO: verify in-game
+	step
+		goto 48.4,10.4
+		.talk Junat the Wanderer##24234
+		..accept Keeping Watch on the Interlopers##11297
+		info TODO: verify in-game
+	step
+		goto 49.2,12.2
+		.talk Longrunner Pembe##24362
+		..accept The Book of Runes##11350
+		info TODO: verify in-game
+	step
+		goto 48.1,10.5
+		.talk Sage Edan##24390
+		..accept March of the Giants##11365
+		info Skip this step if you don't have a group. It's a group quest; the Runed Stone Giants hit hard.
+		info TODO: verify in-game
+	step
+		goto 52.4,3.7
+		.' Use your Carved Horn under the Frozen Waterfall|use Carved Horn##33450
+		.kill Frostgore|n
+		.goal Test Nokoma's Horn|q 11281/1
+		info Ride northeast.
+		info TODO: verify in-game
+	step
+		goto 61.5,22.8
+		.talk Lurielle##24117
+		..turnin The Frozen Glade##11312
+		..accept Spirits of the Ice##11313
+		info Ride southeast to the Frozen Glade.
+		info TODO: verify in-game
+	step
+		goto 60.6,22.4
+		.kill Ice Elementals|n
+		.get 15 Icy Core|q 11313/1
+		info TODO: verify in-game
+	step
+		goto 61.5,22.8
+		.talk Lurielle##24117
+		..turnin Spirits of the Ice##11313
+		..accept The Fallen Sisters##11314
+		..accept Wild Vines##11315
+		info TODO: verify in-game
+	step
+		goto 65.0,28.5
+		.kill Iron Rune Stonecallers and Iron Rune Binders|n
+		.collect 1 Book of Runes - Chapter 1##33778|q 11350|n
+		.collect 1 Book of Runes - Chapter 2##33779|q 11350|n
+		.collect 1 Book of Runes - Chapter 3##33780|q 11350|n
+		.' Click a chapter in your bags to combine them|use Book of Runes - Chapter 1##33778
+		.get The Book of Runes|q 11350/1
+		info Head east.
+		info TODO: verify in-game
+	step
+		goto 69.8,29.8
+		.kill Runed Stone Giants|n
+		.' Use your Runeseeking Pick on their corpses|use Runeseeking Pick##33806
+		.goal 4 Runed Stone Giant Corpse Analyzed|q 11365/1
+		info Skip this step if you didn't take March of the Giants.
+		info TODO: verify in-game
+	step
+		goto 53.3,27.8
+		.kill 8 Scarlet Ivy|q 11315/1
+		.' Weaken Chill Nymphs, then use Lurielle's Pendant on them|use Lurielle's Pendant##33606
+		.goal 7 Chill Nymphs Freed|q 11314/1
+		info Ride southwest to the Vibrant Glade.
+		info TODO: verify in-game
+	step
+		goto 61.5,22.8
+		.talk Lurielle##24117
+		..turnin The Fallen Sisters##11314
+		..turnin Wild Vines##11315
+		..accept Spawn of the Twisted Glade##11316
+		..accept Seeds of the Blacksouled Keepers##11319
+		info Ride northeast back to the Frozen Glade.
+		info TODO: verify in-game
+	step
+		goto 54.7,20.5
+		.kill 10 Thornvine Creeper|q 11316/1
+		.kill Spores|n
+		.' Use your Enchanted Ice Core on Spore corpses|use Enchanted Ice Core##33607
+		.goal 8 Spores frozen|q 11319/1
+		info Ride northwest to the Twisted Glade.
+		info TODO: verify in-game
+	step
+		goto 49.3,12.0
+		.talk Nokoma Snowseer##24123
+		..turnin Mimicking Nature's Call##11281
+		info Ride northwest back to Camp Winterhoof.
+		info TODO: verify in-game
+	step
+		goto 49.2,12.2
+		.talk Longrunner Pembe##24362
+		..turnin The Book of Runes##11350
+		..accept Mastering the Runes##11351
+		info TODO: verify in-game
+	step
+		goto 48.1,10.5
+		.talk Sage Edan##24390
+		..turnin March of the Giants##11365
+		..accept The Lodestone##11366
+		info Skip this step if you didn't take March of the Giants.
+		info TODO: verify in-game
+	step
+		goto 71.2,28.7
+		.' Click the Iron Rune Carving Tools under one of the canopies
+		.get Iron Rune Carving Tools|q 11351/1
+		info Ride southeast to Giants' Run.
+		info If they aren't here, check the canopies at 67.5,23.5, 69.1,22.8, 72.4,17.8, 73.4,24.9 and 67.5,29.2.
+		info TODO: verify in-game
+	step
+		goto 71.6,17.6
+		.' Use your Rune Sample next to the Broken Tablet|use Rune Sample##33819
+		.goal Compare Runes with the Broken Tablet|q 11366/1
+		info It's in the northern part of Giants' Run.
+		info Skip this step if you didn't take The Lodestone.
+		info TODO: verify in-game
+	step
+		goto 61.5,22.8
+		.talk Lurielle##24117
+		..turnin Spawn of the Twisted Glade##11316
+		..turnin Seeds of the Blacksouled Keepers##11319
+		..accept Keeper Witherleaf##11428
+		info Ride northwest to the Frozen Glade.
+		info TODO: verify in-game
+	step
+		goto 53.7,18.6
+		.kill 1 Keeper Witherleaf|q 11428/1
+		info Ride northwest to the Twisted Glade and search him out.
+		info TODO: verify in-game
+	step
+		goto 49.2,12.2
+		.talk Longrunner Pembe##24362
+		..turnin Mastering the Runes##11351
+		..accept The Rune of Command##11352
+		info Ride back to Camp Winterhoof.
+		info TODO: verify in-game
+	step
+		goto 48.0,10.7
+		.talk Chieftain Ashtotem##24129
+		..accept Skorn Must Fall!##11256
+		info Ding80 forgets this one, but you need it for the Winterhoof Emblem at Skorn.
+		info TODO: verify in-game
+	step
+		goto 48.1,10.5
+		.talk Sage Edan##24390
+		..turnin The Lodestone##11366
+		info Don't take the follow-up, Demolishing Megalith.
+		info Skip this step if you didn't take The Lodestone.
+		info TODO: verify in-game
+	step
+		goto 61.5,22.8
+		.talk Lurielle##24117
+		..turnin Keeper Witherleaf##11428
+		info Ride southeast to the Frozen Glade.
+		info TODO: verify in-game
+	step
+		goto 71.9,24.6
+		.' Use your Rune of Command on a non-aggressive Stone Giant to control it|use Rune of Command##33796
+		.goal Stone Giant controlled|q 11352/1
+		.kill Binder Murdis|q 11352/2
+		info Ride east to Giants' Run.
+		info TODO: verify in-game
+	step
+		goto 44.4,26.2
+		.' Use your Winterhoof Emblem to summon a Winterhoof Brave|use Winterhoof Emblem##33340
+		.talk Winterhoof Brave##24130
+		..turnin Skorn Must Fall!##11256
+		..accept Gruesome, But Necessary##11257
+		..accept Burn Skorn, Burn!##11258
+		..accept Towers of Certain Doom##11259
+		info Ride west to Skorn.
+		info TODO: verify in-game
+	step
+		goto 43.7,28.5
+		.kill Winterskorn Vrykul|n
+		.' Use The Brave's Machete on their corpses|use The Brave's Machete##33342
+		.' Use your Brave's Torch inside the Northwest Longhouse|use Brave's Torch##33343
+		.goal Northwest Longhouse Set Ablaze|q 11258/1
+		info Dismember every Vrykul you kill in Skorn. If your brave dies, summon a new one.
+		info TODO: verify in-game
+	step
+		goto 43.6,30.3
+		.' Use the Brave's Flare next to the Northwest Tower|use Brave's Flare##33344
+		.goal Northwest Tower Targeted|q 11259/1
+		info Clear your way south.
+		info TODO: verify in-game
+	step
+		goto 46.4,28.2
+		.' Use your Brave's Torch inside the Northeast Longhouse|use Brave's Torch##33343
+		.goal Northeast Longhouse Set Ablaze|q 11258/2
+		info Clear your way northeast.
+		info TODO: verify in-game
+	step
+		goto 46.0,30.7
+		.' Use your Brave's Torch inside the Barracks|use Brave's Torch##33343
+		.goal Barracks Set Ablaze|q 11258/3
+		info Clear your way south.
+		info TODO: verify in-game
+	step
+		goto 46.5,33.2
+		.' Use the Brave's Flare next to the East Tower|use Brave's Flare##33344
+		.goal East Tower Targeted|q 11259/2
+		info TODO: verify in-game
+	step
+		goto 46.9,37.1
+		.' Use the Brave's Flare next to the Southeast Tower|use Brave's Flare##33344
+		.goal Southeast Tower Targeted|q 11259/4
+		info TODO: verify in-game
+	step
+		goto 45.3,27.0
+		.kill Winterskorn Vrykul|n
+		.' Use The Brave's Machete on their corpses|use The Brave's Machete##33342
+		.goal 20 Winterskorn Vrykul Dismembered|q 11257/1
+		.get Vrykul Scroll of Ascension|n
+		.' Click the Vrykul Scroll of Ascension in your bags|use Vrykul Scroll of Ascension##33345
+		..accept Stop the Ascension!##11260
+		info Keep killing until the scroll drops; it's a random drop.
+		info TODO: verify in-game
+	step
+		goto 44.9,35.0
+		.' Use your Vrykul Scroll of Ascension next to the Thane's Pyre|use Vrykul Scroll of Ascension##33346
+		.kill 1 Halfdan the Ice-Hearted|q 11260/1
+		info TODO: verify in-game
+	step
+		goto 43.2,35.8
+		.' Use the Brave's Flare next to the Southwest Tower|use Brave's Flare##33344
+		.goal Southwest Tower Targeted|q 11259/3
+		info Clear your way southwest, past the bonfire.
+		info TODO: verify in-game
+	step
+		'Use your Winterhoof Emblem to summon a Winterhoof Brave|use Winterhoof Emblem##33340
+		.talk Winterhoof Brave##24130
+		..turnin Gruesome, But Necessary##11257
+		..turnin Burn Skorn, Burn!##11258
+		..turnin Towers of Certain Doom##11259
+		..accept The Conqueror of Skorn!##11261
+		info TODO: verify in-game
+	step
+		goto 49.2,12.2
+		.talk Longrunner Pembe##24362
+		..turnin The Rune of Command##11352
+		info Ride northeast back to Camp Winterhoof.
+		info TODO: verify in-game
+	step
+		goto 48.2,10.7
+		.talk Greatmother Ankha##24135
+		..turnin Stop the Ascension!##11260
+		info TODO: verify in-game
+	step
+		goto 48.0,10.7
+		.talk Chieftain Ashtotem##24129
+		..turnin The Conqueror of Skorn!##11261
+		..accept Dealing With Gjalerbron##11263
+		info TODO: verify in-game
+	step
+		goto 48.2,10.7
+		.talk Greatmother Ankha##24135
+		..accept Of Keys and Cages##11265
+		..accept Find Sage Mistwalker##11287
+		info TODO: verify in-game
+	step
+		goto 48.4,11.0
+		.talk Ahota Whitefrost##24127
+		..turnin Hasty Preparations##11271
+		info Ding80 never turns this in. If you're still short of feathers, they lie around the camp.
+		info TODO: verify in-game
+	step
+		goto 31.2,24.5
+		.talk Sage Mistwalker##24186
+		..turnin Find Sage Mistwalker##11287
+		..accept The Artifacts of Steel Gate##11286
+		info Ride west to the Steel Gate.
+		info TODO: verify in-game
+	step
+		goto 31.3,24.4
+		.talk Longrunner Skycloud##24209
+		..accept Rivenwood Captives##11296
+		info TODO: verify in-game
+	step
+		goto 31.8,25.6
+		.' Click the Steel Gate Artifacts
+		.get 10 Steel Gate Artifact|q 11286/1
+		info Go down into the Excavation Pit.
+		info TODO: verify in-game
+	step
+		'Go back up the hill to 31.2,24.5|goto 31.2,24.5
+		.talk Sage Mistwalker##24186
+		..turnin The Artifacts of Steel Gate##11286
+		..accept The Cleansing##11317
+		info TODO: verify in-game
+	step
+		goto 26.0,25.1
+		.talk Lilleth Radescu##26844
+		..fpath Apothecary Camp
+		info Ride west to the Apothecary Camp.
+		info TODO: verify in-game
+	step
+		goto 26.4,24.5
+		.talk Apothecary Malthus##24152
+		..turnin Keeping Watch on the Interlopers##11297
+		..accept What's in That Brew?##11298
+		info TODO: verify in-game
+	step
+		goto 26.1,24.7
+		.talk Apothecary Anastasia##24359
+		..accept And You Thought Murlocs Smelled Bad!##11397
+		info TODO: verify in-game
+	step
+		goto 26.0,24.4
+		.talk Apothecary Grick##24218
+		..accept Brains! Brains! Brains!##11301
+		info TODO: verify in-game
+	step
+		ding 72
+		info TODO: verify in-game
+	step
+		'Hearth to Camp Winterhoof|goto 49.5,10.8,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 54.1,8.2|n
+		.' The path up to the Frostblade Shrine starts here|goto 54.1,8.2,0.3|noway|c
+		info Ride northeast along the long path into the mountains.
+		info TODO: verify in-game
+	step
+		'Follow the path up to 61.1,2.0|goto 61.1,2.0
+		.' Click the Frostblade Shrine
+		.' Kill Your Inner Turmoil that appears|goal Cleansed of Your Inner Turmoil|q 11317/1
+		info You get a levitation buff. Mount up, jump off to the southwest and float back to Camp Winterhoof.
+		info TODO: verify in-game
+	step
+		goto 49.6,11.6
+		.talk Celea Frozenmane##24032
+		..'Fly to Apothecary Camp|goto 26.0,25.1,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 31.2,24.5
+		.talk Sage Mistwalker##24186
+		..turnin The Cleansing##11317
+		..accept In Worg's Clothing##11323
+		info Ride southeast to the Steel Gate.
+		info TODO: verify in-game
+	step
+		goto 31.1,20.9
+		.' Attack the Riven Widow Cocoons
+		.goal 7 Winterhoof Longrunner Freed|q 11296/1
+		info Ride north into Rivenwood. Not every cocoon holds a longrunner.
+		info TODO: verify in-game
+	step
+		goto 29.7,5.7
+		.' Use your Worg Disguise before you go in|use Worg Disguise##33618
+		.talk Ulfang##24261
+		..turnin In Worg's Clothing##11323
+		..accept Brother Betrayers##11415
+		info Out of the forest to the north, you'll be near Ulfang's cave.
+		info TODO: verify in-game
+	step
+		goto 28.3,23.9
+		.kill 1 Bjomolf|q 11415/1
+		info He wanders around the worg area.
+		info TODO: verify in-game
+	step
+		goto 33.8,29.3
+		.kill 1 Varg|q 11415/2
+		info He wanders a little too.
+		info TODO: verify in-game
+	step
+		goto 35.1,16.0
+		.kill 15 Gjalerbron Warrior|q 11263/1
+		.kill 8 Gjalerbron Rune-Caster|q 11263/2
+		.kill 8 Gjalerbron Sleep-Watcher|q 11263/3
+		.' Loot Gjalerbron Cage Keys from the Vrykul and open the cages
+		.goal 10 Gjalerbron Prisoner Freed|q 11265/1
+		.get Gjalerbron Attack Plans|n
+		.' Click the Gjalerbron Attack Plans in your bags|use Gjalerbron Attack Plans##33347
+		..accept Gjalerbron Attack Plans##11266
+		info Ride northeast into Gjalerbron. The attack plans are a random drop.
+		info TODO: verify in-game
+	step
+		goto 29.7,5.7
+		.' Use your Worg Disguise before you go in|use Worg Disguise##33618
+		.talk Ulfang##24261
+		..turnin Brother Betrayers##11415
+		..accept Eyes of the Eagle##11417
+		info Ride northwest back to the worg cave.
+		info TODO: verify in-game
+	step
+		goto 41.5,37.7
+		.' Click Talonshrike's Egg to lure Talonshrike down
+		.from Talonshrike##24518
+		.get Eyes of the Eagle|q 11417/1
+		info Ride southeast and down the path to the waterfall. The nest is under it.
+		info TODO: verify in-game
+	step
+		goto 33.3,36.5
+		.kill Deranged Explorers|n
+		.' Use Grick's Bonesaw on their corpses|use Grick's Bonesaw##33554
+		.get 12 Deranged Explorer Brain|q 11301/1
+		.' Click the Dwarven Kegs on the ground
+		.get 5 Dwarven Keg|q 11298/1
+		info Ride west into Whisper Gulch.
+		info TODO: verify in-game
+	step
+		goto 23.0,21.9
+		.kill Chillmere Coast undead|n
+		.goal 15 Chillmere Coast Scourge Killed|q 11397/1
+		.get Scourge Device|n
+		.' Click the Scourge Device in your bags|use Scourge Device##33962
+		..accept It's a Scourge Device##11398
+		info Carefully go down northwest to the coast; there's a ramp, or jump and take a little damage.
+		info Kill undead until the Scourge Device drops. The kills count toward the murloc quest.
+		info TODO: verify in-game
+	step
+		goto 26.0,24.4
+		.talk Apothecary Grick##24218
+		..turnin Brains! Brains! Brains!##11301
+		info Ride up the path northeast back to the Apothecary Camp.
+		info TODO: verify in-game
+	step
+		goto 26.1,24.7
+		.talk Apothecary Anastasia##24359
+		..turnin It's a Scourge Device##11398
+		..accept Bring Down Those Shields##11399
+		info TODO: verify in-game
+	step
+		goto 26.4,24.5
+		.talk Apothecary Malthus##24152
+		..turnin What's in That Brew?##11298
+		info TODO: verify in-game
+	step
+		goto 19.8,22.2
+		.talk Old Icefin##24544
+		..accept Trident of the Son##11422
+		info Ride west down the path and swim west.
+		info TODO: verify in-game
+	step
+		goto 22.6,17.6
+		.' Use your Scourging Crystal Controller on the Scourge Crystal|use Scourging Crystal Controller##33960
+		.' Attack the crystal when its purple shield disappears
+		.goal 1 Scourging Crystals Destroyed|q 11399/1
+		info TODO: verify in-game
+	step
+		goto 22.9,20.1
+		.' Use your Scourging Crystal Controller on the Scourge Crystal|use Scourging Crystal Controller##33960
+		.' Attack the crystal when its purple shield disappears
+		.goal 2 Scourging Crystals Destroyed|q 11399/1
+		info TODO: verify in-game
+	step
+		goto 21.8,22.5
+		.' Use your Scourging Crystal Controller on the Scourge Crystal|use Scourging Crystal Controller##33960
+		.' Attack the crystal when its purple shield disappears
+		.goal 3 Scourging Crystals Destroyed|q 11399/1
+		info TODO: verify in-game
+	step
+		goto 23.7,35.2
+		.from Rotgill##24546
+		.get Rotgill's Trident|q 11422/1
+		info Head south.
+		info TODO: verify in-game
+	step
+		goto 19.8,22.2
+		.talk Old Icefin##24544
+		..turnin Trident of the Son##11422
+		info Return northwest, finishing the 15 Chillmere Coast Scourge on the way.
+		info TODO: verify in-game
+	step
+		'Hearth to Camp Winterhoof|goto 49.5,10.8,0.5|use hearthstone##6948|noway|c
+		info Finish the 15 Chillmere Coast Scourge before you hearth.
+		info TODO: verify in-game
+	step
+		goto 48.0,10.7
+		.talk Chieftain Ashtotem##24129
+		..turnin Dealing With Gjalerbron##11263
+		..accept Necro Overlord Mezhen##11264
+		info TODO: verify in-game
+	step
+		goto 48.2,10.7
+		.talk Greatmother Ankha##24135
+		..turnin Of Keys and Cages##11265
+		..accept The Walking Dead##11268
+		info TODO: verify in-game
+	step
+		goto 49.6,11.6
+		.talk Celea Frozenmane##24032
+		..turnin Gjalerbron Attack Plans##11266
+		..accept The Frost Wyrm and its Master##11267
+		info TODO: verify in-game
+	step
+		goto 48.4,11.0
+		.talk Ahota Whitefrost##24127
+		..accept Sleeping Giants##11433
+		info TODO: verify in-game
+	step
+		goto 49.6,11.6
+		.talk Celea Frozenmane##24032
+		..'Fly to Apothecary Camp|goto 26.0,25.1,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 26.1,24.7
+		.talk Apothecary Anastasia##24359
+		..turnin And You Thought Murlocs Smelled Bad!##11397
+		..turnin Bring Down Those Shields##11399
+		info TODO: verify in-game
+	step
+		goto 29.7,5.7
+		.' Use your Worg Disguise before you go in|use Worg Disguise##33618
+		.talk Ulfang##24261
+		..turnin Eyes of the Eagle##11417
+		..accept Alpha Worg##11324
+		info Ride northeast to the worg cave.
+		info TODO: verify in-game
+	step
+		goto 26.3,12.8
+		.kill 1 Garwal|q 11324/1
+		info Ride southwest. He patrols a long way, so look around for him.
+		info TODO: verify in-game
+	step
+		goto 34.5,13.2|n
+		.' The entrance down into the Waking Halls starts here|goto 34.5,13.2,0.3|noway|c
+		info Ride to Gjalerbron and enter the building at the entrance.
+		info TODO: verify in-game
+	step
+		'Go down the stairs to 35.0,11.9|goto 35.0,11.9
+		.kill 4 Fearsome Horror|q 11268/2
+		.kill Necrolords|n
+		.collect 5 Awakening Rod##34083|q 11433|n
+		.' Use your Awakening Rods on the Dormant Vrykul|use Awakening Rod##34083
+		.kill 5 Dormant Vrykul|q 11433/1
+		info TODO: verify in-game
+	step
+		'Go up onto the eastern platform at the top of Gjalerbron to 38.2,11.8|goto 38.2,11.8
+		.kill Deathless Watchers|n
+		.kill Putrid Wights|n
+		.' Then kill Necro Overlord Mezhen at 38.8,13.0
+		.kill 1 Necro Overlord Mezhen|q 11264/1
+		.get Mezhen's Writings|n
+		.' Click Mezhen's Writings in your bags|use Mezhen's Writings##34091
+		..accept The Slumbering King##11453
+		info Clear the Deathless Watchers and Putrid Wights first; they count for The Walking Dead.
+		info TODO: verify in-game
+	step
+		'Go inside the building to the northeast to 40.9,6.5|goto 40.9,6.5
+		.kill 1 Queen Angerboda|q 11453/1
+		info Go around the ritual to the back and pull her. Then leave the building.
+		info TODO: verify in-game
+	step
+		goto 36.5,7.2
+		.kill Deathless Watchers|n
+		.kill Putrid Wights|n
+		.kill 1 Wyrmcaller Vile|q 11267/1
+		.collect 1 Wyrmcaller's Horn##33282|q 11267|n
+		info Head west to the platform.
+		info TODO: verify in-game
+	step
+		goto 35.7,7.8
+		.' Use the Wyrmcaller's Horn to summon Glacion|use Wyrmcaller's Horn##33282
+		.kill 1 Glacion|q 11267/2
+		info It's soloable.
+		info TODO: verify in-game
+	step
+		goto 35.7,15.8
+		.kill 10 Deathless Watcher|q 11268/1
+		.kill 2 Putrid Wight|q 11268/3
+		info If you still need more, there are more on the platform down the stairs and on the branches to the east and west.
+		info TODO: verify in-game
+	step
+		goto 31.2,24.5
+		.talk Sage Mistwalker##24186
+		..turnin Alpha Worg##11324
+		info Ride southwest to the Steel Gate.
+		info TODO: verify in-game
+	step
+		goto 31.3,24.4
+		.talk Longrunner Skycloud##24209
+		..turnin Rivenwood Captives##11296
+		info TODO: verify in-game
+	step
+		goto 40.3,60.3
+		.talk Orfus of Kamagua##23804
+		..accept The Dead Rise!##11504
+		info Ride far southeast to the Ancient Lift.
+		info TODO: verify in-game
+	step
+		goto 52.0,67.4
+		.talk Tobias Sarkhoff##24155
+		..fpath New Agamand
+		info Ride southeast to New Agamand.
+		info TODO: verify in-game
+	step
+		goto 53.6,66.4
+		.talk Chief Plaguebringer Harris##24251
+		..turnin New Agamand##11304
+		..accept A Tailor-Made Formula##11305
+		..accept Give it a Name##12181
+		info !!! Don't turn in Give it a Name until the end of the zone !!!
+		info Turning it in sends you on a forced flight to Dragonblight.
+		info TODO: verify in-game
+	step
+		goto 53.7,65.2
+		.talk "Hacksaw" Jenny##24252
+		..accept Shield Hill##11424
+		info TODO: verify in-game
+	step
+		goto 53.1,66.9
+		.talk Plaguebringer Tillinghast##24157
+		..accept Green Eggs and Whelps##11279
+		info TODO: verify in-game
+	step
+		goto 52.1,66.4
+		.talk Basil Osgood##24149
+		..home New Agamand
+		info TODO: verify in-game
+	step
+		goto 52.0,67.4
+		.talk Tobias Sarkhoff##24155
+		..'Fly to Camp Winterhoof|goto 49.6,11.6,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 48.4,11.0
+		.talk Ahota Whitefrost##24127
+		..turnin Sleeping Giants##11433
+		info TODO: verify in-game
+	step
+		goto 48.2,10.7
+		.talk Greatmother Ankha##24135
+		..turnin The Walking Dead##11268
+		info TODO: verify in-game
+	step
+		goto 48.0,10.7
+		.talk Chieftain Ashtotem##24129
+		..turnin Necro Overlord Mezhen##11264
+		..turnin The Slumbering King##11453
+		info TODO: verify in-game
+	step
+		goto 49.6,11.6
+		.talk Celea Frozenmane##24032
+		..turnin The Frost Wyrm and its Master##11267
+		info TODO: verify in-game
+	step
+		'Hearth to New Agamand|goto 52.1,66.4,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 46.8,68.1
+		.from Thorvald##27926
+		.get Dragonflayer Patriarch's Blood|q 11305/1
+		info Ride west to Thorvald's Camp.
+		info TODO: verify in-game
+	step
+		goto 53.6,66.4
+		.talk Chief Plaguebringer Harris##24251
+		..turnin A Tailor-Made Formula##11305
+		..accept Apply Heat and Stir##11306
+		info Return to New Agamand.
+		info TODO: verify in-game
+	step
+		goto 53.6,66.5
+		.' Use your Empty Apothecary's Flask at the cauldron on the right side of the apothecary|use Empty Apothecary's Flask##34023
+		.collect 1 Flask of Vrykul Blood##33615|q 11306|n
+		.' Use the Flask of Vrykul Blood at the lab table on the left side at 53.5,66.3|use Flask of Vrykul Blood##33615
+		.' Repeat until you get a Balanced Concoction|use Empty Apothecary's Flask##33614
+		.get 1 Balanced Concoction|q 11306/1
+		info It can take a few tries. Enjoy the mishaps!
+		info TODO: verify in-game
+	step
+		goto 53.6,66.4
+		.talk Chief Plaguebringer Harris##24251
+		..turnin Apply Heat and Stir##11306
+		..accept Field Test##11307
+		info TODO: verify in-game
+	step
+		goto 48.5,57.4
+		.' Use your Plague Spray on Plagued Dragonflayer Vrykul|use Plague Spray##33621
+		.goal 10 Plagued Vrykul Sprayed|q 11307/1
+		info Ride north to Halgrind.
+		info TODO: verify in-game
+	step
+		goto 37.4,51.9
+		.talk Ember Clutch Ancient##23870
+		..accept Root Causes##11182
+		info Ride northwest to Ember Clutch. The ancient may walk around a bit.
+		info TODO: verify in-game
+	step
+		goto 42.0,54.4
+		.' Use your Tillinghast's Plague Canister on Proto-Drake Eggs|use Tillinghast's Plague Canister##33418
+		.kill Plagued Proto-Whelps that spawn|n
+		.get 10 Plagued Proto-Whelp Specimen|q 11279/1
+		info TODO: verify in-game
+	step
+		goto 40.6,51.5
+		.kill 5 Dragonflayer Handler|q 11182/1
+		.' Then go inside the building at 41.5,52.3
+		.kill 1 Skeld Drakeson|q 11182/2
+		info Clear your way southeast. The handlers wander near the building.
+		info TODO: verify in-game
+	step
+		goto 37.4,51.9
+		.talk Ember Clutch Ancient##23870
+		..turnin Root Causes##11182
+		info TODO: verify in-game
+	step
+		goto 53.6,66.4
+		.talk Chief Plaguebringer Harris##24251
+		..turnin Field Test##11307
+		..accept Time for Cleanup##11308
+		info Ride back to New Agamand.
+		info TODO: verify in-game
+	step
+		goto 53.7,65.2
+		.talk "Hacksaw" Jenny##24252
+		..turnin Time for Cleanup##11308
+		..accept Parts for the Job##11309
+		info TODO: verify in-game
+	step
+		goto 53.1,66.9
+		.talk Plaguebringer Tillinghast##24157
+		..turnin Green Eggs and Whelps##11279
+		..accept Draconis Gastritis##11280
+		info TODO: verify in-game
+	step
+		goto 57.7,77.5
+		.' Click the Mound of Debris inside the pit
+		.get Fengir's Clue|q 11504/1
+		.kill Risen Vrykul Ancestors|n
+		.get 5 Ancient Vrykul Bone|q 11424/1
+		info Ride southeast along the road to Shield Hill. Kill Risen Vrykul Ancestors as you go from clue to clue.
+		info TODO: verify in-game
+	step
+		goto 59.2,77.0
+		.' Click the Unlocked Chest
+		.get Rodin's Clue|q 11504/2
+		info Head east to another pit.
+		info TODO: verify in-game
+	step
+		goto 59.8,79.4
+		.' Click the Long Tail Feather
+		.get Isuldof's Clue|q 11504/3
+		info TODO: verify in-game
+	step
+		goto 62.0,80.0
+		.' Click the Cannonball
+		.get Windan's Clue|q 11504/4
+		info Finish the 5 Ancient Vrykul Bones if you still need them.
+		info TODO: verify in-game
+	step
+		goto 67.4,60.6
+		.talk Ranger Captain Areiel##27922
+		..accept Against Nifflevar##12482
+		info Ride northeast to Ghostblade Post.
+		info TODO: verify in-game
+	step
+		goto 67.3,60.3
+		.talk Scribe Seguine##24548
+		..accept The Enemy's Legacy##11423
+		info TODO: verify in-game
+	step
+		goto 67.4,57.2
+		.' Click the Saga of the Val'kyr in the first building
+		.get Saga of the Val'kyr|q 11423/2
+		info Clear your way north into Nifflevar, killing all the Dragonflayers in your way.
+		info TODO: verify in-game
+	step
+		goto 64.7,53.6
+		.' Click the Saga of the Twins inside the building
+		.get Saga of the Twins|q 11423/1
+		info Clear your way northwest.
+		info TODO: verify in-game
+	step
+		goto 68.9,52.6
+		.' Click the Saga of the Winter Curse
+		.get Saga of the Winter Curse|q 11423/3
+		info Clear your way east.
+		info TODO: verify in-game
+	step
+		goto 69.6,57.1
+		.kill 5 Dragonflayer Warrior|q 12482/1
+		.kill 4 Dragonflayer Rune-Seer|q 12482/2
+		.kill 4 Dragonflayer Hunting Hound|q 12482/3
+		info TODO: verify in-game
+	step
+		goto 67.4,60.6
+		.talk Ranger Captain Areiel##27922
+		..turnin Against Nifflevar##12482
+		info Return to Ghostblade Post.
+		info TODO: verify in-game
+	step
+		goto 67.3,60.3
+		.talk Scribe Seguine##24548
+		..turnin The Enemy's Legacy##11423
+		info TODO: verify in-game
+	step
+		goto 50.3,65.8
+		.kill Shoveltusks|n
+		.get 6 Shoveltusk Ligament|q 11309/1
+		info Every shoveltusk drops them.
+		info TODO: verify in-game
+	step
+		goto 49.4,74.3
+		.talk Anton##24291
+		.buy 1 Fresh Pound of Flesh|q 11309/2
+		info Ride west to Anton, who walks along the road.
+		info TODO: verify in-game
+	step
+		goto 53.7,65.2
+		.talk "Hacksaw" Jenny##24252
+		..turnin Parts for the Job##11309
+		..accept Warning: Some Assembly Required##11310
+		..turnin Shield Hill##11424
+		info Ride northeast into New Agamand.
+		info TODO: verify in-game
+	step
+		goto 49.6,57.2
+		.' Use your Abomination Assembly Kit on one of the cliffs overlooking Halgrind|use Abomination Assembly Kit##33613
+		.' Run into the camp and gather several Vrykul, using Thunderclap (ability 2) to slow them
+		.' Then use Plagued Blood Explosion (ability 1)|petaction Plagued Blood Explosion
+		.goal 20 Plagued Vrykul exterminated|q 11310/1
+		info Ride north to Halgrind. The kit never runs out, so keep making abominations until you're done.
+		info TODO: verify in-game
+	step
+		goto 41.7,53.7
+		.' Stand under a Proto-Drake flying overhead and use your Tillinghast's Plagued Meat|use Tillinghast's Plagued Meat##33441
+		.kill 1 Proto-Drake|n
+		.goal Proto-Drake Plague Results Observed|q 11280/1
+		info Ride west to Ember Clutch.
+		info TODO: verify in-game
+	step
+		goto 40.3,60.3
+		.talk Orfus of Kamagua##23804
+		..turnin The Dead Rise!##11504
+		..accept Elder Atuik and Kamagua##11507
+		info Ride southwest to the Ancient Lift.
+		info TODO: verify in-game
+	step
+		'Ride the lift down and go north to 25.0,57.0|goto 25.0,57.0
+		.talk Elder Atuik##24755
+		..turnin Elder Atuik and Kamagua##11507
+		..accept Grezzix Spindlesnap##11508
+		..accept Feeding the Survivors##11456
+		info TODO: verify in-game
+	step
+		goto 24.7,57.8
+		.talk Kip Trawlskip##28197
+		..fpath Kamagua
+		info TODO: verify in-game
+	step
+		goto 29.1,58.8
+		.kill Island Shoveltusks|n
+		.get 6 Island Shoveltusk Meat|q 11456/1
+		info Head southeast.
+		info TODO: verify in-game
+	step
+		goto 25.0,57.0
+		.talk Elder Atuik##24755
+		..turnin Feeding the Survivors##11456
+		..accept Arming Kamagua##11457
+		info TODO: verify in-game
+	step
+		goto 27.17,64.47
+		.from Frostwing Chimaera##24673
+		.get 3 Chimaera Horn|q 11457/1
+		info Head south.
+		info TODO: verify in-game
+	step
+		goto 25.0,57.0
+		.talk Elder Atuik##24755
+		..turnin Arming Kamagua##11457
+		..accept Avenge Iskaal##11458
+		info TODO: verify in-game
+	step
+		goto 23.1,62.7
+		.talk Grezzix Spindlesnap##24643
+		..turnin Grezzix Spindlesnap##11508
+		..accept Street "Cred"##11509
+		info Head southwest.
+		info TODO: verify in-game
+	step
+		goto 23.09,62.59|n
+		.talk Lou the Cabin Boy##24896
+		..'Ask to be taken to Scalawag Point|goto 35.57,82.32|noway|c
+		info TODO: verify in-game
+	step
+		goto 35.1,80.9
+		.talk "Silvermoon" Harry##24539
+		..turnin Street "Cred"##11509
+		..accept "Scoodles"##11510
+		info He's inside the tent.
+		info TODO: verify in-game
+	step
+		goto 35.6,80.2
+		.talk Handsome Terry##24537
+		..accept Forgotten Treasure##11434
+		info TODO: verify in-game
+	step
+		goto 37.8,79.6
+		.talk Scuttle Frostprow##24784
+		..accept Swabbin' Soap##11469
+		info He's on the pirate ship to the southeast.
+		info TODO: verify in-game
+	step
+		goto 38.3,83.4
+		.' Use your Fish Bladder so you can breathe underwater|use Fish Bladder##34076
+		.from "Scoodles"##24899
+		.get Sin'dorei Scrying Crystal|q 11510/1
+		info Dive and swim southeast to the wrecked ships.
+		info TODO: verify in-game
+	step
+		goto 37.8,84.6
+		.' Click the Eagle Figurine on the ocean floor by the first ship
+		.get Eagle Figurine|q 11434/2
+		info TODO: verify in-game
+	step
+		goto 37.1,85.5
+		.' Click the Amani Vase by the other wrecked ship
+		.get Amani Vase|q 11434/1
+		info Swim southwest.
+		info TODO: verify in-game
+	step
+		goto 35.6,80.2
+		.talk Handsome Terry##24537
+		..turnin Forgotten Treasure##11434
+		..accept The Fragrance of Money##11455
+		info Return to Scalawag Point.
+		info TODO: verify in-game
+	step
+		goto 35.1,80.9
+		.talk "Silvermoon" Harry##24539
+		..turnin "Scoodles"##11510
+		..accept The Ancient Armor of the Kvaldir##11567
+		..accept The Frozen Heart of Isuldof##11512
+		..accept The Lost Shield of the Aesirites##11519
+		..accept The Staff of Storm's Fury##11511
+		info TODO: verify in-game
+	step
+		goto 36.3,80.5
+		.talk Taruk##24541
+		..accept Gambling Debt##11464
+		info TODO: verify in-game
+	step
+		goto 35.1,80.9
+		.talk "Silvermoon" Harry##24539
+		..'Tell him you want to collect a debt he owes
+		..'Fight him until he surrenders
+		.talk "Silvermoon" Harry##24539
+		..'Tell him to pay up
+		.get "Silvermoon" Harry's Debt|q 11464/1|goal "Silvermoon" Harry's Debt|q 11464/1
+		info TODO: verify in-game
+	step
+		goto 36.3,80.5
+		.talk Taruk##24541
+		..turnin Gambling Debt##11464
+		..accept Jack Likes His Drink##11466
+		info TODO: verify in-game
+	step
+		'Go inside the tavern to 35.3,79.6|goto 35.3,79.6
+		.talk Olga, the Scalawag Wench##24639
+		..' Pay her 1 gold to get Jack Adams drunk
+		.' He passes out on the table
+		.talk Jack Adams##24788
+		..'Search his pockets
+		..get Jack Adams' Debt|q 11466/1|goal Jack Adams' Debt|q 11466/1
+		info TODO: verify in-game
+	step
+		goto 36.3,80.5
+		.talk Taruk##24541
+		..turnin Jack Likes His Drink##11466
+		..accept Dead Man's Debt##11467
+		info TODO: verify in-game
+	step
+		goto 34.1,76.9
+		.kill Rabid Brown Bears|n
+		.get 4 Bear Musk|q 11455/1
+		info Head north.
+		info TODO: verify in-game
+	step
+		goto 31.4,77.9
+		.from Big Roy##24785
+		.get Big Roy's Blubber|q 11469/1
+		info Head west to the northwest shore of the island.
+		info TODO: verify in-game
+	step
+		goto 35.6,80.2
+		.talk Handsome Terry##24537
+		..turnin The Fragrance of Money##11455
+		..accept A Traitor Among Us##11473
+		info Return to Scalawag Point.
+		info TODO: verify in-game
+	step
+		goto 35.6,80.6
+		.talk Zeh'gehn##24525
+		..turnin A Traitor Among Us##11473
+		..accept Zeh'gehn Sez##11459
+		info TODO: verify in-game
+	step
+		goto 35.6,80.2
+		.talk Handsome Terry##24537
+		..turnin Zeh'gehn Sez##11459
+		..accept A Carver and a Croaker##11476
+		info TODO: verify in-game
+	step
+		goto 35.6,81.7
+		.' Click a Scalawag Frog to pick it up
+		.get Scalawag Frog|q 11476/1
+		info TODO: verify in-game
+	step
+		goto 35.1,80.9
+		.talk "Silvermoon" Harry##24539
+		.buy 1 Shiny Knife|q 11476/2
+		info TODO: verify in-game
+	step
+		goto 35.6,80.6
+		.talk Zeh'gehn##24525
+		..turnin A Carver and a Croaker##11476
+		..accept "Crowleg" Dan##11479
+		info TODO: verify in-game
+	step
+		goto 35.9,83.6
+		.talk "Crowleg" Dan##24713
+		.kill "Crowleg" Dan|q 11479/1
+		info Head south to the ship. Talk to him, then kill him.
+		info TODO: verify in-game
+	step
+		goto 35.6,80.2
+		.talk Handsome Terry##24537
+		..turnin "Crowleg" Dan##11479
+		..accept Meet Number Two##11480
+		info TODO: verify in-game
+	step
+		'Go upstairs in the tavern to 35.4,79.4|goto 35.4,79.4
+		.talk Annie Bonn##24741
+		..turnin Meet Number Two##11480
+		..accept The Jig is Up##11471
+		info TODO: verify in-game
+	step
+		goto 37.8,79.6
+		.talk Scuttle Frostprow##24784
+		..turnin Swabbin' Soap##11469
+		info Get on his ship.
+		info TODO: verify in-game
+	step
+		'Wait for the Mercy to arrive next to Juniper's island|goto 37.2,74.8
+		.talk Captain Ellis##24910
+		..turnin The Lost Shield of the Aesirites##11519
+		..accept Mutiny on the Mercy##11527
+		info Swim northeast to the island with Juniper on it, and get on the boat when it comes.
+		info TODO: verify in-game
+	step
+		'Go down to the bottom of the ship
+		.kill Mutinous Sea Dogs|n
+		.get 5 Barrel of Blasting Powder|q 11527/1
+		info TODO: verify in-game
+	step
+		'Go back up to the ship deck
+		.talk Captain Ellis##24910
+		..turnin Mutiny on the Mercy##11527
+		..accept Sorlof's Booty##11529
+		info TODO: verify in-game
+	step
+		'Run to the back of the ship deck to The Big Gun
+		.' When the ship starts attacking Sorlof, keep clicking The Big Gun until he's dead
+		.' Sorlof drops a big pile of gold on the shore
+		.' Jump off the ship and click Sorlof's Booty
+		.get Sorlof's Booty|q 11529/1
+		info TODO: verify in-game
+	step
+		'Swim to the ship at 35.3,64.8|goto 35.3,64.8
+		.' Wait for Abdul the Insane to walk away from the hold's entrance, then sneak downstairs
+		.' Click The Staff of Storm's Fury
+		.get The Staff of Storm's Fury|q 11511/1
+		info Swim northwest.
+		info TODO: verify in-game
+	step
+		goto 33.2,63.9
+		.' Use your Horn of Kamagua to summon a Tuskarr to help|use Horn of Kamagua##36777
+		.kill 8 Crazed Northsea Slaver|q 11458/1
+		info Head northwest.
+		info TODO: verify in-game
+	step
+		goto 29.0,60.5|n
+		.' The path up to Black Conrad's treasure starts here|goto 29.0,60.5,0.3|noway|c
+		info TODO: verify in-game
+	step
+		goto 32.7,60.2
+		.' Cross the bridge and click the Dirt Mound
+		.' Kill Black Conrad's Ghost and the two ghosts that spawn with him
+		.get Black Conrad's Treasure|q 11467/1
+		info TODO: verify in-game
+	step
+		goto 25.0,57.0
+		.talk Elder Atuik##24755
+		..turnin Avenge Iskaal##11458
+		info Ride northwest to Kamagua.
+		info TODO: verify in-game
+	step
+		goto 24.6,58.9
+		.talk Anuniaq##24810
+		..accept The Way to His Heart...##11472
+		info Don't take Travel to Moa'ki Harbor here; you already have the one from Borean Tundra.
+		info TODO: verify in-game
+	step
+		goto 28.9,74.8
+		.' Use Anuniaq's Net on the Schools of Tasty Reef Fish|use Anuniaq's Net##40946
+		.kill Great Reef Sharks|n
+		.collect 10 Tasty Reef Fish##34127|q 11472
+		info Ride south to the southern coast of the island and head west for the fish.
+		info TODO: verify in-game
+	step
+		goto 31.0,74.4
+		.' Use your Tasty Reef Fish on a Reef Bull from as far away as you can|use Tasty Reef Fish##34127
+		.' He walks to where you're standing
+		.' Keep doing this to lead him north to a Reef Cow|goal Reef Bull led to a Reef Cow|q 11472/1
+		info TODO: verify in-game
+	step
+		'Go down the hill to 33.5,75.3|goto 33.5,75.3
+		'Go into the cave to 32.3,78.7|goto 32.3,78.7
+		.' Fight "Mad" Jonah Sterling. Don't waste cooldowns on him; near death he jumps through a hole in the wall
+		.' Follow him down and kill Hozzer. Use your cooldowns, and kite and stun him; he hits hard
+		.' Loot Jonah Sterling's Spyglass off Hozzer|q 11471/1
+		.' Click The Frozen Heart of Isuldof behind Hozzer at the end of the cave
+		.get The Frozen Heart of Isuldof|q 11512/1
+		info Ride southeast into the cave. It's labeled a group quest, but it can be soloed.
+		info TODO: verify in-game
+	step
+		'Go upstairs in the tavern to 35.4,79.4|goto 35.4,79.4
+		.talk Annie Bonn##24741
+		..turnin The Jig is Up##11471
+		info Return to Scalawag Point.
+		info TODO: verify in-game
+	step
+		goto 36.3,80.5
+		.talk Taruk##24541
+		..turnin Dead Man's Debt##11467
+		info TODO: verify in-game
+	step
+		goto 36.1,81.6|n
+		.talk Alanya##27933
+		..'Tell her you want to fly to Bael'gun's
+		..' You will land near a ship|goto 80.9,75.3,1|noway|c
+		info Head south to the docks; she's next to the flying machine.
+		info TODO: verify in-game
+	step
+		'Go onto the ship and down into the hold to 81.8,73.9|goto 81.8,73.9
+		.' Click The Ancient Armor of the Kvaldir
+		.get The Ancient Armor of the Kvaldir|q 11567/1
+		info TODO: verify in-game
+	step
+		goto 80.9,75.1|n
+		.' Click Harry's Bomber
+		.' Go back to Scalawag Point|goto 36.1,81.7,1|noway|c
+		info TODO: verify in-game
+	step
+		'Wait for the Mercy to arrive next to Juniper's island|goto 37.2,74.8
+		.talk Captain Ellis##24910
+		..turnin Sorlof's Booty##11529
+		..accept The Shield of the Aesirites##11530
+		info Swim northeast to the island again.
+		info TODO: verify in-game
+	step
+		'Swim northeast to the Westwind Lift, ride it up and go northwest to 40.3,60.3|goto 40.3,60.3
+		.talk Orfus of Kamagua##23804
+		..turnin The Ancient Armor of the Kvaldir##11567
+		..turnin The Frozen Heart of Isuldof##11512
+		..turnin The Shield of the Aesirites##11530
+		..turnin The Staff of Storm's Fury##11511
+		..accept A Return to Resting##11568
+		info TODO: verify in-game
+	step
+		goto 57.6,77.4
+		.' Use your Bundle of Vrykul Artifacts next to Fengir|use Bundle of Vrykul Artifacts##34624
+		.goal Shield of the Aesirites Returned|q 11568/1
+		info Ride southeast to Shield Hill, back to the places where you found the clues.
+		info TODO: verify in-game
+	step
+		goto 59.2,77.0
+		.' Use your Bundle of Vrykul Artifacts next to Rodin|use Bundle of Vrykul Artifacts##34624
+		.goal Staff of Storm's Fury Returned|q 11568/2
+		info TODO: verify in-game
+	step
+		goto 59.8,79.4
+		.' Use your Bundle of Vrykul Artifacts next to Isuldof|use Bundle of Vrykul Artifacts##34624
+		.goal Frozen Heart of Isuldof Returned|q 11568/3
+		info TODO: verify in-game
+	step
+		goto 62.0,80.0
+		.' Use your Bundle of Vrykul Artifacts next to Windan|use Bundle of Vrykul Artifacts##34624
+		.goal Ancient Armor of the Kvaldir Returned|q 11568/4
+		info TODO: verify in-game
+	step
+		goto 40.3,60.3
+		.talk Orfus of Kamagua##23804
+		..turnin A Return to Resting##11568
+		..accept Return to Atuik##11572
+		info TODO: verify in-game
+	step
+		'Ride the lift down to Kamagua and go to 25.0,57.0|goto 25.0,57.0
+		.talk Elder Atuik##24755
+		..turnin Return to Atuik##11572
+		info TODO: verify in-game
+	step
+		goto 24.6,58.9
+		.talk Anuniaq##24810
+		..turnin The Way to His Heart...##11472
+		info TODO: verify in-game
+	step
+		ding 73
+		info TODO: verify in-game
+	step
+		'Hearth to New Agamand|goto 52.1,66.4,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 53.1,66.9
+		.talk Plaguebringer Tillinghast##24157
+		..turnin Draconis Gastritis##11280
+		info TODO: verify in-game
+	step
+		goto 53.7,65.2
+		.talk "Hacksaw" Jenny##24252
+		..turnin Warning: Some Assembly Required##11310
+		info TODO: verify in-game
+	step
+		goto 52.0,67.4
+		.talk Tobias Sarkhoff##24155
+		..turnin Give it a Name##12181
+		..accept To Venomspite!##12182
+		info TODO: verify in-game
+	step
+		'He flies you to Venomspite in Dragonblight|goto Dragonblight,76.6,62.4,0.5|noway|c
+		info Make sure you train your skills before the next zone if you need to.
+		info TODO: verify in-game
+]])
