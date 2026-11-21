@@ -12,6 +12,10 @@ Checks, per guide line:
   - required level does not exceed the level the guide is at
   - the quest log stays at 25 or fewer
 Problems print as ERROR (almost surely wrong) or WARN (worth a look).
+
+  --as "Orc Hunter"  simulate one race and class: `only` steps and lines that
+                     don't match are skipped (as Zygor does), matching ones are
+                     checked in full. Races use Zygor's names (Scourge, BloodElf).
 """
 
 import os
@@ -26,7 +30,25 @@ TALK_RADIUS = 3.0
 OLD_NAMES = {
     9898: ("Nothin' Says Lovin' Like a Big Stinger",),
 }
+# Prerequisites the Questie data gets wrong (the quest is offered without them).
+BAD_PREREQS = {
+    3097: (369,),  # Hallowed Scroll: undead priest letter at level 1, not after A New Plague
+    3098: (369,),  # Glyphic Scroll: undead mage letter at level 1
+}
 ZONES = None
+
+
+def race_class_match(fits, who):
+    """Zygor's RaceClassMatch: `fits` is an `only` parameter, `who` is (race, class)."""
+    race, cls = (w.upper() for w in who)
+    for fit in fits.split(","):
+        fit = fit.strip().upper()
+        neg = fit.startswith("!")
+        fit = fit.lstrip("!")
+        hit = fit in (race, cls, f"{race} {cls}")
+        if hit != neg:
+            return True
+    return False
 
 
 def zone_names():
@@ -70,7 +92,8 @@ IDREF = re.compile(r"([^|#\n]+?)##(\d+)")
 
 
 class Checker:
-    def __init__(self, path, start_title=None, show_log=False, side="H", skip=(), stop_title=None):
+    def __init__(self, path, start_title=None, show_log=False, side="H", skip=(), stop_title=None, who=None):
+        self.who = who
         self.path = path
         self.start_title = start_title
         self.side = side
@@ -172,7 +195,7 @@ class Checker:
             self.report("WARN", ln, f"{q['name']}##{qid} accepted again after turn-in")
         # A prerequisite still in the log is usually a Questie data quirk
         # (some quests only need the earlier one accepted), so only warn.
-        pre_single = q.get("preQuestSingle") or []
+        pre_single = [p for p in q.get("preQuestSingle") or [] if p not in BAD_PREREQS.get(qid, ())]
         if pre_single and not any(p in self.done for p in pre_single):
             names = ", ".join(f"{(gdb.quest(p) or {}).get('name')}##{p}" for p in pre_single)
             soft = only or any(p in self.log for p in pre_single)
@@ -248,15 +271,20 @@ class Checker:
         self.active = self.start_title is None
         talk = None
         # Lines inside steps gated by a bare `only` line (race/class steps).
+        # With --as, lines in steps whose `only` doesn't match are skipped.
         gated, step_start, step_has_only = set(), 0, False
+        excluded, step_fits = set(), None
         for i, raw in enumerate(lines + ["step"]):
             s = raw.strip().lstrip(".")
             if s.startswith("step") or s.startswith("ZygorGuidesViewer:"):
                 if step_has_only:
                     gated.update(range(step_start + 1, i + 1))
+                    if self.who and not race_class_match(step_fits, self.who):
+                        excluded.update(range(step_start + 1, i + 1))
                 step_start, step_has_only = i, False
             elif s.startswith("only "):
                 step_has_only = True
+                step_fits = s[5:].split("//", 1)[0].strip()
         self.gated = set()
         skipping = False
         for ln, raw in enumerate(lines, 1):
@@ -278,9 +306,16 @@ class Checker:
             if not code:
                 continue
             body = code.lstrip(".")
+            if ln in excluded and not body.startswith("step"):
+                continue
             only = bool(re.search(r"(^|\|)\s*only\b", body)) or body.startswith("only ")
             if body.startswith("only "):
                 continue
+            if self.who and only:
+                m = re.search(r"\|\s*only\s+([^|]+)", body)
+                if m and not race_class_match(m.group(1), self.who):
+                    continue
+                only = False
             if body.startswith("step"):
                 talk = None
                 continue
@@ -370,7 +405,12 @@ def main():
         i = args.index("--skip")
         skip.append(args[i + 1])
         del args[i:i + 2]
-    sys.exit(1 if Checker(args[0], start, show_log, side, skip, stop).run() else 0)
+    who = None
+    if "--as" in args:
+        i = args.index("--as")
+        who = tuple(args[i + 1].split())
+        del args[i:i + 2]
+    sys.exit(1 if Checker(args[0], start, show_log, side, skip, stop, who).run() else 0)
 
 
 if __name__ == "__main__":

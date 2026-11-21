@@ -3,10 +3,2740 @@ if not ZygorGuidesViewer then return end
 --TRIAL if ZygorGuidesViewer.AllianceInstalled then return end
 if UnitFactionGroup("player")~="Horde" then return end
 
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Orc (1-10)",[[
+	author YunataSavior
+	defaultfor Orc
+	next Ding80's Horde Leveling Guides\\Main Guide (10-11)
+	startlevel 1
+
+	step
+		goto Durotar,43.3,68.5
+		.talk Kaltunk##10176
+		..accept Your Place In The World##4641
+		info TODO: verify in-game
+	step
+		'Go inside the cave to 42.1,68.3|goto 42.1,68.3
+		.talk Gornek##3143
+		..turnin Your Place In The World##4641
+		..accept Cutting Teeth##788
+		info TODO: verify in-game
+	step
+		goto 43.8,70
+		.kill 8 Mottled Boar|q 788/1
+		info TODO: verify in-game
+	step
+		ding 2
+	step
+		goto 42.1,68.3
+		.talk Gornek##3143
+		..turnin Cutting Teeth##788
+		..accept Sting of the Scorpid##789
+		..accept Simple Parchment##2383 |only Orc Warrior
+		..accept Rune-Inscribed Parchment##3089 |only Orc Shaman
+		..accept Encrypted Parchment##3088 |only Orc Rogue
+		..accept Etched Parchment##3087 |only Orc Hunter
+		..accept Tainted Parchment##3090 |only Orc Warlock
+		info TODO: verify in-game
+	step
+		goto 42.9,69.4
+		.talk Frang##3153
+		..turnin Simple Parchment##2383
+		info Train your skills here. This is your class trainer.
+		info TODO: verify in-game
+		only Orc Warrior
+	step
+		goto 42.4,69.0
+		.talk Shikrik##3157
+		..turnin Rune-Inscribed Parchment##3089
+		info Train your skills here. This is your class trainer.
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto 41.3,68.0
+		.talk Rwag##3155
+		..turnin Encrypted Parchment##3088
+		info Train your skills here. This is your class trainer.
+		info TODO: verify in-game
+		only Orc Rogue
+	step
+		goto 42.8,69.3
+		.talk Jen'shan##3154
+		..turnin Etched Parchment##3087
+		info Train your skills here. This is your class trainer.
+		info TODO: verify in-game
+		only Orc Hunter
+	step
+		goto 40.6,68.5
+		.talk Nartok##3156
+		..turnin Tainted Parchment##3090
+		info Train your skills here. This is your class trainer.
+		info TODO: verify in-game
+		only Orc Warlock
+	step
+		goto 42.8,69.1
+		.talk Zureetha Fargaze##3145
+		..accept Vile Familiars##792
+		info TODO: verify in-game
+	step
+		goto 42.7,67.2
+		.talk Galgar##9796
+		..accept Galgar's Cactus Apple Surprise##4402
+		info Train your skills at your class trainer in the Den at every even level from now on, whenever you're near a town.
+		info TODO: verify in-game
+	step
+		goto 44.1,65.4
+		.' Click the Cactus Apples
+		.get 6 Cactus Apple|q 4402/1
+		info They look like small cactuses with little pink apples on them.
+		info TODO: verify in-game
+	step
+		goto 45.8,59.3
+		.kill 8 Vile Familiar|q 792/1
+		info TODO: verify in-game
+	step
+		goto 42.8,69.1
+		.talk Zureetha Fargaze##3145
+		..turnin Vile Familiars##792
+		..accept Burning Blade Medallion##794
+		info TODO: verify in-game
+	step
+		goto 42.7,67.2
+		.talk Galgar##9796
+		..turnin Galgar's Cactus Apple Surprise##4402
+		info TODO: verify in-game
+	step
+		ding 3
+	step
+		goto 44.6,68.6
+		.talk Foreman Thazz'ril##11378
+		..accept Lazy Peons##5441
+		info Look out for sleeping peons from now on, and hit them with the Foreman's Blackjack.
+		info TODO: verify in-game
+	step
+		goto 40.6,62.6
+		.talk Hana'zua##3287
+		..accept Sarkoth##790
+		info TODO: verify in-game
+	step
+		goto 41.3,63.3
+		.from Scorpid Worker##3124
+		.get 8 Scorpid Worker Tail|q 789/1
+		info TODO: verify in-game
+	step
+		goto 40.6,66.6
+		.from Sarkoth##3281
+		.get Sarkoth's Mangled Claw|q 790/1
+		info He's on the plateau to the south.
+		info TODO: verify in-game
+	step
+		goto 40.6,62.6
+		.talk Hana'zua##3287
+		..turnin Sarkoth##790
+		..accept Sarkoth##804
+		info TODO: verify in-game
+	step
+		goto 45.3,69.9
+		.' Use your Foreman's Blackjack on Lazy Peons|use Foreman's Blackjack##16114
+		.' Awaken 5 Peons|goal 5 Peons Awoken|q 5441/1
+		info They are sleeping under the trees. Start here and head south along the cliffside.
+		info TODO: verify in-game
+	step
+		goto 44.6,68.6
+		.talk Foreman Thazz'ril##11378
+		..turnin Lazy Peons##5441
+		..accept Thazz'ril's Pick##6394
+		info TODO: verify in-game
+	step
+		goto 42.1,68.3
+		.talk Gornek##3143
+		..turnin Sting of the Scorpid##789
+		..turnin Sarkoth##804
+		info TODO: verify in-game
+	step
+		ding 4
+	step
+		goto 42.4,69.2
+		.talk Canaga Earthcaller##5887
+		..accept Call of Earth##1516
+		info It's the first of your totem quests, and it gives you the Earth Totem.
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto 45.3,55.7
+		.from Felstalker##3102
+		.get 2 Felstalker Hoof|q 1516/1
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto 44.8,54.4|n
+		'Go inside the Burning Blade cave|goto Durotar,44.8,54.4,0.3|noway|c
+		info At the entrance there are three paths: left, middle and right.
+		info TODO: verify in-game
+	step
+		goto 43.8,53.8
+		.' Click Thazz'ril's Pick
+		.get Thazz'ril's Pick|q 6394/1
+		info Take the middle path to the room with a small waterfall. The pick is glowing, leaning against the wall.
+		info TODO: verify in-game
+	step
+		goto 42.7,53
+		.from Yarrog Baneshadow##3183
+		.get Burning Blade Medallion|q 794/1
+		info Go back to the entrance and take the right path to the end of the tunnel.
+		info TODO: verify in-game
+	step
+		'Hearth to the Valley of Trials|goto 43.3,68.8,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 42.8,69.1
+		.talk Zureetha Fargaze##3145
+		..turnin Burning Blade Medallion##794
+		..accept Report to Sen'jin Village##805
+		info TODO: verify in-game
+	step
+		goto 44.6,68.6
+		.talk Foreman Thazz'ril##11378
+		..turnin Thazz'ril's Pick##6394
+		info TODO: verify in-game
+	step
+		goto 42.4,69.2
+		.talk Canaga Earthcaller##5887
+		..turnin Call of Earth##1516
+		..accept Call of Earth##1517
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto 41.5,73.4|n
+		'The path up to the Minor Manifestation of Earth starts here|goto Durotar,41.5,73.4,0.3|noway|c
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto 44.0,76.2
+		.' Drink the Earth Sapta in your bags|use Earth Sapta##6635
+		.talk Minor Manifestation of Earth##5891
+		..turnin Call of Earth##1517
+		..accept Call of Earth##1518
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto 42.4,69.2
+		.talk Canaga Earthcaller##5887
+		..turnin Call of Earth##1518
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		ding 5
+	step
+		'Go east along the road through the big gate|goto 49.8,68.4,0.3
+		info TODO: verify in-game
+	step
+		goto 52.1,68.3
+		.talk Ukor##6786
+		..accept A Peon's Burden##2161
+		info TODO: verify in-game
+	step
+		goto 54.4,74.3
+		.talk Lar Prowltusk##3140
+		..accept Thwarting Kolkar Aggression##786
+		info TODO: verify in-game
+	step
+		goto 56.0,74.7
+		.talk Master Gadrin##3188
+		..turnin Report to Sen'jin Village##805
+		..accept Minshina's Skull##808
+		..accept Zalazane##826
+		..accept Report to Orgnil##823
+		.talk Master Vornal##3304
+		..accept A Solvent Spirit##818
+		info TODO: verify in-game
+	step
+		goto 56.0,73.9
+		.talk Vel'rin Fang##3194
+		..accept Practical Prey##817
+		info TODO: verify in-game
+	step
+		goto 51.5,41.6
+		.talk Innkeeper Grosk##6928
+		..turnin A Peon's Burden##2161
+		..home Razor Hill
+		info TODO: verify in-game
+	step
+		goto 52.2,43.1
+		.talk Orgnil Soulscar##3142
+		..turnin Report to Orgnil##823
+		info Don't accept Dark Storms. Ding80 never finishes it.
+		info TODO: verify in-game
+	step
+		goto 52.0,43.5
+		.talk Gar'Thok##3139
+		..accept Vanquish the Betrayers##784
+		info TODO: verify in-game
+	step
+		goto 49.9,40.4
+		.talk Furl Scornbrow##3147
+		..accept Carry Your Weight##791
+		info He's up in the watchtower.
+		info TODO: verify in-game
+	step
+		goto 55.5,51.2
+		.kill 10 Kul Tiras Sailor|q 784/1
+		.kill 8 Kul Tiras Marine|q 784/2
+		.from Kul Tiras Sailor##3128, Kul Tiras Marine##3129
+		.get 8 Canvas Scraps|q 791/1
+		info TODO: verify in-game
+	step
+		goto 59.7,58.3
+		.kill Lieutenant Benedict##3192|q 784/3
+		.collect 1 Benedict's Key##4882|future|q 830
+		info He's on the upper floor of Tiragarde Keep with one add. Kill Benedict first.
+		info TODO: verify in-game
+	step
+		goto 59.3,57.7
+		.' Use Benedict's Key to open Benedict's Chest
+		.collect 1 Aged Envelope##4881|n
+		.' Click the Aged Envelope|use Aged Envelope##4881
+		..accept The Admiral's Orders##830
+		info The chest is further up the keep, at the very top.
+		info TODO: verify in-game
+	step
+		ding 6
+	step
+		goto 52.0,43.5
+		.talk Gar'Thok##3139
+		..turnin Vanquish the Betrayers##784
+		..accept From The Wreckage....##825
+		..accept Encroachment##837
+		..turnin The Admiral's Orders##830
+		..accept The Admiral's Orders##831
+		info TODO: verify in-game
+	step
+		goto 51.1,42.5
+		.talk Cook Torka##3191
+		..accept Break a Few Eggs##815
+		info TODO: verify in-game
+	step
+		goto 60.8,46.9
+		.from Makrura Shellhide##3104+, Makrura Clacker##3103+
+		.get 4 Intact Makrura Eye|q 818/1
+		.' Click the Gnomish Toolboxes
+		.get 3 Gnomish Tools|q 825/1
+		info Dive down and search the sunken ships for the Gnomish Toolboxes. They look like grey metal chests.
+		info TODO: verify in-game
+	step
+		goto 55.9,79.3
+		.from Pygmy Surf Crawler##3106+, Surf Crawler##3107+
+		.get 8 Crawler Mucus|q 818/2
+		info Kill crawlers along the coast as you head south. There are some near the Makrura too.
+		info TODO: verify in-game
+	step
+		goto 60.3,82.9
+		.' Click the purple Taillasher Eggs
+		.get 3 Taillasher Egg|q 815/1
+		.from Durotar Tiger##3121
+		.get 4 Durotar Tiger Fur|q 817/1
+		info Swim southeast to the Echo Isles, and start from the northeastern island.
+		info TODO: verify in-game
+	step
+		goto 65.4,83.3
+		.kill 8 Hexed Troll|q 826/1
+		.kill 8 Voodoo Troll|q 826/2
+		info TODO: verify in-game
+	step
+		goto 67.6,86.5
+		.from Zalazane##3205
+		.get Zalazane's Head|q 826/3
+		info TODO: verify in-game
+	step
+		goto 67.5,87.8
+		.' Click an Imprisoned Darkspear
+		.get Minshina's Skull|q 808/1
+		info It's on top of the hill near Zalazane: a little skull inside a round demonic symbol.
+		info TODO: verify in-game
+	step
+		goto 56.0,74.7
+		.talk Master Gadrin##3188
+		..turnin Minshina's Skull##808
+		..turnin Zalazane##826
+		.talk Master Vornal##3304
+		..turnin A Solvent Spirit##818
+		info TODO: verify in-game
+	step
+		goto 56.0,73.9
+		.talk Vel'rin Fang##3194
+		..turnin Practical Prey##817
+		info TODO: verify in-game
+	step
+		goto 51.3,79.1|n
+		'The path into the Kolkar canyon starts here|goto 51.3,79.1,0.3|noway|c
+		info TODO: verify in-game
+	step
+		goto 49.8,81.3
+		.' Click the Attack Plan: Valley of Trials
+		.' Burn the Attack Plan: Valley of Trials|goal Attack Plan: Valley of Trials destroyed|q 786/1
+		info It's a small white scroll laying flat on the floor in a big tent.
+		info TODO: verify in-game
+	step
+		goto 46.2,78.9
+		.' Click the Attack Plan: Orgrimmar
+		.' Burn the Attack Plan: Orgrimmar|goal Attack Plan: Orgrimmar destroyed|q 786/3
+		info It's a small white scroll laying under a canopy in a small camp.
+		info TODO: verify in-game
+	step
+		goto 47.7,77.3
+		.' Click the Attack Plan: Sen'jin Village
+		.' Burn the Attack Plan: Sen'jin Village|goal Attack Plan: Sen'jin Village destroyed|q 786/2
+		info It's a small white scroll laying on the floor under a brown canopy in a small camp.
+		info TODO: verify in-game
+	step
+		goto 54.4,74.3
+		.talk Lar Prowltusk##3140
+		..turnin Thwarting Kolkar Aggression##786
+		info TODO: verify in-game
+	step
+		ding 8
+	step
+		'Hearth to Razor Hill|goto 51.5,41.7,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 52.0,43.5
+		.talk Gar'Thok##3139
+		..turnin From The Wreckage....##825
+		info TODO: verify in-game
+	step
+		goto 51.1,42.5
+		.talk Cook Torka##3191
+		..turnin Break a Few Eggs##815
+		info TODO: verify in-game
+	step
+		goto 49.9,40.4
+		.talk Furl Scornbrow##3147
+		..turnin Carry Your Weight##791
+		info TODO: verify in-game
+	step
+		goto 44.6,48.6
+		.kill 4 Razormane Quilboar|q 837/1
+		.kill 4 Razormane Scout|q 837/2
+		info Watch out for Captain Flat Tusk, a level 11 elite who walks around this area.
+		info TODO: verify in-game
+	step
+		goto 44.5,41
+		.kill 4 Razormane Dustrunner|q 837/3
+		.kill 4 Razormane Battleguard|q 837/4
+		info TODO: verify in-game
+	step
+		goto 43.1,30.2
+		.talk Misha Tor'kren##3193
+		..accept Lost But Not Forgotten##816
+		info TODO: verify in-game
+	step
+		goto 37.2,17.4
+		.from Dreadmaw Crocolisk##3110, Corrupted Dreadmaw Crocolisk##3231
+		.get Kron's Amulet|q 816/1
+		info Kill crocolisks along the river, heading north, until the amulet drops.
+		info TODO: verify in-game
+	step
+		goto 46.4,22.9
+		.talk Rezlak##3293
+		..accept Winds in the Desert##834
+		info TODO: verify in-game
+	step
+		goto 48.6,33.5
+		.' Click the Stolen Supply Sacks
+		.get 5 Sack of Supplies|q 834/1
+		info They're small tan bags in the near part of Razorwind Canyon. The path in starts at 50.8,31.6.
+		info TODO: verify in-game
+	step
+		goto 46.4,22.9
+		.talk Rezlak##3293
+		..turnin Winds in the Desert##834
+		..accept Securing the Lines##835
+		info TODO: verify in-game
+	step
+		goto 54.1,26.9
+		.kill 12 Dustwind Savage|q 835/1
+		.kill 8 Dustwind Storm Witch|q 835/2
+		info Follow the path southeast into the cave tunnel. The harpies are deeper in. The path starts at 51.7,27.4.
+		info TODO: verify in-game
+	step
+		goto 46.4,22.9
+		.talk Rezlak##3293
+		..turnin Securing the Lines##835
+		info TODO: verify in-game
+	step
+		goto 43.1,30.2
+		.talk Misha Tor'kren##3193
+		..turnin Lost But Not Forgotten##816
+		info TODO: verify in-game
+	step
+		goto 52.0,43.5
+		.talk Gar'Thok##3139
+		..turnin Encroachment##837
+		info TODO: verify in-game
+	step
+		ding 10
+		.'Pick your first talent point.
+	step
+		goto 51.9,43.5
+		.talk Thotar##3171
+		..accept Taming the Beast##6062
+		info This chain gives you Tame Beast, so you can have a pet.
+		info TODO: verify in-game
+		only Orc Hunter
+	step
+		goto 52.1,46.2
+		.' Use your Taming Rod on a Dire Mottled Boar|use Taming Rod##15917
+		.' Tame a Dire Mottled Boar|goal Tame a Dire Mottled Boar|q 6062/1
+		info TODO: verify in-game
+		only Orc Hunter
+	step
+		goto 51.9,43.5
+		.talk Thotar##3171
+		..turnin Taming the Beast##6062
+		..accept Taming the Beast##6083
+		info TODO: verify in-game
+		only Orc Hunter
+	step
+		goto 59,26.5
+		.' Use your Taming Rod on a Surf Crawler|use Taming Rod##15919
+		.' Tame a Surf Crawler|goal Tame a Surf Crawler|q 6083/1
+		info TODO: verify in-game
+		only Orc Hunter
+	step
+		goto 51.9,43.5
+		.talk Thotar##3171
+		..turnin Taming the Beast##6083
+		..accept Taming the Beast##6082
+		info TODO: verify in-game
+		only Orc Hunter
+	step
+		goto 48,39.3
+		.' Use your Taming Rod on an Armored Scorpid|use Taming Rod##15920
+		.' Tame an Armored Scorpid|goal Tame an Armored Scorpid|q 6082/1
+		info TODO: verify in-game
+		only Orc Hunter
+	step
+		goto 51.9,43.5
+		.talk Thotar##3171
+		..turnin Taming the Beast##6082
+		..accept Training the Beast##6081
+		info You can tame your own pet now. Turn in Training the Beast in Orgrimmar.
+		info TODO: verify in-game
+		only Orc Hunter
+	step
+		goto 54.2,42.5
+		.talk Tarshaw Jaggedscar##3169
+		..accept Veteran Uzzek##1505
+		info This chain gives you Defensive Stance.
+		info TODO: verify in-game
+		only Orc Warrior
+	step
+		goto The Barrens,61.4,21.1
+		.talk Uzzek##5810
+		..turnin Veteran Uzzek##1505
+		..accept Path of Defense##1498
+		info He's at Far Watch Post, just west across the river from Durotar.
+		info TODO: verify in-game
+		only Orc Warrior
+	step
+		goto Durotar,39,32
+		.from Thunder Lizard##3130, Lightning Hide##3131
+		.get 5 Singed Scale|q 1498/1
+		info TODO: verify in-game
+		only Orc Warrior
+	step
+		goto The Barrens,61.4,21.1
+		.talk Uzzek##5810
+		..turnin Path of Defense##1498
+		info TODO: verify in-game
+		only Orc Warrior
+	step
+		goto Durotar,54.4,42.6
+		.talk Swart##3173
+		..accept Call of Fire##2983
+		info This chain gives you the Fire Totem.
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto The Barrens,56.0,19.9
+		.talk Kranal Fiss##5907
+		..turnin Call of Fire##2983
+		..accept Call of Fire##1524
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto Durotar,38.5,59.0
+		.talk Telf Joolam##5900
+		..turnin Call of Fire##1524
+		..accept Call of Fire##1525
+		info The path up to him starts at 36.6,57.1.
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto The Barrens,53.8,25.6
+		.from Razormane Thornweaver##3268, Razormane Water Seeker##3267
+		.get Fire Tar|q 1525/1
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto Durotar,52.8,28.9
+		.from Burning Blade Cultist##3199
+		.get Reagent Pouch|q 1525/2
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto 38.5,59.0
+		.talk Telf Joolam##5900
+		..turnin Call of Fire##1525
+		..accept Call of Fire##1526
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto 38.9,58.3
+		.' Drink the Fire Sapta in your bags|use Fire Sapta##6636
+		.from Minor Manifestation of Fire##5893
+		.get Glowing Ember|q 1526/1
+		.' Click the Brazier of the Dormant Flame
+		..turnin Call of Fire##1526
+		..accept Call of Fire##1527
+		info Run up the big hill next to Telf Joolam. The brazier is silver, on the ground.
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto The Barrens,56.0,19.9
+		.talk Kranal Fiss##5907
+		..turnin Call of Fire##1527
+		info TODO: verify in-game
+		only Orc Shaman
+	step
+		goto Durotar,54.4,41.3
+		.talk Ophek##3294
+		..accept Gan'rul's Summons##1506
+		info This chain gives you your Voidwalker.
+		info TODO: verify in-game
+		only Orc Warlock
+	step
+		'Go north to Orgrimmar|goto Orgrimmar
+		info TODO: verify in-game
+	step
+		goto Orgrimmar,45.1,63.9
+		.talk Doras##3310
+		..fpath Orgrimmar
+		info Train your skills at your class trainer while you're here. Ask a guard where to find them.
+		info TODO: verify in-game
+	step
+		goto 66.0,18.5
+		.talk Ormak Grimshot##3352
+		..turnin Training the Beast##6081
+		info TODO: verify in-game
+		only Orc Hunter
+	step
+		goto Orgrimmar,48.2,45.3
+		.talk Gan'rul Bloodeye##5875
+		..turnin Gan'rul's Summons##1506
+		..accept Creature of the Void##1501
+		info TODO: verify in-game
+		only Orc Warlock
+	step
+		goto Durotar,55.0,10.0|n
+		'Go inside Skull Rock|goto Durotar,55.0,10.0,1|noway|c
+		info Leave Orgrimmar by the east gate. The cave is just outside.
+		info TODO: verify in-game
+		only Orc Warlock
+	step
+		goto 51.6,9.7
+		.' Click the Burning Blade Stash
+		.get Tablet of Verga|q 1501/1
+		info Take the path to the right. It's a gray chest on the ground.
+		info TODO: verify in-game
+		only Orc Warlock
+	step
+		goto Orgrimmar,48.2,45.3
+		.talk Gan'rul Bloodeye##5875
+		..turnin Creature of the Void##1501
+		..accept The Binding##1504
+		info TODO: verify in-game
+		only Orc Warlock
+	step
+		goto 49.5,50.0
+		.' Use your Glyphs of Summoning while standing on the pink Summoning Circle|use Glyphs of Summoning##7464
+		.kill Summoned Voidwalker|q 1504/1
+		info TODO: verify in-game
+		only Orc Warlock
+	step
+		goto 48.2,45.3
+		.talk Gan'rul Bloodeye##5875
+		..turnin The Binding##1504
+		info You can summon your Voidwalker now.
+		info TODO: verify in-game
+		only Orc Warlock
+	step
+		goto Orgrimmar,34.3,36.3
+		.talk Vol'jin##10540
+		..turnin The Admiral's Orders##831
+		info Ding80 says to skip the follow-up, as it's too far out of the way.
+		info TODO: verify in-game
+	step
+		'Leave Orgrimmar|goto Durotar
+		info TODO: verify in-game
+	step
+		goto Durotar,50.8,13.3|n
+		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|c
+		info Ask the zeppelin master in front of each platform which way it goes. You want the one to Undercity, not Grom'gol.
+		info TODO: verify in-game
+	step
+		'Go into Undercity|goto Undercity
+		info TODO: verify in-game
+	step
+		goto Undercity,63.2,48.6
+		.talk Michael Garrett##4551
+		..fpath Undercity
+		info Take the elevator down into the Undercity.
+		info TODO: verify in-game
+	step
+		goto Undercity,54.6,11.3
+		.' Click the Orb of Translocation
+		..'It will teleport you to Silvermoon City|goto Silvermoon City|noway|c
+		info It's back at the entrance of Undercity, in the ruins above.
+		info TODO: verify in-game
+]])
+
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Troll (1-10)",[[
+	author YunataSavior
+	defaultfor Troll
+	next Ding80's Horde Leveling Guides\\Main Guide (10-11)
+	startlevel 1
+
+	step
+		goto Durotar,43.3,68.5
+		.talk Kaltunk##10176
+		..accept Your Place In The World##4641
+		info TODO: verify in-game
+	step
+		'Go inside the cave to 42.1,68.3|goto 42.1,68.3
+		.talk Gornek##3143
+		..turnin Your Place In The World##4641
+		..accept Cutting Teeth##788
+		info TODO: verify in-game
+	step
+		goto 43.8,70
+		.kill 8 Mottled Boar|q 788/1
+		info TODO: verify in-game
+	step
+		ding 2
+	step
+		goto 42.1,68.3
+		.talk Gornek##3143
+		..turnin Cutting Teeth##788
+		..accept Sting of the Scorpid##789
+		..accept Simple Tablet##3065 |only Troll Warrior
+		..accept Rune-Inscribed Tablet##3084 |only Troll Shaman
+		..accept Encrypted Tablet##3083 |only Troll Rogue
+		..accept Etched Tablet##3082 |only Troll Hunter
+		..accept Hallowed Tablet##3085 |only Troll Priest
+		..accept Glyphic Tablet##3086 |only Troll Mage
+		info TODO: verify in-game
+	step
+		goto 42.9,69.4
+		.talk Frang##3153
+		..turnin Simple Tablet##3065
+		info Train your skills here. This is your class trainer.
+		info TODO: verify in-game
+		only Troll Warrior
+	step
+		goto 42.4,69.0
+		.talk Shikrik##3157
+		..turnin Rune-Inscribed Tablet##3084
+		info Train your skills here. This is your class trainer.
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto 41.3,68.0
+		.talk Rwag##3155
+		..turnin Encrypted Tablet##3083
+		info Train your skills here. This is your class trainer.
+		info TODO: verify in-game
+		only Troll Rogue
+	step
+		goto 42.8,69.3
+		.talk Jen'shan##3154
+		..turnin Etched Tablet##3082
+		info Train your skills here. This is your class trainer.
+		info TODO: verify in-game
+		only Troll Hunter
+	step
+		goto 42.4,68.8
+		.talk Ken'jai##3707
+		..turnin Hallowed Tablet##3085
+		info Train your skills here. This is your class trainer.
+		info TODO: verify in-game
+		only Troll Priest
+	step
+		goto 42.5,69.0
+		.talk Mai'ah##5884
+		..turnin Glyphic Tablet##3086
+		info Train your skills here. This is your class trainer.
+		info TODO: verify in-game
+		only Troll Mage
+	step
+		goto 42.8,69.1
+		.talk Zureetha Fargaze##3145
+		..accept Vile Familiars##792
+		info TODO: verify in-game
+	step
+		goto 42.7,67.2
+		.talk Galgar##9796
+		..accept Galgar's Cactus Apple Surprise##4402
+		info Train your skills at your class trainer in the Den at every even level from now on, whenever you're near a town.
+		info TODO: verify in-game
+	step
+		goto 44.1,65.4
+		.' Click the Cactus Apples
+		.get 6 Cactus Apple|q 4402/1
+		info They look like small cactuses with little pink apples on them.
+		info TODO: verify in-game
+	step
+		goto 45.8,59.3
+		.kill 8 Vile Familiar|q 792/1
+		info TODO: verify in-game
+	step
+		goto 42.8,69.1
+		.talk Zureetha Fargaze##3145
+		..turnin Vile Familiars##792
+		..accept Burning Blade Medallion##794
+		info TODO: verify in-game
+	step
+		goto 42.7,67.2
+		.talk Galgar##9796
+		..turnin Galgar's Cactus Apple Surprise##4402
+		info TODO: verify in-game
+	step
+		ding 3
+	step
+		goto 44.6,68.6
+		.talk Foreman Thazz'ril##11378
+		..accept Lazy Peons##5441
+		info Look out for sleeping peons from now on, and hit them with the Foreman's Blackjack.
+		info TODO: verify in-game
+	step
+		goto 40.6,62.6
+		.talk Hana'zua##3287
+		..accept Sarkoth##790
+		info TODO: verify in-game
+	step
+		goto 41.3,63.3
+		.from Scorpid Worker##3124
+		.get 8 Scorpid Worker Tail|q 789/1
+		info TODO: verify in-game
+	step
+		goto 40.6,66.6
+		.from Sarkoth##3281
+		.get Sarkoth's Mangled Claw|q 790/1
+		info He's on the plateau to the south.
+		info TODO: verify in-game
+	step
+		goto 40.6,62.6
+		.talk Hana'zua##3287
+		..turnin Sarkoth##790
+		..accept Sarkoth##804
+		info TODO: verify in-game
+	step
+		goto 45.3,69.9
+		.' Use your Foreman's Blackjack on Lazy Peons|use Foreman's Blackjack##16114
+		.' Awaken 5 Peons|goal 5 Peons Awoken|q 5441/1
+		info They are sleeping under the trees. Start here and head south along the cliffside.
+		info TODO: verify in-game
+	step
+		goto 44.6,68.6
+		.talk Foreman Thazz'ril##11378
+		..turnin Lazy Peons##5441
+		..accept Thazz'ril's Pick##6394
+		info TODO: verify in-game
+	step
+		goto 42.1,68.3
+		.talk Gornek##3143
+		..turnin Sting of the Scorpid##789
+		..turnin Sarkoth##804
+		info TODO: verify in-game
+	step
+		ding 4
+	step
+		goto 42.4,69.2
+		.talk Canaga Earthcaller##5887
+		..accept Call of Earth##1516
+		info It's the first of your totem quests, and it gives you the Earth Totem.
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto 45.3,55.7
+		.from Felstalker##3102
+		.get 2 Felstalker Hoof|q 1516/1
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto 44.8,54.4|n
+		'Go inside the Burning Blade cave|goto Durotar,44.8,54.4,0.3|noway|c
+		info At the entrance there are three paths: left, middle and right.
+		info TODO: verify in-game
+	step
+		goto 43.8,53.8
+		.' Click Thazz'ril's Pick
+		.get Thazz'ril's Pick|q 6394/1
+		info Take the middle path to the room with a small waterfall. The pick is glowing, leaning against the wall.
+		info TODO: verify in-game
+	step
+		goto 42.7,53
+		.from Yarrog Baneshadow##3183
+		.get Burning Blade Medallion|q 794/1
+		info Go back to the entrance and take the right path to the end of the tunnel.
+		info TODO: verify in-game
+	step
+		'Hearth to the Valley of Trials|goto 43.3,68.8,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 42.8,69.1
+		.talk Zureetha Fargaze##3145
+		..turnin Burning Blade Medallion##794
+		..accept Report to Sen'jin Village##805
+		info TODO: verify in-game
+	step
+		goto 44.6,68.6
+		.talk Foreman Thazz'ril##11378
+		..turnin Thazz'ril's Pick##6394
+		info TODO: verify in-game
+	step
+		goto 42.4,69.2
+		.talk Canaga Earthcaller##5887
+		..turnin Call of Earth##1516
+		..accept Call of Earth##1517
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto 41.5,73.4|n
+		'The path up to the Minor Manifestation of Earth starts here|goto Durotar,41.5,73.4,0.3|noway|c
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto 44.0,76.2
+		.' Drink the Earth Sapta in your bags|use Earth Sapta##6635
+		.talk Minor Manifestation of Earth##5891
+		..turnin Call of Earth##1517
+		..accept Call of Earth##1518
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto 42.4,69.2
+		.talk Canaga Earthcaller##5887
+		..turnin Call of Earth##1518
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		ding 5
+	step
+		'Go east along the road through the big gate|goto 49.8,68.4,0.3
+		info TODO: verify in-game
+	step
+		goto 52.1,68.3
+		.talk Ukor##6786
+		..accept A Peon's Burden##2161
+		info TODO: verify in-game
+	step
+		goto 54.4,74.3
+		.talk Lar Prowltusk##3140
+		..accept Thwarting Kolkar Aggression##786
+		info TODO: verify in-game
+	step
+		goto 56.0,74.7
+		.talk Master Gadrin##3188
+		..turnin Report to Sen'jin Village##805
+		..accept Minshina's Skull##808
+		..accept Zalazane##826
+		..accept Report to Orgnil##823
+		.talk Master Vornal##3304
+		..accept A Solvent Spirit##818
+		info TODO: verify in-game
+	step
+		goto 56.0,73.9
+		.talk Vel'rin Fang##3194
+		..accept Practical Prey##817
+		info TODO: verify in-game
+	step
+		goto 51.5,41.6
+		.talk Innkeeper Grosk##6928
+		..turnin A Peon's Burden##2161
+		..home Razor Hill
+		info TODO: verify in-game
+	step
+		goto 52.2,43.1
+		.talk Orgnil Soulscar##3142
+		..turnin Report to Orgnil##823
+		info Don't accept Dark Storms. Ding80 never finishes it.
+		info TODO: verify in-game
+	step
+		goto 52.0,43.5
+		.talk Gar'Thok##3139
+		..accept Vanquish the Betrayers##784
+		info TODO: verify in-game
+	step
+		goto 49.9,40.4
+		.talk Furl Scornbrow##3147
+		..accept Carry Your Weight##791
+		info He's up in the watchtower.
+		info TODO: verify in-game
+	step
+		goto 55.5,51.2
+		.kill 10 Kul Tiras Sailor|q 784/1
+		.kill 8 Kul Tiras Marine|q 784/2
+		.from Kul Tiras Sailor##3128, Kul Tiras Marine##3129
+		.get 8 Canvas Scraps|q 791/1
+		info TODO: verify in-game
+	step
+		goto 59.7,58.3
+		.kill Lieutenant Benedict##3192|q 784/3
+		.collect 1 Benedict's Key##4882|future|q 830
+		info He's on the upper floor of Tiragarde Keep with one add. Kill Benedict first.
+		info TODO: verify in-game
+	step
+		goto 59.3,57.7
+		.' Use Benedict's Key to open Benedict's Chest
+		.collect 1 Aged Envelope##4881|n
+		.' Click the Aged Envelope|use Aged Envelope##4881
+		..accept The Admiral's Orders##830
+		info The chest is further up the keep, at the very top.
+		info TODO: verify in-game
+	step
+		ding 6
+	step
+		goto 52.0,43.5
+		.talk Gar'Thok##3139
+		..turnin Vanquish the Betrayers##784
+		..accept From The Wreckage....##825
+		..accept Encroachment##837
+		..turnin The Admiral's Orders##830
+		..accept The Admiral's Orders##831
+		info TODO: verify in-game
+	step
+		goto 51.1,42.5
+		.talk Cook Torka##3191
+		..accept Break a Few Eggs##815
+		info TODO: verify in-game
+	step
+		goto 60.8,46.9
+		.from Makrura Shellhide##3104+, Makrura Clacker##3103+
+		.get 4 Intact Makrura Eye|q 818/1
+		.' Click the Gnomish Toolboxes
+		.get 3 Gnomish Tools|q 825/1
+		info Dive down and search the sunken ships for the Gnomish Toolboxes. They look like grey metal chests.
+		info TODO: verify in-game
+	step
+		goto 55.9,79.3
+		.from Pygmy Surf Crawler##3106+, Surf Crawler##3107+
+		.get 8 Crawler Mucus|q 818/2
+		info Kill crawlers along the coast as you head south. There are some near the Makrura too.
+		info TODO: verify in-game
+	step
+		goto 60.3,82.9
+		.' Click the purple Taillasher Eggs
+		.get 3 Taillasher Egg|q 815/1
+		.from Durotar Tiger##3121
+		.get 4 Durotar Tiger Fur|q 817/1
+		info Swim southeast to the Echo Isles, and start from the northeastern island.
+		info TODO: verify in-game
+	step
+		goto 65.4,83.3
+		.kill 8 Hexed Troll|q 826/1
+		.kill 8 Voodoo Troll|q 826/2
+		info TODO: verify in-game
+	step
+		goto 67.6,86.5
+		.from Zalazane##3205
+		.get Zalazane's Head|q 826/3
+		info TODO: verify in-game
+	step
+		goto 67.5,87.8
+		.' Click an Imprisoned Darkspear
+		.get Minshina's Skull|q 808/1
+		info It's on top of the hill near Zalazane: a little skull inside a round demonic symbol.
+		info TODO: verify in-game
+	step
+		goto 56.0,74.7
+		.talk Master Gadrin##3188
+		..turnin Minshina's Skull##808
+		..turnin Zalazane##826
+		.talk Master Vornal##3304
+		..turnin A Solvent Spirit##818
+		info TODO: verify in-game
+	step
+		goto 56.0,73.9
+		.talk Vel'rin Fang##3194
+		..turnin Practical Prey##817
+		info TODO: verify in-game
+	step
+		goto 51.3,79.1|n
+		'The path into the Kolkar canyon starts here|goto 51.3,79.1,0.3|noway|c
+		info TODO: verify in-game
+	step
+		goto 49.8,81.3
+		.' Click the Attack Plan: Valley of Trials
+		.' Burn the Attack Plan: Valley of Trials|goal Attack Plan: Valley of Trials destroyed|q 786/1
+		info It's a small white scroll laying flat on the floor in a big tent.
+		info TODO: verify in-game
+	step
+		goto 46.2,78.9
+		.' Click the Attack Plan: Orgrimmar
+		.' Burn the Attack Plan: Orgrimmar|goal Attack Plan: Orgrimmar destroyed|q 786/3
+		info It's a small white scroll laying under a canopy in a small camp.
+		info TODO: verify in-game
+	step
+		goto 47.7,77.3
+		.' Click the Attack Plan: Sen'jin Village
+		.' Burn the Attack Plan: Sen'jin Village|goal Attack Plan: Sen'jin Village destroyed|q 786/2
+		info It's a small white scroll laying on the floor under a brown canopy in a small camp.
+		info TODO: verify in-game
+	step
+		goto 54.4,74.3
+		.talk Lar Prowltusk##3140
+		..turnin Thwarting Kolkar Aggression##786
+		info TODO: verify in-game
+	step
+		ding 8
+	step
+		'Hearth to Razor Hill|goto 51.5,41.7,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 52.0,43.5
+		.talk Gar'Thok##3139
+		..turnin From The Wreckage....##825
+		info TODO: verify in-game
+	step
+		goto 51.1,42.5
+		.talk Cook Torka##3191
+		..turnin Break a Few Eggs##815
+		info TODO: verify in-game
+	step
+		goto 49.9,40.4
+		.talk Furl Scornbrow##3147
+		..turnin Carry Your Weight##791
+		info TODO: verify in-game
+	step
+		goto 44.6,48.6
+		.kill 4 Razormane Quilboar|q 837/1
+		.kill 4 Razormane Scout|q 837/2
+		info Watch out for Captain Flat Tusk, a level 11 elite who walks around this area.
+		info TODO: verify in-game
+	step
+		goto 44.5,41
+		.kill 4 Razormane Dustrunner|q 837/3
+		.kill 4 Razormane Battleguard|q 837/4
+		info TODO: verify in-game
+	step
+		goto 43.1,30.2
+		.talk Misha Tor'kren##3193
+		..accept Lost But Not Forgotten##816
+		info TODO: verify in-game
+	step
+		goto 37.2,17.4
+		.from Dreadmaw Crocolisk##3110, Corrupted Dreadmaw Crocolisk##3231
+		.get Kron's Amulet|q 816/1
+		info Kill crocolisks along the river, heading north, until the amulet drops.
+		info TODO: verify in-game
+	step
+		goto 46.4,22.9
+		.talk Rezlak##3293
+		..accept Winds in the Desert##834
+		info TODO: verify in-game
+	step
+		goto 48.6,33.5
+		.' Click the Stolen Supply Sacks
+		.get 5 Sack of Supplies|q 834/1
+		info They're small tan bags in the near part of Razorwind Canyon. The path in starts at 50.8,31.6.
+		info TODO: verify in-game
+	step
+		goto 46.4,22.9
+		.talk Rezlak##3293
+		..turnin Winds in the Desert##834
+		..accept Securing the Lines##835
+		info TODO: verify in-game
+	step
+		goto 54.1,26.9
+		.kill 12 Dustwind Savage|q 835/1
+		.kill 8 Dustwind Storm Witch|q 835/2
+		info Follow the path southeast into the cave tunnel. The harpies are deeper in. The path starts at 51.7,27.4.
+		info TODO: verify in-game
+	step
+		goto 46.4,22.9
+		.talk Rezlak##3293
+		..turnin Securing the Lines##835
+		info TODO: verify in-game
+	step
+		goto 43.1,30.2
+		.talk Misha Tor'kren##3193
+		..turnin Lost But Not Forgotten##816
+		info TODO: verify in-game
+	step
+		goto 52.0,43.5
+		.talk Gar'Thok##3139
+		..turnin Encroachment##837
+		info TODO: verify in-game
+	step
+		ding 10
+		.'Pick your first talent point.
+	step
+		goto 51.9,43.5
+		.talk Thotar##3171
+		..accept Taming the Beast##6062
+		info This chain gives you Tame Beast, so you can have a pet.
+		info TODO: verify in-game
+		only Troll Hunter
+	step
+		goto 52.1,46.2
+		.' Use your Taming Rod on a Dire Mottled Boar|use Taming Rod##15917
+		.' Tame a Dire Mottled Boar|goal Tame a Dire Mottled Boar|q 6062/1
+		info TODO: verify in-game
+		only Troll Hunter
+	step
+		goto 51.9,43.5
+		.talk Thotar##3171
+		..turnin Taming the Beast##6062
+		..accept Taming the Beast##6083
+		info TODO: verify in-game
+		only Troll Hunter
+	step
+		goto 59,26.5
+		.' Use your Taming Rod on a Surf Crawler|use Taming Rod##15919
+		.' Tame a Surf Crawler|goal Tame a Surf Crawler|q 6083/1
+		info TODO: verify in-game
+		only Troll Hunter
+	step
+		goto 51.9,43.5
+		.talk Thotar##3171
+		..turnin Taming the Beast##6083
+		..accept Taming the Beast##6082
+		info TODO: verify in-game
+		only Troll Hunter
+	step
+		goto 48,39.3
+		.' Use your Taming Rod on an Armored Scorpid|use Taming Rod##15920
+		.' Tame an Armored Scorpid|goal Tame an Armored Scorpid|q 6082/1
+		info TODO: verify in-game
+		only Troll Hunter
+	step
+		goto 51.9,43.5
+		.talk Thotar##3171
+		..turnin Taming the Beast##6082
+		..accept Training the Beast##6081
+		info You can tame your own pet now. Turn in Training the Beast in Orgrimmar.
+		info TODO: verify in-game
+		only Troll Hunter
+	step
+		goto 54.2,42.5
+		.talk Tarshaw Jaggedscar##3169
+		..accept Veteran Uzzek##1505
+		info This chain gives you Defensive Stance.
+		info TODO: verify in-game
+		only Troll Warrior
+	step
+		goto The Barrens,61.4,21.1
+		.talk Uzzek##5810
+		..turnin Veteran Uzzek##1505
+		..accept Path of Defense##1498
+		info He's at Far Watch Post, just west across the river from Durotar.
+		info TODO: verify in-game
+		only Troll Warrior
+	step
+		goto Durotar,39,32
+		.from Thunder Lizard##3130, Lightning Hide##3131
+		.get 5 Singed Scale|q 1498/1
+		info TODO: verify in-game
+		only Troll Warrior
+	step
+		goto The Barrens,61.4,21.1
+		.talk Uzzek##5810
+		..turnin Path of Defense##1498
+		info TODO: verify in-game
+		only Troll Warrior
+	step
+		goto Durotar,54.4,42.6
+		.talk Swart##3173
+		..accept Call of Fire##2983
+		info This chain gives you the Fire Totem.
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto The Barrens,56.0,19.9
+		.talk Kranal Fiss##5907
+		..turnin Call of Fire##2983
+		..accept Call of Fire##1524
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto Durotar,38.5,59.0
+		.talk Telf Joolam##5900
+		..turnin Call of Fire##1524
+		..accept Call of Fire##1525
+		info The path up to him starts at 36.6,57.1.
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto The Barrens,53.8,25.6
+		.from Razormane Thornweaver##3268, Razormane Water Seeker##3267
+		.get Fire Tar|q 1525/1
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto Durotar,52.8,28.9
+		.from Burning Blade Cultist##3199
+		.get Reagent Pouch|q 1525/2
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto 38.5,59.0
+		.talk Telf Joolam##5900
+		..turnin Call of Fire##1525
+		..accept Call of Fire##1526
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto 38.9,58.3
+		.' Drink the Fire Sapta in your bags|use Fire Sapta##6636
+		.from Minor Manifestation of Fire##5893
+		.get Glowing Ember|q 1526/1
+		.' Click the Brazier of the Dormant Flame
+		..turnin Call of Fire##1526
+		..accept Call of Fire##1527
+		info Run up the big hill next to Telf Joolam. The brazier is silver, on the ground.
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		goto The Barrens,56.0,19.9
+		.talk Kranal Fiss##5907
+		..turnin Call of Fire##1527
+		info TODO: verify in-game
+		only Troll Shaman
+	step
+		'Go north to Orgrimmar|goto Orgrimmar
+		info TODO: verify in-game
+	step
+		goto Orgrimmar,45.1,63.9
+		.talk Doras##3310
+		..fpath Orgrimmar
+		info Train your skills at your class trainer while you're here. Ask a guard where to find them.
+		info TODO: verify in-game
+	step
+		goto 66.0,18.5
+		.talk Ormak Grimshot##3352
+		..turnin Training the Beast##6081
+		info TODO: verify in-game
+		only Troll Hunter
+	step
+		goto Orgrimmar,34.3,36.3
+		.talk Vol'jin##10540
+		..turnin The Admiral's Orders##831
+		info Ding80 says to skip the follow-up, as it's too far out of the way.
+		info TODO: verify in-game
+	step
+		'Leave Orgrimmar|goto Durotar
+		info TODO: verify in-game
+	step
+		goto Durotar,50.8,13.3|n
+		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|c
+		info Ask the zeppelin master in front of each platform which way it goes. You want the one to Undercity, not Grom'gol.
+		info TODO: verify in-game
+	step
+		'Go into Undercity|goto Undercity
+		info TODO: verify in-game
+	step
+		goto Undercity,63.2,48.6
+		.talk Michael Garrett##4551
+		..fpath Undercity
+		info Take the elevator down into the Undercity.
+		info TODO: verify in-game
+	step
+		goto Undercity,54.6,11.3
+		.' Click the Orb of Translocation
+		..'It will teleport you to Silvermoon City|goto Silvermoon City|noway|c
+		info It's back at the entrance of Undercity, in the ruins above.
+		info TODO: verify in-game
+]])
+
+
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Tauren (1-10)",[[
+	author YunataSavior
+	defaultfor Tauren
+	next Ding80's Horde Leveling Guides\\Main Guide (10-11)
+	startlevel 1
+
+	step
+		goto Mulgore,44.9,77.1
+		.talk Grull Hawkwind##2980
+		..accept The Hunt Begins##747
+		info TODO: verify in-game
+	step
+		goto 44.2,76.1
+		.talk Chief Hawkwind##2981
+		..accept A Humble Task##752
+		info TODO: verify in-game
+	step
+		goto 45.6,79.4
+		.from Plainstrider##2955
+		.get 7 Plainstrider Meat|q 747/1
+		.get 7 Plainstrider Feather|q 747/2
+		info TODO: verify in-game
+	step
+		goto 50.0,81.2
+		.talk Greatmother Hawkwind##2991
+		..turnin A Humble Task##752
+		..accept A Humble Task##753
+		.' Click a Water Pitcher on the well
+		.get Water Pitcher|q 753/1
+		info TODO: verify in-game
+	step
+		ding 2
+	step
+		goto 44.9,77.1
+		.talk Grull Hawkwind##2980
+		..turnin The Hunt Begins##747
+		..accept The Hunt Continues##750
+		..accept Simple Note##3091 |only Tauren Warrior
+		..accept Rune-Inscribed Note##3093 |only Tauren Shaman
+		..accept Etched Note##3092 |only Tauren Hunter
+		..accept Verdant Note##3094 |only Tauren Druid
+		info TODO: verify in-game
+	step
+		goto 44.2,76.1
+		.talk Chief Hawkwind##2981
+		..turnin A Humble Task##753
+		..accept Rites of the Earthmother##755
+		info TODO: verify in-game
+	step
+		goto 44.0,76.1
+		.talk Harutt Thunderhorn##3059
+		..turnin Simple Note##3091
+		info Train your skills here. This is your class trainer. From now on, train at every even level whenever you're near a town.
+		info TODO: verify in-game
+		only Tauren Warrior
+	step
+		goto 45.0,75.9
+		.talk Meela Dawnstrider##3062
+		..turnin Rune-Inscribed Note##3093
+		info Train your skills here. This is your class trainer. From now on, train at every even level whenever you're near a town.
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto 44.2,75.8
+		.talk Lanka Farshot##3061
+		..turnin Etched Note##3092
+		info Train your skills here. This is your class trainer. From now on, train at every even level whenever you're near a town.
+		info TODO: verify in-game
+		only Tauren Hunter
+	step
+		goto 45.1,75.9
+		.talk Gart Mistrunner##3060
+		..turnin Verdant Note##3094
+		info Train your skills here. This is your class trainer. From now on, train at every even level whenever you're near a town.
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 45.1,88.1
+		.from Mountain Cougar##2961
+		.get 10 Mountain Cougar Pelt|q 750/1
+		info TODO: verify in-game
+	step
+		goto 42.6,92.2
+		.talk Seer Graytongue##2982
+		..turnin Rites of the Earthmother##755
+		..accept Rite of Strength##757
+		info TODO: verify in-game
+	step
+		ding 3
+	step
+		goto 44.9,77.1
+		.talk Grull Hawkwind##2980
+		..turnin The Hunt Continues##750
+		..accept The Battleboars##780
+		info TODO: verify in-game
+	step
+		goto 44.5,76.5
+		.talk Brave Windfeather##3209
+		..accept Break Sharptusk!##3376
+		info TODO: verify in-game
+	step
+		ding 4
+	step
+		goto 44.7,76.2
+		.talk Seer Ravenfeather##5888
+		..accept Call of Earth##1519
+		info It's the first of your totem quests, and it gives you the Earth Totem.
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto 52.3,78.8
+		.from Battleboar##2966, Bristleback Battleboar##2954
+		.get 8 Battleboar Snout|q 780/1
+		.get 8 Battleboar Flank|q 780/2
+		info TODO: verify in-game
+	step
+		goto 58.2,84.9
+		.from Bristleback Quilboar##2952, Bristleback Shaman##2953
+		.get 12 Bristleback Belt|q 757/1
+		info TODO: verify in-game
+	step
+		goto 64.0,77.8
+		.from Bristleback Shaman##2953
+		.get 2 Ritual Salve|q 1519/1
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto 64.7,77.7
+		.from Chief Sharptusk Thornmantle##8554
+		.get Chief Sharptusk Thornmantle's Head|q 3376/1
+		info Go southeast into the cave and through the tunnel. He's in a huge round tent.
+		info TODO: verify in-game
+	step
+		goto 63.2,82.7
+		.' Click the Dirt-stained Map
+		..accept Attack on Camp Narache##24857
+		info It's in a small cave to the south.
+		info TODO: verify in-game
+	step
+		ding 5
+	step
+		'Hearth to Camp Narache|goto 44.9,77.2,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 44.9,77.1
+		.talk Grull Hawkwind##2980
+		..turnin The Battleboars##780
+		info TODO: verify in-game
+	step
+		goto 44.5,76.5
+		.talk Brave Windfeather##3209
+		..turnin Break Sharptusk!##3376
+		info TODO: verify in-game
+	step
+		goto 44.2,76.1
+		.talk Chief Hawkwind##2981
+		..turnin Rite of Strength##757
+		..turnin Attack on Camp Narache##24857
+		..accept Rites of the Earthmother##763
+		info TODO: verify in-game
+	step
+		goto 44.7,76.2
+		.talk Seer Ravenfeather##5888
+		..turnin Call of Earth##1519
+		..accept Call of Earth##1520
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto 53.9,80.5
+		.' Drink the Earth Sapta in your bags next to the huge rock|use Earth Sapta##6635
+		.talk Minor Manifestation of Earth##5891
+		..turnin Call of Earth##1520
+		..accept Call of Earth##1521
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto 44.7,76.2
+		.talk Seer Ravenfeather##5888
+		..turnin Call of Earth##1521
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto 38.5,81.5
+		.talk Antur Fallow##6775
+		..accept A Task Unfinished##1656
+		info Follow the road southwest out of Camp Narache.
+		info TODO: verify in-game
+	step
+		goto 46.6,61.1
+		.talk Innkeeper Kauth##6747
+		..turnin A Task Unfinished##1656
+		..home Bloodhoof Village
+		info TODO: verify in-game
+	step
+		goto 47.5,60.2
+		.talk Baine Bloodhoof##2993
+		..turnin Rites of the Earthmother##763
+		..accept Sharing the Land##745
+		..accept Rite of Vision##767
+		info TODO: verify in-game
+	step
+		goto 48.5,60.4
+		.talk Mull Thunderhorn##2948
+		..accept Poison Water##748
+		info TODO: verify in-game
+	step
+		goto 48.7,59.3
+		.talk Harken Windtotem##2947
+		..accept Swoop Hunting##761
+		info TODO: verify in-game
+	step
+		goto 47.4,62.0
+		.talk Ruul Eagletalon##2985
+		..accept Dangers of the Windfury##743
+		info TODO: verify in-game
+	step
+		goto 47.0,57.1
+		.talk Maur Raincaller##3055
+		..accept Mazzranache##766
+		info TODO: verify in-game
+	step
+		goto 47.8,57.5
+		.talk Zarlman Two-Moons##3054
+		..turnin Rite of Vision##767
+		..accept Rite of Vision##771
+		info He's by the bonfire.
+		info TODO: verify in-game
+	step
+		goto 48.2,53.3
+		.talk Ahab Wheathoof##23618
+		..accept Kyle's Gone Missing!##11129
+		info He's at the northern end of the village, by the bridge.
+		info TODO: verify in-game
+	step
+		goto 52.0,66.9
+		.from Prairie Wolf##2958, Prairie Stalker##2959
+		.get 6 Prairie Wolf Paw|q 748/1
+		.from Adult Plainstrider##2956, Elder Plainstrider##2957
+		.get 4 Plainstrider Talon|q 748/2
+		.collect 1 Tender Strider Meat##33009|q 11129
+		info TODO: verify in-game
+	step
+		goto 52.0,63.6
+		.' Click the Ambercorn on the ground
+		.get 2 Ambercorn|q 771/2
+		info They look like little brown pine cones under the trees.
+		info TODO: verify in-game
+	step
+		goto 53.3,65.7
+		.' Click the flat grey Well Stones around the well
+		.get 2 Well Stone|q 771/1
+		info TODO: verify in-game
+	step
+		ding 6
+	step
+		goto 49.3,61.3
+		.' Use the Tender Strider Meat on Kyle the Frenzied when he runs past|use Tender Strider Meat##33009
+		.' Feed Kyle|goal Kyle Fed|q 11129/1
+		info He's a wolf that runs in a circle around the village.
+		info TODO: verify in-game
+	step
+		goto 48.2,53.3
+		.talk Ahab Wheathoof##23618
+		..turnin Kyle's Gone Missing!##11129
+		info TODO: verify in-game
+	step
+		goto 47.5,60.2
+		.talk Baine Bloodhoof##2993
+		..accept Dwarven Digging##746
+		info Train your skills while you're in town.
+		info TODO: verify in-game
+	step
+		goto 48.5,60.4
+		.talk Mull Thunderhorn##2948
+		..turnin Poison Water##748
+		..accept Winterhoof Cleansing##754
+		info TODO: verify in-game
+	step
+		goto 47.8,57.5
+		.talk Zarlman Two-Moons##3054
+		..turnin Rite of Vision##771
+		..accept Rite of Vision##772
+		info TODO: verify in-game
+	step
+		goto 53.7,66.2
+		.' Use your Winterhoof Cleansing Totem next to the well|use Winterhoof Cleansing Totem##5411
+		.' Cleanse the Winterhoof Water Well|goal Cleanse the Winterhoof Water Well|q 754/1
+		info TODO: verify in-game
+	step
+		goto 48.5,60.4
+		.talk Mull Thunderhorn##2948
+		..turnin Winterhoof Cleansing##754
+		..accept Thunderhorn Totem##756
+		info TODO: verify in-game
+	step
+		goto 52.8,71.2
+		.kill 10 Palemane Tanner|q 745/1
+		.kill 8 Palemane Skinner|q 745/2
+		.kill 5 Palemane Poacher|q 745/3
+		info TODO: verify in-game
+	step
+		goto 57.2,61.2
+		.talk Morin Cloudstalker##2988
+		..accept The Ravaged Caravan##749
+		info He walks along the road, so you may need to look for him.
+		info TODO: verify in-game
+	step
+		goto 56.1,71.4
+		.from Wiry Swoop##2969, Swoop##2970
+		.get 8 Trophy Swoop Quill|q 761/1
+		.from Prairie Stalker##2959
+		.get 6 Stalker Claws|q 756/1
+		.from Flatland Cougar##3035
+		.get 6 Cougar Claws|q 756/2
+		info TODO: verify in-game
+	step
+		goto 56.1,71.4
+		.from Prairie Wolf##2958, Prairie Stalker##2959
+		.get 1 Prairie Wolf Heart|q 766/1
+		.from Flatland Cougar##3035
+		.get 1 Flatland Cougar Femur|q 766/2
+		.from Adult Plainstrider##2956, Elder Plainstrider##2957
+		.get 1 Plainstrider Scale|q 766/3
+		.from Wiry Swoop##2969, Swoop##2970
+		.get 1 Swoop Gizzard|q 766/4
+		info TODO: verify in-game
+	step
+		goto 53.7,48.2
+		.' Click the Sealed Supply Crate
+		..turnin The Ravaged Caravan##749
+		..accept The Ravaged Caravan##751
+		info It's a crate on the ground next to a bonfire.
+		info TODO: verify in-game
+	step
+		goto 57.2,61.2
+		.talk Morin Cloudstalker##2988
+		..turnin The Ravaged Caravan##751
+		..accept The Venture Co.##764
+		..accept Supervisor Fizsprocket##765
+		info You'll do these after level 10.
+		info TODO: verify in-game
+	step
+		ding 7
+	step
+		goto 47.5,60.2
+		.talk Baine Bloodhoof##2993
+		..turnin Sharing the Land##745
+		info TODO: verify in-game
+	step
+		goto 48.7,59.3
+		.talk Harken Windtotem##2947
+		..turnin Swoop Hunting##761
+		info TODO: verify in-game
+	step
+		goto 48.5,60.4
+		.talk Mull Thunderhorn##2948
+		..turnin Thunderhorn Totem##756
+		..accept Thunderhorn Cleansing##758
+		info TODO: verify in-game
+	step
+		goto 47.0,57.1
+		.talk Maur Raincaller##3055
+		..turnin Mazzranache##766
+		info Train your skills while you're in town.
+		info TODO: verify in-game
+	step
+		goto 44.5,45.5
+		.' Use your Thunderhorn Cleansing Totem next to the well|use Thunderhorn Cleansing Totem##5415
+		.' Cleanse the Thunderhorn Water Well|goal Cleanse the Thunderhorn Water Well|q 758/1
+		info TODO: verify in-game
+	step
+		goto 48.5,60.4
+		.talk Mull Thunderhorn##2948
+		..turnin Thunderhorn Cleansing##758
+		..accept Wildmane Totem##759
+		info TODO: verify in-game
+	step
+		ding 8
+	step
+		goto 34.7,46.9
+		.from Bael'dun Digger##2989, Bael'dun Appraiser##2990
+		.collect 5 Prospector's Pick##4702|q 746
+		info Clear your way deep into the digsite, toward the forge.
+		info TODO: verify in-game
+	step
+		goto 31.3,49.9
+		.' Click the Prospector's Picks in your bags next to the forge|use Prospector's Pick##4702
+		.get 5 Broken Tools|q 746/1
+		info TODO: verify in-game
+	step
+		goto 32.5,42.5
+		.from Windfury Wind Witch##2963, Windfury Harpy##2962
+		.get 8 Windfury Talon|q 743/1
+		info TODO: verify in-game
+	step
+		goto 32.7,36.1
+		.talk Seer Wiserunner##2984
+		..turnin Rite of Vision##772
+		..accept Rite of Wisdom##773
+		info He's inside a cave. If you can't see him, drink the Water of the Seers next to the bonfire in Bloodhoof Village and follow the ghost wolf.
+		info TODO: verify in-game
+	step
+		goto 53.1,32.5
+		.from Prairie Wolf Alpha##2960
+		.get 8 Prairie Alpha Tooth|q 759/1
+		info Kill them on your way far to the east.
+		info TODO: verify in-game
+	step
+		goto 59.9,25.6
+		.talk Lorekeeper Raintotem##3233
+		..accept A Sacred Burial##833
+		info TODO: verify in-game
+	step
+		goto 61.0,23.1
+		.kill 8 Bristleback Interloper|q 833/1
+		info TODO: verify in-game
+	step
+		goto 61.5,21.0
+		.talk Ancestral Spirit##2994
+		..turnin Rite of Wisdom##773
+		..accept Journey into Thunder Bluff##775|only Tauren Hunter,Tauren Druid
+		info Only hunters and druids take Journey into Thunder Bluff. They fly to Thunder Bluff later for their class quests, so they can turn it in on the way.
+		info TODO: verify in-game
+	step
+		goto 59.9,25.6
+		.talk Lorekeeper Raintotem##3233
+		..turnin A Sacred Burial##833
+		info TODO: verify in-game
+	step
+		ding 9
+	step
+		'Hearth to Bloodhoof Village|goto 46.7,61.0,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 47.4,62.0
+		.talk Ruul Eagletalon##2985
+		..turnin Dangers of the Windfury##743
+		info TODO: verify in-game
+	step
+		goto 47.5,60.2
+		.talk Baine Bloodhoof##2993
+		..turnin Dwarven Digging##746
+		info TODO: verify in-game
+	step
+		goto 48.5,60.4
+		.talk Mull Thunderhorn##2948
+		..turnin Wildmane Totem##759
+		info Don't accept the follow-up, Wildmane Cleansing. It's too far out of the way.
+		info TODO: verify in-game
+	step
+		ding 10
+		.'Pick your first talent point, and train your skills.
+	step
+		goto 47.8,55.7
+		.talk Yaw Sharpmane##3065
+		..accept Taming the Beast##6061
+		info This chain gives you Tame Beast, so you can have a pet.
+		info TODO: verify in-game
+		only Tauren Hunter
+	step
+		goto 42.4,54.5
+		.' Use your Taming Rod on an Adult Plainstrider|use Taming Rod##15914
+		.' Tame an Adult Plainstrider|goal Tame an Adult Plainstrider|q 6061/1
+		info TODO: verify in-game
+		only Tauren Hunter
+	step
+		goto 47.8,55.7
+		.talk Yaw Sharpmane##3065
+		..turnin Taming the Beast##6061
+		..accept Taming the Beast##6087
+		info TODO: verify in-game
+		only Tauren Hunter
+	step
+		goto 48.6,46.7
+		.' Use your Taming Rod on a Prairie Stalker|use Taming Rod##15915
+		.' Tame a Prairie Stalker|goal Tame a Prairie Stalker|q 6087/1
+		info TODO: verify in-game
+		only Tauren Hunter
+	step
+		goto 47.8,55.7
+		.talk Yaw Sharpmane##3065
+		..turnin Taming the Beast##6087
+		..accept Taming the Beast##6088
+		info TODO: verify in-game
+		only Tauren Hunter
+	step
+		goto 42.3,50.1
+		.' Use your Taming Rod on a Swoop|use Taming Rod##15916
+		.' Tame a Swoop|goal Tame a Swoop|q 6088/1
+		info TODO: verify in-game
+		only Tauren Hunter
+	step
+		goto 47.8,55.7
+		.talk Yaw Sharpmane##3065
+		..turnin Taming the Beast##6088
+		..accept Training the Beast##6089
+		info You can tame your own pet now. You'll turn in Training the Beast in Thunder Bluff soon.
+		info TODO: verify in-game
+		only Tauren Hunter
+	step
+		goto 48.5,59.6
+		.talk Gennia Runetotem##3064
+		..accept Heeding the Call##5928
+		info This chain gives you Bear Form. You'll fly to Thunder Bluff for it soon.
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 49.5,60.6
+		.talk Krang Stonehoof##3063
+		..accept Veteran Uzzek##1505
+		info This chain gives you Defensive Stance. Uzzek is on the way to Durotar.
+		info TODO: verify in-game
+		only Tauren Warrior
+	step
+		goto 48.4,59.1
+		.talk Narm Skychaser##3066
+		..accept Call of Fire##2984
+		info This chain gives you the Fire Totem. You'll do it on the way to Durotar.
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto 59.2,48.8
+		.kill 14 Venture Co. Worker|q 764/1
+		.kill 6 Venture Co. Supervisor|q 764/2
+		info Head east and up the hill into the cave. Clear your way through the tunnels.
+		info TODO: verify in-game
+	step
+		goto 64.4,43.5
+		.from Supervisor Fizsprocket##3051
+		.get Fizsprocket's Clipboard|q 765/1
+		info He's at the end of the tunnel. Keep heading right inside the mine.
+		info TODO: verify in-game
+	step
+		goto 57.2,61.2
+		.talk Morin Cloudstalker##2988
+		..turnin The Venture Co.##764
+		..turnin Supervisor Fizsprocket##765
+		info He's on the road east of Bloodhoof Village. You may need to look for him.
+		info TODO: verify in-game
+	step
+		'Continue east out of Mulgore to The Barrens|goto The Barrens
+		info TODO: verify in-game
+	step
+		goto The Barrens,44.4,59.2
+		.talk Omusa Thunderhorn##10378
+		..fpath Camp Taurajo
+		info TODO: verify in-game
+	step
+		goto 44.9,58.6
+		.talk Kirge Sternhorn##3418
+		..accept Journey to the Crossroads##854
+		info TODO: verify in-game
+	step
+		goto 44.4,59.2
+		.talk Omusa Thunderhorn##10378
+		..'Fly to Thunder Bluff|goto Thunder Bluff|noway|c
+		info TODO: verify in-game
+		only Tauren Hunter,Tauren Druid
+	step
+		goto Thunder Bluff,57.3,89.8
+		.talk Holt Thunderhorn##3039
+		..turnin Training the Beast##6089
+		info TODO: verify in-game
+		only Tauren Hunter
+	step
+		goto Thunder Bluff,60.3,51.7
+		.talk Cairne Bloodhoof##3057
+		..turnin Journey into Thunder Bluff##775
+		info Don't accept the follow-up.
+		info TODO: verify in-game
+		only Tauren Hunter,Tauren Druid
+	step
+		goto Thunder Bluff,76.5,27.2
+		.talk Turak Runetotem##3033
+		..turnin Heeding the Call##5928
+		..accept Moonglade##5922
+		info He teaches you Teleport: Moonglade.
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		'Cast Teleport: Moonglade|goto Moonglade|cast Teleport: Moonglade|noway|c
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto Moonglade,56.2,30.6
+		.talk Dendrite Starblaze##11802
+		..turnin Moonglade##5922
+		..accept Great Bear Spirit##5930
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 39.1,27.3
+		.talk Great Bear Spirit##11956
+		.goal Seek out the Great Bear Spirit and learn what it has to share with you about the nature of the bear.|q 5930/1
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 56.2,30.6
+		.talk Dendrite Starblaze##11802
+		..turnin Great Bear Spirit##5930
+		..accept Back to Thunder Bluff##5932
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 44.3,45.9
+		.talk Bunthen Plainswind##11798
+		..'Fly to Thunder Bluff|goto Thunder Bluff|noway|c
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto Thunder Bluff,76.5,27.2
+		.talk Turak Runetotem##3033
+		..turnin Back to Thunder Bluff##5932
+		..accept Body and Heart##6002
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		'Fly to Camp Taurajo|goto The Barrens,44.4,59.2,0.5|noway|c
+		info TODO: verify in-game
+		only Tauren Hunter,Tauren Druid
+	step
+		goto The Barrens,42.0,60.9
+		.' Use your Cenarion Lunardust on the Moonkin Stone to summon Lunaclaw|use Cenarion Lunardust##15710
+		.from Lunaclaw##12138
+		.talk Lunaclaw Spirit##12144
+		.goal Face Lunaclaw and earn the strength of body and heart it possesses.|q 6002/1
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 44.4,59.2
+		.talk Omusa Thunderhorn##10378
+		..'Fly to Thunder Bluff|goto Thunder Bluff|noway|c
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto Thunder Bluff,76.5,27.2
+		.talk Turak Runetotem##3033
+		..turnin Body and Heart##6002
+		info You know Bear Form now.
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		'Fly to Camp Taurajo|goto The Barrens,44.4,59.2,0.5|noway|c
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto The Barrens,51.5,30.9
+		.talk Thork##3429
+		..turnin Journey to the Crossroads##854
+		info Follow the road northeast to The Crossroads.
+		info TODO: verify in-game
+	step
+		goto 51.5,30.3
+		.talk Devrak##3615
+		..fpath Crossroads
+		info TODO: verify in-game
+	step
+		goto The Barrens,61.4,21.1
+		.talk Uzzek##5810
+		..turnin Veteran Uzzek##1505
+		..accept Path of Defense##1498
+		info He's at Far Watch Post, along the road to Durotar.
+		info TODO: verify in-game
+		only Tauren Warrior
+	step
+		goto Durotar,39,32
+		.from Thunder Lizard##3130, Lightning Hide##3131
+		.get 5 Singed Scale|q 1498/1
+		info TODO: verify in-game
+		only Tauren Warrior
+	step
+		goto The Barrens,61.4,21.1
+		.talk Uzzek##5810
+		..turnin Path of Defense##1498
+		info TODO: verify in-game
+		only Tauren Warrior
+	step
+		goto The Barrens,56.0,19.9
+		.talk Kranal Fiss##5907
+		..turnin Call of Fire##2984
+		..accept Call of Fire##1524
+		info He's near Far Watch Post, along the road to Durotar.
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto Durotar,38.5,59.0
+		.talk Telf Joolam##5900
+		..turnin Call of Fire##1524
+		..accept Call of Fire##1525
+		info The path up to him starts at 36.6,57.1.
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto The Barrens,53.8,25.6
+		.from Razormane Thornweaver##3268, Razormane Water Seeker##3267
+		.get Fire Tar|q 1525/1
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto Durotar,52.8,28.9
+		.from Burning Blade Cultist##3199
+		.get Reagent Pouch|q 1525/2
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto 38.5,59.0
+		.talk Telf Joolam##5900
+		..turnin Call of Fire##1525
+		..accept Call of Fire##1526
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto 38.9,58.3
+		.' Drink the Fire Sapta in your bags|use Fire Sapta##6636
+		.from Minor Manifestation of Fire##5893
+		.get Glowing Ember|q 1526/1
+		.' Click the Brazier of the Dormant Flame
+		..turnin Call of Fire##1526
+		..accept Call of Fire##1527
+		info Run up the big hill next to Telf Joolam. The brazier is silver, on the ground.
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		goto The Barrens,56.0,19.9
+		.talk Kranal Fiss##5907
+		..turnin Call of Fire##1527
+		info TODO: verify in-game
+		only Tauren Shaman
+	step
+		'Follow the road northeast into Durotar, then north to Orgrimmar|goto Orgrimmar
+		info TODO: verify in-game
+	step
+		goto Orgrimmar,45.1,63.9
+		.talk Doras##3310
+		..fpath Orgrimmar
+		info TODO: verify in-game
+	step
+		'Leave Orgrimmar|goto Durotar
+		info TODO: verify in-game
+	step
+		goto Durotar,50.8,13.3|n
+		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|c
+		info Ask the zeppelin master in front of each platform which way it goes. You want the one to Undercity, not Grom'gol.
+		info TODO: verify in-game
+	step
+		'Go into Undercity|goto Undercity
+		info TODO: verify in-game
+	step
+		goto Undercity,63.2,48.6
+		.talk Michael Garrett##4551
+		..fpath Undercity
+		info Take the elevator down into the Undercity.
+		info TODO: verify in-game
+	step
+		goto Undercity,54.6,11.3
+		.' Click the Orb of Translocation
+		..'It will teleport you to Silvermoon City|goto Silvermoon City|noway|c
+		info It's back at the entrance of Undercity, in the ruins above.
+		info TODO: verify in-game
+]])
+
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Undead (1-10)",[[
+	author YunataSavior
+	defaultfor Scourge
+	next Ding80's Horde Leveling Guides\\Main Guide (10-11)
+	startlevel 1
+
+	step
+		goto Tirisfal Glades,30.0,71.8
+		.talk Undertaker Mordo##1568
+		..accept Rude Awakening##363
+		info Head up the stairs out of the crypt.
+		info TODO: verify in-game
+	step
+		goto 30.8,66.2
+		.talk Shadow Priest Sarvis##1569
+		..turnin Rude Awakening##363
+		..accept The Mindless Ones##364
+		info TODO: verify in-game
+	step
+		goto 31.8,63.7
+		.kill 5 Mindless Zombie|q 364/1
+		.kill 5 Wretched Ghoul|q 364/2
+		info TODO: verify in-game
+	step
+		ding 2
+	step
+		goto 30.8,66.2
+		.talk Shadow Priest Sarvis##1569
+		..turnin The Mindless Ones##364
+		..accept Rattling the Rattlecages##3901
+		..accept Simple Scroll##3095 |only Scourge Warrior
+		..accept Tainted Scroll##3099 |only Scourge Warlock
+		..accept Encrypted Scroll##3096 |only Scourge Rogue
+		..accept Hallowed Scroll##3097 |only Scourge Priest
+		..accept Glyphic Scroll##3098 |only Scourge Mage
+		.talk Novice Elreth##1661
+		..accept The Damned##376
+		info TODO: verify in-game
+	step
+		goto 32.7,65.6
+		.talk Dannal Stern##2119
+		..turnin Simple Scroll##3095
+		info Train your skills here. This is your class trainer. From now on, train at every even level whenever you're near a town.
+		info TODO: verify in-game
+		only Scourge Warrior
+	step
+		goto 30.9,66.3
+		.talk Maximillion##2126
+		..turnin Tainted Scroll##3099
+		info Train your skills here. This is your class trainer. From now on, train at every even level whenever you're near a town.
+		info TODO: verify in-game
+		only Scourge Warlock
+	step
+		goto 32.5,65.7
+		.talk David Trias##2122
+		..turnin Encrypted Scroll##3096
+		info Train your skills here. This is your class trainer. From now on, train at every even level whenever you're near a town.
+		info TODO: verify in-game
+		only Scourge Rogue
+	step
+		goto 31.1,66.0
+		.talk Dark Cleric Duesten##2123
+		..turnin Hallowed Scroll##3097
+		info Train your skills here. This is your class trainer. From now on, train at every even level whenever you're near a town.
+		info TODO: verify in-game
+		only Scourge Priest
+	step
+		goto 30.9,66.1
+		.talk Isabella##2124
+		..turnin Glyphic Scroll##3098
+		info Train your skills here. This is your class trainer. From now on, train at every even level whenever you're near a town.
+		info TODO: verify in-game
+		only Scourge Mage
+	step
+		goto 31.7,58.7
+		.from Young Scavenger##1508, Ragged Scavenger##1509
+		.get 6 Scavenger Paw|q 376/1
+		.from Duskbat##1512, Mangy Duskbat##1513
+		.get 6 Duskbat Wing|q 376/2
+		info TODO: verify in-game
+	step
+		goto 32.5,61.3
+		.kill 8 Rattlecage Skeleton|q 3901/1
+		info TODO: verify in-game
+	step
+		ding 3
+	step
+		goto 30.8,66.2
+		.talk Novice Elreth##1661
+		..turnin The Damned##376
+		..accept Marla's Last Wish##6395
+		.talk Shadow Priest Sarvis##1569
+		..turnin Rattling the Rattlecages##3901
+		info TODO: verify in-game
+	step
+		goto 31.6,65.6
+		.talk Deathguard Saltain##1740
+		..accept Scavenging Deathknell##3902
+		info TODO: verify in-game
+	step
+		goto 32.2,66.0
+		.talk Executor Arren##1570
+		..accept Night Web's Hollow##380
+		info Train your skills while you're here.
+		info TODO: verify in-game
+	step
+		goto 33.2,63.7
+		.' Click the Equipment Boxes
+		.get 6 Scavenged Goods|q 3902/1
+		info They're piles of brown boxes in the houses.
+		info TODO: verify in-game
+	step
+		goto 36.7,61.5
+		.from Samuel Fipps##1919
+		.collect 1 Samuel's Remains##16333|q 6395
+		info He's at a camp to the northeast.
+		info TODO: verify in-game
+	step
+		goto 29.4,58.6
+		.kill 8 Young Night Web Spider|q 380/1
+		info TODO: verify in-game
+	step
+		goto 26.9,59.4
+		.kill 5 Night Web Spider|q 380/2
+		info They're inside the cave.
+		info TODO: verify in-game
+	step
+		ding 4
+	step
+		'Hearth to Deathknell|goto 30.8,66.2,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 31.2,65.1
+		.' Click Marla's Grave
+		.' Bury Samuel's Remains|goal Samuel's Remains Buried|q 6395/1
+		info It's the only light brown pile of dirt in the graveyard, just north of town.
+		info TODO: verify in-game
+	step
+		goto 31.6,65.6
+		.talk Deathguard Saltain##1740
+		..turnin Scavenging Deathknell##3902
+		info TODO: verify in-game
+	step
+		goto 32.2,66.0
+		.talk Executor Arren##1570
+		..turnin Night Web's Hollow##380
+		..accept The Scarlet Crusade##381
+		info TODO: verify in-game
+	step
+		goto 30.8,66.2
+		.talk Novice Elreth##1661
+		..turnin Marla's Last Wish##6395
+		info TODO: verify in-game
+	step
+		goto 36.1,67.1
+		.from Scarlet Convert##1506, Scarlet Initiate##1507
+		.get 12 Scarlet Armband|q 381/1
+		info They're at the Scarlet camp to the southeast.
+		info TODO: verify in-game
+	step
+		ding 5
+	step
+		goto 32.2,66.0
+		.talk Executor Arren##1570
+		..turnin The Scarlet Crusade##381
+		..accept The Red Messenger##382
+		info TODO: verify in-game
+	step
+		goto 36.5,68.8
+		.from Meven Korgal##1667
+		.get Scarlet Crusade Documents|q 382/1
+		info He's at the south tent of the Scarlet camp.
+		info TODO: verify in-game
+	step
+		goto 32.2,66.0
+		.talk Executor Arren##1570
+		..turnin The Red Messenger##382
+		..accept Vital Intelligence##383
+		info TODO: verify in-game
+	step
+		goto 38.2,56.8
+		.talk Calvin Montague##6784
+		..accept A Rogue's Deal##8
+		info Follow the road northeast.
+		info TODO: verify in-game
+	step
+		goto 43.1,54.7
+		.talk Gordo##10666
+		..accept Gordo's Task##5481
+		info He's an abomination wandering near the road to the southeast. Leave Fields of Grief for now.
+		info TODO: verify in-game
+	step
+		goto 52.9,52.1
+		.' Click the Gloom Weeds
+		.get 3 Gloom Weed|q 5481/1
+		info They're little dark wilted plants, a short way north of the road.
+		info TODO: verify in-game
+	step
+		ding 6
+	step
+		goto 61.7,52.0
+		.talk Innkeeper Renee##5688
+		..turnin A Rogue's Deal##8
+		..home Brill
+		info Buy food and water here for the trip ahead.
+		info TODO: verify in-game
+	step
+		goto 60.6,51.8
+		.talk Executor Zygand##1515
+		..turnin Vital Intelligence##383
+		..accept At War With The Scarlet Crusade##427
+		info TODO: verify in-game
+	step
+		goto 60.7,51.5
+		.' Click the Wanted Poster
+		..accept Wanted: Maggot Eye##398
+		info It's next to the steps of the big building.
+		info TODO: verify in-game
+	step
+		goto 61.3,50.8
+		.talk Magistrate Sevren##1499
+		..accept Graverobbers##358
+		info TODO: verify in-game
+	step
+		goto 59.4,52.4
+		.talk Apothecary Johaan##1518
+		..accept A New Plague##367
+		info TODO: verify in-game
+	step
+		goto 58.2,51.4
+		.talk Deathguard Dillinger##1496
+		..accept A Putrid Task##404
+		info TODO: verify in-game
+	step
+		goto 57.6,48.7
+		.talk Junior Apothecary Holland##10665
+		..turnin Gordo's Task##5481
+		..accept Doom Weed##5482
+		info He's in the northwest part of town. Train your skills while you're in Brill.
+		info TODO: verify in-game
+	step
+		goto 55.2,51.1
+		.from Ravaged Corpse##1526, Rotting Dead##1525
+		.get 7 Putrid Claw|q 404/1
+		info TODO: verify in-game
+	step
+		goto 55.7,61.3
+		.from Decrepit Darkhound##1547, Cursed Darkhound##1548
+		.get 5 Darkhound Blood|q 367/1
+		info TODO: verify in-game
+	step
+		goto 40.9,54.2
+		.talk Deathguard Simmer##1519
+		..accept Fields of Grief##365
+		info Take the road northwest.
+		info TODO: verify in-game
+	step
+		goto 37.2,52.2
+		.' Click the Tirisfal Pumpkins
+		.get 10 Tirisfal Pumpkin|q 365/1
+		info They're in the field at the Solliden Farmstead.
+		info TODO: verify in-game
+	step
+		goto 33.0,50.4
+		.kill 10 Scarlet Warrior|q 427/1
+		info TODO: verify in-game
+	step
+		ding 7
+	step
+		'Hearth to Brill|goto 61.8,52.1,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 59.4,52.4
+		.talk Apothecary Johaan##1518
+		..turnin Fields of Grief##365
+		..accept Fields of Grief##407
+		..turnin A New Plague##367
+		..accept A New Plague##368
+		info TODO: verify in-game
+	step
+		goto 62.0,51.3
+		.talk Captured Scarlet Zealot##1931
+		..turnin Fields of Grief##407
+		info He's in the basement of the inn.
+		info TODO: verify in-game
+	step
+		goto 58.2,51.4
+		.talk Deathguard Dillinger##1496
+		..turnin A Putrid Task##404
+		..accept The Mills Overrun##426
+		info TODO: verify in-game
+	step
+		goto 60.6,51.8
+		.talk Executor Zygand##1515
+		..turnin At War With The Scarlet Crusade##427
+		..accept At War With The Scarlet Crusade##370
+		info TODO: verify in-game
+	step
+		goto 60.9,52.0
+		.talk Deathguard Burgess##1652
+		..accept Proof of Demise##374
+		info TODO: verify in-game
+	step
+		goto 61.7,52.3
+		.talk Coleman Farthing##1500
+		..accept Deaths in the Family##354
+		..accept The Haunted Mills##362
+		info TODO: verify in-game
+	step
+		goto 61.9,52.7
+		.talk Gretchen Dedmar##1521
+		..accept The Chill of Death##375
+		info TODO: verify in-game
+	step
+		goto 57.5,41.1
+		.kill 8 Rot Hide Graverobber|q 358/1
+		.' Click the Doom Weeds
+		.get 10 Doom Weed|q 5482/1
+		info Follow the road northeast out of Brill to Garren's Haunt. The Doom Weeds are little purple plants.
+		info TODO: verify in-game
+	step
+		goto 58.3,35.3
+		.kill 5 Rot Hide Mongrel|q 358/2
+		.from Rot Hide Graverobber##1941, Rot Hide Gnoll##1674, Rot Hide Mongrel##1675
+		.get 8 Embalming Ichor|q 358/3
+		info TODO: verify in-game
+	step
+		goto 58.7,30.7
+		.from Maggot Eye##1753
+		.get Maggot Eye's Paw|q 398/1
+		info He's at the northern part of the farm.
+		info TODO: verify in-game
+	step
+		goto 60.2,29.9
+		.from Vile Fin Puddlejumper##1543, Vile Fin Minor Oracle##1544
+		.get 5 Vile Fin Scale|q 368/1
+		info Continue north to the shore.
+		info TODO: verify in-game
+	step
+		ding 8
+	step
+		goto 57.6,48.7
+		.talk Junior Apothecary Holland##10665
+		..turnin Doom Weed##5482
+		info TODO: verify in-game
+	step
+		goto 61.3,50.8
+		.talk Magistrate Sevren##1499
+		..turnin Graverobbers##358
+		..accept Forsaken Duties##359
+		..accept The Prodigal Lich##405
+		info TODO: verify in-game
+	step
+		goto 59.4,52.4
+		.talk Apothecary Johaan##1518
+		..turnin A New Plague##368
+		..accept A New Plague##369
+		info Don't accept Delivery to Silverpine Forest. This guide doesn't go there.
+		info TODO: verify in-game
+	step
+		goto 60.6,51.8
+		.talk Executor Zygand##1515
+		..turnin Wanted: Maggot Eye##398
+		info Train your skills while you're in Brill.
+		info TODO: verify in-game
+	step
+		goto 50.0,48.5
+		.from Greater Duskbat##1553
+		.get 5 Duskbat Pelt|q 375/1
+		info TODO: verify in-game
+	step
+		goto 51.1,67.9
+		.kill Captain Perrine|q 370/1
+		info He's inside the Scarlet Guard Tower to the southwest.
+		info TODO: verify in-game
+	step
+		goto 53.1,65.8
+		.kill 3 Scarlet Zealot|q 370/2
+		.kill 3 Scarlet Missionary|q 370/3
+		.from Scarlet Missionary##1536, Scarlet Zealot##1537
+		.get 5 Scarlet Insignia Ring|q 374/1
+		info You don't need all 10 rings yet. You'll kill more Scarlets later.
+		info TODO: verify in-game
+	step
+		goto 48.4,42.1
+		.from Rattlecage Soldier##1520, Cracked Skull Soldier##1523
+		.get 5 Notched Rib|q 426/1
+		.from Darkeye Bonecaster##1522
+		.get 3 Blackened Skull|q 426/2
+		info Kill these all over Agamand Mills as you go from target to target.
+		info TODO: verify in-game
+	step
+		goto 47.5,42.0
+		.from Devlin Agamand##1657
+		.get Devlin's Remains|q 362/1
+		info TODO: verify in-game
+	step
+		goto 49.5,36.1
+		.from Nissa Agamand##1655
+		.get Nissa's Remains|q 354/2
+		info TODO: verify in-game
+	step
+		goto 46.0,31.8
+		.from Gregor Agamand##1654
+		.get Gregor's Remains|q 354/1
+		info TODO: verify in-game
+	step
+		goto 43.9,36.0
+		.from Thurman Agamand##1656
+		.get Thurman's Remains|q 354/3
+		info TODO: verify in-game
+	step
+		.' Click A Letter to Yvette in your bags|use A Letter to Yvette##2839
+		..accept A Letter Undelivered##361
+		info Skeletons at Agamand Mills sometimes drop it. Skip this step if you didn't get one.
+		info TODO: verify in-game
+	step
+		ding 9
+	step
+		'Hearth to Brill|goto 61.8,52.1,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 61.0,52.4
+		.talk Abigail Shiel##2118
+		..buy 1 Coarse Thread|q 375/2
+		info She's the trade supplies vendor by the outdoor cart.
+		info TODO: verify in-game
+	step
+		goto 61.6,52.6
+		.talk Yvette Farthing##1560
+		..turnin A Letter Undelivered##361
+		info Don't accept the follow-up. Skip this step if you didn't get the letter.
+		info TODO: verify in-game
+	step
+		goto 61.7,52.3
+		.talk Coleman Farthing##1500
+		..turnin Deaths in the Family##354
+		..turnin The Haunted Mills##362
+		info TODO: verify in-game
+	step
+		goto 61.9,52.7
+		.talk Gretchen Dedmar##1521
+		..turnin The Chill of Death##375
+		info TODO: verify in-game
+	step
+		goto 58.2,51.4
+		.talk Deathguard Dillinger##1496
+		..turnin The Mills Overrun##426
+		info TODO: verify in-game
+	step
+		goto 60.6,51.8
+		.talk Executor Zygand##1515
+		..turnin At War With The Scarlet Crusade##370
+		..accept At War With The Scarlet Crusade##371
+		info Train your skills while you're in Brill.
+		info TODO: verify in-game
+	step
+		goto 65.6,60.3
+		.talk Deathguard Linnea##1495
+		..turnin Forsaken Duties##359
+		..accept Return to the Magistrate##360
+		..accept Rear Guard Patrol##356
+		info TODO: verify in-game
+	step
+		goto 74.7,61.5
+		.kill 8 Bleeding Horror|q 356/1
+		.kill 8 Wandering Spirit|q 356/2
+		info TODO: verify in-game
+	step
+		goto 76.2,54.3
+		.kill 5 Scarlet Friar|q 371/2
+		.from Scarlet Friar##1538, Scarlet Neophyte##1539, Scarlet Vanguard##1540
+		.get 10 Scarlet Insignia Ring|q 374/1
+		info Finish the 10 rings on the Scarlets around the Scarlet Outpost.
+		info TODO: verify in-game
+	step
+		goto 78.8,56.0
+		.kill Captain Vachon|q 371/1
+		info He's inside the tower.
+		info TODO: verify in-game
+	step
+		goto 82.3,54.3
+		.from Vicious Night Web Spider##1555
+		.get 4 Vicious Night Web Spider Venom|q 369/1
+		info TODO: verify in-game
+	step
+		ding 10
+		.'Pick your first talent point.
+	step
+		goto 65.6,60.3
+		.talk Deathguard Linnea##1495
+		..turnin Rear Guard Patrol##356
+		info TODO: verify in-game
+	step
+		goto 60.6,51.8
+		.talk Executor Zygand##1515
+		..turnin At War With The Scarlet Crusade##371
+		info Don't accept the follow-up.
+		info TODO: verify in-game
+	step
+		goto 61.3,50.8
+		.talk Magistrate Sevren##1499
+		..turnin Return to the Magistrate##360
+		info TODO: verify in-game
+	step
+		goto 60.9,52.0
+		.talk Deathguard Burgess##1652
+		..turnin Proof of Demise##374
+		info TODO: verify in-game
+	step
+		goto 59.4,52.4
+		.talk Apothecary Johaan##1518
+		..turnin A New Plague##369
+		..accept A New Plague##492
+		info TODO: verify in-game
+	step
+		goto 61.9,51.4
+		.talk Captured Mountaineer##2211
+		..turnin A New Plague##492
+		info He's in the basement of the inn.
+		info TODO: verify in-game
+	step
+		goto 61.9,52.5
+		.talk Austil de Mon##2131
+		..accept Speak with Dillinger##1818
+		info This chain gives you Defensive Stance.
+		info TODO: verify in-game
+		only Scourge Warrior
+	step
+		goto 58.2,51.4
+		.talk Deathguard Dillinger##1496
+		..turnin Speak with Dillinger##1818
+		..accept Ulag the Cleaver##1819
+		info TODO: verify in-game
+		only Scourge Warrior
+	step
+		goto 59.2,48.5
+		.' Click the Mausoleum Trigger on the ground, then kill Ulag the Cleaver
+		.kill Ulag the Cleaver|q 1819/1
+		info It's a small square on the ground with a skull painted on it.
+		info TODO: verify in-game
+		only Scourge Warrior
+	step
+		goto 58.2,51.4
+		.talk Deathguard Dillinger##1496
+		..turnin Ulag the Cleaver##1819
+		info Don't accept the follow-up.
+		info TODO: verify in-game
+		only Scourge Warrior
+	step
+		goto 61.6,52.7
+		.talk Ageron Kargal##5724
+		..accept Halgar's Summons##1478
+		info This chain gives you your Voidwalker.
+		info TODO: verify in-game
+		only Scourge Warlock
+	step
+		'Head south along the road to Undercity|goto Undercity
+		info TODO: verify in-game
+	step
+		goto Undercity,63.2,48.6
+		.talk Michael Garrett##4551
+		..fpath Undercity
+		info Train your skills at your class trainer while you're here. Ask a guard where to find them.
+		info TODO: verify in-game
+	step
+		goto 84.1,17.4
+		.talk Bethor Iceshard##1498
+		..turnin The Prodigal Lich##405
+		info He's in the Magic Quarter. Don't accept the follow-up.
+		info TODO: verify in-game
+	step
+		goto 85.1,26.0
+		.talk Carendin Halgar##5675
+		..turnin Halgar's Summons##1478
+		..accept Creature of the Void##1473
+		info TODO: verify in-game
+		only Scourge Warlock
+	step
+		goto Tirisfal Glades,51.1,67.6
+		.' Click Perrine's Chest
+		.get Egalin's Grimoire|q 1473/1
+		info It's a gray chest inside the Scarlet Guard Tower, just outside Undercity.
+		info TODO: verify in-game
+		only Scourge Warlock
+	step
+		goto Undercity,85.1,26.0
+		.talk Carendin Halgar##5675
+		..turnin Creature of the Void##1473
+		..accept The Binding##1471
+		info TODO: verify in-game
+		only Scourge Warlock
+	step
+		goto 86.6,27.1
+		.' Use your Runes of Summoning while standing on the pink Summoning Circle|use Runes of Summoning##6284
+		.kill Summoned Voidwalker|q 1471/1
+		info TODO: verify in-game
+		only Scourge Warlock
+	step
+		goto 85.1,26.0
+		.talk Carendin Halgar##5675
+		..turnin The Binding##1471
+		info You can summon your Voidwalker now.
+		info TODO: verify in-game
+		only Scourge Warlock
+	step
+		goto Undercity,54.6,11.3
+		.' Click the Orb of Translocation
+		..'It will teleport you to Silvermoon City|goto Silvermoon City|noway|c
+		info It's back at the entrance of Undercity, in the ruins above.
+		info TODO: verify in-game
+]])
+
 ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Blood Elf (1-5)",[[
 	author YunataSavior
 	defaultfor BloodElf
-	next Ding80's Horde Leveling Guides\\Main Guide (5-11)
+	next Ding80's Horde Leveling Guides\\Blood Elf (5-10)
 	startlevel 1
 
 	step
@@ -211,9 +2941,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Blood Elf (1-5)
 		..turnin Completing the Delivery##8350
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (5-11)",[[
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Blood Elf (5-10)",[[
 	author YunataSavior
-	next Ding80's Horde Leveling Guides\\Main Guide (12-19)
+	next Ding80's Horde Leveling Guides\\Main Guide (10-11)
 	startlevel 5
 
 	step
@@ -231,6 +2961,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (5-1
 		.'Standing to the right of the entrance to the big building
 		.talk Aeldon Sunbrand##15403
 		..accept Unstable Mana Crystals##8463
+	step
+		goto 47.9,48.0
+		.talk Ponaris##16276
+		..accept Cleansing the Scar##9489
+		info It's an optional priest quest that only rewards an item, and you do it next to a quest on the route. Skip this step if you don't want it.
+		info TODO: verify in-game
+		only BloodElf Priest
 	step
 		goto 45,37.8
 		.' Click the Unstable Mana Crystal Crates
@@ -348,6 +3085,19 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (5-1
 		goto 50.3,50.8
 		.talk Ranger Jaela##15416
 		..turnin The Dead Scar##8475
+	step
+		goto 50.2,51.0
+		.' Cast Power Word: Fortitude on 6 Eversong Rangers|q 9489/1
+		info They're the rangers fighting in the Dead Scar. Skip this step if you didn't take Cleansing the Scar.
+		info TODO: verify in-game
+		only BloodElf Priest
+	step
+		goto 47.9,48.0
+		.talk Ponaris##16276
+		..turnin Cleansing the Scar##9489
+		info Skip this step if you didn't take Cleansing the Scar.
+		info TODO: verify in-game
+		only BloodElf Priest
 	step
 		goto 55.7,54.5
 		.talk Instructor Antheol##15970
@@ -493,14 +3243,65 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (5-1
 		goto 79.5,58.5
 		.talk Vinemaster Suntouched##16442
 		..buy Suntouched Special Reserve|get 1 Suntouched Special Reserve|q 9067/1
-		.'TODO: Add class quests. You can manually go and pick yours up right now.
+		info Train your class skills while you're in Silvermoon City. Ask a guard where your trainer is.
+	step
+		goto Silvermoon City,74.4,47.1
+		.talk Talionia##16647
+		..accept The Stone##9529
+		info This chain gives you your Voidwalker. You'll finish it on the way to the Ghostlands.
+		info TODO: verify in-game
+		only BloodElf Warlock
+]])
+
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (10-11)",[[
+	author YunataSavior
+	next Ding80's Horde Leveling Guides\\Main Guide (12-19)
+	startlevel 10
+
 	step
 		'Leave Silvermoon City|goto Eversong Woods
 	step
+		goto Eversong Woods,54.4,50.7
+		.talk Skymistress Gloaming##16192
+		..fpath Silvermoon City
+		info Train your class skills in Silvermoon City first, if your class has a trainer there. Ask a guard where it is.
+		info TODO: verify in-game
+		only !BloodElf
+	step
 		goto Eversong Woods,60.3,62.8
 		.talk Lieutenant Dawnrunner##15399
-		..turnin Farstrider Retreat##9359
+		..turnin Farstrider Retreat##9359|only BloodElf
 		..accept Amani Encroachment##8476
+		..accept Taming the Beast##9484|only BloodElf Hunter
+		info TODO: verify in-game
+	step
+		goto 61.2,65.5
+		.' Use your Taming Rod on a Crazed Dragonhawk|use Taming Rod##23697
+		.' Tame a Crazed Dragonhawk|goal Tame a Crazed Dragonhawk|q 9484/1
+		info This chain gives you Tame Beast, so you can have a pet.
+		info TODO: verify in-game
+		only BloodElf Hunter
+	step
+		goto 60.3,62.8
+		.talk Lieutenant Dawnrunner##15399
+		..turnin Taming the Beast##9484
+		..accept Taming the Beast##9486
+		info TODO: verify in-game
+		only BloodElf Hunter
+	step
+		goto 64.7,60.9
+		.' Use your Taming Rod on an Elder Springpaw|use Taming Rod##23702
+		.' Tame an Elder Springpaw|goal Tame an Elder Springpaw|q 9486/1
+		info TODO: verify in-game
+		only BloodElf Hunter
+	step
+		goto 60.3,62.8
+		.talk Lieutenant Dawnrunner##15399
+		..turnin Taming the Beast##9486
+		..accept Taming the Beast##9485
+		info The last tame is a Mistbat, on the way to the Ghostlands.
+		info TODO: verify in-game
+		only BloodElf Hunter
 	step
 		goto 59.5,62.6
 		.talk Arathel Sunforge##15400
@@ -548,6 +3349,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (5-1
 		goto 60.4,62.5
 		.talk Zalene Firstlight##16443
 		..buy Springpaw Appetizers|get 1 Springpaw Appetizers|q 9067/2
+		only BloodElf
 	step
 		goto 67.8,56.5
 		.talk Apprentice Loralthalis##15924
@@ -601,28 +3403,48 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (5-1
 		..turnin Abandoned Investigations##8891
 	step
 		'Hearth to Fairbreeze Village|goto 43.7,71.2,0.5|use hearthstone##6948|noway|c
+		only BloodElf
+	step
+		'Go to Silvermoon City|goto Silvermoon City
+		info Train your class skills if your class has a trainer here. Ask a guard where it is.
+		info TODO: verify in-game
+		only !BloodElf
+	step
+		'Run southwest out of the city, along the road, to Fairbreeze Village|goto Eversong Woods,43.7,71.2,0.5
+		info TODO: verify in-game
+		only !BloodElf
 	step
 		goto 44,70.8
 		.talk Magistrix Landra Dawnstrider##16210
 		..turnin Research Notes##9255
 		..accept Missing in the Ghostlands##9144
+		only BloodElf
 	step
 		goto 43.3,70.8
 		.talk Ranger Degolien##15939
 		..turnin Warning Fairbreeze Village##9363
 	step
+		goto 43.7,71.2
+		.talk Ardeyn Riverwind##16397
+		..accept The Scorched Grove##9258
+		info TODO: verify in-game
+		only !BloodElf
+	step
 		goto 44.1,70.3
 		.talk Halis Dawnstrider##16444
 		..buy 1 Bundle of Fireworks|q 9067/3
+		only BloodElf
 	step
 		goto 46.9,71.8
 		.talk Ranger Sareyn##15942
 		..turnin Defending Fairbreeze Village##9252
 		..accept Runewarden Deryan##9253
+		only BloodElf
 	step
 		goto 38.1,73.6
 		.talk Lord Saltheril##16144
 		..turnin The Party Never Ends##9067
+		only BloodElf
 	step
 		goto 34.1,80.0
 		.talk Larianna Riverwind##15398
@@ -649,7 +3471,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (5-1
 	step
 		goto 44.2,85.5
 		.talk Runewarden Deryan##16362
-		..turnin Runewarden Deryan##9253
+		..turnin Runewarden Deryan##9253|only BloodElf
 		..accept Powering Our Defenses##8490
 	step
 		goto 55,84
@@ -663,7 +3485,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (5-1
 	step
 		goto 49.0,89.0
 		.talk Courier Dawnstrider##16183
-		..turnin Missing in the Ghostlands##9144
+		..turnin Missing in the Ghostlands##9144|only BloodElf
 		.talk Apothecary Thedra##16196
 		..accept The Fallen Courier##9147
 	step
@@ -671,11 +3493,40 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (5-1
 		.'Kill anything on the Ghostlands-side of the river
 		..get 4 Plagued Blood Samples|q 9147/1
 	step
+		goto 51,15.2
+		.' Use your Taming Rod on a Mistbat|use Taming Rod##23703
+		.' Tame a Mistbat|goal Tame a Mistbat|q 9485/1
+		info TODO: verify in-game
+		only BloodElf Hunter
+	step
+		goto 43.8,15.6
+		.' Click a Voidstone on the ground
+		..turnin The Stone##9529
+		..accept The Rune of Summoning##9619
+		info They're blue crystals on the ground.
+		info TODO: verify in-game
+		only BloodElf Warlock
+	step
+		goto 27,15.2
+		.' Use your Voidstone while standing on the pink Summoning Circle|use Voidstone##23732
+		.kill Summoned Voidwalker|q 9619/1
+		info The circle is on the top floor of this building. You can summon your Voidwalker now; turn the quest in at your next visit to Silvermoon City.
+		info TODO: verify in-game
+		only BloodElf Warlock
+	step
 		goto Eversong Woods,49.0,89.0
 		.talk Apothecary Thedra##16196
 		..turnin The Fallen Courier##9147
 		.talk Courier Dawnstrider##16183
 		..accept Delivery to Tranquillien##9148
+	step
+		goto Eversong Woods,60.3,62.8
+		.talk Lieutenant Dawnrunner##15399
+		..turnin Taming the Beast##9485
+		..accept Beast Training##9673
+		info You can tame your own pet now. It's a run north and back, but worth it. Turn in Beast Training at your next visit to Silvermoon City.
+		info TODO: verify in-game
+		only BloodElf Hunter
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-19)",[[
@@ -746,8 +3597,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 	step
 		goto 45.4,30.5
 		.talk Skymaster Sunwing##16189
-		..turnin Goods from Silvermoon City##9130
-		..accept Fly to Silvermoon City##9133
+		..turnin Goods from Silvermoon City##9130 | only BloodElf
+		..accept Fly to Silvermoon City##9133 | only BloodElf
 		.'Note: Don't actually travel to Silvermoon yet. We'll head there later when we train.
 	step
 		goto 44.9,32.5
@@ -840,6 +3691,26 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		..accept Skymistress Gloaming##9134
 		only BloodElf
 	step
+		goto Silvermoon City,74.4,47.1
+		.talk Talionia##16647
+		..turnin The Rune of Summoning##9619
+		info TODO: verify in-game
+		only BloodElf Warlock
+	step
+		goto Silvermoon City,82.2,28.1
+		.talk Halthenis##16675
+		..turnin Beast Training##9673
+		info He's the pet trainer.
+		info TODO: verify in-game
+		only BloodElf Hunter
+	step
+		goto Silvermoon City,89.3,35.2
+		.talk Knight-Lord Bloodvalor##17717
+		..accept The First Trial##9678
+		info This chain gives you Redemption. You'll do the trial in the northeast of the Ghostlands.
+		info TODO: verify in-game
+		only BloodElf Paladin
+	step
 		goto Eversong Woods,54.4,50.7
 		.'Train your class skills FIRST before returning. Ask a guard where your class trainer is.
 		.talk Skymistress Gloaming##16192
@@ -886,6 +3757,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		.from Shadowpine Ripper##16340+
 		.from Shadowpine Witch##16341+
 		..get 6 Zeb'Sora Troll Ears | q 9143/1
+	step
+		goto 68.5,9.7
+		.' Light the brazier in the cave on the island, then defeat Sangrias Stillblade
+		.kill Undergo the First Trial|q 9678/1
+		info TODO: verify in-game
+		only BloodElf Paladin
 	step
 		goto 69.4,15.2
 		.talk Ranger Valanna##16219
@@ -1057,10 +3934,53 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		.talk Magister Darenis##16199
 		..accept The Sanctum of the Sun##9151
 	step
+		goto Silvermoon City,89.3,35.2
+		.talk Knight-Lord Bloodvalor##17717
+		..turnin The First Trial##9678
+		..accept A Study in Power##9681
+		info Do these steps while you're in Silvermoon City to train.
+		info TODO: verify in-game
+		only BloodElf Paladin
+	step
+		goto 92.1,36.2
+		.talk Magister Astalor Bloodsworn##17718
+		..turnin A Study in Power##9681
+		..accept Claiming the Light##9684
+		info He's in the hidden chamber beneath the Blood Knight headquarters.
+		info TODO: verify in-game
+		only BloodElf Paladin
+	step
+		goto 93.0,37.9
+		.' Use the Shimmering Vessel on the Blood Elf Magisters|use Shimmering Vessel##24157
+		.get Filled Shimmering Vessel|q 9684/1
+		info TODO: verify in-game
+		only BloodElf Paladin
+	step
+		goto 89.3,35.2
+		.talk Knight-Lord Bloodvalor##17717
+		..turnin Claiming the Light##9684
+		..accept Redeeming the Dead##9685
+		info TODO: verify in-game
+		only BloodElf Paladin
+	step
+		goto 80.1,60.3
+		.' Use the Filled Shimmering Vessel on Blood Knight Stillblade|use Filled Shimmering Vessel##24184
+		.goal Resurrect Blood Knight Stillblade|q 9685/1
+		info He's in the inn.
+		info TODO: verify in-game
+		only BloodElf Paladin
+	step
+		goto 89.3,35.2
+		.talk Knight-Lord Bloodvalor##17717
+		..turnin Redeeming the Dead##9685
+		info You know Redemption now.
+		info TODO: verify in-game
+		only BloodElf Paladin
+	step
 		.'If you're neither a Warrior nor Shaman, go to Silvermoon City and train, then hearth back.
 		.'Skip this step when done.
 	step
-		goto 58.1,27.15|n
+		goto Ghostlands,58.1,27.15|n
 		.'The Troll cave entrance is here. Go North, then East.|goto 58.1,27.15,1|noway|c
 	step
 		goto 62.9,32.8
@@ -1302,7 +4222,17 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		.'Open the mailbox, and open the letter titled "Learn to Ride in ...", then retrieve the pamphlet.
 		.' Click the Riding Training Pamphlet in your bags|use Riding Training Pamphlet##46882 | only BloodElf
 		..collect Riding Training Pamphlet##46882 | only BloodElf
-		..accept Learn to Ride in the Eversong Woods##14081
+		..accept Learn to Ride in the Eversong Woods##14081 | only BloodElf
+		.' Click the Riding Training Pamphlet in your bags|use Riding Training Pamphlet##46880 | only Orc
+		..accept Learn to Ride in Orgrimmar##14086 | only Orc
+		.' Click the Riding Training Pamphlet in your bags|use Riding Training Pamphlet##46883 | only Troll
+		..accept Learn to Ride in Durotar##14088 | only Troll
+		.' Click the Riding Training Pamphlet in your bags|use Riding Training Pamphlet##46884 | only Tauren
+		..accept Learn to Ride in Mulgore##14087 | only Tauren
+		.' Click the Riding Training Pamphlet in your bags|use Riding Training Pamphlet##46881 | only Scourge
+		..accept Learn to Ride in Tirisfal Glades##14089 | only Scourge
+		info Everyone else turns in their pamphlet in their home zone on the way. The guide takes you there.
+		info TODO: verify in-game
 	step
 		goto 45.4,30.5|n
 		.talk Skymaster Sunwing##16189
@@ -1347,6 +4277,14 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 	step
 		'Go outside of Undercity|goto Tirisfal Glades
 	step
+		goto Tirisfal Glades,60.1,52.6
+		.talk Velma Warnam##4773
+		..turnin Learn to Ride in Tirisfal Glades##14089
+		.' Train your riding skill here, and buy your mount!
+		info Ride north to the stables in Brill, then come back south to the zeppelin tower.
+		info TODO: verify in-game
+		only Scourge
+	step
 		goto Tirisfal Glades,60.8,58.8|n
 		.' Ride the zeppelin to Orgrimmar|goto Durotar,50.8,13.2,1|noway|c
 		info You can ride zeppelins here to either Orgrimmar or Grom'Gol Base Camp
@@ -1361,6 +4299,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (12-
 		.talk Thrall##4949
 		..turnin Meeting the Warchief##9626 | only BloodElf
 		..turnin Meeting the Warchief##9813 | only !BloodElf
+	step
+		goto Orgrimmar,69.4,13.1
+		.talk Kildar##4752
+		..turnin Learn to Ride in Orgrimmar##14086
+		.' Train your riding skill here, and buy your mount!
+		info TODO: verify in-game
+		only Orc
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-24)",[[
@@ -1373,13 +4318,139 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-
 		.talk Innkeeper Gryshka##6929
 		home Orgrimmar
 	step
+		goto Orgrimmar,43.0,53.7
+		.talk Shenthul##3401
+		..accept The Shattered Salute##2460
+		.' Type /salute at Shenthul|goal Shenthul|q 2460/1
+		..turnin The Shattered Salute##2460
+		..accept Deep Cover##2458
+		info He's in the Cleft of Shadow. This chain gives you Poisons.
+		info TODO: verify in-game
+		only Rogue
+	step
+		goto Orgrimmar,48.2,45.3
+		.talk Gan'rul Bloodeye##5875
+		..accept Devourer of Souls##1507
+		info He's in the Cleft of Shadow. This chain gives you the Succubus.
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto 47.1,46.4
+		.talk Cazul##5909
+		..turnin Devourer of Souls##1507
+		..accept Blind Cazul##1508
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto 37.0,59.5
+		.talk Zankaja##5910
+		..turnin Blind Cazul##1508
+		..accept News of Dogran (1)##1509
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto Orgrimmar,55.7,62.9
+		'Buy 5 Earthroot from the Auction House|collect 5 Earthroot##2449
+		info You need them for the Cure Poison quests. Skip this step if you have Herbalism, you can pick them in the Barrens.
+		info TODO: verify in-game
+		only Tauren Druid
+	step
 		'Go outside of Orgrimmar|goto Durotar
 	step
+		goto Durotar,55.3,75.5
+		.talk Xar'Ti##7953
+		..turnin Learn to Ride in Durotar##14088
+		.' Train your riding skill here, and buy your mount!
+		info Ride south to Sen'jin Village, then west to the Barrens.
+		info TODO: verify in-game
+		only Troll
+	step
 		'Go west to the Barrens|goto The Barrens
+	step
+		goto The Barrens,51.5,30.3
+		.talk Devrak##3615
+		..'Fly to Thunder Bluff|goto Thunder Bluff|noway|c
+		info Ride west to the Crossroads first. You get your mount in Mulgore.
+		info Druids also get Aquatic Form and Cure Poison on this trip.
+		info TODO: verify in-game
+		only Tauren
+	step
+		goto Thunder Bluff,76.5,27.2
+		.talk Turak Runetotem##3033
+		..accept Lessons Anew##6126
+		..accept A Lesson to Learn##27
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto Mulgore,47.6,58.5
+		.talk Kar Stormsinger##3690
+		..turnin Learn to Ride in Mulgore##14087
+		.' Train your riding skill here, and buy your mount!
+		info Take the lift down and ride south to Bloodhoof Village.
+		info TODO: verify in-game
+		only Tauren
+	step
+		'Ride back up to Thunder Bluff|goto Thunder Bluff
+		info TODO: verify in-game
+		only Tauren Hunter,Tauren Warrior,Tauren Shaman
+	step
+		'Cast Teleport: Moonglade|goto Moonglade|cast Teleport: Moonglade|noway|c
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto Moonglade,56.2,30.6
+		.talk Dendrite Starblaze##11802
+		..turnin Lessons Anew##6126
+		..accept The Principal Source##6127
+		..turnin A Lesson to Learn##27
+		..accept Trial of the Lake##28
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 57.6,57.8
+		.' Click a Bauble Container underwater
+		.collect 1 Shrine Bauble##15877|q 28
+		info They spawn all over the bottom of the lake, so you may have to search around.
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 36.1,41.6
+		.' Use the Shrine Bauble next to the tree that looks like a woman|use Shrine Bauble##15877
+		.' Complete the Trial of the Lake|goal Complete the Trial of the Lake|q 28/1
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 36.5,40.1
+		.talk Tajarri##11799
+		..turnin Trial of the Lake##28
+		..accept Trial of the Sea Lion##30
+		info The two pendant halves are in lockboxes in the northern Barrens and on the Silverpine coast. The guide takes you to both.
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 44.3,45.9
+		.talk Bunthen Plainswind##11798
+		..'Fly to Thunder Bluff|goto Thunder Bluff|noway|c
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto Thunder Bluff,47,49.8
+		.talk Tal##2995
+		..'Fly to the Crossroads|goto The Barrens,51.5,30.3,0.5|noway|c
+		info Then ride east to Ratchet.
+		info TODO: verify in-game
+		only Tauren
 	step
 		goto 63.1,37.2
 		.talk Bragok##16227
 		..fpath Ratchet
+	step
+		goto 65.8,43.8
+		.talk Islen Waterseer##5901
+		..accept Call of Water (2)##1530
+		info Islen is on the beach southeast of Ratchet. This chain gives you the Water Totem.
+		info TODO: verify in-game
+		only Shaman
 	step
 		goto 63,37.2
 		.talk Sputtervalve##3442
@@ -1393,10 +4464,75 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-
 		.talk Devrak##3615
 		..fpath Crossroads
 	step
+		goto 51.9,30.3
+		.talk Gazrog##3464
+		..turnin News of Dogran (1)##1509
+		..accept News of Dogran (2)##1510
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto 48.4,18.9
+		.' Use your Empty Dreadmist Peak Sampler while standing in the bubbling pool|use Empty Dreadmist Peak Sampler##15842
+		.get Filled Dreadmist Peak Sampler|q 6127/1
+		info Go up the hill north of the Crossroads.
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 55.4,5.6
+		.' When you can see the tower, use your Flare Gun twice|use Flare Gun##8051
+		.' Then target Taskmaster Fizzule and type /salute
+		.talk Taskmaster Fizzule##7233
+		..turnin Deep Cover##2458
+		..accept Mission: Possible But Not Probable##2478
+		info He's at the Venture Co. tower in the far north. Do the flares and the salute in that order, or he attacks you.
+		info TODO: verify in-game
+		only Rogue
+	step
+		goto 54.8,6.0
+		.' Pick Pocket Foreman Silixiz
+		.get Silixiz's Tower Key|q 2478/5
+		.kill 2 Mutated Venture Co. Drone|q 2478/1
+		.kill 2 Venture Co. Lookout|q 2478/2
+		.kill 2 Venture Co. Patroller|q 2478/3
+		info TODO: verify in-game
+		only Rogue
+	step
+		goto 54.8,5.6
+		.kill Grand Foreman Puzik Gallywix##7288
+		.get Gallywix's Head|q 2478/4
+		.' Pick the lock on Gallywix's Lockbox and click it
+		.get Cache of Zanzil's Altered Mixture|q 2478/6
+		info He's at the top of the tower, the key opens the door.
+		info TODO: verify in-game
+		only Rogue
+	step
+		goto 56.7,8.3
+		.' Click the Strange Lockbox underwater
+		.collect 1 Half Pendant of Aquatic Agility##15883|q 30
+		info It's underwater, just east of the tower.
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 52.3,31.9
+		.talk Tonga Runetotem##3448
+		..turnin The Principal Source##6127
+		..accept Gathering the Cure##6128
+		info He's in the Crossroads.
+		info TODO: verify in-game
+		only Tauren Druid
+	step
 		goto 52,31.6
 		.talk Mankrik##3432
 		..accept Consumed by Hatred##899
 		..accept Lost in Battle##4921
+	step
+		goto 51.5,42.9
+		.from Lost Barrens Kodo##3234
+		.get 5 Kodo Horn|q 6128/2
+		.get 5 Earthroot|q 6128/1
+		info They walk around the road south of the Crossroads. Pick Earthroot as you go if you have Herbalism.
+		info TODO: verify in-game
+		only Tauren Druid
 	step
 		goto 49.3,50.3
 		.' Click the Beaten Corpse and inspect it further |tip In a small camp of 2 houses to the side of the road.
@@ -1424,10 +4560,46 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-
 		..accept Blood Shards of Agamaggan##5052
 		..turnin Blood Shards of Agamaggan##5052
 	step
+		goto 43.4,77.4
+		.talk Brine##5899
+		..turnin Call of Water (2)##1530
+		..accept Call of Water (3)##1535
+		info Ride south down the road to Blackthorn Ridge. Brine is in the hut on the hill.
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto 44.2,77
+		.' Use the Empty Brown Waterskin next to the pond below the hut|use Empty Brown Waterskin##7766
+		.get Filled Brown Waterskin|q 1535/1
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto 43.4,77.4
+		.talk Brine##5899
+		..turnin Call of Water (3)##1535
+		..accept Call of Water (4)##1536
+		info You fill the red waterskin at Tarren Mill later.
+		info TODO: verify in-game
+		only Shaman
+	step
 		goto 52,31.6
 		.talk Mankrik##3432
 		..turnin Lost in Battle##4921
 		..turnin Consumed by Hatred##899
+	step
+		goto 52.3,31.9
+		.talk Tonga Runetotem##3448
+		..turnin Gathering the Cure##6128
+		..accept Curing the Sick##6129
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 50.7,35.9
+		.' Use your Curative Animal Salve on Sickly Gazelles|use Curative Animal Salve##15826
+		.' Cure 10 Sickly Gazelles|goal 10 Sickly Gazelle cured|q 6129/1
+		info They're all over the northern Barrens, north of the road through the Crossroads. Finish them on the way west.
+		info TODO: verify in-game
+		only Tauren Druid
 	step
 		goto 35.2,27.8
 		.talk Seereth Stonebreak##4049
@@ -1467,6 +4639,14 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-
 		goto Stonetalon Mountains,71.2,95
 		.talk Xen'Zilla##12816
 		..accept Blood Feeders##6461
+	step
+		goto 73.2,95.1
+		.talk Ken'zigla##4197
+		..turnin News of Dogran (2)##1510
+		..accept Ken'zigla's Draught##1511
+		info Ken'zigla is in Malaka'jin, near Xen'Zilla.
+		info TODO: verify in-game
+		only Warlock
 	step
 		goto 74.5,97.9
 		.talk Witch Doctor Jin'Zil##3995
@@ -1562,6 +4742,28 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-
 		..turnin Goblin Invaders##1062
 		..accept Shredding Machines##1068
 	step
+		goto 51.5,30.3
+		.talk Devrak##3615
+		..'Fly to Camp Taurajo|goto The Barrens,44.4,59.2,0.5|noway|c
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto 44.6,59.3
+		.talk Grunt Logmar##5911
+		..turnin Ken'zigla's Draught##1511
+		..accept Dogran's Captivity##1515
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto 43.3,47.9
+		.talk Grunt Dogran##5908
+		..turnin Dogran's Captivity##1515
+		..accept Love's Gift##1512
+		info Ride north up the road.
+		info Then ride on north to the Crossroads.
+		info TODO: verify in-game
+		only Warlock
+	step
 		.'Go to the Crossroads flight master|goto 51.5,30.3|n
 		..'Fly to Ratchet|goto The Barrens,63.1,37.1,0.1|noway|c
 	step
@@ -1579,6 +4781,33 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-
 		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
 		info !!! Make sure you train your skills !!!
 	step
+		goto Orgrimmar,43.0,53.7
+		.talk Shenthul##3401
+		..turnin Mission: Possible But Not Probable##2478
+		..accept Hinott's Assistance (1)##2479
+		info TODO: verify in-game
+		only Rogue
+	step
+		goto Orgrimmar,48.2,45.3
+		.talk Gan'rul Bloodeye##5875
+		..turnin Love's Gift##1512
+		..accept The Binding##1513
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto 49.5,50.0
+		.' Use Dogran's Pendant while standing on the Summoning Circle|use Dogran's Pendant##6626
+		.kill Summoned Succubus|q 1513/1
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto 48.2,45.3
+		.talk Gan'rul Bloodeye##5875
+		..turnin The Binding##1513
+		info You can summon your Succubus now.
+		info TODO: verify in-game
+		only Warlock
+	step
 		'Go outside of Orgrimmar|goto Durotar
 		'Go east to 50.8,13.3|goto Durotar,50.8,13.3|n
 		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|c
@@ -1591,6 +4820,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-
 		goto Silverpine Forest,45.6,42.6
 		.talk Karos Razok##2226
 		..fpath The Sepulcher
+	step
+		goto Silverpine Forest,29.6,29.2
+		.' Click the Strange Lockbox underwater
+		.collect 1 Half Pendant of Aquatic Endurance##15882|q 30
+		info Ride west to the coast and swim out.
+		info TODO: verify in-game
+		only Tauren Druid
 	step
 		goto 42.8,40.9
 		.talk Apothecary Renferrel##1937
@@ -1614,6 +4850,22 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-
 		.talk Apothecary Lydon##2216
 		..turnin Journey to Hillsbrad Foothills##493
 		..accept Elixir of Suffering (1)##496
+	step
+		goto 61.6,19.2
+		.talk Serge Hinott##2391
+		..turnin Hinott's Assistance (1)##2479
+		..accept Hinott's Assistance (2)##2480
+		.' Wait for Serge Hinott to finish the cure|goal Cure Completed|q 2480/1
+		..turnin Hinott's Assistance (2)##2480
+		info He's the alchemy trainer. He teaches you Poisons.
+		info TODO: verify in-game
+		only Rogue
+	step
+		goto 62.2,20.8
+		.' Use the Empty Red Waterskin next to the well|use Empty Red Waterskin##7768
+		.get Filled Red Waterskin|q 1536/1
+		info TODO: verify in-game
+		only Shaman
 	step
 		goto 62.4,20.3
 		.talk High Executor Darthalia##2215
@@ -1785,6 +5037,66 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-
 		info Riding there is fine too, it's on the way north.
 		info TODO: verify in-game
 	step
+		goto 51.5,30.3
+		.talk Devrak##3615
+		..'Fly to Camp Taurajo|goto The Barrens,44.4,59.2,0.5|noway|c
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto 43.4,77.4
+		.talk Brine##5899
+		..turnin Call of Water (4)##1536
+		..accept Call of Water (5)##1534
+		info Ride south to Blackthorn Ridge again.
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto 44.4,59.2
+		.talk Omusa Thunderhorn##10378
+		..'Fly to the Crossroads|goto The Barrens,51.5,30.3,0.5|noway|c
+		info TODO: verify in-game
+		only Shaman
+	step
+		'Cast Teleport: Moonglade|goto Moonglade|cast Teleport: Moonglade|noway|c
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto Moonglade,36.1,41.6
+		.' Stand next to the tree that looks like a woman
+		.' Use the Half Pendant of Aquatic Agility|use Half Pendant of Aquatic Agility##15883
+		.get Pendant of the Sea Lion|q 30/1
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 56.2,30.6
+		.talk Dendrite Starblaze##11802
+		..turnin Curing the Sick##6129
+		..accept Power over Poison##6130
+		..turnin Trial of the Sea Lion##30
+		..accept Aquatic Form##31
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 44.3,45.9
+		.talk Bunthen Plainswind##11798
+		..'Fly to Thunder Bluff|goto Thunder Bluff|noway|c
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto Thunder Bluff,76.5,27.2
+		.talk Turak Runetotem##3033
+		..turnin Power over Poison##6130
+		..turnin Aquatic Form##31
+		info He teaches you Aquatic Form and Cure Poison.
+		info TODO: verify in-game
+		only Tauren Druid
+	step
+		goto 47,49.8
+		.talk Tal##2995
+		..'Fly to the Crossroads|goto The Barrens,51.5,30.3,0.5|noway|c
+		info TODO: verify in-game
+		only Tauren Druid
+	step
 		'Go north to Ashenvale|goto Ashenvale
 		info TODO: verify in-game
 	step
@@ -1869,6 +5181,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (20-
 		.' Click Ursangous's Paw|use Ursangous's Paw##16303
 		..accept Ursangous's Paw##23
 		info TODO: verify in-game
+	step
+		goto 33.6,67.5
+		.' Use your Empty Blue Waterskin next to the Ruins of Stardust Fountain|use Empty Blue Waterskin##7767
+		.get Filled Blue Waterskin|q 1534/1
+		info Head southwest to the ruins, then come back north to the path.
+		info TODO: verify in-game
+		only Shaman
 	step
 		goto 36.6,57.1|n
 		.' The path to bypass Astranaar starts here|goto Ashenvale,36.6,57.2,0.3|noway|c
@@ -2165,6 +5484,34 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (25-
 		info Head east to the two tauren at the Barrens border.
 		info TODO: verify in-game
 	step
+		goto 51.5,30.3
+		.talk Devrak##3615
+		..'Fly to Camp Taurajo|goto The Barrens,44.4,59.2,0.5|noway|c
+		info Ride east to the Crossroads first.
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto 43.4,77.4
+		.talk Brine##5899
+		..turnin Call of Water (5)##1534
+		..accept Call of Water (6)##220
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto 44.4,59.2
+		.talk Omusa Thunderhorn##10378
+		..'Fly to Ratchet|goto The Barrens,63.1,37.1,0.5|noway|c
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto 65.8,43.8
+		.talk Islen Waterseer##5901
+		..turnin Call of Water (6)##220
+		..accept Call of Water (7)##63
+		info You need a Water Sapta in Silverpine, so check that you have one in your bags.
+		info TODO: verify in-game
+		only Shaman
+	step
 		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
 		info !!! Make sure you train your skills !!!
 		info TODO: verify in-game
@@ -2176,6 +5523,41 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (25-
 	step
 		'Go into the Undercity|goto Undercity,63.2,48.6
 		info TODO: verify in-game
+	step
+		goto Undercity,63.2,48.6
+		.talk Michael Garrett##4551
+		..'Fly to the Sepulcher|goto Silverpine Forest,45.6,42.6,0.5|noway|c
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto Silverpine Forest,38.8,44.2
+		.kill Corrupt Minor Manifestation of Water##5894
+		.get Corrupt Manifestation's Bracers|q 63/1
+		info It's on the shore at North Tide's Run, west of the Sepulcher.
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto 38.3,44.6
+		.' Click the Brazier of Everfount
+		..turnin Call of Water (7)##63
+		..accept Call of Water (8)##100
+		info It's a small metal plate on the ground with a fire in it.
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto 38.6,44.6
+		.' Drink the Water Sapta next to the big rock with the rune on it|use Water Sapta##6637
+		.talk Minor Manifestation of Water##5895
+		..turnin Call of Water (8)##100
+		..accept Call of Water (9)##96
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto 45.6,42.6
+		.talk Karos Razok##2226
+		..'Fly to Tarren Mill|goto Hillsbrad Foothills,60.1,18.6,0.5|noway|c
+		info TODO: verify in-game
+		only Shaman
 	step
 		goto Undercity,63.2,48.6
 		.' Fly to Tarren Mill|goto Hillsbrad Foothills,60.1,18.6,0.5|noway|c
@@ -2313,6 +5695,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (25-
 		'Take the boat back to Ratchet|goto The Barrens,63.7,38.6,1|noway|c
 		info Skip this step if you didn't go to Booty Bay.
 		info TODO: verify in-game
+	step
+		goto The Barrens,65.8,43.8
+		.talk Islen Waterseer##5901
+		..turnin Call of Water (9)##96
+		info This gives you the Water Totem.
+		info TODO: verify in-game
+		only Shaman
 	step
 		goto The Barrens,63.1,37.2
 		.talk Bragok##16227
@@ -2599,6 +5988,63 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (30-
 	startlevel 30
 
 	step
+		goto Orgrimmar,80.4,32.4
+		.talk Sorek##3354
+		..accept The Islander##1718
+		info He's the warrior trainer in the Valley of Honor. This chain gives you Berserker Stance.
+		info TODO: verify in-game
+		only Warrior
+	step
+		goto Orgrimmar,38.0,37.7
+		.talk Searn Firewarder##5892
+		..accept Call of Air##1531
+		info This gives you the Air Totem.
+		info TODO: verify in-game
+		only Shaman
+	step
+		goto Orgrimmar,45.1,63.9
+		.talk Doras##3310
+		..'Fly to Ratchet|goto The Barrens,63.1,37.1,0.5|noway|c
+		info TODO: verify in-game
+		only Warrior,Warlock
+	step
+		goto The Barrens,62.6,35.5
+		.talk Strahad Farsan##6251
+		..accept Tome of the Cabal (1)##1801
+		info This chain gives you the Felhunter. It takes a trip to the Undercity and one to the Wetlands later.
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto 68.6,49.2
+		.talk Klannoc Macleod##6236
+		..turnin The Islander##1718
+		..accept The Affray##1719
+		info Fray Island is off the coast southeast of Ratchet.
+		info TODO: verify in-game
+		only Warrior
+	step
+		goto 68.6,48.7
+		.' Step on the grate to begin the Affray|goal Step on the grate to begin the Affray|q 1719/1
+		.' Kill the challengers, then Big Will
+		.kill Big Will##6238|q 1719/2
+		info Big Will is level 33, so use your cooldowns.
+		info TODO: verify in-game
+		only Warrior
+	step
+		goto 68.6,49.2
+		.talk Klannoc Macleod##6236
+		..turnin The Affray##1719
+		info He teaches you Berserker Stance. Don't take The Windwatcher, it's far out of the way.
+		info TODO: verify in-game
+		only Warrior
+	step
+		goto 63.1,37.2
+		.talk Bragok##16227
+		..'Fly to Freewind Post|goto Thousand Needles,45.1,49.1,0.5|noway|c
+		info TODO: verify in-game
+		only Warrior,Warlock
+	step
 		goto Orgrimmar,45.1,63.9
 		.talk Doras##3310
 		..'Fly to Freewind Post|goto Thousand Needles,45.1,49.1,0.5|noway|c
@@ -2706,6 +6152,36 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (30-
 		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
 		info TODO: verify in-game
 	step
+		'Go outside of Orgrimmar|goto Durotar
+		info Skip the next steps if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto Durotar,50.8,13.3|n
+		.' Ride the zeppelin to Undercity|goto Tirisfal Glades|noway|c
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto Undercity,75.9,37.9
+		.talk Jorah Annison##6293
+		..turnin Tome of the Cabal (1)##1801
+		..accept Tome of the Cabal (2)##1803
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto Tirisfal Glades,60.8,58.8|n
+		.' Ride the zeppelin to Orgrimmar|goto Durotar|noway|c
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
+		'Go into Orgrimmar|goto Orgrimmar
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
 		goto Orgrimmar,45.1,63.9
 		.talk Doras##3310
 		..'Fly to Thunder Bluff|goto Thunder Bluff,47,49.8,0.5|noway|c
@@ -2749,6 +6225,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (30-
 		..accept Test of Strength##1151
 		info TODO: verify in-game
 	step
+		goto 53.5,42.6
+		.talk Prate Cloudseer##5905
+		..turnin Call of Air##1531
+		info This gives you the Air Totem.
+		info TODO: verify in-game
+		only Shaman
+	step
 		goto 31.8,32.6
 		.' Click the Document Chest
 		.get Secret Note #1|q 5064/1
@@ -2771,6 +6254,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (30-
 		.' Kill Arikara
 		.get Arikara Serpent Skin|q 5088/2
 		info TODO: verify in-game
+	step
+		goto 43.4,32.7
+		.' Click the Damaged Chest
+		.get Tattered Manuscript|q 1803/2
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
 	step
 		goto 38.9,28.6
 		.' Arnak Grimtotem walks around here
@@ -3018,6 +6508,14 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (30-
 		info Head southwest to the murlocs.
 		info TODO: verify in-game
 	step
+		goto 27.8,72.8
+		.' Click the Tome of the Cabal
+		.get Moldy Tome|q 1803/1
+		info It's southwest of the murlocs.
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
 		goto 58.9,77.6
 		.' Kill Daggerspine nagas
 		.get 5 Daggerspine Scale|q 515/2
@@ -3192,6 +6690,29 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (30-
 		info It needs level 34, you should have hit it by now.
 		info TODO: verify in-game
 	step
+		goto 75.9,37.9
+		.talk Jorah Annison##6293
+		..turnin Tome of the Cabal (2)##1803
+		..accept Tome of the Cabal (3)##1805
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto 63.2,48.6
+		.talk Michael Garrett##4551
+		..'Fly to Hammerfall|goto Arathi Highlands,73.1,32.7,0.5|noway|c
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto Wetlands,49.6,47.5
+		.from Dragonmaw Bonewarder##1057, Dragonmaw Shadowwarder##1038
+		.get 3 Rod of Channeling|q 1805/1
+		info Ride southwest out of Arathi and over the Thandol Span into the Wetlands.
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
 		'Hearth to Orgrimmar|goto Orgrimmar|use hearthstone##6948|noway|c
 		info !!! Make sure you train your skills !!!
 		info TODO: verify in-game
@@ -3212,6 +6733,28 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Main Guide (30-
 		.talk Doras##3310
 		..'Fly to Ratchet|goto The Barrens,63.1,37.1,0.5|noway|c
 		info TODO: verify in-game
+	step
+		goto The Barrens,62.6,35.5
+		.talk Strahad Farsan##6251
+		..turnin Tome of the Cabal (3)##1805
+		..accept The Binding##1795
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto 62.6,35.3
+		.' Use the Tome of the Cabal on the summoning circle|use Tome of the Cabal##6999
+		.kill Summoned Felhunter|q 1795/1
+		info Skip this step if you're not interested in the Felhunter.
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto 62.6,35.5
+		.talk Strahad Farsan##6251
+		..turnin The Binding##1795
+		info You can summon your Felhunter now.
+		info TODO: verify in-game
+		only Warlock
 	step
 		goto The Barrens,62.7,36.2
 		.talk Gazlowe##3391
