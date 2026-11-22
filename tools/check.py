@@ -45,6 +45,9 @@ OLD_NAMES = {
 SUMMONED = {
     29579,  # Brann Bronzebeard, called with Brann's Communicator (Storm Peaks)
     26206,  # Keristrasza, called with the Augmented Arcane Prison (Borean Tundra)
+    # Crew of the Icecrown gunships, which fly around, so the spawn point says nothing.
+    30824, 29795, 32301, 31261, 30825,  # Orgrim's Hammer
+    30344, 29799, 32302, 31259, 30345,  # The Skybreaker
 }
 # NPCs the Wrath Classic data renamed, with their 3.3.5 names.
 OLD_NPC_NAMES = {
@@ -249,6 +252,9 @@ class Checker:
         # A prerequisite still in the log is usually a Questie data quirk
         # (some quests only need the earlier one accepted), so only warn.
         pre_single = [p for p in q.get("preQuestSingle") or [] if p not in BAD_PREREQS.get(qid, ())]
+        # A child quest is offered while its parent is in the log (Avenge Me! during The Broken Front).
+        if q.get("parentQuest") in self.log:
+            pre_single = [p for p in pre_single if p != q["parentQuest"]]
         if pre_single and not any(p in self.done for p in pre_single):
             names = ", ".join(f"{(gdb.quest(p) or {}).get('name')}##{p}" for p in pre_single)
             soft = only or any(p in self.log for p in pre_single)

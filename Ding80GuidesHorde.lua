@@ -25115,6 +25115,7 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Sholazar Basin"
 ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Storm Peaks",[[
 	author YunataSavior
 	startlevel 79
+	next Ding80's Horde Leveling Guides\\Icecrown
 
 	step
 		goto Dalaran,30.9,50.2
@@ -26538,5 +26539,2006 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Storm Peaks",[[
 	step
 		'Congratulations! You've finished the Storm Peaks
 		info Left out: the Sons of Hodir, Brunnhildar and K3 dailies, Forging Hodir's Spear (needs Honored with The Sons of Hodir), Everfrost (a random drop that needs Friendly), and the Ulduar raid quests.
+		info TODO: verify in-game
+]])
+ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Icecrown",[[
+	author YunataSavior
+	startlevel 80
+
+	step
+		'Fly to Dalaran|goto Dalaran,72.2,45.8,0.5|noway|c
+		info Take the flight from Dun Niffelem.
+		info TODO: verify in-game
+	step
+		goto Dalaran,69.4,40.6
+		.talk Sky-Reaver Klum##31085
+		..accept Preparations for War##13419
+		info He's at the edge of Krasus' Landing.
+		info TODO: verify in-game
+	step
+		goto Dalaran,69.4,40.6
+		.talk Sky-Reaver Klum##31085
+		..'Ask him for passage to Orgrim's Hammer|goto Icecrown|noway|c
+		info TODO: verify in-game
+	step
+		.talk Sky-Reaver Korm Blackscar##30824
+		..turnin Preparations for War##13419
+		info On Orgrim's Hammer. Don't take the other quests here yet; they open after the Argent Vanguard.
+		info TODO: verify in-game
+	step
+		.talk Brother Keltan##31261
+		..accept Judgment Day Comes!##13227
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		goto Icecrown,87.8,78.1
+		.talk Aedan Moran##30433
+		..fpath The Argent Vanguard
+		info TODO: verify in-game
+	step
+		goto 87.5,75.8
+		.talk Highlord Tirion Fordring##28179
+		..turnin Judgment Day Comes!##13227
+		..accept Honor Above All Else##13036
+		info TODO: verify in-game
+	step
+		goto 87.1,75.8
+		.talk Crusade Commander Entari##30223
+		..turnin Honor Above All Else##13036
+		..accept Scourge Tactics##13008
+		info TODO: verify in-game
+	step
+		goto 86.8,76.7
+		.talk Father Gustav##30226
+		..accept Curing The Incurable##13040
+		info TODO: verify in-game
+	step
+		goto 86.1,75.8
+		.talk Crusader Lord Dalfors##30224
+		..accept Defending The Vanguard##13039
+		info TODO: verify in-game
+	step
+		goto 84.4,74.3
+		.from Carrion Fleshstripper##30206+, Forgotten Depths Acolyte##30205+
+		.kill 15 Forgotten Depths Nerubian|q 13039/1
+		.from Carrion Fleshstripper##30206+, Forgotten Depths Acolyte##30205+
+		.get 10 Forgotten Depths Venom Sac|q 13040/1
+		.' Click Webbed Crusaders|tip They look like white squirming cocoons on the ground around this area.
+		.' Free 8 Webbed Crusaders|goal 8 Webbed Crusader Freed|q 13008/1
+		info TODO: verify in-game
+	step
+		goto 86.1,75.8
+		.talk Crusader Lord Dalfors##30224
+		..turnin Defending The Vanguard##13039
+		info TODO: verify in-game
+	step
+		goto 86.8,76.7
+		.talk Father Gustav##30226
+		..turnin Curing The Incurable##13040
+		info TODO: verify in-game
+	step
+		goto 87.1,75.8
+		.talk Crusade Commander Entari##30223
+		..turnin Scourge Tactics##13008
+		..accept If There Are Survivors...##13044
+		info TODO: verify in-game
+	step
+		goto 87.0,79.0
+		.talk Penumbrius##30227
+		..turnin If There Are Survivors...##13044
+		..accept Into The Wild Green Yonder##13045
+		info TODO: verify in-game
+	step
+		goto 87.1,79.1
+		.' Click an Argent Skytalon dragon to ride it |invehicle |tip They look like dragons under white canopies.
+		info TODO: verify in-game
+	step
+		goto 79.0,67.4
+		.' Use the Grab Captured Crusader ability near Captured Crusaders to pick them up |petaction Grab Captured Crusader
+		.' Once you pick up a Captured Crusader, fly to 86.9,76.5|n
+		.' Use the Drop Off Captured Crusader ability near the tents to drop off the crusaders
+		.' Repeat this process 2 more times
+		.' Rescue 3 Captured Crusaders |goal 3 Captured Crusader Rescued |q 13045/1
+		info TODO: verify in-game
+	step
+		'Click the red arrow on your vehicle hot bar to stop riding the dragon|script VehicleExit()|outvehicle|c
+		info TODO: verify in-game
+	step
+		goto 87.5,75.8
+		.talk Highlord Tirion Fordring##28179
+		..turnin Into The Wild Green Yonder##13045
+		..accept A Cold Front Approaches##13070
+		info TODO: verify in-game
+	step
+		goto 85.6,76.0
+		.talk Siegemaster Fezzik##30657
+		..turnin A Cold Front Approaches##13070
+		..accept The Last Line Of Defense##13086
+		info TODO: verify in-game
+	step
+		goto 85.3,75.9
+		.' Click the Argent Cannon to get on it |invehicle |tip It looks like a white cannon on top of a wall tower.
+		info TODO: verify in-game
+	step
+		'Use the skills on your hotbar to kill scourge mobs and dragons
+		.kill 100 Scourge Attacker |q 13086/1
+		.kill 3 Frostbrood Destroyer |q 13086/2
+		info TODO: verify in-game
+	step
+		'Click the red arrow on your vehicle hot bar to stop using the cannon|script VehicleExit()|outvehicle|c
+		info TODO: verify in-game
+	step
+		goto 85.6,76.0
+		.talk Siegemaster Fezzik##30657
+		..turnin The Last Line Of Defense##13086
+		info TODO: verify in-game
+	step
+		goto 86.0,75.8
+		.talk Highlord Tirion Fordring##30677
+		..accept Once More Unto The Breach, Hero##13105 |only DeathKnight
+		..accept Once More Unto The Breach, Hero##13104 |only !DeathKnight
+		info TODO: verify in-game
+	step
+		goto 83.0,72.9
+		.talk The Ebon Watcher##30596
+		..turnin Once More Unto The Breach, Hero##13105 |only DeathKnight
+		..turnin Once More Unto The Breach, Hero##13104 |only !DeathKnight
+		..accept The Purging Of Scourgeholme##13118
+		..accept The Scourgestone##13122
+		info TODO: verify in-game
+	step
+		goto 83.0,73.1
+		.talk Crusade Architect Silas##30686
+		..accept The Stone That Started A Revolution##13130
+		info TODO: verify in-game
+	step
+		goto 83.0,73.1
+		.talk Crusade Engineer Spitzpatrick##30714
+		..accept It Could Kill Us All##13135
+		info TODO: verify in-game
+	step
+		goto 82.9,72.8
+		.talk Father Gustav##30683
+		..accept The Restless Dead##13110
+		info TODO: verify in-game
+	step
+		goto 80.4,68.2
+		.kill 8 Reanimated Crusader |q 13118/3
+		.kill 3 Forgotten Depths Underking |q 13118/2
+		.from Reanimated Crusader##30202+, Forgotten Depths Underking##30541+
+		.get 15 Scourgestone |q 13122/1
+		.' Use your Holy Water on Reanimated Crusader corpses |use Holy Water##43153
+		.' Free 10 Restless Souls |goal 10 Restless Soul Freed |q 13110/1
+		info TODO: verify in-game
+	step
+		goto 78.7,60.2
+		.kill 3 Forgotten Depths High Priest |q 13118/1
+		.' You can find another Forgotten Depths High Priest at 76.2,61.0 |n
+		info TODO: verify in-game
+	step
+		goto 82.9,72.8
+		.talk Father Gustav##30683
+		..turnin The Restless Dead##13110
+		info TODO: verify in-game
+	step
+		goto 83.0,72.9
+		.talk The Ebon Watcher##30596
+		..turnin The Purging Of Scourgeholme##13118
+		..turnin The Scourgestone##13122
+		..accept The Air Stands Still##13125
+		info TODO: verify in-game
+	step
+		goto 77.6,62.2
+		.' Use your War Horn of Acherus on Salranax the Flesh Render |use War Horn of Acherus##43206 |tip A Death Knight is summoned to help you, but make sure you get the first hit on Salranax the Flesh Render, or else you won't get credit for the kill.
+		.kill Salranax the Flesh Render##30829 |q 13125/1
+		info TODO: verify in-game
+	step
+		goto 79.7,60.9
+		.' Use your War Horn of Acherus on High Priest Yath'amon |use War Horn of Acherus##43206 |tip A Death Knight is summoned to help you, but make sure you get the first hit on High Priest Yath'amon, or else you won't get credit for the kill.
+		.kill High Priest Yath'amon##30831 |q 13125/3
+		info TODO: verify in-game
+	step
+		goto 76.6,54.1
+		.' Use your War Horn of Acherus on Underking Talonox |use War Horn of Acherus##43206 |tip A Death Knight is summoned to help you, but make sure you get the first hit on Underking Talonox, or else you won't get credit for the kill.
+		.kill Underking Talonox##30830 |q 13125/2
+		info TODO: verify in-game
+	step
+		'Click the dark portal that spawns after you kill Underking Talonox to return to the Valley of Echoes |goto Icecrown,83.0,72.6,0.5 |noway |c
+		info TODO: verify in-game
+	step
+		goto 83.0,72.9
+		.talk The Ebon Watcher##30596
+		..turnin The Air Stands Still##13125
+		info TODO: verify in-game
+	step
+		'Go south to Crystalsong Forest |goto Crystalsong Forest |noway |c
+		info TODO: verify in-game
+	step
+		goto Crystalsong Forest,59.9,57.2
+		.from Unbound Ent##30862+, Unbound Dryad##30860+
+		.get 8 Crystallized Energy |q 13135/1
+		.' Click Crystalline Heartwood |tip They look like pink glowing tree stumps on the ground around this area.
+		.get 10 Crystalline Heartwood |q 13130/1
+		info TODO: verify in-game
+	step
+		goto 73.8,53.0
+		.' Click Ancient Elven Masonry |tip They look like blue stone pieces of a building on the ground around this area.
+		.get 10 Ancient Elven Masonry |q 13130/2
+		.' You can find more Ancient Elven Masonry around 79.6,61.3 |n
+		info TODO: verify in-game
+	step
+		'Go northwest to Icecrown |goto Icecrown |noway |c
+		info TODO: verify in-game
+	step
+		goto Icecrown,83.0,73.1
+		.talk Crusade Architect Silas##30686
+		..turnin The Stone That Started A Revolution##13130
+		info TODO: verify in-game
+	step
+		goto 83.0,73.1
+		.talk Crusade Engineer Spitzpatrick##30714
+		..turnin It Could Kill Us All##13135
+		info TODO: verify in-game
+	step
+		goto 82.9,72.8
+		.talk Father Gustav##30683
+		..accept Into The Frozen Heart Of Northrend##13139
+		info TODO: verify in-game
+	step
+		goto 86.0,75.8
+		.talk Highlord Tirion Fordring##30677
+		..turnin Into The Frozen Heart Of Northrend##13139
+		..accept The Battle For Crusaders' Pinnacle##13141
+		info TODO: verify in-game
+	step
+		goto 80.1,72.0
+		.' Use your Blessed Banner of the Crusade |use Blessed Banner of the Crusade##43243
+		.' Watch the Battle for Crusaders' Pinnacle |goal Battle for Crusaders' Pinnacle |q 13141/1
+		info TODO: verify in-game
+	step
+		goto 82.9,72.8
+		.talk Father Gustav##30683
+		..turnin The Battle For Crusaders' Pinnacle##13141
+		..accept The Crusaders' Pinnacle##13157
+		info TODO: verify in-game
+	step
+		goto 79.8,71.8
+		.talk Highlord Tirion Fordring##31044
+		..turnin The Crusaders' Pinnacle##13157
+		info He also offers A Tale of Valor. Leave it for now; the guide comes back for it at the end.
+		info TODO: verify in-game
+	step
+		goto 79.5,72.7
+		.talk Warlord Hork Strongbrow##31240
+		..accept Orgrim's Hammer##13224
+		info TODO: verify in-game
+	step
+		goto 79.4,72.4
+		.talk Penumbrius##31069
+		..fpath Crusaders' Pinnacle
+		info TODO: verify in-game
+	step
+		'Find Orgrim's Hammer flying over Icecrown and land on it
+		.talk Sky-Reaver Korm Blackscar##30824
+		..turnin Orgrim's Hammer##13224
+		..accept The Broken Front##13228
+		info Orgrim's Hammer flies a triangle between 60.6,34.9, 68.0,52.5 and 68.9,27.0, and shows on the world map as a ship with two red balloons.
+		info TODO: verify in-game
+	step
+		.talk Koltira Deathweaver##29795
+		..accept It's All Fun and Games##12892
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		.talk Warbringer Davos Rioht##32301
+		..accept Joining the Assault##13340
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		.talk Chief Engineer Copperclaw##30825
+		..accept Get to Ymirheim!##13293
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		goto 58.3,46.0
+		.talk Ground Commander Xutjja##31834
+		..turnin Joining the Assault##13340
+		info TODO: verify in-game
+	step
+		goto 54.5,59.3
+		.talk Darkspeaker R'khem##31892
+		..accept Mind Tricks##13308
+		info He's chained up inside the Saronite Mines; the entrance is at 57.0,57.3.
+		info It's a group quest, but you can solo it if you pull the guards away from the foreman first.
+		info Skip this step and the next two if you don't want to do it.
+		info TODO: verify in-game
+	step
+		goto 55.1,59.4
+		.kill Foreman Thaldrin##31399|n
+		.get Foreman's Key|q 13308/1
+		info Skip this step if you didn't take Mind Tricks.
+		info TODO: verify in-game
+	step
+		goto 54.5,59.3
+		.talk Darkspeaker R'khem##31892
+		..turnin Mind Tricks##13308
+		info Skip this step if you didn't take Mind Tricks.
+		info TODO: verify in-game
+	step
+		goto 51.9,57.6
+		.talk Blast Thunderbomb##31781
+		..turnin Get to Ymirheim!##13293
+		info TODO: verify in-game
+	step
+		goto 69.0,67.3
+		.talk Dying Berserker##31273
+		..' Ask him what happened here
+		.' Question the Dying Berserker|goal Dying Berserker Questioned|q 13228/1
+		info TODO: verify in-game
+	step
+		goto 69.0,67.3
+		.talk Dying Berserker##31273
+		..accept Avenge Me!##13230
+		info TODO: verify in-game
+	step
+		goto 68.8,67.2
+		.from Dying Soldier##31304
+		.' Kill 5 Dying Alliance Soldiers|goal 5 Dying Alliance Soldiers slain|q 13230/1
+		info TODO: verify in-game
+	step
+		'Find Orgrim's Hammer flying over Icecrown and land on it
+		.talk Sky-Reaver Korm Blackscar##30824
+		..turnin The Broken Front##13228
+		..turnin Avenge Me!##13230
+		..accept Good For Something?##13238
+		..accept Takes One to Know One##13260
+		info Orgrim's Hammer flies a triangle between 60.6,34.9, 68.0,52.5 and 68.9,27.0, and shows on the world map as a ship with two red balloons.
+		info TODO: verify in-game
+	step
+		.talk Koltira Deathweaver##29795
+		..turnin Takes One to Know One##13260
+		..accept Poke and Prod##13237
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		.talk Chief Engineer Copperclaw##30825
+		..turnin Good For Something?##13238
+		..accept Volatility##13239
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		goto 69.9,64.3
+		.' Click Abandoned Armor|tip They look like metal armor chestpieces laying on the ground around this area.
+		.collect 3 Abandoned Armor##43616|q 13239
+		.' Click Abandoned Helms|tip They look like metal helmets laying on the ground around this area.
+		.collect 3 Abandoned Helm##43610|q 13239
+		.' Click Piles of Bones|tip They look like small piles of bones laying on the ground around this area.
+		.collect 3 Pile of Bones##43609|q 13239
+		info TODO: verify in-game
+	step
+		goto 68.8,67.5
+		.' Use Copperclaw's Volatile Oil 3 times|use Copperclaw's Volatile Oil##43608
+		.' Conduct 3 Field Tests|goal 3 Field Tests Conducted|q 13239/1
+		info TODO: verify in-game
+	step
+		goto 68.8,66.6
+		.' Kill 5 Hulking Abominations|goal 5 Hulking Abominations Slain|q 13237/1
+		.' Kill 5 Malefic Necromancer|goal 5 Malefic Necromancers Slain|q 13237/2
+		.' Kill 5 Shadow Adept|goal 5 Shadow Adepts Slain|q 13237/3
+		info TODO: verify in-game
+	step
+		'Find Orgrim's Hammer flying over Icecrown and land on it
+		.talk Koltira Deathweaver##29795
+		..turnin Poke and Prod##13237
+		..accept That's Abominable!##13264
+		..accept Against the Giants##13277
+		info Orgrim's Hammer flies a triangle between 60.6,34.9, 68.0,52.5 and 68.9,27.0, and shows on the world map as a ship with two red balloons.
+		info TODO: verify in-game
+	step
+		.talk Chief Engineer Copperclaw##30825
+		..turnin Volatility##13239
+		..accept Green Technology##13379
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		goto 69.8,62.4
+		.from Hulking Abomination##31140+
+		.collect Chilled Abomination Guts|n
+		.' Use your Abomination Reanimation Kit|use Abomination Reanimation Kit##43968
+		.' With your control Abomination, go to 69.1,61.6|n
+		.' Use your Burst at the Seams ability to explode the mobs around this area|petaction Burst at the Seams
+		.' Keep repeating this process until you:
+		.' Explode 15 Icy Ghouls|goal 15 Icy Ghouls Exploded|q 13264/1
+		.' Explode 15 Vicious Geists|goal 15 Vicious Geists|q 13264/2
+		.' Explode 15 Risen Alliance Soldiers|goal 15 Risen Alliance Soldiers Exploded|q 13264/3
+		info TODO: verify in-game
+	step
+		goto 70.3,72.5
+		.kill Pustulent Horrors|n
+		.get 5 Pustulant Spine|q 13277/1
+		info They're the big plague giants walking around Mord'rethar, south of the Broken Front.
+		info TODO: verify in-game
+	step
+		'Find Orgrim's Hammer flying over Icecrown and land on it
+		.talk Koltira Deathweaver##29795
+		..turnin That's Abominable!##13264
+		..accept Sneak Preview##13351
+		..turnin Against the Giants##13277
+		..accept Coprous the Defiled##13278
+		..accept Basic Chemistry##13279
+		info Orgrim's Hammer flies a triangle between 60.6,34.9, 68.0,52.5 and 68.9,27.0, and shows on the world map as a ship with two red balloons.
+		info TODO: verify in-game
+	step
+		goto 61.5,63.5
+		.' Use the Pustulant Spinal Fluid on 3 Plague Cauldrons|use Pustulant Spinal Fluid##44010
+		.' Taint 3 Plague Cauldrons|goal 3 Plague Cauldron|q 13279/1
+		.kill Coprous the Defiled##31198|q 13278/1
+		info Coprous is at 60.8,62.2, beside the cauldrons.
+		info TODO: verify in-game
+	step
+		goto 55.1,43.9
+		.' Visit Aldur'thar South|goal Aldur'thar South Visited|q 13351/1
+		info TODO: verify in-game
+	step
+		goto 54.7,38.9
+		.' Visit Aldur'thar Central|goal Aldur'thar Central Visited|q 13351/2
+		info TODO: verify in-game
+	step
+		goto 54.0,36.9
+		.talk Fringe Engineer Tezzla##32430
+		..turnin Green Technology##13379
+		..accept Fringe Science Benefits##13373
+		..accept Amped for Revolt!##13374
+		info TODO: verify in-game
+	step
+		goto 54.0,36.7
+		.talk Rizzy Ratchwiggle##31839
+		.' Tell her to give you a bomber!|invehicle|q 13373
+		info TODO: verify in-game
+	step
+		'You fly off in a bomber:
+		.' Use the 3 different modes on the right side of your hotbar to shoot rockets, drop bombs, or repair your bomber
+		.' Shoot rockets at the gargoyles that fly behind you (you have to aim it)
+		..kill 15 Gargoyle Ambusher|q 13373/3
+		.' Drop bombs on the mobs below
+		..kill 40 Bombardment Infantry|q 13373/1
+		..kill 8 Bombardment Captain|q 13373/2
+		.' Bomb Frostbrood Sentries and Scourge War Machines too, for Amped for Revolt!
+		..kill Gargoyle Ambusher|q 13374/1
+		..kill Scourge War Machine|q 13374/2
+		..kill Frostbrood Sentry|q 13374/3
+		.' Use your Charge Shield ability to keep your bomber's defense up
+		.' Use your Fight Fire ability to put out fires on your bomber
+		info TODO: verify in-game
+	step
+		goto 54.0,36.9
+		.talk Fringe Engineer Tezzla##32430
+		..turnin Fringe Science Benefits##13373
+		..turnin Amped for Revolt!##13374
+		info She also offers Total Ohmage, a daily. Skip it.
+		info TODO: verify in-game
+	step
+		goto 57.5,35.2
+		.' Visit Aldur'thar North|goal Aldur'thar North Visited|q 13351/3
+		info TODO: verify in-game
+	step
+		goto 51.3,35.3
+		.' Visit Aldur'thar Northwest|goal Aldur'thar Northwest Visited|q 13351/4
+		info TODO: verify in-game
+	step
+		goto 44.3,21.5
+		.' Use your Eyesore Blaster on The Ocular|use Eyesore Blaster##41265|tip The Ocular is a huge blue glowing eye at the very top of the Shadow Vault.
+		.' Destroy The Ocular|goal The Ocular has been destroyed|q 12892/1
+		info TODO: verify in-game
+	step
+		goto 44.1,24.7
+		.talk Baron Sliver##29804
+		..turnin It's All Fun and Games##12892
+		..accept I Have an Idea, But First...##12891
+		info TODO: verify in-game
+	step
+		goto 43.7,24.8
+		.from Shadow Cultist##29717+
+		.get 1 Cultist Rod|q 12891/1
+		.from Morbid Carcass##29719+
+		.get 1 Abomination Hook|q 12891/2
+		.from Vault Geist##29720+
+		.get 1 Geist Rope|q 12891/3
+		.from Morbid Carcass##29719+, Vault Geist##29720+, Rabid Cannibal##29722+, Death Knight Master##29738+
+		.get 5 Scourge Essence|q 12891/4
+		info TODO: verify in-game
+	step
+		goto 44.1,24.7
+		.talk Baron Sliver##29804
+		..turnin I Have an Idea, But First...##12891
+		..accept Free Your Mind##12893
+		info TODO: verify in-game
+	step
+		goto 43.4,19.1
+		.from The Leaper##29840
+		.' Use your Sovereign Rod on The Leaper's corpse|use Sovereign Rod##41366
+		.' Turn The Leaper|goal The Leaper turned|q 12893/3
+		info TODO: verify in-game
+	step
+		goto 44.4,27.0
+		.from Vile##29769
+		.' Use your Sovereign Rod on Vile's corpse|use Sovereign Rod##41366
+		.' Turn Vile|goal Vile turned|q 12893/1
+		info TODO: verify in-game
+	step
+		goto 41.8,24.5
+		.from Lady Nightswood##29770
+		.' Use your Sovereign Rod on Lady Nightswood's corpse|use Sovereign Rod##41366
+		.' Turn Lady Nightswood|goal Lady Nightswood turned|q 12893/2
+		info TODO: verify in-game
+	step
+		goto 44.1,24.7
+		.talk Baron Sliver##29804
+		..turnin Free Your Mind##12893
+		..accept If He Cannot Be Turned##12897
+		info TODO: verify in-game
+	step
+		'The entrance to the Shadow Vault starts here|goto Icecrown,43.7,23.6,0.3|c
+		info TODO: verify in-game
+	step
+		goto 44.9,19.9
+		.' Click the General's Weapon Rack|tip It looks like a square metal table rack with swords laying on it, next to a big skull Runeforge with blue eyes.
+		.' General Lightsbane spawns
+		.kill General Lightsbane|q 12897/1
+		info TODO: verify in-game
+	step
+		'Leave the Shadow Vault|goto 43.7,23.6,0.3|c
+		info TODO: verify in-game
+	step
+		'Find Orgrim's Hammer flying over Icecrown and land on it
+		.talk Koltira Deathweaver##29795
+		..turnin If He Cannot Be Turned##12897
+		..accept The Shadow Vault##12899
+		..turnin Sneak Preview##13351
+		..accept Drag and Drop##13352
+		..accept Chain of Command##13354
+		..accept Cannot Reproduce##13355
+		..turnin Coprous the Defiled##13278
+		..turnin Basic Chemistry##13279
+		info Orgrim's Hammer flies a triangle between 60.6,34.9, 68.0,52.5 and 68.9,27.0, and shows on the world map as a ship with two red balloons.
+		info TODO: verify in-game
+	step
+		goto 53.9,46.9
+		.' Kill Overseer Faedris|goal Overseer Faedris Killed|q 13354/1|tip He's standing in a tent.
+		info TODO: verify in-game
+	step
+		goto 53.9,46.1
+		.from Bitter Initiate##32238
+		.collect 3 Orb of Illusion##44246 |n
+		.' Use your Orbs of Illusion on Dark Subjugators|use Orb of Illusion##44246
+		.' Drag and drop 3 Dark Subjugators goal 3 Dark Subjugators dragged and dropped|q 13352/1
+		info TODO: verify in-game
+	step
+		goto 54.7,32.6
+		.' Kill Overseer Jhaeqon|goal Overseer Jhaeqon Killed|q 13354/2|tip He's standing in a tent.
+		info TODO: verify in-game
+	step
+		goto 53.7,29.2
+		.' Kill Overseer Veraj|goal Overseer Veraj Killed|q 13354/3|tip He's standing under a white canopy.
+		info TODO: verify in-game
+	step
+		goto 49.7,34.4
+		.' Use your Partitioned Flask next to the big cauldron with purple smoke|use Partitioned Flask##44251
+		.' Collect the Dark Sample|goal Dark Sample Collected|q 13355/3
+		info TODO: verify in-game
+	step
+		goto 49.1,34.2
+		.' Use your Partitioned Flask next to the big cauldron with green smoke|use Partitioned Flask##44251
+		.' Collect the Green Sample|goal Green Sample Collected|q 13355/2
+		info TODO: verify in-game
+	step
+		goto 49.0,33.2
+		.' Use your Partitioned Flask next to the big cauldron with gray or blue smoke|use Partitioned Flask##44251
+		.' Collect the Blue Sample|goal Blue Sample Collected|q 13355/1
+		info TODO: verify in-game
+	step
+		goto 49.4,31.2
+		.' Kill Overseer Savryn|goal Overseer Savryn Killed|q 13354/4|tip He's standing under a white canopy.
+		info TODO: verify in-game
+	step
+		goto 42.8,24.9
+		.talk Baron Sliver##29343
+		..turnin The Shadow Vault##12899
+		..accept The Duke##12938
+		..accept Blackwatch##13106
+		info TODO: verify in-game
+	step
+		goto 43.7,24.4
+		.talk Morlia Doomwing##30314
+		..fpath The Shadow Vault
+		info TODO: verify in-game
+	step
+		goto 44.0,22.2
+		.talk Initiate Brenners##30308
+		..home The Shadow Vault
+		info TODO: verify in-game
+	step
+		goto 44.7,20.3
+		.talk Duke Lankral##30002
+		..turnin The Duke##12938
+		..accept Honor Challenge##12939
+		info TODO: verify in-game
+	step
+		goto 43.6,24.7
+		.talk The Leaper##30074
+		..accept Eliminate the Competition##12955
+		info TODO: verify in-game
+	step
+		goto 37.9,22.9
+		.talk Onu'zun##30180
+		..' Tell him you have bad news for him
+		.' Defeat Onu'zun|goal Onu'zun defeated|q 12955/3
+		info TODO: verify in-game
+	step
+		goto 37.9,25.1
+		.talk Efrem the Faithful##30081
+		..' Challenge him to a duel
+		.' Defeat Efrem the Faithful|goal Efrem the Faithful defeated|q 12955/2
+		info TODO: verify in-game
+	step
+		goto 37.5,24.6
+		.' Use your Challenge Flag on Mjordin Combatants to challenge them|use Challenge Flag##41372
+		..' Challenge and defeat 6 Mjordin Combatants|goal 6 Mjordin Combatants challenged and defeated|q 12939/1
+		info TODO: verify in-game
+	step
+		goto 37.1,22.5
+		.talk Sigrid Iceborn##30086
+		..' Tell her you heard vrykul women cannot fight at all
+		.' Defeat Sigrid Iceborn|goal Sigrid Iceborn defeated|q 12955/1
+		info TODO: verify in-game
+	step
+		goto 36.2,23.6
+		.talk Tinky Wickwhistle##30162
+		..' Tell her you can't afford her as a distraction
+		.' Defeat Tinky Wickwhistle|goal Tinky Wickwhistle defeated|q 12955/4
+		info TODO: verify in-game
+	step
+		goto 44.7,20.3
+		.talk Duke Lankral##30002
+		..turnin Honor Challenge##12939
+		..accept Shadow Vault Decree##12943
+		info TODO: verify in-game
+	step
+		goto 43.6,24.7
+		.talk The Leaper##30074
+		..turnin Eliminate the Competition##12955
+		..accept The Bone Witch##12999
+		info TODO: verify in-game
+	step
+		'The entrance to the Ufrang's Hall starts here|goto 38.8,24.0,0.3|c
+		info TODO: verify in-game
+	step
+		goto 41.0,23.9
+		.talk Vaelen the Flayed##30056
+		..accept Get the Key##12949
+		info TODO: verify in-game
+	step
+		goto 40.3,23.9
+		.' Use your Shadow Vault Decree on Thane Ulfrang the Mighty|use Shadow Vault Decree##41776
+		..kill Thane Ulfrang the Mighty|q 12943/1
+		info TODO: verify in-game
+	step
+		'Leave Ufrang's Hall|goto 38.8,24.0,0.3|c
+		info TODO: verify in-game
+	step
+		goto 36.5,23.6
+		.from Instructor Hroegar##29915
+		.get Key to Vaelan's Chains|q 12949/1
+		info TODO: verify in-game
+	step
+		'The entrance to the Ufrang's Hall starts here|goto 38.8,24.0,0.3|c
+		info TODO: verify in-game
+	step
+		goto 41.0,23.9
+		.talk Vaelen the Flayed##30056
+		..turnin Get the Key##12949
+		..accept Let the Baron Know##12951
+		info TODO: verify in-game
+	step
+		'Leave Ufrang's Hall|goto 38.8,24.0,0.3|c
+		info TODO: verify in-game
+	step
+		goto 42.8,24.9
+		.talk Baron Sliver##29343
+		..turnin Let the Baron Know##12951
+		..accept Vaelen Has Returned##13085
+		info TODO: verify in-game
+	step
+		goto 43.3,24.8
+		.talk Vile##30216
+		..accept Crush Dem Vrykuls!##12992
+		info TODO: verify in-game
+	step
+		goto 43.1,21.1
+		.talk Vaelen the Flayed##30218
+		..turnin Vaelen Has Returned##13085
+		..accept Ebon Blade Prisoners##12982
+		info TODO: verify in-game
+	step
+		goto 44.7,20.3
+		.talk Duke Lankral##30002
+		..turnin Shadow Vault Decree##12943
+		..accept Vandalizing Jotunheim##13084
+		info TODO: verify in-game
+	step
+		goto 33.0,28.1
+		.from Njorndar Spear-Sister##30243+, Jotunheim Warrior##29880+, Valhalas Vargul##30250+
+		.kill 15 Jotunheim vrykul|q 12992/1
+		.collect 15 Vrykul Bones##43089|q 13092|future
+		.collect 8 Jotunheim Cage Key##42422|q 12982|n
+		.' Click Jotunheim Cages|tip They look like wooden cages on the ground around this area.
+		.' Set free 8 Ebon Blade Prisoners|goal 8 Ebon Blade Prisoners set free|q 12982/1
+		.' Click Vrykul Banners|tip They look like big wooden posts with red banners hanging from them around this area.
+		.' Burn 10 Vrykul banners|goal 10 Vrykul banners burned|q 13084/1
+		info TODO: verify in-game
+	step
+		goto 43.1,21.1
+		.talk Vaelen the Flayed##30218
+		..turnin Ebon Blade Prisoners##12982
+		info TODO: verify in-game
+	step
+		goto 44.7,20.3
+		.talk Duke Lankral##30002
+		..turnin Vandalizing Jotunheim##13084
+		info TODO: verify in-game
+	step
+		goto 43.3,24.8
+		.talk Vile##30216
+		..turnin Crush Dem Vrykuls!##12992
+		info TODO: verify in-game
+	step
+		goto 42.8,24.9
+		.talk Baron Sliver##29343
+		..accept To the Rise with all Due Haste!##12806
+		info He also offers Leave Our Mark, a daily. Skip it.
+		info TODO: verify in-game
+	step
+		goto 32.5,42.9
+		.talk The Bone Witch##30232
+		..turnin The Bone Witch##12999
+		..accept Reading the Bones##13092
+		..turnin Reading the Bones##13092
+		..accept Deep in the Bowels of the Underhalls##13042
+		info TODO: verify in-game
+	step
+		'The entrance to The Underhalls starts here|goto 32.6,32.1,0.3|c
+		info TODO: verify in-game
+	step
+		goto 36.1,33.0
+		.talk Bethod Feigr##30406
+		..accept Revenge for the Vargul##13059
+		info TODO: verify in-game
+	step
+		goto 33.1,37.7
+		.' Use Bethod's Sword in the middle of the room|use Bethod's Sword##42928
+		.' Issue a challenge using Bethod's Sword|goal Challenge issued using Bethod's Sword|q 13059/1
+		.kill Thane Illskar|q 13059/2
+		info TODO: verify in-game
+	step
+		goto 34.0,36.3
+		.kill Apprentice Osterkilgr##30409|q 13042/2
+		.' Beat the information out of Apprentice Osterkilgr|goal Information beaten out of Apprentice Osterkilgr|q 13042/1
+		.collect Dr. Terrible's "Building a Better Flesh Giant"##42772|n
+		.' Click Dr. Terrible's "Building a Better Flesh Giant" in your bags|use Dr. Terrible's "Building a Better Flesh Giant"##42772
+		..accept The Sum is Greater than the Parts##13043
+		info TODO: verify in-game
+	step
+		goto 33.4,33.2
+		.' Click Nergeld to control him|tip He's a big undead monster.
+		.'Use Nergeld's abilities to kill Dr. Terrible|tip The best way to kill Dr. Terrible is to knock him, and all the other mobs, away using Nergeld's shout ability.  Then, target Dr. Terrible and pull him close with Nergeld's chain ability.  When Dr. Terrible is close to you, use Nergeld's punch ability to get his health down quickly.  When Dr. Terrible tries to heal, use Nergeld's shout ability to interrupt him, then pull him close again and resume punching him.
+		.kill Dr. Terrible|q 13043
+		info TODO: verify in-game
+	step
+		goto 36.1,33.0
+		.talk Bethod Feigr##30406
+		..turnin Revenge for the Vargul##13059
+		info TODO: verify in-game
+	step
+		'Leave The Underhalls|goto 32.6,32.1,0.3|c
+		info TODO: verify in-game
+	step
+		goto 32.5,42.9
+		.talk The Bone Witch##30232
+		..turnin Deep in the Bowels of the Underhalls##13042
+		..turnin The Sum is Greater than the Parts##13043
+		..accept The Art of Being a Water Terror##13091
+		info TODO: verify in-game
+	step
+		goto 31.4,41.2
+		.' Click the huge Lock Gate to control a Water Terror
+		.' Use the Water Terror's abilities to kill mobs around this area
+		.' Slay 10 Jotunheim vrykul while possessing a Water Terror|goal 10 Jotunheim vrykul slain while possessing a Water Terror|q 13091/1
+		info TODO: verify in-game
+	step
+		'Click the red arrow on your vehicle hot bar to stop controlling the Water Terror|script VehicleExit()|outvehicle|c
+		info TODO: verify in-game
+	step
+		goto 32.5,42.9
+		.talk The Bone Witch##30232
+		..turnin The Art of Being a Water Terror##13091
+		..accept Through the Eye##13121
+		info TODO: verify in-game
+	step
+		'The entrance to Kul'galar Keep starts here|goto 25.1,61.3,0.3|c
+		info TODO: verify in-game
+	step
+		goto 26.2,62.3
+		.' Click the Eye of the Lich King|tip It's a blue floating ball up on a stage.
+		.' Grasp the Eye of the Lich King and focus
+		.' Gain information for The Bone Witch|goal Information gained for The Bone Witch|q 13121/1
+		info TODO: verify in-game
+	step
+		'Leave Kul'galar Keep|goto 25.1,61.3,0.3|c
+		info TODO: verify in-game
+	step
+		goto 32.5,42.9
+		.talk The Bone Witch##30232
+		..turnin Through the Eye##13121
+		..accept Find the Ancient Hero##13133
+		info TODO: verify in-game
+	step
+		'The entrance to the Halls of the Ancestors starts here|goto 27.9,47.2,0.3|c
+		info TODO: verify in-game
+	step
+		goto 27.4,47.9
+		.talk Slumbering Mjordin##30718
+		..' Waken them to see if it is Iskalder
+		.' Use The Bone Witch's Amulet on Iskalder|use The Bone Witch's Amulet##43166
+		.' Bring Iskalder back to The Bone Witch at 32.5,42.9|n
+		.' Deliver Iskalder to The Bone Witch|goal Iskalder delivered to The Bone Witch|q 13133/1
+		info TODO: verify in-game
+	step
+		goto 32.5,42.9
+		.talk The Bone Witch##30232
+		..turnin Find the Ancient Hero##13133
+		info TODO: verify in-game
+	step
+		goto 32.5,42.9
+		.talk The Bone Witch##30232
+		..accept Not-So-Honorable Combat##13137
+		info It's a group quest. Skip this step and the rest of the Bone Witch's group quests (through Battle at Valhalas) if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 28.8,52.2
+		.kill Possessed Iskalder##30924|q 13137/1
+		info He's on top of Battlescar Spire.
+		info Skip this step if you didn't take Not-So-Honorable Combat.
+		info TODO: verify in-game
+	step
+		goto 32.5,42.9
+		.talk The Bone Witch##30232
+		..turnin Not-So-Honorable Combat##13137
+		..accept Banshee's Revenge##13142
+		info Skip this step if you didn't take Not-So-Honorable Combat.
+		info TODO: verify in-game
+	step
+		goto 17.2,56.0
+		.kill Overthane Balargarde##31016|q 13142/1
+		info Skip this step if you didn't take Banshee's Revenge.
+		info TODO: verify in-game
+	step
+		goto 32.5,42.9
+		.talk The Bone Witch##30232
+		..turnin Banshee's Revenge##13142
+		..accept Battle at Valhalas##13213
+		info Skip this step if you didn't take Banshee's Revenge.
+		info TODO: verify in-game
+	step
+		goto 30.7,29.0
+		.talk Geirrvif##31135
+		..turnin Battle at Valhalas##13213
+		..accept Battle at Valhalas: Fallen Heroes##13214
+		info Valhalas is the arena in Jotunheim. Each fight below is a group quest: Geirrvif gives it, the fight is in the arena below him, and Gjonner the Merciless at 31.6,31.0 takes the turn-in.
+		info Skip this step and the other Valhalas steps if you didn't take Battle at Valhalas.
+		info TODO: verify in-game
+	step
+		goto 31.6,31.0
+		.' Defeat the six fallen heroes in the arena|goal Fallen Heroes|q 13214/1
+		.talk Gjonner the Merciless##31154
+		..turnin Battle at Valhalas: Fallen Heroes##13214
+		info Skip this step if you didn't take the Valhalas quests.
+		info TODO: verify in-game
+	step
+		goto 30.7,29.0
+		.talk Geirrvif##31135
+		..accept Battle at Valhalas: Khit'rix the Dark Master##13215
+		info Skip this step if you didn't take the Valhalas quests.
+		info TODO: verify in-game
+	step
+		goto 31.6,31.0
+		.kill Khit'rix the Dark Master|q 13215/1
+		.talk Gjonner the Merciless##31154
+		..turnin Battle at Valhalas: Khit'rix the Dark Master##13215
+		info Skip this step if you didn't take the Valhalas quests.
+		info TODO: verify in-game
+	step
+		goto 30.7,29.0
+		.talk Geirrvif##31135
+		..accept Battle at Valhalas: The Return of Sigrid Iceborn##13216
+		info Skip this step if you didn't take the Valhalas quests.
+		info TODO: verify in-game
+	step
+		goto 31.6,31.0
+		.kill Sigrid Iceborn|q 13216/1
+		.talk Gjonner the Merciless##31154
+		..turnin Battle at Valhalas: The Return of Sigrid Iceborn##13216
+		info Skip this step if you didn't take the Valhalas quests.
+		info TODO: verify in-game
+	step
+		goto 30.7,29.0
+		.talk Geirrvif##31135
+		..accept Battle at Valhalas: Carnage!##13217
+		info Skip this step if you didn't take the Valhalas quests.
+		info TODO: verify in-game
+	step
+		goto 31.6,31.0
+		.kill Carnage|q 13217/1
+		.talk Gjonner the Merciless##31154
+		..turnin Battle at Valhalas: Carnage!##13217
+		info Skip this step if you didn't take the Valhalas quests.
+		info TODO: verify in-game
+	step
+		goto 30.7,29.0
+		.talk Geirrvif##31135
+		..accept Battle at Valhalas: Thane Deathblow##13218
+		info Skip this step if you didn't take the Valhalas quests.
+		info TODO: verify in-game
+	step
+		goto 31.6,31.0
+		.kill Thane Banahogg|q 13218/1
+		.talk Gjonner the Merciless##31154
+		..turnin Battle at Valhalas: Thane Deathblow##13218
+		info Skip this step if you didn't take the Valhalas quests.
+		info TODO: verify in-game
+	step
+		goto 30.7,29.0
+		.talk Geirrvif##31135
+		..accept Battle at Valhalas: Final Challenge##13219
+		info Skip this step if you didn't take the Valhalas quests.
+		info TODO: verify in-game
+	step
+		goto 31.6,31.0
+		.kill Prince Sandoval|q 13219/1
+		.talk Gjonner the Merciless##31154
+		..turnin Battle at Valhalas: Final Challenge##13219
+		info Skip this step if you didn't take the Valhalas quests.
+		info TODO: verify in-game
+	step
+		goto 19.3,47.8
+		.talk Dreadwind##31078
+		..fpath Death's Rise
+		info TODO: verify in-game
+	step
+		goto 19.5,48.2
+		.talk Lord-Commander Arete##29344
+		..turnin To the Rise with all Due Haste!##12806
+		..accept The Story Thus Far...##12807
+		info TODO: verify in-game
+	step
+		goto 19.5,48.2
+		.talk Lord-Commander Arete##29344
+		..' Tell him you would hear his tale|goal Lord-Commander Arete's tale listened to.|q 12807/1
+		info TODO: verify in-game
+	step
+		goto 19.5,48.2
+		.talk Lord-Commander Arete##29344
+		..turnin The Story Thus Far...##12807
+		..accept Blood in the Water##12810
+		info TODO: verify in-game
+	step
+		goto 19.9,48.3
+		.talk Aurochs Grimbane##29456
+		..accept Intelligence Gathering##12838
+		info TODO: verify in-game
+	step
+		goto 9.6,44.3
+		.from Onslaught Harbor Guard##29330+, Onslaught Paladin##29329+, Onslaught Raven Bishop##29338, Onslaught Gryphon Rider##29333+
+		.collect Scarlet Onslaught Trunk Key##40652+|n
+		.' Click Scarlet Onslaught Trunks|tip They look like small wooden boxes on the ground around this area.
+		.get 5 Onslaught Intel Documents|q 12838/1
+		.collect Note from the Grand Admiral##40666|n
+		.' Click the Note from the Grand Admiral in your bags|use Note from the Grand Admiral##40666
+		..accept The Grand (Admiral's) Plan##12839
+		info TODO: verify in-game
+	step
+		goto 10.5,40.8
+		.from Ravenous Jaws##29392|tip They are sharks in the water.
+		.' Use your Gore Bladder on their corpses|use Gore Bladder##40551
+		.' Collect 10 Blood from Ravenous Jaws|goal 10 Blood collected from Ravenous Jaws|q 12810/1
+		info TODO: verify in-game
+	step
+		goto 19.5,48.2
+		.talk Lord-Commander Arete##29344
+		..turnin Blood in the Water##12810
+		..accept You'll Need a Gryphon##12814
+		..turnin The Grand (Admiral's) Plan##12839
+		..accept In Strict Confidence##12840
+		info TODO: verify in-game
+	step
+		goto 19.9,48.3
+		.talk Aurochs Grimbane##29456
+		..turnin Intelligence Gathering##12838
+		info TODO: verify in-game
+	step
+		goto 8.5,44.3
+		.from Onslaught Gryphon Rider##29333+
+		.collect 1 Onslaught Gryphon Reins##40970|q 12814
+		info TODO: verify in-game
+	step
+		goto 7.0,41.9
+		.from Captain Hartford##29490|tip Standing on the top deck of the ship, next to the wooden steering wheel.
+		.kill Captain Hartford##29490|q 12840/2
+		info TODO: verify in-game
+	step
+		goto 5.7,41.9
+		.from Captain Welsington##29489|tip Standing on the top deck of the ship, next to the wooden steering wheel.
+		.kill Captain Welsington##29489|q 12840/1
+		.' Use your Onslaught Gryphon Reins in your bags|use Onslaught Gryphon Reins##40970
+		.' Take control of an Onslaught Gryphon|invehicle|q 12814
+		info TODO: verify in-game
+	step
+		goto 19.6,47.8
+		.' Use the Deliver Gryphon ability on your gryphon hotbar next to Uzo Deathcaller|tip He's standing on a bunch of scattered straw on the ground.
+		.' Deliver the Onslaught Gryphon to Uzo Deathcaller|goal Onslaught Gryphon delivered to Uzo Deathcaller|q 12814/1
+		info TODO: verify in-game
+	step
+		goto 19.6,47.8
+		.talk Uzo Deathcaller##29405
+		..turnin You'll Need a Gryphon##12814
+		info TODO: verify in-game
+	step
+		goto 19.5,48.2
+		.talk Lord-Commander Arete##29344
+		..turnin In Strict Confidence##12840
+		info TODO: verify in-game
+	step
+		goto 19.5,48.2
+		.talk Lord-Commander Arete##29344
+		..accept Second Chances##12847
+		info It's a group quest in the Crimson Cathedral at Onslaught Harbor. Skip this step and the next three if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 9.5,47.3
+		.kill Archbishop Landgren##29542|q 12847/1
+		.' Use Arete's Gate beside his corpse|use Arete's Gate##40730
+		.' Summon Arete's Gate|goal Arete's Gate summoned|q 12847/2
+		info Skip this step if you didn't take Second Chances.
+		info TODO: verify in-game
+	step
+		goto 9.5,47.0
+		.talk Lord-Commander Arete##29560
+		..turnin Second Chances##12847
+		..accept The Admiral Revealed##12852
+		info He appears inside the Crimson Cathedral once he's done questioning the archbishop's spirit.
+		info Skip this step if you didn't take Second Chances.
+		info TODO: verify in-game
+	step
+		goto 8.9,46.2
+		.' Use the Lord-Commander's Nullifier on Grand Admiral Westwind when he shields himself|use Lord-Commander's Nullifier##40917
+		.kill Grand Admiral Westwind##29621|q 12852/1
+		info Skip this step if you didn't take The Admiral Revealed.
+		info TODO: verify in-game
+	step
+		goto 19.5,48.2
+		.talk Lord-Commander Arete##29344
+		..turnin The Admiral Revealed##12852
+		info Skip this step if you didn't take The Admiral Revealed.
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..turnin Blackwatch##13106
+		..accept Where Are They Coming From?##13117
+		info TODO: verify in-game
+	step
+		goto 36.8,70.7
+		.' Click a Summoning Altar|tip They look like small stone stages with green summoning circles on them on the ground around this area.
+		.' Investigate a Summoning Altar|goal Summoning Altar investigated|q 13117/1
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..turnin Where Are They Coming From?##13117
+		..accept Destroying the Altars##13119
+		..accept Death's Gaze##13120
+		info TODO: verify in-game
+	step
+		goto 30.5,65.1
+		.' Click the Cauldron Area Orb Stand|tip It looks like a square metal table with a small blue glowing ball on top of it.
+		.' Place the orb in the Cauldron Area Orb Stand|goal Orb placed in cauldron area|q 13120/3
+		info TODO: verify in-game
+	step
+		goto 32.6,70.6
+		.' Click the Abomination Lab Orb Stand|tip It looks like a square metal table with a small blue glowing ball on top of it.
+		.' Place the orb in the Abomination Lab Orb Stand|goal Orb placed in abomination lab|q 13120/1
+		info TODO: verify in-game
+	step
+		goto 34.6,69.6
+		.' Click the Flesh Giant Lab Orb Stand|tip It looks like a square metal table with a small blue glowing ball on top of it.
+		.' Place the orb in the Flesh Giant Lab Orb Stand|goal Orb placed in flesh giant lab|q 13120/2
+		info TODO: verify in-game
+	step
+		goto 37.0,71.1
+		.from Master Summoner Zarod##30746
+		.collect 1 Master Summoner's Staff##43159|q 13119
+		info TODO: verify in-game
+	step
+		goto 36.7,70.7
+		.' Use your Master Summoner's Staff next to the green summoning altar|use Master Summoner's Staff##43159|tip You can use the staff while on your flying mount, hovering above the summoning altar a little.  You don't have to land.
+		.' Destroy the First Summoning Altar|goal First Summoning Altar destroyed|q 13119/1
+		info TODO: verify in-game
+	step
+		goto 36.6,71.6
+		.' Use your Master Summoner's Staff next to the green summoning altar|use Master Summoner's Staff##43159|tip You can use the staff while on your flying mount, hovering above the summoning altar a little.  You don't have to land.
+		.' Destroy the Second Summoning Altar|goal Second Summoning Altar destroyed|q 13119/2
+		info TODO: verify in-game
+	step
+		goto 37.4,71.5
+		.' Use your Master Summoner's Staff next to the green summoning altar|use Master Summoner's Staff##43159|tip You can use the staff while on your flying mount, hovering above the summoning altar a little.  You don't have to land.
+		.' Destroy the Fourth Summoning Altar|goal Fourth Summoning Altar destroyed|q 13119/4
+		info TODO: verify in-game
+	step
+		goto 37.8,70.7
+		.' Use your Master Summoner's Staff next to the green summoning altar|use Master Summoner's Staff##43159|tip You can use the staff while on your flying mount, hovering above the summoning altar a little.  You don't have to land.
+		.' Destroy the Third Summoning Altar|goal Third Summoning Altar destroyed|q 13119/3
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..turnin Destroying the Altars##13119
+		..turnin Death's Gaze##13120
+		..accept Spill Their Blood##13134
+		info TODO: verify in-game
+	step
+		goto 34.0,70.0
+		.' Attack the vats of Embalming Fluid|tip They look like big glass balls half full of green liquid with 4 metal legs holding them around this area.
+		.' Destroy 5 Vats of Embalming Fluid|goal 5 Vats of Embalming Fluid destroyed|q 13134/2
+		.' Attack the Blood Orbs|tip They look like small glass balls half full of red liquid floating above small metal pillars around this area.
+		.' Shatter 5 Blood Orbs|goal 5 Blood Orbs shattered|q 13134/1
+		.from Spiked Ghoul##30597+
+		.collect 1 Jagged Shard##43242|n
+		.' Click the Jagged Shard in your bags|use Jagged Shard##43242
+		..accept Jagged Shards##13136
+		info TODO: verify in-game
+	step
+		goto 34.4,68.9
+		.from Spiked Ghoul##30597+|tip You can find them all around this area.
+		.get 10 Jagged Shard|q 13136/1
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..turnin Spill Their Blood##13134
+		info TODO: verify in-game
+	step
+		goto 35.5,66.4
+		.talk Crusader Olakin Sainrith##30708
+		..turnin Jagged Shards##13136
+		..accept I'm Smelting... Smelting!##13138
+		..accept The Runesmiths of Malykriss##13140
+		info TODO: verify in-game
+	step
+		goto 31.8,64.8
+		.talk Father Kamaros##31279
+		..accept I'm Not Dead Yet!##13229
+		.' Escort Father Kamaros to safety|goal Escort Father Kamaros to safety|q 13229/1
+		info TODO: verify in-game
+	step
+		goto 58.1,70.9
+		.' Use your Bag of Jagged Shards while standing on the big platform with fire shooting out of it|use Bag of Jagged Shards##43289
+		.get Smelted Bar|q 13138/1
+		info TODO: verify in-game
+	step
+		goto 58.9,73.3
+		.from Skeletal Runesmith##30921+
+		.get 5 Runed Saronite Plate|q 13140/1
+		info TODO: verify in-game
+	step
+		'Find Orgrim's Hammer flying over Icecrown and land on it
+		.talk Koltira Deathweaver##29795
+		..turnin Drag and Drop##13352
+		..turnin Chain of Command##13354
+		..accept Opportunity##13258
+		..accept Not a Bug##13358
+		..accept Need More Info##13366
+		info Orgrim's Hammer flies a triangle between 60.6,34.9, 68.0,52.5 and 68.9,27.0, and shows on the world map as a ship with two red balloons.
+		info He also offers a daily Drag and Drop. Skip it.
+		info TODO: verify in-game
+	step
+		.talk Chief Engineer Copperclaw##30825
+		..turnin Cannot Reproduce##13355
+		..accept Retest Now##13356
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		.talk Brother Keltan##31261
+		..turnin I'm Not Dead Yet!##13229
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		goto 55.2,29.1
+		.' Use your Diluted Cult Tonic|use Diluted Cult Tonic##44307|tip This gives you a buff that allows you to collect Tainted Essences from dead cultists in Aldur'thar.  If you lose the buff, use this again.
+		.from Void Summoner##32259+, Shadow Channeler##32262+
+		.collect 10 Tainted Essence##44301|n
+		.' Use a Tainted Essence to combine them|use Tainted Essence##44301
+		..collect 1 Writhing Mass##44304|q 13356
+		.from Enslaved Minion##32260+
+		.' Use your Rod of Siphoning on the Enslaved Minion corpses|use Rod of Siphoning##44433
+		.collect 5 Dark Matter##44434|q 13358
+		info TODO: verify in-game
+	step
+		goto 53.8,33.6
+		.' Click the Summoning Stone
+		.' Summon the Dark Messenger|goal Dark Messenger summoned|q 13358/1
+		info TODO: verify in-game
+	step
+		goto 49.1,34.2
+		.' Use your Writhing Mass next to the big cauldron|use Writhing Mass##44304
+		.' Banish the Writhing Mass|goal Writhing Mass Banished|q 13356/1
+		info TODO: verify in-game
+	step
+		.' You may need to get in a three-man group for the next quest
+		.' Go into the building at 51.9,32.7 |goto 51.9,32.7,0.5 |c |q 13366
+		info TODO: verify in-game
+	step
+		goto 51.9,30.8
+		.from Cult Researcher##32297+
+		..collect Cult of the Damned Research - Page 1##44459|n
+		..collect Cult of the Damned Research - Page 2##44460|n
+		..collect Cult of the Damned Research - Page 3##44461|n
+		.' Use a Cult of the Damned Research Page to combine them|use Cult of the Damned Research - Page 1##44459
+		.get Cult of the Damned Thesis|q 13366/1
+		info TODO: verify in-game
+	step
+		'Find Orgrim's Hammer flying over Icecrown and land on it
+		.talk Koltira Deathweaver##29795
+		..turnin Not a Bug##13358
+		..turnin Need More Info##13366
+		..accept No Rest For The Wicked##13367
+		..accept Raise the Barricades##13306
+		info Orgrim's Hammer flies a triangle between 60.6,34.9, 68.0,52.5 and 68.9,27.0, and shows on the world map as a ship with two red balloons.
+		info No Rest For The Wicked is a group quest. Skip it if you can't find a group; The Ironwall Rampart and the Corp'rethar quests after it need it, so the guide marks those optional too.
+		info TODO: verify in-game
+	step
+		.talk Chief Engineer Copperclaw##30825
+		..turnin Retest Now##13356
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		goto 52.0,30.0
+		.' Click Alumeth's Skull, Heart, Scepter and Robes around this spot|tip They lie around the building at 51.9,30.8, where you found the research pages.
+		.' Alumeth the Ascended rises when you have them all
+		.' Defeat Alumeth the Ascended|goal Alumeth the Ascended Defeated|q 13367/1
+		info Skip this step if you didn't take No Rest For The Wicked.
+		info TODO: verify in-game
+	step
+		goto 51.1,39.6
+		.' Use your Barricade Construction Kit next to the pink and purple orbs|use Barricade Construction Kit##44127|tip They look like pink and purple orbs that flash and disappear around this area.
+		.' Construct 8 Barricades |q 13306/1
+		info TODO: verify in-game
+	step
+		goto 54.9,84.2
+		.talk Sergeant Kregga##31440
+		..turnin Opportunity##13258
+		..accept Establishing Superiority##13259
+		info TODO: verify in-game
+	step
+		goto 54.8,85.0
+		.kill 10 Hulking Horror|q 13259/1
+		info TODO: verify in-game
+	step
+		goto 54.9,84.2
+		.talk Sergeant Kregga##31440
+		..turnin Establishing Superiority##13259
+		..accept Blow it Up!##13262
+		info TODO: verify in-game
+	step
+		goto 54.4,86.3
+		.' Click the Saronite Bomb Stack|tip It looks like a pile of big spiked round bombs.
+		..turnin Blow it Up!##13262
+		..accept A Short Fuse##13263
+		info TODO: verify in-game
+	step
+		goto 54.0,87.3
+		.' Click the Pulsing Crystal underwater|tip This is underground in Naz'anak: The Forgotten Depths.
+		..turnin A Short Fuse##13263
+		..accept A Voice in the Dark##13271
+		info TODO: verify in-game
+	step
+		goto 53.8,86.9
+		.talk Matthias Lehner##31237
+		..turnin A Voice in the Dark##13271
+		..accept Time to Hide##13275
+		info TODO: verify in-game
+	step
+		goto 54.5,87.4
+		.from Faceless Lurker##31691+|tip They look like elephant men with squid arms underground in Naz'anak: The Forgotten Depths.
+		.get 3 Faceless One's Blood|q 13275/1
+		info TODO: verify in-game
+	step
+		goto 53.8,86.9
+		.talk Matthias Lehner##31237
+		..turnin Time to Hide##13275
+		..accept Return to the Surface##13282
+		info TODO: verify in-game
+	step
+		goto 53.8,86.8
+		.' Click the Surface Portal|tip It looks like a small round green and black portal underground in Naz'anak: The Forgotten Depths.
+		..' Go to the surface|goto Icecrown,49.1,71.6,0.5|noway|c
+		info TODO: verify in-game
+	step
+		'Find Orgrim's Hammer flying over Icecrown and land on it
+		.talk Koltira Deathweaver##29795
+		..turnin Raise the Barricades##13306
+		..accept Bloodspattered Banners##13307
+		..turnin No Rest For The Wicked##13367
+		..accept The Ironwall Rampart##13312
+		..turnin Return to the Surface##13282
+		..accept Field Repairs##13304
+		info Orgrim's Hammer flies a triangle between 60.6,34.9, 68.0,52.5 and 68.9,27.0, and shows on the world map as a ship with two red balloons.
+		info Skip No Rest For The Wicked and The Ironwall Rampart if you didn't kill Alumeth.
+		info TODO: verify in-game
+	step
+		.talk Sky-Reaver Korm Blackscar##30824
+		..accept Blinding the Eyes in the Sky##13313
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		goto 49.4,39.3
+		.' Use your SGM-3 on Skybreaker Recon Fighters |use SGM-3##44212 |tip They look like airplanes flying around this area.
+		.' Shoot Down 6 Skybreaker Recon Fighters |q 13313/1
+		info TODO: verify in-game
+	step
+		goto 46.8,39.7
+		.kill 5 Scourge Converter|q 13307/3
+		info They're at the north end of the battlefield, below Aldur'thar.
+		info TODO: verify in-game
+	step
+		goto 45.4,46.0
+		.' Use the Rune of Distortion when you reach Grimkor the Wicked|use Rune of Distortion##44186
+		.kill Grimkor the Wicked##32162|q 13312/1
+		info He's on the Ironwall Rampart.
+		info Skip this step if you didn't take The Ironwall Rampart.
+		info TODO: verify in-game
+	step
+		goto 41.6,50.4
+		.kill 5 Scourge Banner-Bearer|q 13307/1
+		.kill 20 Converted Hero|q 13307/2
+		info They fight all over the battlefield south of the Ironwall Rampart.
+		info TODO: verify in-game
+	step
+		'Hearth to The Shadow Vault|goto 44.0,22.2,0.5|use hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto 44.1,24.5
+		.talk Keritose Bloodblade##30946
+		..accept Parting Gifts##13168
+		info TODO: verify in-game
+	step
+		goto 44.1,24.7
+		.' Click an Eye of Domination|tip They look like red globes floating above small metal pillars.
+		.' Seize Control of an Eidolon Watcher|goal Seize Control of an Eidolon Watcher|q 13168/1
+		info TODO: verify in-game
+	step
+		goto 44.1,24.5
+		.talk Keritose Bloodblade##30946
+		..turnin Parting Gifts##13168
+		..accept From Whence They Came##13171
+		..accept An Undead's Best Friend##13169
+		..accept Honor is for the Weak##13170
+		info TODO: verify in-game
+	step
+		goto 44.1,24.7
+		.' Click an Eye of Domination|tip They look like red globes floating above small metal pillars.
+		.' Seize Control of an Eidolon Watcher|invehicle|c
+		info TODO: verify in-game
+	step
+		goto 41.5,32.4
+		.' Use your Eidolon Watcher abilities around this area to:
+		.' Feed 18 Hungering Plaguehounds|goal 18 Hungering Plaguehounds fed|q 13169/1
+		.' Assassinate 20 Restless Lookouts|goal 20 Restless Lookouts assassinated|q 13170/1
+		.' Banish 10 Scourge Crystals|goal 10 Banished Scourge Crystals|q 13171|tip The Scourge Crystals look like big crystals floating above small stone pillars around this area.
+		info TODO: verify in-game
+	step
+		goto 44.1,24.5
+		.talk Keritose Bloodblade##30946
+		..turnin From Whence They Came##13171
+		..turnin An Undead's Best Friend##13169
+		..turnin Honor is for the Weak##13170
+		..accept Seeds of Chaos##13172
+		..accept Amidst the Confusion##13174
+		info TODO: verify in-game
+	step
+		goto 44.1,24.5
+		.talk Keritose Bloodblade##30946
+		..' Tell him you are prepared to join the assault|invehicle
+		info TODO: verify in-game
+	step
+		'Use your Firebomb ability as you fly around to:
+		.' Slaughter 80 Weeping Quarry Undead|goal 80 Weeping Quarry Undead slaughtered|q 13172/1
+		info TODO: verify in-game
+	step
+		'Click the red arrow on your vehicle hot bar to stop riding the skeleton mount|script VehicleExit()|outvehicle|c
+		info TODO: verify in-game
+	step
+		goto 37.2,41.6
+		.' Click the Weeping Quarry Schedule|tip It looks like a rolled up white scroll laying on the back of this wagon, next to a bunch of wooden boxes.
+		.get Weeping Quarry Schedule|q 13174/4
+		info TODO: verify in-game
+	step
+		goto 38.7,39.4
+		.' Click the Weeping Quarry Map|tip It looks like a tan piece of paper laying on a wooden box, next to a bunch of wooden boxes and a canopy.
+		.get Weeping Quarry Map|q 13174/3
+		info TODO: verify in-game
+	step
+		goto 39.2,36.7
+		.' Click the Weeping Quarry Ledger|tip It looks like a rolled up white scroll laying on the corner of a wooden box, under a canopy.
+		.get Weeping Quarry Ledger|q 13174/2
+		info TODO: verify in-game
+	step
+		goto 39.1,33.6
+		.' Click the Weeping Quarry Document|tip It looks like an unrolled white scroll with black writing on it, laying on the corner of a wooden box, under a canopy.
+		.get Weeping Quarry Document|q 13174/1
+		info TODO: verify in-game
+	step
+		goto 44.1,24.5
+		.talk Keritose Bloodblade##30946
+		..turnin Seeds of Chaos##13172
+		..turnin Amidst the Confusion##13174
+		..accept Vereth the Cunning##13155
+		info TODO: verify in-game
+	step
+		goto 66.0,53.7
+		.from Scavenging Geist##31847+
+		.get 5 Demolisher Parts|q 13304/1
+		info TODO: verify in-game
+	step
+		goto 68.0,51.9
+		.talk Wrecked Demolisher##31868
+		..turnin Field Repairs##13304
+		info TODO: verify in-game
+	step
+		goto 68.0,51.6
+		.talk Matthias Lehner##32408
+		..accept Do Your Worst##13305
+		info TODO: verify in-game
+	step
+		goto 68.0,51.8
+		.' Click the Refurbished Demolisher to drive it|invehicle|tip It looks like a big wooden catapult machine.
+		info TODO: verify in-game
+	step
+		goto 65.4,47.9
+		.' Use the catapult's abilities around this area to:
+		.kill 150 Decomposed Ghoul|q 13305/1
+		.kill 20 Frostskull Magus|q 13305/2
+		.kill 2 Bone Giant|q 13305/3
+		info TODO: verify in-game
+	step
+		goto 64.5,44.0
+		.talk Matthias Lehner##32404
+		..turnin Do Your Worst##13305
+		..accept Army of the Damned##13236
+		info TODO: verify in-game
+	step
+		goto 64.9,43.9
+		.' Use your abilities as Arthas to kill Lordaeron Footsoldiers and turn them into Ghoulish Minions
+		.' Raise 100 Ghoulish Minions|goal 100 Ghoulish Minions Raised|q 13236/1
+		info TODO: verify in-game
+	step
+		'Click the red arrow on your vehicle hot bar to stop controlling Arthas|script VehicleExit()|outvehicle|c
+		info TODO: verify in-game
+	step
+		goto 64.5,44.0
+		.talk Matthias Lehner##32404
+		..turnin Army of the Damned##13236
+		..accept Futility##13348
+		info TODO: verify in-game
+	step
+		'Find Orgrim's Hammer flying over Icecrown and land on it
+		.talk Koltira Deathweaver##29795
+		..turnin Bloodspattered Banners##13307
+		..turnin The Ironwall Rampart##13312
+		..accept Before the Gate of Horror##13329
+		..turnin Futility##13348
+		..accept Cradle of the Frostbrood##13349
+		info Orgrim's Hammer flies a triangle between 60.6,34.9, 68.0,52.5 and 68.9,27.0, and shows on the world map as a ship with two red balloons.
+		info TODO: verify in-game
+	step
+		.talk Sky-Reaver Korm Blackscar##30824
+		..turnin Blinding the Eyes in the Sky##13313
+		info On Orgrim's Hammer.
+		info TODO: verify in-game
+	step
+		goto 71.5,37.6
+		.talk Matthias Lehner##32423
+		..accept Where Dragons Fell##13359
+		info TODO: verify in-game
+	step
+		goto 69.7,36.7
+		.kill 8 Cultist Corrupter|q 13349/2
+		.kill 3 Vrykul Necrolord|q 13349/3
+		.from Frostbrood Whelp##31718+
+		.get 6 Whelp Bone Dust|q 13359/1
+		info TODO: verify in-game
+	step
+		goto 71.5,37.6
+		.talk Matthias Lehner##32423
+		..turnin Where Dragons Fell##13359
+		..accept Time for Answers##13360
+		info TODO: verify in-game
+	step
+		goto 72.3,36.7
+		.kill 5 Wyrm Reanimator|q 13349/1
+		info TODO: verify in-game
+	step
+		goto 47.5,61.7
+		.kill Skeletal Reavers|n
+		.' Use the Volatile Acid on their remains|use Volatile Acid##44653
+		.' Dissolve the remains of 6 Skeletal Reavers|goal 6 Skeletal Reaver|q 13329/1
+		info Skip this step if you didn't take Before the Gate of Horror.
+		info TODO: verify in-game
+	step
+		goto 49.2,73.1
+		.talk Matthias Lehner##32497
+		..turnin Time for Answers##13360
+		..accept The Hunter and the Prince##13361
+		info TODO: verify in-game
+	step
+		goto 49.2,73.9
+		.' Click a Bloodstained Stone|tip They look like pointed rocks on the ground around this area.
+		.' Fight Illidan using your Arthas abilities|tip The best way to kill Illidan is to just keep parrying his attacks until your mana is full.  Once your mana is full, use your knockback ability, followed immediately by your Annihilate ability.  Keep repeating this process until Illidan is dead.
+		.' Find out the Prince's Destiny|goal The Prince's Destiny|q 13361/1
+		info TODO: verify in-game
+	step
+		goto 49.2,73.1
+		.talk Matthias Lehner##32497
+		..turnin The Hunter and the Prince##13361
+		..accept Knowledge is a Terrible Burden##13362
+		info TODO: verify in-game
+	step
+		goto 54.1,71.2
+		.talk Vereth the Cunning##30944
+		..turnin Vereth the Cunning##13155
+		..accept New Recruit##13143
+		info TODO: verify in-game
+	step
+		goto 55.5,71.5
+		.' Fight a Lithe Stalker until you see a message in your chat that it's weak|tip You can find Lithe Stalkers up on this high bridge.
+		.' Use your Sigil of the Ebon Blade on a weakened Lithe Stalker|use Sigil of the Ebon Blade##43315
+		.' Bring the Lithe Stalker off the bridge to 55.4,70.8
+		.' Return the Subdued Lithe Stalker|goal Subdued Lithe Stalker Returned|q 13143/1
+		info TODO: verify in-game
+	step
+		goto 54.1,71.2
+		.talk Vereth the Cunning##30944
+		..turnin New Recruit##13143
+		..accept The Vile Hold##13145
+		info TODO: verify in-game
+	step
+		goto 56.1,79.8
+		.' Explore the Altar of Sacrifice|goal Altar of Sacrifice explored|q 13145/1
+		info TODO: verify in-game
+	step
+		goto 59.0,73.8
+		.' Explore the Runeworks|goal Runeworks explored|q 13145/4
+		info TODO: verify in-game
+	step
+		goto 58.0,71.3
+		.' Explore the Blood Forge|goal Blood Forge explored|q 13145/2
+		info TODO: verify in-game
+	step
+		goto 60.4,68.7
+		.' Explore the Icy Lookout|goal Icy Lookout explored|q 13145/3
+		info TODO: verify in-game
+	step
+		goto 54.1,71.2
+		.talk Vereth the Cunning##30944
+		..turnin The Vile Hold##13145
+		..accept Generosity Abounds##13146
+		..accept Matchmaker##13147
+		..accept Stunning View##13160
+		info TODO: verify in-game
+	step
+		goto 54.3,70.6
+		.' Click the Eye of Domination|tip It looks like a red globe floating above a small metal pillar.
+		.' Seize control of a Lithe Stalker|invehicle|q 13146
+		info TODO: verify in-game
+	step
+		goto 57.7,73.7
+		.' Start 5 Worker Fights|goal 5 Worker fight started|q 13147|tip To start a Worker Fight, use your Lithe Stalker Throw Rock ability on Umbral Brutes when they get close to the skeletons around this area.
+		.' Deliver 4 Scourge Bomb Gifts|goal 4 Scourge Bomb gift delivered|q 13146|tip The Scourge Bombs look like spiked round metal bombs on the ground around this area.  Use your Lithe Stalker Iron Chain ability on the Scourge Bombs.  Then, drag the Scourge Bombs next to Lumbering Atrocities.  Lumbering Atrocities look like abominations around this area.
+		info TODO: verify in-game
+	step
+		goto 59.6,76.2
+		.' Use your Lithe Stalker Leap ability to jump up the cliff to this spot.
+		.' Destroy 12 Iceskin Sentries|goal 12 Iceskin Sentry destroyed|q 13160|tip The Iceskin Sentries look like gargoyles sitting high up on the cliffside.  Use your Lithe Stalker Leap ability to jump around to them.  Once you get close to them, use your Lithe Stalker Heave ability to destroy them.
+		info TODO: verify in-game
+	step
+		'Click the red arrow on your hot bar to stop controlling a Lithe Stalker|script VehicleExit()|outvehicle|c
+		info TODO: verify in-game
+	step
+		goto 54.1,71.2
+		.talk Vereth the Cunning##30944
+		..turnin Generosity Abounds##13146
+		..turnin Matchmaker##13147
+		..turnin Stunning View##13160
+		info TODO: verify in-game
+	step
+		goto 54.1,71.2
+		.talk Vereth the Cunning##30944
+		..accept The Rider of the Unholy##13161
+		..accept The Rider of Frost##13162
+		..accept The Rider of Blood##13163
+		info These are group quests. Skip this step and the other Rider and Bloodbane steps if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 59.1,72.0
+		.kill Baelok##31159|q 13163/1
+		info Skip this step if you didn't take the Rider quests.
+		info TODO: verify in-game
+	step
+		goto 61.9,68.6
+		.kill Sapph##31161|q 13162/1
+		info Skip this step if you didn't take the Rider quests.
+		info TODO: verify in-game
+	step
+		goto 56.2,80.3
+		.kill Rokir##31160|q 13161/1
+		info Skip this step if you didn't take the Rider quests.
+		info TODO: verify in-game
+	step
+		goto 54.1,71.2
+		.talk Vereth the Cunning##30944
+		..turnin The Rider of the Unholy##13161
+		..turnin The Rider of Frost##13162
+		..turnin The Rider of Blood##13163
+		..accept The Fate of Bloodbane##13164
+		info Skip this step if you didn't take the Rider quests.
+		info TODO: verify in-game
+	step
+		goto 54.4,86.1
+		.kill Orbaz Bloodbane##31283|q 13164/1
+		info Skip this step if you didn't take The Fate of Bloodbane.
+		info TODO: verify in-game
+	step
+		goto 54.1,71.2
+		.talk Vereth the Cunning##30944
+		..turnin The Fate of Bloodbane##13164
+		info Skip this step if you didn't take The Fate of Bloodbane.
+		info TODO: verify in-game
+	step
+		'Find Orgrim's Hammer flying over Icecrown and land on it
+		.talk Koltira Deathweaver##29795
+		..turnin Cradle of the Frostbrood##13349
+		..turnin Before the Gate of Horror##13329
+		..accept The Guardians of Corp'rethar##13316
+		..accept Shatter the Shards##13328
+		..turnin Knowledge is a Terrible Burden##13362
+		..accept Argent Aid##13363
+		info Orgrim's Hammer flies a triangle between 60.6,34.9, 68.0,52.5 and 68.9,27.0, and shows on the world map as a ship with two red balloons.
+		info TODO: verify in-game
+	step
+		goto 79.8,71.8
+		.talk Highlord Tirion Fordring##31044
+		..turnin Argent Aid##13363
+		..accept Tirion's Gambit##13364
+		info TODO: verify in-game
+	step
+		goto 47.3,68.5
+		.kill 5 Harbinger of Horror|q 13316/1
+		.kill 5 Corp'rethar Guardian|q 13316/2
+		.' Click the Shard of Horror at 47.8,68.1
+		.get Broken Shard of Horror|q 13328/1
+		.' Click the Shard of Despair at 49.8,66.7
+		.get Broken Shard of Despair|q 13328/2
+		.' Click the Shard of Suffering at 45.8,69.5
+		.get Broken Shard of Suffering|q 13328/3
+		info Skip this step if you didn't take The Guardians of Corp'rethar and Shatter the Shards.
+		info TODO: verify in-game
+	step
+		goto 35.5,66.4
+		.talk Crusader Olakin Sainrith##30708
+		..turnin I'm Smelting... Smelting!##13138
+		..turnin The Runesmiths of Malykriss##13140
+		..accept By Fire Be Purged##13211
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..accept A Visit to the Doctor##13152
+		info TODO: verify in-game
+	step
+		'The entrance to the Sanctum of Reanimation starts here|goto 34.4,68.4,0.3|c
+		info TODO: verify in-game
+	step
+		goto 34.6,67.7
+		.' Use Olakin's Torch on Festering Corpses|use Olakin's Torch##43524|tip They look like dead soldiers on the ground inside this cave.
+		.' Burn 7 Festering Corpses|goal 7 Festering Corpse burned|q 13211/1
+		info TODO: verify in-game
+	step
+		goto 35.8,67.0
+		.' Follow the path in the cave to this spot
+		.' Click the Metal Stake|tip It looks like a big metal spike sticking out of the ground.
+		.' Free Patches|goal Patches freed|q 13152/1
+		.' Help Patches kill Doctor Sabnok|goal Help Patches kill Doctor Sabnok|q 13152/2
+		info TODO: verify in-game
+	step
+		'Leave the Sanctum of Reanimation|goto 34.4,68.4,0.3|c
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..turnin A Visit to the Doctor##13152
+		info TODO: verify in-game
+	step
+		goto 35.5,66.4
+		.talk Crusader Olakin Sainrith##30708
+		..turnin By Fire Be Purged##13211
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..accept Killing Two Scourge With One Skeleton##13144
+		info TODO: verify in-game
+	step
+		goto 35.1,69.4
+		.' Click Grasping Arms|tip They look like green arms on the ground that reach up sometimes.
+		.' Get a Burning Skeleton minion
+		.' With a Burning Skeleton minion, go to 32.2,71.2
+		.' Stand next to Chained Abominations with your Burning Skeleton to burn them|tip They look like fat white abominations chained to the big spikes around the edge of this platform.
+		.' Repeat this process 2 more times
+		.' Burn 3 Chained Abominations|goal 3 Chained Abominations burned|q 13144
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..turnin Killing Two Scourge With One Skeleton##13144
+		..accept He's Gone to Pieces##13212
+		info TODO: verify in-game
+	step
+		goto 34.0,69.2
+		.from Corpulent Horror##30696+
+		.get Olakin's Torso|q 13212/1
+		.get Olakin's Legs|q 13212/2
+		.get Olakin's Left Arm|q 13212/3
+		.get Olakin's Right Arm|q 13212/4
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..turnin He's Gone to Pieces##13212
+		..accept Putting Olakin Back Together Again##13220
+		info TODO: verify in-game
+	step
+		'The entrance to the Sanctum of Reanimation starts here|goto 34.4,68.4,0.3|c
+		info TODO: verify in-game
+	step
+		goto 34.7,66.0
+		.' Click the Spool of Thread|tip It looks like a red spool with white thread wound on it, sitting on a small metal chest with a skull on it, in a small side room in the Sanctum of Reanimation.
+		.collect 1 Spool of Thread|q 13220
+		info TODO: verify in-game
+	step
+		goto 36.6,67.6
+		.' Follow the path in the cave all the way to the end into the doctor's big lab.
+		.' Click The Doctor's Cleaver|tip It looks like a butcher's cleaver stuck in a bloody metal table.
+		.collect 1 The Doctor's Cleaver|q 13220
+		info TODO: verify in-game
+	step
+		goto 35.6,66.7
+		.' Follow the path in the cave back up into the main entrance room of the cave
+		.' Use Crusader Olakin's Remains while standing on the big black stone slab made of skulls|use Crusader Olakin's Remains##43564
+		.' Revive Crusader Olakin Sainrith|goal Crusader Olakin Sainrith revived|q 13220/1
+		info TODO: verify in-game
+	step
+		'Leave the Sanctum of Reanimation|goto 34.4,68.4,0.3|c
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..turnin Putting Olakin Back Together Again##13220
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..accept The Flesh Giant Champion##13235
+		info It's a group quest. Skip this step and the next two if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 29.8,61.2
+		.talk Margrave Dhakar##31306
+		..' Tell him you're ready to face Morbidus
+		.kill Morbidus##30698|q 13235/1
+		info Skip this step if you didn't take The Flesh Giant Champion.
+		info TODO: verify in-game
+	step
+		goto 35.4,66.3
+		.talk Darkrider Arly##30631
+		..turnin The Flesh Giant Champion##13235
+		info Skip this step if you didn't take The Flesh Giant Champion.
+		info TODO: verify in-game
+	step
+		goto 45.2,77.0
+		.from Cultist Acolyte##32507+
+		.collect 1 Cultist Acolyte's Hood##44784|q 13364
+		.' Use your Cultist Acolyte's Hood|use Cultist Acolyte's Hood##44784
+		.' Become disguised as a cultist|havebuff Ability_Rogue_MasterOfSubtlety|q 13364
+		info TODO: verify in-game
+	step
+		goto 44.4,76.2
+		.talk Highlord Tirion Fordring##32239
+		..' Tell him you're ready and follow him into the cathedral
+		.' Watch the cutscene
+		.' See Tirion's Gambit|goal Tirion's Gambit|q 13364/1
+		info TODO: verify in-game
+	step
+		goto 42.8,78.8|n
+		.' Click the Escape Portal that appears after the cutscene|goto Icecrown,80.2,70.3,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 79.8,71.8
+		.talk Highlord Tirion Fordring##31044
+		..turnin Tirion's Gambit##13364
+		..accept A Tale of Valor##13068
+		info TODO: verify in-game
+	step
+		'Find Orgrim's Hammer flying over Icecrown and land on it
+		.talk Koltira Deathweaver##29795
+		..turnin The Guardians of Corp'rethar##13316
+		..turnin Shatter the Shards##13328
+		info Orgrim's Hammer flies a triangle between 60.6,34.9, 68.0,52.5 and 68.9,27.0, and shows on the world map as a ship with two red balloons.
+		info Skip this step if you didn't do the Corp'rethar quests.
+		info TODO: verify in-game
+	step
+		goto 79.8,30.8
+		.talk Crusader Bridenbrad##30562
+		..turnin A Tale of Valor##13068
+		..accept A Hero Remains##13072
+		info TODO: verify in-game
+	step
+		goto 79.8,71.8
+		.talk Highlord Tirion Fordring##31044
+		..turnin A Hero Remains##13072
+		..accept The Keeper's Favor##13073
+		info TODO: verify in-game
+	step
+		goto 87.1,77.0
+		.talk Arch Druid Lilliandra##30630
+		..' Ask her for a portal to Moonglade
+		..' Click the Moonglade Portal that appears next to you|goto Moonglade|noway|c
+		info TODO: verify in-game
+	step
+		goto Moonglade,36.2,41.8
+		.talk Keeper Remulos##11832
+		..turnin The Keeper's Favor##13073
+		..accept Hope Within the Emerald Nightmare##13074
+		info TODO: verify in-game
+	step
+		goto 33.7,44.1
+		.' Click Emerald Acorns|tip They look like brown pinecones on the ground around this area.
+		.get 3 Emerald Acorn|q 13074/1
+		info TODO: verify in-game
+	step
+		'Right click your Fitfull Dream buff to awaken from the nightmare|nobuff Spell_Nature_Sleep|q 13074|tip The Fitfull Dream buff icon looks like a closed eye.
+		info TODO: verify in-game
+	step
+		goto 36.2,41.8
+		.talk Keeper Remulos##11832
+		..turnin Hope Within the Emerald Nightmare##13074
+		..accept The Boon of Remulos##13075
+		info TODO: verify in-game
+	step
+		.talk Keeper Remulos##11832
+		.' Tell him you wish to return to Arch Druid Lilliandra.
+		' Click the Moonglade Return Portal that appears next to you|goto Icecrown|noway|c
+		info TODO: verify in-game
+	step
+		goto 79.8,30.8
+		.talk Crusader Bridenbrad##30562
+		..turnin The Boon of Remulos##13075
+		..accept Time Yet Remains##13076
+		info TODO: verify in-game
+	step
+		goto 79.8,71.8
+		.talk Highlord Tirion Fordring##31044
+		..turnin Time Yet Remains##13076
+		..accept The Touch of an Aspect##13077
+		info TODO: verify in-game
+	step
+		goto 79.4,72.4
+		.talk Penumbrius##31069
+		..' Fly to Wyrmrest Temple in Dragonblight|goto Dragonblight,60.3,51.4,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto Dragonblight,57.9,54.2|n
+		.talk Tariolstrasz##26443
+		..'Tell him you need to go to the top of the temple|goto Dragonblight,59.7,53.1,0.1|noway|c
+		info TODO: verify in-game
+	step
+		goto 59.8,54.7
+		.talk Alexstrasza the Life-Binder##26917
+		..turnin The Touch of an Aspect##13077
+		..accept Dahlia's Tears##13078
+		info TODO: verify in-game
+	step
+		goto 59.5,53.3|n
+		.talk Torastrasza##26949
+		..'Tell him you want to go to the ground level of the temple|goto Dragonblight,58.0,55.2,0.1|noway|c
+		info TODO: verify in-game
+	step
+		goto 43.2,51.7
+		.' There should be a fight happening, so just wait around until the fight is over|tip If there isn't fight happening, just wait until the fighters spawn again, and there should be some red dragon Ruby Watchers flying above the fight.
+		.' At the end of the fight, a Ruby Watcher will blow alot of fire on the ground and the Dahlia's Tears will spawn
+		.' Click the Dahlia's Tears|tip They look like yellow flowers on the ground.
+		.get Dahlia's Tears|q 13078/1
+		info TODO: verify in-game
+	step
+		goto 57.9,54.2|n
+		.talk Tariolstrasz##26443
+		..'Tell him you need to go to the top of the temple|goto Dragonblight,59.7,53.1,0.1|noway|c
+		info TODO: verify in-game
+	step
+		goto 59.8,54.7
+		.talk Alexstrasza the Life-Binder##26917
+		..turnin Dahlia's Tears##13078
+		..accept The Boon of Alexstrasza##13079
+		info TODO: verify in-game
+	step
+		goto 59.5,53.3|n
+		.talk Torastrasza##26949
+		..'Tell him you want to go to the ground level of the temple|goto Dragonblight,58.0,55.2,0.1|noway|c
+		info TODO: verify in-game
+	step
+		goto 60.3,51.6
+		.talk Nethestrasz##26851
+		..' Fly to Crusaders' Pinnacle in Icecrown|goto Icecrown,79.3,72.3,0.5|noway|c
+		info TODO: verify in-game
+	step
+		goto 79.8,30.8
+		.talk Crusader Bridenbrad##30562
+		..turnin The Boon of Alexstrasza##13079
+		..accept Hope Yet Remains##13080
+		info TODO: verify in-game
+	step
+		goto 79.8,71.8
+		.talk Highlord Tirion Fordring##31044
+		..turnin Hope Yet Remains##13080
+		..accept The Will of the Naaru##13081
+		info TODO: verify in-game
+	step
+		'Click the Portal to Shattrath that appears near you|goto Shattrath City|noway|c
+		info TODO: verify in-game
+	step
+		goto Shattrath City,54,44.8
+		.talk A'dal##18481
+		..turnin The Will of the Naaru##13081
+		..accept The Boon of A'dal##13082
+		info TODO: verify in-game
+	step
+		'Hearth to The Shadow Vault|goto Icecrown,44.0,22.2,0.5|use hearthstone##6948|noway|c
+		info Then fly east to the Silent Vigil at 79.8,30.8.
+		info TODO: verify in-game
+	step
+		goto Icecrown,79.8,30.8
+		.talk Crusader Bridenbrad##30562
+		..turnin The Boon of A'dal##13082
+		info TODO: verify in-game
+	step
+		goto 79.8,30.8
+		.talk Bridenbrad's Possessions##192833
+		..accept Light Within the Darkness##13083
+		info TODO: verify in-game
+	step
+		goto 79.8,71.8
+		.talk Highlord Tirion Fordring##31044
+		..turnin Light Within the Darkness##13083
+		info TODO: verify in-game
+	step
+		'Congratulations! You've finished Icecrown
+		info Left out: the dailies (Orgrim's Hammer, Ymirheim, Aldur'thar, the Shadow Vault and Death's Rise), Make Them Pay! (it needs Alliance player kills), the Argent Tournament, the Frozen Halls dungeons and Quel'Delar, Trial of the Champion, and the Icecrown Citadel raid quests.
 		info TODO: verify in-game
 ]])
