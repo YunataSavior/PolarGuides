@@ -33,6 +33,16 @@ TALK_RADIUS = 3.0
 OLD_NAMES = {
     9898: ("Nothin' Says Lovin' Like a Big Stinger",),
     12435: ("Report to Lord Afrasastrasz",),
+    12821: ("Opening the Backdoor",),
+    12977: ("Blowing Hodir's Horn",),
+    12987: ("Mounting Hodir's Helm",),
+    13006: ("Polishing the Helm",),
+    13011: ("Jormuttar is Soo Fat...",),
+    12851: ("Going Bearback",),
+}
+# NPCs an item summons wherever the player is, so their spawn point says nothing.
+SUMMONED = {
+    29579,  # Brann Bronzebeard, called with Brann's Communicator (Storm Peaks)
 }
 # NPCs the Wrath Classic data renamed, with their 3.3.5 names.
 OLD_NPC_NAMES = {
@@ -162,7 +172,7 @@ class Checker:
         old = OLD_NPC_NAMES.get(eid, ()) if kind == "npc" else ()
         if not loose(rec.get("name"), name) and not any(loose(alt, name) for alt in old):
             self.report("ERROR", ln, f"{kind} ##{eid} is '{rec.get('name')}', guide says '{name}'")
-        if near and kind != "item" and self.pos and self.zone:
+        if near and kind != "item" and eid not in SUMMONED and self.pos and self.zone:
             hit = gdb.nearest(rec.get("spawns") or {}, self.zone, self.pos)
             if hit is None:
                 zones = ", ".join((rec.get("spawns") or {}).keys()) or "none"
