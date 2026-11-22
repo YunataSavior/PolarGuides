@@ -60,6 +60,7 @@ BAD_PREREQS = {
     3097: (369,),  # Hallowed Scroll: undead priest letter at level 1, not after A New Plague
     3098: (369,),  # Glyphic Scroll: undead mage letter at level 1
     206: (202,),  # Mai'Zoth: Brother Nimetz offers it without Colonel Kurzen (user, in game)
+    12869: (13417,),  # Pushed Too Far: 13417 has no giver; Zygor takes it after The Brothers Bronzebeard##12973
 }
 REP_LEVELS = {"Hated": -42000, "Hostile": -6000, "Unfriendly": -3000, "Neutral": 0,
               "Friendly": 3000, "Honored": 9000, "Revered": 21000, "Exalted": 42000}
