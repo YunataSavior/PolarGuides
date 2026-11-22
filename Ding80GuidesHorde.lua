@@ -24072,6 +24072,35 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Horde Leveling Guides\\Sholazar Basin"
 		info Sholazar Basin has several quests that need a flying mount, so learn it now if you can.
 		info TODO: verify in-game
 	step
+		goto Dalaran,30.6,48.6
+		.talk Rhonin##16128
+		..accept Discretion is Key##13158
+		info He's at the top of the Violet Citadel.
+		info It's a dungeon quest for The Violet Hold. Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto Dalaran,61.3,63.7
+		.talk Warden Alturas##31080
+		..turnin Discretion is Key##13158
+		..accept Containment##13159
+		info He's outside the Violet Hold's gate, on the east side of Dalaran.
+		info Skip this step if you didn't take Discretion is Key.
+		info TODO: verify in-game
+	step
+		goto Dalaran,61.3,63.7
+		.' Run The Violet Hold
+		.kill Cyanigosa|q 13159/1
+		info Cyanigosa is the last boss, after the waves of portals.
+		info Queue with the Dungeon Finder, or walk in: the entrance is behind Warden Alturas.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto Dalaran,61.3,63.7
+		.talk Warden Alturas##31080
+		..turnin Containment##13159
+		info Skip this step if you didn't kill Cyanigosa.
+		info TODO: verify in-game
+	step
 		goto Dalaran,68.5,42.0
 		.talk Archmage Pentarus##28160
 		..accept Where in the World is Hemet Nesingwary?##12521

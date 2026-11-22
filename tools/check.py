@@ -19,6 +19,7 @@ Problems print as ERROR (almost surely wrong) or WARN (worth a look).
   --undone <qid>     `only if ZGV.completedQuests[qid]` counts that quest as not
                      done (to check the branch for players who skipped an
                      optional quest). Repeatable.
+  --at <line>        print the quest log after that line. Repeatable.
 """
 
 import os
@@ -43,16 +44,25 @@ OLD_NAMES = {
 # NPCs an item summons wherever the player is, so their spawn point says nothing.
 SUMMONED = {
     29579,  # Brann Bronzebeard, called with Brann's Communicator (Storm Peaks)
+    26206,  # Keristrasza, called with the Augmented Arcane Prison (Borean Tundra)
 }
 # NPCs the Wrath Classic data renamed, with their 3.3.5 names.
 OLD_NPC_NAMES = {
     27575: ("Lord Afrasastrasz",),
+    299: ("Young Wolf",),  # Northshire; "Diseased Young Wolf" is the Cataclysm name
+}
+# Quest goals the data gives a later name, with their 3.3.5 name.
+OLD_GOALS = {
+    (33, 1): "Tough Wolf Meat",  # Wolves Across the Border; Diseased Wolf Pelt is Cataclysm
 }
 # Prerequisites the Questie data gets wrong (the quest is offered without them).
 BAD_PREREQS = {
     3097: (369,),  # Hallowed Scroll: undead priest letter at level 1, not after A New Plague
     3098: (369,),  # Glyphic Scroll: undead mage letter at level 1
+    206: (202,),  # Mai'Zoth: Brother Nimetz offers it without Colonel Kurzen (user, in game)
 }
+REP_LEVELS = {"Hated": -42000, "Hostile": -6000, "Unfriendly": -3000, "Neutral": 0,
+              "Friendly": 3000, "Honored": 9000, "Revered": 21000, "Exalted": 42000}
 ZONES = None
 
 
@@ -81,6 +91,8 @@ def zone_names():
 
 def qnorm(name):
     name = re.sub(r"\s*\(\d+\)\s*$", "", name or "")
+    # Guide text often puts a count or an article in front: "5 Deserter Agitator", "a Rock Falcon".
+    name = re.sub(r"^\s*(?:\+\s*,?\s*)?(?:buy\s+)?(?:\d+\s+)?(?:(?:a|an|the)\s+)?", "", name, flags=re.I)
     return gdb.norm(name)
 
 
@@ -129,15 +141,25 @@ class Checker:
         self.pos = None
         self.guide = "?"
         self.active = True
+        self.dump_at = set()
+        self.prepared = set()  # quests whose objectives were gathered ahead (`|future`)
 
     def condition(self, cond, ln):
         """Evaluate an `only if` condition; only ZGV.completedQuests[id] with and/or/not is understood."""
         expr = re.sub(r"ZGV\.completedQuests\[(\d+)\]",
                       lambda m: str(int(m.group(1)) in self.done and int(m.group(1)) not in self.undone), cond)
-        if re.sub(r"\b(True|False|and|or|not)\b|[()\s]", "", expr):
+        expr = re.sub(r"ZGV\.questsbyid\[(\d+)\]", lambda m: str(int(m.group(1)) in self.log), expr)
+        # Professions: the guide teaches Cooking, so assume it and nothing else.
+        expr = re.sub(r"""skill\(\s*['"]([^'"]+)['"]\s*\)""",
+                      lambda m: "1" if m.group(1) == "Cooking" else "0", expr)
+        # Reputation: assume neutral (0) with everyone.
+        expr = re.sub(r"""rep\(\s*['"][^'"]+['"]\s*\)""", "0", expr)
+        for name, value in REP_LEVELS.items():
+            expr = re.sub(rf"\b{name}\b", str(value), expr)
+        if re.sub(r"\b(True|False|and|or|not)\b|[()\s\d<>=!~]", "", expr):
             self.report("ERROR", ln, f"can't evaluate condition: {cond}")
             return True
-        return eval(expr)  # only True/False/and/or/not/parentheses remain
+        return eval(expr.replace("~=", "!="))  # only booleans, numbers and comparisons remain
 
     def report(self, sev, ln, msg):
         if not self.active:
@@ -231,7 +253,7 @@ class Checker:
             soft = only or any(p in self.log for p in pre_single)
             self.report("WARN" if soft else "ERROR", ln, f"{q['name']}##{qid} needs one of: {names}")
         for p in q.get("preQuestGroup") or []:
-            if p not in self.done:
+            if p not in self.done and p not in BAD_PREREQS.get(qid, ()):
                 soft = only or p in self.log
                 self.report("WARN" if soft else "ERROR", ln,
                             f"{q['name']}##{qid} needs {(gdb.quest(p) or {}).get('name')}##{p} done first")
@@ -282,7 +304,7 @@ class Checker:
         # grouping differs, so only check that the named target belongs to
         # some objective of this quest.
         m = re.search(r"(?:kill|get|collect)\s+(?:\d+\s+)?([^|#]+?)\s*(?:\||##|$)", text)
-        zname = gdb.zygor_goals().get((qid, idx))
+        zname = OLD_GOALS.get((qid, idx)) or gdb.zygor_goals().get((qid, idx))
         if m and zname:
             want = m.group(1).strip()
             if not (loose(zname, want) or qnorm(want) in qnorm(zname) or qnorm(zname) in qnorm(want)):
@@ -377,6 +399,9 @@ class Checker:
                 self.level = int(re.findall(r"\d+", body)[0])
                 continue
             word = body.split(None, 1)[0] if body.split() else ""
+            # Clicking an object or using an item: the next accept/turnin is not the NPC's.
+            if re.match(r"'\s*(Click|Open|Use)\b", body) or word == "use":
+                talk = None
             if word == "talk":
                 m = re.match(r"talk\s+(.+?)##(\d+)", body)
                 if m:
@@ -390,9 +415,19 @@ class Checker:
                 if not m:
                     self.report("ERROR", ln, f"{word} without ##id")
                 elif word == "accept":
-                    self.accept(m.group(2).strip(), int(m.group(3)), ln, talk, only)
+                    qid = int(m.group(3))
+                    self.accept(m.group(2).strip(), qid, ln, talk, only)
                     if only or ln in gated:
-                        self.gated.add(int(m.group(3)))
+                        self.gated.add(qid)
+                    # `|instant` quests complete on accept and never get a turnin line.
+                    if re.search(r"\|\s*instant\b", body):
+                        q = gdb.quest(qid)
+                        o = (q or {}).get("objectives") or {}
+                        # Fine when the guide got the objective ahead (a `|future` goal).
+                        if q and qid not in self.prepared and any(o.get(k) for k in ("creature", "object", "item")):
+                            self.report("ERROR", ln, f"{q['name']}##{qid} is marked instant but has objectives")
+                        self.log.pop(qid, None)
+                        self.done.add(qid)
                 else:
                     self.turnin(m.group(2).strip(), int(m.group(3)), ln, talk, only)
             else:
@@ -415,6 +450,9 @@ class Checker:
                 if word in ("accept", "turnin"):
                     continue
                 if "future" in body:
+                    self.prepared.add(int(m.group(1)))
+                if "future" in body or re.search(r"(^|\|)\s*'?buy\b", body, re.I):
+                    # Items bought ahead for a quest that isn't in the log yet.
                     continue
                 self.goal(int(m.group(1)), int(m.group(2)) if m.group(2) else None, ln, body, only)
             # Race/class-gated quests are alternatives, so count them as one.
@@ -423,6 +461,10 @@ class Checker:
             if count > 25 and count != getattr(self, "_last_over", None):
                 self.report("ERROR", ln, f"quest log has {count} quests (max 25)")
             self._last_over = count if count > 25 else None
+            if ln in self.dump_at and self.active and not skipping:
+                print(f"Quest log at L{ln} ({count}):")
+                for qid, name in self.log.items():
+                    print(f"  {name}##{qid}")
         if self.show_log:
             print("Open quests at end:")
             for qid, name in self.log.items():
@@ -466,7 +508,14 @@ def main():
         i = args.index("--undone")
         undone.append(int(args[i + 1]))
         del args[i:i + 2]
-    sys.exit(1 if Checker(args[0], start, show_log, side, skip, stop, who, undone).run() else 0)
+    dump_at = set()
+    while "--at" in args:
+        i = args.index("--at")
+        dump_at.add(int(args[i + 1]))
+        del args[i:i + 2]
+    checker = Checker(args[0], start, show_log, side, skip, stop, who, undone)
+    checker.dump_at = dump_at
+    sys.exit(1 if checker.run() else 0)
 
 
 if __name__ == "__main__":

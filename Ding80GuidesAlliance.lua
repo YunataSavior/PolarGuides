@@ -1046,11 +1046,15 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Night Elf (1
 		goto 60.9,68.5
 		.talk Denalan##2080
 		..turnin Oakenscowl##2499
+		..turnin The Moss-twined Heart##927
+		info Turn in The Moss-twined Heart if Blackmoss the Fetid dropped it.
+		info TODO: verify in-game
 	step
 		goto 56.0,61.5
 		.talk Kal##3602
-		..accept Heeding the Call##5923
+		..accept Heeding the Call##5925
 		only NightElf Druid
+		info TODO: verify in-game
 	step
 		'Hearth to Darnassus|goto Darnassus|use Hearthstone##6948|noway|c
 	step
@@ -1151,9 +1155,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Night Elf (1
 	step
 		goto Darnassus,35.2,8.1
 		.talk Mathrengyl Bearwalker##4217
-		..turnin Heeding the Call##5923
+		..turnin Heeding the Call##5925
 		..accept Moonglade##5921
 		only NightElf Druid
+		info TODO: verify in-game
 	step
 		'He gives you a spell called Teleport: Moonglade
 		.'Teleport to Moonglade|goto Moonglade|cast Teleport: Moonglade|c
@@ -1611,9 +1616,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Draenei (1-1
 		.talk Cryptographer Aurren##17232
 		..accept Learning the Language##9538
 		.'Click the Stillpine Furbolg Language Primer in your bags|use Stillpine Furbolg Language Primer##23818
-		.'Click the Totem of Akida next to Cryptographer Aurren|tip In the middle of town, next to the giant bone altar thing with the huge pink crystal in it.
+		.talk Totem of Akida##17360|tip It's next to Cryptographer Aurren, in the middle of town, next to the giant bone altar thing with the huge pink crystal in it.
 		..turnin Learning the Language##9538
 		..accept Totem of Coo##9539
+		info TODO: verify in-game
 	step
 		'Follow the ghost furbolg as he runs up the hill northeast to 55.2,41.6|goto 55.2,41.6
 		.'Click the Totem of Coo
@@ -1702,9 +1708,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Draenei (1-1
 		..accept Deliver Them From Evil...##9602
 	step
 		goto 49.41,51.0
-		.talk Arugoo the Stillpine##17114
+		.talk Arugoo of the Stillpine##17114
 		..turnin The Prophecy of Akida##9544
 		..accept Stillpine Hold##9559
+		info TODO: verify in-game
 	step
 		goto 47.1,50.6
 		.talk Exarch Menelaous##17116
@@ -1825,10 +1832,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Draenei (1-1
 		.from Siltfin Hunter##17192+, Siltfin Murloc##17190+, Siltfin Oracle##17191+
 		.'Click the Stillpine Grain bags near the murloc huts
 		.get 5 Stillpine Grain|q 9562/1
-		.from Murgurgala##17475
+		.from Murgurgula##17475
 		.'Get Gurf's Dignity|n
 		.'Click Gurf's Dignity|use Gurf's Dignity##23850
 		..accept Gurf's Dignity##9564
+		info TODO: verify in-game
 	step
 		goto 44.7,23.6
 		.talk Gurf##17441
@@ -2036,8 +2044,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		goto 77.1,53.3
 		.talk Harry Burlguard##6089
 		..turnin Bartleby's Mug##1665
-		..accept Marshall Haggard##1666
+		..accept Marshal Haggard##1666
 		only Warrior
+		info TODO: verify in-game
 	step
 		goto 39.2,85.3
 		.talk Gakin the Darkbinder##6122
@@ -2136,8 +2145,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		..accept Collecting Kelp##112
 	step
 		goto 49.7,66.3
-		.from Murloc##285+, Murloc Steamrunner##735+
+		.from Murloc##285+, Murloc Streamrunner##735+
 		..get 4 Crystal Kelp Frond|q 112/1
+		info TODO: verify in-game
 	step
 		ding 11
 	step
@@ -2365,9 +2375,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		..get Furlbrow's Pocket Watch|q 64/1
 	step
 		goto 57,15.1
-		.from Riverpaw Gnoll##725+, Riverpaw Scout##500+
+		.from Riverpaw Gnoll##117+, Riverpaw Scout##500+
 		..get 8 Gnoll Paw|q 102/1
 		.'You can find more gnolls at 52.4,16.2|n
+		info TODO: verify in-game
 	step
 		goto 55.1,12.3
 		.from Murloc Raider##515+, Murloc Coastrunner##126+
@@ -2573,6 +2584,15 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 	step
 		'Fly to Thelsamar|goto Loch Modan,33.9,50.8,0.5|noway|c
 	step
+		goto Loch Modan,22.1,73.1
+		.talk Mountaineer Cobbleflint##1089
+		..accept In Defense of the King's Lands##224
+		.talk Captain Rugelfuss##1092
+		..accept The Trogg Threat##267
+		info Rugelfuss is in the tower next to Cobbleflint, at 23.2,73.7. Dwarves, gnomes and humans took both in Dun Morogh's level 10 trip.
+		info TODO: verify in-game
+		only NightElf,Draenei
+	step
 		goto 31.1,70.7
 		.kill 10 Stonesplinter Trogg|q 224/1
 		.kill 10 Stonesplinter Scout|q 224/2
@@ -2609,8 +2629,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		..accept Mountaineer Stormpike's Task##1339
 	step
 		goto 37.3,46.5
-		.talk WANTED##256
+		.'Click the WANTED poster
 		..accept WANTED: Chok'sul##256
+		info TODO: verify in-game
 	step
 		goto 37.2,47.4
 		.talk Jern Hornhelm##1105
@@ -2640,8 +2661,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		goto 35.4,18.5
 		.'Click Miners' League Crates inside the cave
 		..get 4 Miners' Gear|q 307/1
-		.from Tunnel Rat Forager##1176+, Tunnel Rat Geomancer##1174+, Tunnel Rat Kobold##1202+, Tunnel Rat Surveyor##1177+, Tunnel Rat Vermin##1172+, Tunnel Rat Vermin##1175+
+		.from Tunnel Rat Forager##1176+, Tunnel Rat Geomancer##1174+, Tunnel Rat Kobold##1202+, Tunnel Rat Surveyor##1177+, Tunnel Rat Vermin##1172+, Tunnel Rat Digger##1175+
 		..get 12 Tunnel Rat Ear|q 416/1
+		info TODO: verify in-game
 	step
 		ding 16
 	step
@@ -2721,8 +2743,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		..get Bingles' Wrench|q 2038/1
 	step
 		goto 53.35,25.5
-		.kill 10 Stonesplinter Shaman|q 263/1
-		.kill 10 Stonesplinter Bonesnapper|q 263/2
+		.kill 10 Stonesplinter Bonesnapper|q 263/1
+		.kill 10 Stonesplinter Shaman|q 263/2
+		info TODO: verify in-game
 	step
 		goto 63.6,47.9
 		.talk Bingles Blastenheimer##6577
@@ -2754,8 +2777,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		..turnin In Defense of the King's Lands (3)##263
 	step
 		goto 23.2,73.7
-		.talk Captain Rugelfuss
+		.talk Captain Rugelfuss##1092
 		..accept In Defense of the King's Lands (4)##217
+		info TODO: verify in-game
 	step
 		goto 34.8,90.5
 		.kill Grawmug##1205|q 217/1
@@ -2770,9 +2794,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		.goal Find Huldar, Miran, Saean|q 273/1
 	step
 		goto 52.2,69.3
-		.talk Huldar
+		.talk Huldar##2057
 		..turnin Resupplying the Excavation##273
 		..accept After the Ambush##454
+		info TODO: verify in-game
 	step
 		'WARNING: ESCORT!
 		goto 52.2,69.4
@@ -2787,8 +2812,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		..turnin Protecting the Shipment##309
 	step
 		goto 68.1,63.2
-		.from Stoneplinter Digger##1167+, Stonesplinter Geomancer##1165+ 
+		.from Stonesplinter Digger##1167+, Stonesplinter Geomancer##1165+ 
 		..get 8 Carved Stone Idol|q 297/1
+		info TODO: verify in-game
 	step
 		goto 64.9,66.7
 		.talk Magmar Fellhew##1345
@@ -2837,12 +2863,14 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		goto 34.7,43.2
 		.talk Magistrate Bluntnose##1139
 		..turnin Mercenaries##255
-		..turnin Chok'sul##256
+		..turnin WANTED: Chok'sul##256
+		info TODO: verify in-game
 	step
 		goto 23.2,73.7
-		.talk Captain Rugelfuss
+		.talk Captain Rugelfuss##1092
 		..turnin In Defense of the King's Lands (4)##217
 	//todo: druid water form here
+		info TODO: verify in-game
 	step
 		'Hearth to Stormwind City|goto Stormwind City|use Hearthstone##6948|noway|c
 	step
@@ -2982,8 +3010,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 	step
 		'WARNING: ESCORT
 		goto 38.6,87.3
-		.talk Therlune##3584
+		.talk Therylune##3584
 		..accept Therylune's Escape##945|noautoaccept
+		info TODO: verify in-game
 	step
 		goal Escort Therylune away from the Master's Glaive|q 945/1
 		from Twilight Disciple##2338+, Twilight Thug##2339+
@@ -3026,8 +3055,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Main Guide (
 		.'When Kerlonian falls asleep, use the Horn of Awakening on him.|use Horn of Awakening##13536
 	step
 		goto 27.3,35.6
-		.talk Liadris Moonriver##11219
+		.talk Liladris Moonriver##11219
 		..turnin The Sleeper Has Awakened##5321
+		info TODO: verify in-game
 	step
 		goto 26.6,36.7
 		.talk Sentinel Onaeya##11806
@@ -3213,10 +3243,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (20-2
 		..get 8 Murloc Fin##1468|q 150/1
 	step
 		goto 34.2,67.4
-		.from Black Dragon Whelp##1221+
+		.from Black Dragon Whelp##441+
 		..get 6 Underbelly Whelp Scale|q 122/1
-		.from Great Goretusk##2296+|tip Skip this step if there's no Boars around, keep killing them as you met them in your travels.
+		.from Great Goretusk##547+|tip Skip this step if there's no Boars around, keep killing them as you met them in your travels.
 		..get 5 Great Goretusk Snout|q 92/1
+		info TODO: verify in-game
 	step
 		goto 15.62,64.16|tip Don't wait around for respawns, skip to the next step if no Gnolls around.
 		.kill 10 Redridge Mongrel|q 246/1
@@ -3322,8 +3353,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (20-2
 		..turnin Howling in the Hills##126
 	step
 		goto 30.7,60
+		only if not ZGV.completedQuests[246]
 		.talk Deputy Feldon##1070
 		..turnin Assessing the Threat##246
+		info Only if you couldn't turn it in on the first visit.
+		info TODO: verify in-game
 	step
 		'Go south to Duskwood|goto Duskwood,73.8,43.5
 		.talk Chef Grual##272
@@ -3688,16 +3722,22 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (20-2
 		..accept Messenger to Darkshire (1)##145
 	step
 		goto 29.6,46.2
-		.talk Wanted: Gath'Ilzogg
-		..accept Gath'Ilzogg##169
+		.'Click the Wanted: Gath'Ilzogg poster
+		..accept Wanted: Gath'Ilzogg##169
+		info TODO: verify in-game
 	step
 		goto 26.8,46.4
-		.talk Wanted: Lieutenant Fangore
+		.'Click the Wanted: Lieutenant Fangore poster
 		..accept Wanted: Lieutenant Fangore##180
+		info TODO: verify in-game
 	step
 		goto 27,44.8
 		.talk Innkeeper Brianna##6727
 		..home Lakeshire
+		.talk Guard Berton##859
+		..accept What Comes Around...##386
+		info Guard Berton stands by the inn. What Comes Around... is a Stockades quest (Ding80 lists it at 20, but it needs level 22). Ding80 runs the Stockades at 29; skip it if you won't.
+		info TODO: verify in-game
 	step
 		'Head left when you enter the cave
 		'WARNING: ESCORT!
@@ -3720,21 +3760,24 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (20-2
 		goto 80.2,37.1
 		.from Lieutenant Fangore##703
 		..get 1 Fangore's Paw|q 180/1
-		.from Shadowhide Assassin##579+, Shadowhide Brute##432+, Shadowhide Darkweaver##429+, Shadow Gnoll##433+, Shadowhide Slayer##431+, Shadowhide Warrior##568+
+		.from Shadowhide Assassin##579+, Shadowhide Brute##432+, Shadowhide Darkweaver##429+, Shadowhide Gnoll##433+, Shadowhide Slayer##431+, Shadowhide Warrior##568+
 		..get 10 Shadowhide Pendant|q 91/1
 		.'If you got the Glowing Shadowhide Pendant; accept, otherwise skip this step.
 		..use Glowing Shadowhide Pendant##1962
 		...accept Theocritus' Retrieval##178
+		info TODO: verify in-game
 	step
 		goto 84.5,46.8
-		.talk Old Lion Statue
+		.'Click the Old Lion Statue
 		..turnin A Watchful Eye##94
 		..accept Looking Further##248
+		info TODO: verify in-game
 	step
 		'The Jar is at the top of the stone tower next to the keep.
 		goto 63.2,49.8
-		.talk An Empty Jar
+		.'Click the Empty Jar
 		..turnin Looking Further##248
+		info TODO: verify in-game
 	step
 		ding 25
 	step
@@ -3808,6 +3851,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 		goto 71.9,46.4
 		.talk Lord Ello Ebonlocke##263
 		..turnin Messenger to Darkshire##145
+		.talk Councilman Millstipe##270
+		..accept Crime and Punishment##377
+		info Crime and Punishment is a Stockades quest; skip it if you won't run the Stockades at 29.
+		info TODO: verify in-game
 	step
 		goto 49.9,77.7
 		.'Click the Mound of Loose Dirt|tip It's easiest to work your way around to behind the farm around this spot.
@@ -3936,8 +3983,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 		.kill 15 Skeletal Raider|q 323/1
 		.kill 3 Skeletal Healer|q 323/2
 		.kill 3 Skeletal Warder|q 323/3
-		.from Skeletal Raider##1110+, Skeletal Healer##787+, Skeleton Warder##785+
+		.from Skeletal Raider##1110+, Skeletal Healer##787+, Skeletal Warder##785+
 		..get 10 Skeleton Finger|q 101/3
+		info TODO: verify in-game
 	step
 		goto 23.6,34.91
 		.kill 20 Plague Spreader|q 58/1
@@ -3985,10 +4033,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 	step
 		'Fly to Stormwind|goto Stormwind City|noway|c
 	step
-		goto 39.1,27.9
+		goto 49.9,46.0
 		.talk Bishop Farthing##1212
 		..turnin Seeking Wisdom##269
 		..accept The Doomed Fleet##270
+		info TODO: verify in-game
 	step
 		'Fly to Menethil Harbor|goto Wetlands,9.5,59.7,0.5|noway|c
 	step
@@ -4146,6 +4195,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 		..turnin A Grim Task##304
 		.talk Motley Garmason##1074
 		..turnin The Dark Iron War##303
+		..accept The Fury Runs Deep##378
+		info The Fury Runs Deep is a Stockades quest; skip it if you won't run the Stockades at 29.
+		info TODO: verify in-game
 	step
 		goto 51.3,8
 		.'Click Ebenezer Rustlocke's Corpse|tip Down the passage to the right in the middle of the bridge, all the way downstairs.
@@ -4199,8 +4251,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 		..turnin Cleansing the Eye##293
 	step
 		goto 49.6,44.5
-		.talk Tomas##4982
+		.talk Thomas##4982
 		..accept The Missing Diplomat (1)##1274
+		info TODO: verify in-game
 	step
 		goto 59.7,33.8
 		.talk Grimand Elmore##1416
@@ -4231,11 +4284,72 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 		..turnin The Missing Diplomat (3)##1242
 		..accept The Missing Diplomat (4)##1243
 	step
+		goto 73.3,50.7
+		.talk Nikova Raskol##1721
+		..accept The Color of Blood##388
+		info Ding80: now's the time to run The Stockade if you can find a group.
+		info Skip this step and the next four if you won't run it.
+		info TODO: verify in-game
+	step
+		goto 51.5,69.4
+		.talk Warden Thelwater##1719
+		..accept Quell The Uprising##387
+		info He's at the Stockade entrance.
+		info TODO: verify in-game
+	step
+		'Run The Stockade|goto Stormwind City,51.5,69.4
+		.kill 10 Defias Prisoner|q 387/1
+		.kill 8 Defias Convict|q 387/2
+		.kill 8 Defias Insurgent|q 387/3
+		.get 10 Red Wool Bandana|q 388/1
+		.' Kill Targorr the Dread
+		.get Head of Targorr|q 386/1
+		.' Kill Dextren Ward
+		.get Hand of Dextren Ward|q 377/1
+		.' Kill Kam Deepfury
+		.get Head of Deepfury|q 378/1
+		info The entrance is behind Warden Thelwater. The prisoners all drop Red Wool Bandanas.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 51.5,69.4
+		.talk Warden Thelwater##1719
+		..turnin Quell The Uprising##387
+		info Then turn in The Color of Blood to Nikova Raskol at 73.3,50.7.
+		info Skip this step if you didn't run The Stockade.
+		info TODO: verify in-game
+	step
+		goto 73.3,50.7
+		.talk Nikova Raskol##1721
+		..turnin The Color of Blood##388
+		info Skip this step if you didn't run The Stockade.
+		info TODO: verify in-game
+	step
 		'Fly to Darkshire|goto Duskwood,77.6,44.4,0.1|noway|c
 	step
 		goto 73.9,44.4
 		.talk Innkeeper Trelayne##6790
 		..home Darkshire
+	step
+		goto 71.9,47.8
+		.talk Councilman Millstipe##270
+		..turnin Crime and Punishment##377
+		info Skip this step if you didn't run The Stockade.
+		info TODO: verify in-game
+	step
+		'Fly to Lakeshire|goto Redridge Mountains,30.6,59.4,0.5|noway|c
+		info A short detour for What Comes Around...; skip this step and the next two if you didn't run The Stockade.
+		info TODO: verify in-game
+	step
+		goto Redridge Mountains,26.3,46.6
+		.talk Guard Berton##859
+		..turnin What Comes Around...##386
+		info Skip this step if you didn't run The Stockade.
+		info TODO: verify in-game
+	step
+		'Fly back to Darkshire|goto Duskwood,77.6,44.4,0.1|noway|c
+		info Skip this step if you didn't fly to Lakeshire.
+		info TODO: verify in-game
 	step
 		goto 70.2,45.1|n
 		.'The path over to Worgen in the Woods starts here
@@ -4244,10 +4358,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 		goto 66,47
 		.kill 12 Nightbane Dark Runner|q 221/1
 	step
-		goto 72.6,33.5
+		goto 74.8,44.2
 		.talk Watcher Backus##840
 		..turnin The Missing Diplomat (4)##1243
 		..accept The Missing Diplomat (5)##1244
+		info TODO: verify in-game
 	step
 		goto 75.7,47.6
 		.talk Calor##663
@@ -4315,10 +4430,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 		.talk Viktori Prism'Antras##276
 		..turnin Look To The Stars (4)##181
 	step
-		goto 72.6,33.5
+		goto 74.8,44.2
 		.talk Watcher Backus##840
 		..turnin The Missing Diplomat (5)##1244
 		..accept The Missing Diplomat (6)##1245
+		info TODO: verify in-game
 	step
 		ding 30
 	step
@@ -4328,9 +4444,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 	step
 		goto 28.9,30.8
 		.'Click Eliza's Grave Dirt|tip It looks like a single dirt grave.
-		..accept Digging Through the Dirt##254|n
+		..accept Digging Through the Dirt##254|instant
 		.from Eliza##314
 		..get The Embalmer's Heart|q 253/1
+		info TODO: verify in-game
 	step
 		goto 17.7,29.1
 		.turnin A Daughter's Love##231
@@ -4374,15 +4491,17 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (25-2
 	step
 		'WARNING: EVENT
 		goto 74.3,59.2
-		.talk Dashel Stonefist
+		.talk Dashel Stonefist##4961
 		..turnin The Missing Diplomat (7)##1246
 		..accept The Missing Diplomat (8)##1447|noautoaccept
+		info TODO: verify in-game
 	step
 		goal Defeat Dashel Stonefist|q 1447
 	step
-		.talk Dashel Stonefist
+		.talk Dashel Stonefist##4961
 		..turnin The Missing Diplomat (8)##1447
 		..accept The Missing Diplomat (9)##1247
+		info TODO: verify in-game
 	step
 		'If you found the Old History Book from Duskwood accept this quest now, otherwise skip.
 		.get An Old History Book|n
@@ -4412,8 +4531,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (30-3
 		..accept Sara Balloo's Plea##683
 	step
 		goto 72.7,94
-		.talk Pilot Longeard##2092
+		.talk Pilot Longbeard##2092
 		..accept The Brassbolts Brothers##1179
+		info TODO: verify in-game
 	step
 		goto 70.3,90.7
 		.talk Kelv Sternhammer##5113
@@ -4441,6 +4561,13 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (30-3
 		only Warlock
 	step
 		'Fly to Menethil Harbor|goto Wetlands,9.5,59.7,0.5|noway|c
+	step
+		goto Wetlands,49.8,18.3
+		.talk Motley Garmason##1074
+		..turnin The Fury Runs Deep##378
+		info He's in Dun Modr, on the way north to the Thandol Span.
+		info Skip this step if you didn't run The Stockade.
+		info TODO: verify in-game
 	step
 		'Go north to the Arathi Highlands|goto Arathi Highlands|noway|c
 	step
@@ -4625,20 +4752,22 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (30-3
 		..fpath Ratchet
 	step
 		goto 68.6,49.2
-		.talk Klannoc Macleod##
+		.talk Klannoc Macleod##6236
 		..turnin The Islander##1718
 		..accept The Affray##1719
 		only Warrior
+		info TODO: verify in-game
 	step
 		goal Step on the grate to begin the Affray|q 1719/1
 		kill Big Will|q 1719/2
 		only Warrior
 	step
 		goto 68.6,49.2
-		.talk Klannoc Macleod##
+		.talk Klannoc Macleod##6236
 		..turnin The Affray##1719
 		..accept The Windwatcher##1791
 		only Warrior
+		info TODO: verify in-game
 	step
 		goto 49.3,57.1
 		.talk Takar the Seer##6244	
@@ -4922,7 +5051,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (30-3
 	step
 		goto 38.33,87.09
 		.kill 8 Mountain Lion|q 564/1
-		.kill 10 Hulking Mountaimn Lion|q 564/2
+		.kill 10 Hulking Mountain Lion|q 564/2
+		info TODO: verify in-game
 	step
 		goto 47.9,82.2
 		.'Click the Syndicate Documents on the little round table in the middle of the small camp
@@ -5288,9 +5418,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (35-3
 		..accept Northfold Manor##681
 	step
 		goto 46,47.8
-		.talk Wanted Board
+		.'Click the Wanted Board
 		..accept Wanted! Marez Cowl##684
 		..accept Wanted! Otto and Falconcrest##685
+		info TODO: verify in-game
 	step
 		goto 46.7,47
 		.talk Skuerto##2789
@@ -5301,8 +5432,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (35-3
 		..accept Worth Its Weight in Gold##691
 	step
 		goto 62.5,33.7
-		.talk Shards of Myzrael
+		.'Click the Shards of Myzrael
 		..accept The Princess Trapped##642
+		info TODO: verify in-game
 	step
 		goto 80.95,39.93|n
 		.'The path up to the cave starts here|goto 80.95,39.93,0.5|noway|c|tip Be prepared to meet horde.
@@ -5313,9 +5445,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (35-3
 		.collect 20 Lesser Bloodstone Ore##4278|n|only if skill('Mining')>74|tip Mine more and sell on the Auction House, kthx.
 	step
 		goto 84.3,31
-		.talk Iridescent Shards
+		.'Click the Iridescent Shards
 		..turnin The Princess Trapped##642
 		..accept Stones of Binding##651
+		info TODO: verify in-game
 	step
 		goto 66.7,29.7
 		.'Click the Stone of East Binding
@@ -5426,9 +5559,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (35-3
 		..accept Stromgarde Badges##682
 	step
 		goto 36.2,57.4
-		.talk Stone of Inner Binding
+		.'Click the Stone of Inner Binding
 		..turnin Stones of Binding##651
 		..accept Breaking the Keystone##652
+		info TODO: verify in-game
 	step
 		goto 29.6,63
 		.from Marez Cowl##2783|tip Marez is either behind the last house on the lower tier or behind the last house on the upper tier.
@@ -5577,7 +5711,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (35-3
 		goto 10.6,60.8
 		.talk Mikhail##4963
 		..turnin The Missing Diplomat (11)##1249
+		.talk Tapoke "Slim" Jahn##4962
+		..accept The Missing Diplomat##1250
+		.talk Mikhail##4963
+		..turnin The Missing Diplomat##1250
 		..accept The Missing Diplomat (12)##1264
+		info TODO: verify in-game
 	step
 		goto 8.4,61.8
 		.talk Vincent Hyal##5082
@@ -5831,8 +5970,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (35-3
 		goto 29.7,47.6
 		.talk Inspector Tarem##23567
 		..turnin Inspecting the Ruins##11123
-		.'Click the Suspicious Hoofprints'|tip They look like a set of 3 toed tan muddy footprints on the ground next to the path.
+		.'Click the Suspicious Hoofprints|tip They look like a set of 3 toed tan muddy footprints on the ground next to the path.
 		..accept Suspicious Hoofprints##1284
+		info TODO: verify in-game
 	step
 		goto 29.8,48.3
 		.'Click the Theramore Guard Badge|tip A very tiny grey badge laying on a board ont he floor in the burnt down house.
@@ -5952,16 +6092,18 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (35-3
 		..accept A Grim Connection##11143
 	step
 		goto 66.3,49
-		.talk Lady Jaina Proudmore##4968
+		.talk Lady Jaina Proudmoore##4968
 		..turnin Jaina Must Know##11141
 		..accept Survey Alcaz Island##11142
+		info TODO: verify in-game
 	step
 		'Get a flight tour of the Alcaz island from Cassa Crimsonwing| goto 67.3,51.1
 		goal Survey Alcaz Island|q 11142/1
 	step
 		goto 66.3,49
-		.talk Lady Jaina Proudmore##4968
+		.talk Lady Jaina Proudmoore##4968
 		..turnin Survey Alcaz Island##11142
+		info TODO: verify in-game
 	step
 		ding 40
 	step
@@ -6262,12 +6404,14 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (40-4
 	step
 		goto 58.7,30.5
 		'Start here and kill 1 Argus Shadow Mage every camp moving northwest
-		.kill 4 Argust Shadow Mage|q 537/1
+		.kill 4 Argus Shadow Mage|q 537/1
+		info TODO: verify in-game
 	step
 		'If you fought the Shadowy Assassins in Southshore, otherwise skip.
 		goto 47.8,17.1
 		.from Baron Vardus##2306
-		..get Head of Baron Vardus|q 566/1
+		..get Head of Baron Vardus|q 523/1
+		info TODO: verify in-game
 	step
 		goto 39.2,14.3
 		'APPROACH THE HOUSE CAREFULLY, THERE ARE A LOT OF STEALTHED ASSASSINS HERE
@@ -6306,9 +6450,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (40-4
 		.get Rod of Order|q 652/1
 	step
 		goto 36.1,58.1
-		.talk Keystone
+		.'Click the Keystone
 		..turnin Breaking the Keystone##652
 		..accept Myzrael's Allies##653
+		info TODO: verify in-game
 	step
 		ding 42
 	step
@@ -6788,8 +6933,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (40-4
 		..get The Second Troll Legend|q 207/2
 	step
 		goto 25,23.6
-		.'Use Caitlyn's Blade at the Altar of the Tides and then kill Gazban|use Caitlyn's Blade##4027
+		.'Use Catelyn's Blade at the Altar of the Tides and then kill Gazban|use Catelyn's Blade##4027
 		..get Stone of the Tides|q 611/1
+		info TODO: verify in-game
 	step
 		goto 29.5,19.1
 		.'Click the Moon Over the Vale
@@ -7466,9 +7612,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (45-4
 		'If you have the OOX-09/HL distress beacon, now is the time to do this escort, otherwise skip this part|goto 49.4,37.7
 		.'Click the OOX-09/HL Distress Beacon|use OOX-09/HL Distress Beacon##8704
 		..accept Find OOX-09/HL!##485
-		.talk OOX-09/HL##7806
+		.talk Homing Robot OOX-09/HL##7806
 		..turnin Find OOX-09/HL!##485
 		..accept Rescue OOX-09/HL!##836|noautoaccept
+		info TODO: verify in-game
 	step
 		goal Escort OOX-09/HL to safety|q 836/1
 	step
@@ -7587,14 +7734,18 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (45-4
 		..turnin Wandering Shay##2845
 	step
 		.'WARNING: ESCORT
+		only if not ZGV.completedQuests[2767]
 		'If you have the OOX-22/FE Distress Beacon and didn't do it earlier, do it now, otherwise skip.|goto 53.4,55.7
 		.'Click the OOX-22/FE Distress Beacon|use OOX-22/FE Distress Beacon##8705
 		..accept Find OOX-22/FE!##2766
 		.talk Homing Robot OOX-22/FE##7807
 		..turnin Find OOX-22/FE!##2766
 		..accept Rescue OOX-22/FE!##2767|noautoaccept
+		info TODO: verify in-game
 	step
 		goal Escort OOX-22/FE to safety|q 2767/1
+		only if not ZGV.completedQuests[2767]
+		info TODO: verify in-game
 	step
 		'Hearth to Feathermoon Stronghold|goto Feralas,31.0,44.0,5|use Hearthstone##6948|noway|c
 	step
@@ -7777,7 +7928,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (45-4
 		.talk Oglethorpe Obnoticus##7406
 		..turnin Rescue OOX-09/HL!##836
 		..turnin Rescue OOX-17/TN!##648
+		..turnin Rescue OOX-22/FE!##2767|only if ZGV.questsbyid[2767]
 		..accept An OOX of Your Own##3721|instant
+		info TODO: verify in-game
 	step
 		ding 50
 ]])
@@ -8017,10 +8170,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (50-5
 		..accept Arcane Runes##3449
 		..accept An Easy Pickup##3450
 	step
-		goto 26.3,6.8
-		.talk Juli Stormkettle##5145
+		goto 27.2,8.6
+		.talk Dink##7312
 		..accept Magecraft##8250
 		only Mage
+		info TODO: verify in-game
 	step
 		goto 23.2,7.2
 		.talk High Priest Rohan##11406
@@ -8077,7 +8231,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (50-5
 		..collect 14 Vulture Gizzard##8396
 		..collect 11 Basilisk Brain##8394
 		..collect 6 Scorpok Pincer##8393
-		.kill 7 Hellboar|q 8423/1|only Warrior
+		.kill 7 Helboar|q 8423/1|only Warrior
+		info TODO: verify in-game
 	step
 		goto 50.7,14.2
 		.talk Bloodmage Lynnore##7506
@@ -8267,7 +8422,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (50-5
 	step
 		goto 54.2,86.8
 		.talk Arathandris Silversky##9528
-		..accept Salve Via Hunting##4103 |instant
+		.collect 6 Corrupted Soul Shard##11515|q 5882|future|tip The furbolgs and oozes drop them once you have the Cenarion Beacon.
+		..accept Salve via Hunting##5882|instant
+		info TODO: verify in-game
 	step
 		'Fly to Forest Song|goto Ashenvale,85.04,43.51,5|noway|c
 	step
@@ -8515,9 +8672,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (50-5
 	step
 		ding 54
 	step
-		goto 29.4,22.1
+		goto 55.9,81.4
 		.talk Courier Hammerfall##10877
 		..accept A Call to Arms: The Plaguelands!##5090
+		info He walks around the Ironforge ring, so he may be elsewhere.
+		info TODO: verify in-game
 	step
 		'Fly to Refuge Point|goto Arathi Highlands,45.8,46.1|noway|c
 	step
@@ -8526,8 +8685,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (50-5
 		.from Myzrael##2755
 		..get Eldritch Shackles|q 656/1
 	step
-		.talk Shards of Myzrael
+		.'Click the Shards of Myzrael
 		..turnin Summoning the Princess##656
+		info TODO: verify in-game
 	step
 		'Fly to Southshore|goto Hillsbrad Foothills|noway|c
 	step
@@ -9075,9 +9235,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (55-5
 	step
 		.'WARNING: ESCORT
 		goto 36.2,55.5
-		.talk Captured Arko'narin
+		.talk Captured Arko'narin##11016
 		..turnin A Strange Red Key##5202
 		..accept Rescue From Jaedenar##5203|noautoaccept
+		info TODO: verify in-game
 	step
 		goto 36.3,56.3
 		.'Click the Brazier of Pain|tip Underground in the cave, looks like a purple flame in a bowl.
@@ -9105,8 +9266,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Levels (55-5
 		.'WARNING: ESCORT
 		goto 49.6,30.4
 		.use Flute of the Ancients##11445
-		..talk Arei##9589
+		..talk Arei##9598
 		...accept Ancient Spirit##4261|noautoaccept
+		info TODO: verify in-game
 	step
 		goal Help Arei get to Safety|q 4261/1
 	step
@@ -9338,11 +9500,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Hellfire Pen
 		.talk Bernie Heisten##3546
 		..buy Nethergarde Bitter##23848|q 9563/1
 	step
-		'Deliver this quest in Felwood at your own leisure.
+		'Kill Felguard Sentries for the last essence. You'll turn the quest in at Felwood after Hellfire Peninsula.
 		goto 58.2,51.3
 		.from Felguard Sentry##6011+
 		..get Flawless Fel Essence (Dark Portal)|q 7602/3
 		only Warlock
+		info TODO: verify in-game
 	step
 		goto 58.3,55.9
 		.talk Watch Commander Relthorn Netherwane##16841
@@ -9550,8 +9713,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Hellfire Pen
 		..accept Go to the Front##10382
 	step
 		goto 78.3,34.5|n
-		.talk Gryphoneer Windbellow|tip Right next to an Armored Gryphon Destroyer.
+		.talk Gryphoneer Windbellow##20235|tip Right next to an Armored Gryphon Destroyer.
 		..'Fly to Honor Point|goto Hellfire Peninsula,68.7,28.2,1|noway|c
+		info TODO: verify in-game
 	step
 		goto 68.3,28.6
 		.talk Field Marshal Brock##20793
@@ -9577,11 +9741,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Hellfire Pen
 	step
 		goto 53,27.7
 		.kill Warbringer Arix'Amal|q 10397/1
-		..get Burning Blade Missive|n
-		.'Click the Burning Blade Missive|use Burning Blade Missive##29588
+		..get Burning Legion Missive|n
+		.'Click the Burning Legion Missive|use Burning Legion Missive##29588
 		..accept The Dark Missive##10395
 		.get Burning Legion Gate Key|q 10397/3
 		.goal Close Burning Legion Gate|q 10397/2
+		info TODO: verify in-game
 	step
 		goto 68.3,28.6
 		.talk Field Marshal Brock##20793
@@ -9624,6 +9789,29 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Hellfire Pen
 		goto 56.7,66.3
 		.talk Lieutenant Chadwick##17557
 		..accept Weaken the Ramparts##9575
+	step
+		'Run Hellfire Ramparts|goto Hellfire Peninsula,47.6,53.6
+		.' Kill Watchkeeper Gargolmar, the first boss
+		.get Gargolmar's Hand|q 9575/1
+		.' Kill Omor the Unscarred, the second boss
+		.get Omor's Hoof|q 9575/2
+		.' Kill Vazruden and his drake Nazan at the end. Vazruden drops the Ominous Letter
+		.get Nazan's Head|q 9575/3
+		.' Click the Ominous Letter in your bags|use Ominous Letter##23890
+		..accept Dark Tidings##9587
+		info Ding80: the first Ramparts run gives a lot of XP on top of the quest. Queue with the Dungeon Finder here in Honor Hold; it sends you back afterwards.
+		info Or fly to the entrance on the side of Hellfire Citadel.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 56.4,66.7
+		.talk Gunny##17479
+		..turnin Weaken the Ramparts##9575
+		.talk Force Commander Danath Trollbane##16819
+		..turnin Dark Tidings##9587
+		info Danath is next to Gunny, at 56.6,66.7. Don't take The Blood is Life; it's a Blood Furnace quest.
+		info Skip this step if you didn't run Hellfire Ramparts.
+		info TODO: verify in-game
 	step
 		goto 50.9,60.2
 		.talk Honor Guard Wesilow##16827
@@ -9682,6 +9870,23 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Hellfire Pen
 		..fpath Shattrath City
 	step
 		'Take the appropriate capitol portal and train your skills
+	step
+		'Take the Stormwind portal, train your skills, then ride the boat from Stormwind Harbor to Auberdine|goto Darkshore|noway|c
+		info Warlocks only: this side trip turns in Flawless Fel Essence back in Felwood.
+		info TODO: verify in-game
+		only Warlock
+	step
+		'Fly to Talonbranch Glade|goto Felwood,62.5,24.2,0.5|noway|c
+		info TODO: verify in-game
+		only Warlock
+	step
+		goto Felwood,41.4,45.0
+		.talk Impsy##14470
+		..turnin Flawless Fel Essence##7602
+		info Don't take the follow-up, Kroshius' Infernal Core.
+		info Then hearth back to Honor Hold.
+		info TODO: verify in-game
+		only Warlock
 	step
 		'Hearth to Honor Hold|goto Hellfire Peninsula,55.7,63.3,5|use Hearthstone##6948|noway|c
 	step
@@ -10504,6 +10709,14 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Zangarmarsh"
 	step
 		'Hearth to Orebor Harborage|goto 41.87,26.25|noway|c
 	step
+		goto Zangarmarsh,52.3,36.0
+		.talk Watcher Jhang##17884
+		..turnin Failed Incursion##9876
+		info Swim to the middle of Serpent Lake and dive down the big pipe into Coilfang Reservoir; she's on the drained floor by the dungeon portals.
+		info Don't take Lost in Action; it needs both The Slave Pens and The Underbog.
+		info Then swim back northwest to Orebor Harborage.
+		info TODO: verify in-game
+	step
 		goto Zangarmarsh,42.2,41.4
 		.kill Mragesh|q 9905/1|tip He is a big brown hydra underwater.
 	step
@@ -10618,6 +10831,39 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Zangarmarsh"
 		.talk Gzhun'tt##17856
 		..turnin Now That We're Friends...##9726
 	step
+		goto 19.5,50.0
+		.talk T'shu##17857
+		..accept Oh, It's On!##9717
+		.talk Khn'nix##17866
+		..accept Stalk the Stalker##9719
+		.talk Gzhun'tt##17856
+		..accept Bring Me A Shrubbery!##9715
+		info Ding80: these are The Underbog's three quests, 66,000 XP together. Queue for it and keep questing until a group forms.
+		info Skip this step unless you're going to run The Underbog.
+		info TODO: verify in-game
+	step
+		'Run The Underbog|goto 54.2,34.4
+		.' Click the Sanguine Hibiscus plants growing along the way
+		.get 5 Sanguine Hibiscus|q 9715/1
+		.' Click The Underspore, the big glowing mushroom behind Hungarfen, the first boss
+		.get Underspore Frond|q 9717/1
+		.' Kill The Black Stalker, the last boss
+		.get Brain of the Black Stalker|q 9719/1
+		info The entrance is in Coilfang Reservoir, in the middle of the lake; dive under the pipe. The Dungeon Finder can take you there instead.
+		info Don't take Bring Me Another Shrubbery! afterwards; it needs a second run.
+		info Skip this step if you didn't take the Underbog quests.
+		info TODO: verify in-game
+	step
+		goto 19.5,50.0
+		.talk T'shu##17857
+		..turnin Oh, It's On!##9717
+		.talk Khn'nix##17866
+		..turnin Stalk the Stalker##9719
+		.talk Gzhun'tt##17856
+		..turnin Bring Me A Shrubbery!##9715
+		info Skip this step if you didn't take the Underbog quests.
+		info TODO: verify in-game
+	step
 		goto 23.3,66.2
 		.talk Watcher Leesa'oh##17831
 		..turnin Stealing Back the Mushrooms##9709
@@ -10689,8 +10935,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Terokkar For
 		..accept Thin the Flock##10869
 	step
 		goto 57.8,56
-		.talk Lady Deno Kennedy##15991
+		.talk Lady Dena Kennedy##15991
 		..accept Secrets of the Arakkoa##10863
+		info TODO: verify in-game
 	step
 		goto 57.8,54.3
 		.talk Thander##18389
@@ -10711,9 +10958,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Terokkar For
 	step
 		'Fly to Shattrath City|goto Shattrath City|noway|c
 	step
-		goto Shattrath City,61.2,12.6
-		.talk the Haggard War Veteran##19684
+		goto Shattrath City,73.0,17.8
+		.talk Haggard War Veteran##19684
 		..accept A'dal##10210
+		info TODO: verify in-game
 	step
 		goto 54,44.8
 		.talk A'dal##18481
@@ -11102,7 +11350,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Terokkar For
 	step
 		goto 43.2,51.6
 		.from Trachela##21515
-		..collect Trachela's Carcass##30618|q 10036
+		..collect Trachela's Carcass##30618|q 10035
+		info TODO: verify in-game
 	step
 		goto 26.9,55.6
 		.kill 4 Deathtalon Spirit|q 10848/1
@@ -11164,9 +11413,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Terokkar For
 		.'Use your Sha'tari Torch on corpses|use Sha'tari Torch##31769
 		..'Burn 8 Slain Sha'tar Vindicator corpses|goal 8 Slain Sha'tar Vindicator corpse burned|q 10913/1
 		..'Burn 8 Slain Auchenai Warrior corpses|goal 8 Slain Auchenai Warrior corpse burned|q 10913/2
-		.'Use the Fumper on cooldown|use Fumper 31810##31810
+		.'Use the Fumper on cooldown|use Fumper##31810
 		..get 8 Mature Bone Sifter Carcass|q 10929/1
 		..'Pick up Restless bones while waiting around|get 10 Restless Bone|q 10030/1
+		info TODO: verify in-game
 	step
 		goto 31,76.1
 		.talk Commander Ra'vaj##22446
@@ -11177,6 +11427,21 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Terokkar For
 		.talk Dwarfowitz##22481
 		..turnin Fumping##10929
 		..accept The Big Bone Worm##10930
+		info It's a group quest. Skip this step's accept and the next two steps if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 33.0,76.3
+		.' Use the Fumper in the same spot as before to call up Hai'shulud, the Bone Emperor|use Fumper##31825
+		.from Hai'shulud##22038
+		.get Enormous Bone Worm Organs|q 10930/1
+		info Skip this step if you didn't take The Big Bone Worm.
+		info TODO: verify in-game
+	step
+		goto 31.0,76.2
+		.talk Dwarfowitz##22481
+		..turnin The Big Bone Worm##10930
+		info Skip this step if you didn't take The Big Bone Worm.
+		info TODO: verify in-game
 	step
 		goto 31.1,76.5
 		.talk Oakun##22456
@@ -11260,9 +11525,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Terokkar For
 	step
 		'Fly to Shattrath City|goto Shattrath City|noway|c
 	step
-		talk Ezekiel##19715
-		..turnin Exekiel##10228
+		goto Shattrath City,49.1,35.9
+		.talk Ezekiel##19715
+		..turnin Ezekiel##10228
 		..accept What Book? I Don't See Any Book.##10231
+		info TODO: verify in-game
 	step
 		goto 43.6,29.8
 		goal Beat Down "Dirty" Larry and Get Information|q 10231
@@ -11652,11 +11919,12 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Nagrand",[[
 		ding 67
 	step
 		goto 73.8,62.6
-		.talk Lantressor of the Blade##18261
+		.talk Lantresor of the Blade##18261
 		..'Listen to his story|goal Hear the Tale of the Blademaster|q 10108/1
 		..turnin Diplomatic Measures##10108
 		..accept Armaments for Deception##9928
 		..accept Ruthless Cunning##9927
+		info TODO: verify in-game
 	step
 		goto 71.1,82.4
 		.kill Giselda the Crone##18391|q 9936/1
@@ -11686,6 +11954,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Nagrand",[[
 		goto 61.8,24.4
 		.talk Gordawg##18099
 		..turnin Shattering the Veil##9849
+		..accept Gurok the Usurper##9853
+		info Gurok the Usurper is a group quest, doable with two people. Skip it if you have no partner.
+		info TODO: verify in-game
 	step
 		goto 60.5,22.4
 		.talk Elementalist Lo'ap##18073
@@ -11708,12 +11979,94 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Nagrand",[[
 		.'Use your Kil'sorrow Banners on their corpses|use Kil'sorrow Banner##25555
 		.'Plant 10 Kil'sorrow Banners|goal 10 Kil'sorrow Banner Planted|q 9931/1
 	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: Brokentoe##9962
+		.kill 1 Brokentoe|q 9962/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: Brokentoe##9962
+		info Ride north to the Ring of Blood. Ding80: the chain needs a full group of five around level 67, or a couple of high-level helpers.
+		info Skip this step and the next five if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: The Blue Brothers##9967
+		.kill 1 Murkblood Twin|q 9967/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: The Blue Brothers##9967
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: Rokdar the Sundered Lord##9970
+		.kill 1 Rokdar the Sundered Lord|q 9970/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: Rokdar the Sundered Lord##9970
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: Skra'gath##9972
+		.kill 1 Skra'gath|q 9972/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: Skra'gath##9972
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: The Warmaul Champion##9973
+		.kill 1 Warmaul Champion|q 9973/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: The Warmaul Champion##9973
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
+		goto 42.8,20.7
+		.talk Gurgthock##18471
+		..accept The Ring of Blood: The Final Challenge##9977
+		.kill 1 Mogor|q 9977/1
+		.talk Wodin the Troll-Servant##22893
+		..turnin The Ring of Blood: The Final Challenge##9977
+		info Mogor is the hardest fight; the rare weapon is the reward here.
+		info Skip this step if you can't find a group.
+		info TODO: verify in-game
+	step
 		goto 27.9,29.7
 		.get 10 Telaar Supply Crate|q 9956/1|tip They look like little grey boxes on the ground.
 	step
 		goto 29.5,26.1
-		.talk Corki##18369
+		.talk Corki##18445
 		..turnin Corki's Ransom##9954
+		..accept Cho'war the Pillager##9955
+		info Cho'war the Pillager is a group quest, doable with two people. Skip it if you have no partner.
+		info TODO: verify in-game
+	step
+		goto 26.0,13.9
+		.from Cho'war the Pillager##18423
+		.get Cho'war's Key|n
+		.' Go back down to Corki and use the key on his cage|goal Corki freed|q 9955/1
+		info Cho'war is further up the mountain, past the cave.
+		info Skip this step if you didn't take Cho'war the Pillager.
+		info TODO: verify in-game
+	step
+		goto 29.1,25.0
+		.' Kill Warmaul Warlocks and Reavers until one drops a Warmaul Skull
+		.' Use the Warmaul Skull at the pyre to call Gurok the Usurper|use Warmaul Skull##24502
+		.from Gurok the Usurper##18182
+		.get Gurok's Earthen Head|q 9853/1
+		info Skip this step if you didn't take Gurok the Usurper.
+		info TODO: verify in-game
+	step
+		goto 61.8,24.4
+		.talk Gordawg##18099
+		..turnin Gurok the Usurper##9853
+		info Ride back east to the Throne of the Elements, then hearth to Telaar.
+		info Skip this step if you didn't kill Gurok.
+		info TODO: verify in-game
 	step
 		'Hearth to Telaar|goto 54.267,76.088|use Hearthstone##6948|noway|c
 	step
@@ -11739,6 +12092,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Nagrand",[[
 		goto 55.5,68.8
 		.talk Arechron##18183
 		..turnin Message to Telaar##9933
+		..turnin Cho'war the Pillager##9955
+		info Turn in Cho'war the Pillager if you freed Corki.
+		info TODO: verify in-game
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Blade's Edge Mountains",[[
@@ -11829,7 +12185,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Blade's Edge
 		..get 4 Thunderlord Dire Wolf Tail|q 10456/1
 	step
 		goto 51.6,75
-		.kill Rema##21596|q 10690/1
+		.kill Rema##21956|q 10690/1
+		info TODO: verify in-game
 	step
 		'Hearth to Sylvanaar|goto 35.83,63.89,2|use Hearthstone##6948|noway|c
 	step
@@ -12138,8 +12495,22 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Howling Fjor
 		..accept Disarmament##13205
 		..accept Into Utgarde!##11252
 	step
-		.'The two quests you just received are dungeon quests for Utgarde Keep. Group/queue for the dungeon to complete them. They award some nice experience!
-		.'Skip this step.
+		'Run Utgarde Keep|goto Howling Fjord,57.3,46.8
+		.' Click the Vrykul Weapons lying around the keep
+		.get 5 Vrykul Weapon|q 13205/1
+		.' Kill Ingvar the Plunderer, the last boss
+		.get Ingvar's Head|q 11252/1
+		info Ding80: run it at least once while you're in the Fjord; the two quests give an extra 60,500 XP.
+		info Queue with the Dungeon Finder, or walk in: the entrance is under the keep, at the end of the bridge behind Defender Mordun.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 59.4,49.1
+		.talk Defender Mordun##24111
+		..turnin Disarmament##13205
+		info Keep Into Utgarde! for Vice Admiral Keller in Valgarde; you'll pass him before the boat.
+		info Skip this step if you didn't run Utgarde Keep.
+		info TODO: verify in-game
 	step
 		goto 59.8,61.5
 		.talk Thoralius the Wise##23975
@@ -13497,10 +13868,18 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Howling Fjor
 		'Go inside the fort to 28.9,44.2|goto 28.9,44.2
 		.talk Mage-Lieutenant Malister##23888
 		..turnin Sleeping Giants##11432
+		..turnin The Frost Wyrm and its Master##11238
+		info TODO: verify in-game
 	step
 		ding 71
 	step
 		'Fly to Valgarde|goto 59.79,63.26|noway|c
+	step
+		goto 60.5,61.1
+		.talk Vice Admiral Keller##23546
+		..turnin Into Utgarde!##11252
+		info Skip this step if you didn't run Utgarde Keep.
+		info TODO: verify in-game
 	step
 		goto 61.3,62.6|n
 		.'Ride the boat to Menethil Harbor|goto Wetlands|noway|c
@@ -13863,8 +14242,9 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		.get 10 Crafty's Stuff|q 11645/1
 	step
 		goto 57.6,18.7
-		.talk Crafty Wobblesprout##25477
+		.talk Crafty Wobblesprocket##25477
 		..turnin Dirty, Stinkin' Snobolds!##11645
+		info TODO: verify in-game
 	step
 		goto 58.54,19.14
 		kill any of the Robots|n
@@ -13875,9 +14255,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		..'Curse & port 6 Fizzcrank Gnomes|goal 6 Fizzcrank Gnome cursed & ported|q 11712/1|tip Pick up Fizzcrank Spare Parts on the way too, but those are not the focus right now.
 	step
 		goto 57.6,18.7
-		.talk Crafty Wobblesprout##25477
+		.talk Crafty Wobblesprocket##25477
 		..turnin The Ultrasonic Screwdriver##11729
 		..accept Master and Servant##11730
+		info TODO: verify in-game
 	step
 		goto 57.4,18.7
 		.talk Jinky Wingnut##25747
@@ -14433,10 +14814,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		..turnin The Cell##11943
 	step
 		'Use the Augmented Arcane Prison in your bags|use Augmented Arcane Prison##35671
-		.talk Keristrasza##26237
+		.talk Keristrasza##26206
 		..accept Keristrasza##11946
 		..turnin Keristrasza##11946
 		..accept Bait and Switch##11951
+		info TODO: verify in-game
 	step
 		kill 10 Coldarra Spellweaver|q 11918/1
 		from Glacial Ancient+
@@ -14465,9 +14847,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		..accept Quickening##11911
 	step
 		'Use the Augmented Arcane Prison in your bags|use Augmented Arcane Prison##35671
-		.talk Keristrasza##26237
+		.talk Keristrasza##26206
 		..turnin Bait and Switch##11951
 		..accept Saragosa's End##11957
+		info TODO: verify in-game
 	step
 		'Use the Augmented Arcane Prison in your bags|use Augmented Arcane Prison##35671
 		.talk Keristrasza##26206
@@ -14544,7 +14927,38 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		.talk Raelorasz##26117
 		..turnin Cracking the Code##11931
 	step
-		.'Queue/group for "The Nexus" dungeon and complete the quests! Skip this step.
+		'Run The Nexus|goto 27.5,26.0
+		.' Kill Crystalline Protectors in the halls for Arcane Splinters
+		.get 5 Arcane Splinter|q 11911/1
+		.' Use the Interdimensional Refabricator near the rift, by Anomalus, the second boss
+		.goal Interdimensional Refabricator used|q 11905/1
+		.' Find Berinand's Research, a book in the Nexus
+		.get Berinand's Research|q 13094/1
+		.' Kill Keristrasza, the last boss, to release her
+		.kill 1 Keristrasza|q 11973/1
+		info Ding80: run The Nexus at least once; the four quests give an extra 70,400 XP on top of the dungeon's.
+		info Queue with the Dungeon Finder here at the Transitus Shield; it sends you back afterwards.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 33.5,34.4
+		.talk Librarian Serrah##26110
+		..turnin Have They No Shame?##13094
+		info Skip this step if you didn't run The Nexus.
+		info TODO: verify in-game
+	step
+		goto 32.9,34.4
+		.talk Archmage Berinand##25314
+		..turnin Quickening##11911
+		..turnin Postponing the Inevitable##11905
+		info Skip this step if you didn't run The Nexus.
+		info TODO: verify in-game
+	step
+		goto 33.3,34.5
+		.talk Raelorasz##26117
+		..turnin Prisoner of War##11973
+		info Skip this step if you didn't run The Nexus.
+		info TODO: verify in-game
 	step
 		'Fly to Amber Ledge|goto 45.1,34.1,0.5|noway|c
 	step
@@ -14715,9 +15129,11 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Borean Tundr
 		..turnin The Tides Turn##11968
 	step
 		goto 67.2,54.9
+		only if not (ZGV.questsbyid[12118] or ZGV.completedQuests[12118])
 		.'If you didn't pick up the quest in Howling Fjord; otherwise skip this.
 		.talk Hotawa##28382
 		..accept Travel to Moa'ki Harbor##12117
+		info TODO: verify in-game
 	step
 		goto 78.5,51.5
 		.talk Bilko Driftspark##28195
@@ -15145,7 +15561,34 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Dragonblight
 		..accept Death to the Traitor King##13167
 		..accept The Faceless Ones##13187
 	step
-		.'Now, queue up/find a group for Azjol-Nerub and The Old Kingdom to complete these instance quests. Skip if you don't want to dungeon.
+		goto 26.2,50.8
+		.' Run Azjol-Nerub
+		.' Destroy the Nerubian Scourge Eggs in Krik'thir the Gatewatcher's chamber, the first boss|goal 6 Nerubian Scourge Eggs Destroyed|q 13182/1
+		.' Kill Anub'arak, the last boss, and loot his husk
+		.get Anub'arak's Broken Husk|q 13167/1
+		info Queue with the Dungeon Finder, or walk in: the entrance is here in the Pit of Narjun.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 26.2,50.8
+		.' Run Ahn'kahet: The Old Kingdom
+		.' Kill the Savage Cave Beasts in the caves until one drops the Ooze-covered Fungus, then click it|use Ooze-covered Fungus##43512
+		..accept Funky Fungi##13204
+		.get 6 Grotesque Fungus|q 13204/1|tip The Savage Cave Beasts drop these too.
+		.kill 3 Forgotten One|q 13187/1|tip They come out during the fight with Herald Volazj, the last boss.
+		.kill 1 Herald Volazj|q 13187/2
+		info Queue with the Dungeon Finder, or walk in: the entrance is here in the Pit of Narjun.
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
+	step
+		goto 26.2,50.8
+		.talk Kilix the Unraveler##26653
+		..turnin Death to the Traitor King##13167
+		..turnin Don't Forget the Eggs!##13182
+		..turnin The Faceless Ones##13187
+		..turnin Funky Fungi##13204
+		info Skip this step if you can't find a dungeon group.
+		info TODO: verify in-game
 	step
 		'Go out of the cave to 29.2,55.6|goto 29.2,55.6
 		.talk Warden Jodi Moonsong##26973
@@ -15265,9 +15708,10 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Dragonblight
 		goto 48,74.9
 		.talk Elder Ko'nani##26194
 		.'Turn in whichever quest you picked up, then skip once you get the quest.
-		..turnin Travel to Moa'ki Harbor##12117
-		..turnin Travel to Moa'ki Harbor##12118
+		..turnin Travel to Moa'ki Harbor##12117|only if ZGV.questsbyid[12117]
+		..turnin Travel to Moa'ki Harbor##12118|only if ZGV.questsbyid[12118]
 		..accept Let Nothing Go To Waste##11958
+		info TODO: verify in-game
 	step
 		goto 48.3,74.3
 		.talk Trapper Mau'i##26228
@@ -16008,7 +16452,8 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Dragonblight
 	step
 		goto 89.5,19.1
 		.' Use your Seeds of Nature's Wrath on Overseer Deathgaze to weaken him|use Seeds of Nature's Wrath##37887
-		.kill Weakened Overseer Deathgaze##27122|q 12459/3
+		.kill Overseer Deathgaze##27122|q 12459/3
+		info TODO: verify in-game
 	step
 		goto 86.8,22.4
 		.kill undead mobs|n
@@ -16114,7 +16559,68 @@ ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Dragonblight
 		.' Click Fordragon's Shield|tip It looks like a small metal shield on the ground.
 		.get Fordragon's Shield|q 13347/1
 	step
-		TODO
+		'Ride back down to Fordragon Hold and take the flight to Dalaran|goto Dalaran|noway|c
+		info TODO: verify in-game
+	step
+		'Take the portal to Stormwind and train your skills|goto Stormwind City|noway|c
+		info The Stormwind portal is in the Silver Enclave.
+		info TODO: verify in-game
+	step
+		goto Stormwind City,80.0,38.5
+		.talk King Varian Wrynn##29611
+		..turnin Reborn From The Ashes##13347
+		..accept Fate, Up Against Your Will##13369
+		info He's in Stormwind Keep.
+		info TODO: verify in-game
+	step
+		'Talk to Lady Jaina Proudmoore next to Varian and take her portal to Orgrimmar|goto Orgrimmar|noway|c
+		info TODO: verify in-game
+	step
+		goto Orgrimmar,31.8,37.8
+		.talk Thrall##32363
+		..turnin Fate, Up Against Your Will##13369
+		..accept A Royal Coup##13370
+		info He's in Grommash Hold.
+		info TODO: verify in-game
+	step
+		'Take the portal back to Stormwind|goto Stormwind City|noway|c
+		info TODO: verify in-game
+	step
+		goto Stormwind City,80.0,38.5
+		.talk King Varian Wrynn##29611
+		..turnin A Royal Coup##13370
+		..accept The Killing Time##13371
+		info TODO: verify in-game
+	step
+		'Talk to Lady Jaina Proudmoore and take her portal to the Undercity|goto Tirisfal Glades|noway|c
+		info TODO: verify in-game
+	step
+		goto Tirisfal Glades,50.0,68.5
+		.talk Broll Bearmantle##32376
+		..turnin The Killing Time##13371
+		..accept The Battle For The Undercity##13377
+		info TODO: verify in-game
+	step
+		.' Wait a couple of minutes, then follow King Varian into the Undercity
+		.' Stay close to him: his and Jaina's auras keep you alive. Use your area attacks
+		.' When Varian runs off without Jaina, follow Varian
+		.goal Help bring Grand Apothecary Putress to justice|q 13377/1
+		info You're sent back to Stormwind at the end.
+		info TODO: verify in-game
+	step
+		goto Stormwind City,80.0,38.5
+		.talk King Varian Wrynn##29611
+		..turnin The Battle For The Undercity##13377
+		info TODO: verify in-game
+	step
+		'Hearth to Wintergarde Keep|goto Dragonblight,77.5,51.5,2|use Hearthstone##6948|noway|c
+		info TODO: verify in-game
+	step
+		goto Dragonblight,79.2,47.2
+		.talk Zelig the Visionary##27314
+		..turnin Frostmourne Cavern##12478
+		info Ding80 then flies on to Amberpine Lodge in the Grizzly Hills. Keep Into the Breach! for Zul'Drak.
+		info TODO: verify in-game
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Ding80's Alliance Leveling Guides\\Grizzly Hills",[[
